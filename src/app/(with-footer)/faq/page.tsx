@@ -1,11 +1,11 @@
-import React from 'react';
-import styles from './page.module.css';
-import ScrollToTopButton from '~/components/ScrollToTopButton/ScrollToTopButton';
-import Link from 'next/link';
+import React from 'react'
+import styles from './page.module.css'
+import ScrollToTopButton from '~/components/ScrollToTopButton/ScrollToTopButton'
+import Link from 'next/link'
 export const metadata = {
   title: 'Max Comperatore - FAQ',
   description: 'Preguntas personales para reflexionar, y practicar para entrevistas de trabajo.',
-};
+}
 const FAQ = () => {
   return (
     <>
