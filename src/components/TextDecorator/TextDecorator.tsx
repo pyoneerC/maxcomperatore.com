@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from 'react';
 
 interface TextDecoratorProps {
 	children: React.ReactNode
@@ -28,13 +28,13 @@ const TextDecorator: React.FC<TextDecoratorProps> = ({
 		fontFamily: font,
 		backgroundColor: isHighlighted ? '#ffff00' : 'transparent',
 		...style,
-	}
+	};
 
 	return (
 		<span style={textStyle}>
       {children}
     </span>
-	)
-}
+	);
+};
 
-export default TextDecorator
+export default TextDecorator;

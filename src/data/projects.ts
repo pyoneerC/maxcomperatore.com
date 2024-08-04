@@ -1,5 +1,5 @@
-import type { CoverProject } from "~/types"
-import { Tag } from "./tags"
+import type { CoverProject } from "~/types";
+import { Tag } from "./tags";
 
 export const projectMetadata = {
 	mercadolibrepricechart: {
@@ -14,7 +14,7 @@ export const projectMetadata = {
 		slug: "the-dungeon",
 		name: "The Forgotten Maze",
 	},
-}
+};
 
 export const coverProjects: CoverProject[] = [
 	{
@@ -34,7 +34,7 @@ export const coverProjects: CoverProject[] = [
 		description:
 			"Juego de puzzles y terror que combina acertijos desafiantes en un entorno oscuro y misterioso."
 	},
-]
+];
 
 export const projects = [
 	{
@@ -129,4 +129,4 @@ export const projects = [
 			Tag.cPlusPlus
 		],
 	},
-]
+];

@@ -1,5 +1,5 @@
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "~/components/Ui/Dialog"
-import ContactForm from "../ContactForm/ContactForm"
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "~/components/Ui/Dialog";
+import ContactForm from "../ContactForm/ContactForm";
 
 
 interface Props {
@@ -15,5 +15,5 @@ export const ContactDialog: React.FC<Props> = ({ trigger }) => {
 				<ContactForm />
 			</DialogContent>
 		</Dialog>
-	)
-}
+	);
+};

@@ -1,1 +1,1 @@
-export * from './MessageCard'
+export * from './MessageCard';

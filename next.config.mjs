@@ -1,10 +1,10 @@
-import createMDX from '@next/mdx'
-import rehypeShiki from '@shikijs/rehype'
+import createMDX from '@next/mdx';
+import rehypeShiki from '@shikijs/rehype';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-}
+};
 
 const withMDX = createMDX({
   options: {
@@ -16,6 +16,6 @@ const withMDX = createMDX({
       }
     }]],
   },
-})
+});
 
-export default withMDX(nextConfig)
+export default withMDX(nextConfig);

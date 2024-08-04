@@ -1,13 +1,13 @@
-import NextLink from "next/link"
-import { APP_ROUTES } from "~/constants"
-import { HomeLogo } from "~/components/Svg/HomeLogo"
-import { LanguageSwitcher } from "~/components/LanguageSwitcher"
-import { Button } from "~/components/Ui/Button"
-import { Link } from "~/components/Ui/Link"
-import { MenuMobile } from "~/components/MenuMobile"
-import { ContactDialog } from "~/components/ContactDialog"
-import styles from "./Header.module.css"
-import { ThemeSwitcher } from "../ThemeSwitcher"
+import NextLink from "next/link";
+import { APP_ROUTES } from "~/constants";
+import { HomeLogo } from "~/components/Svg/HomeLogo";
+import { LanguageSwitcher } from "~/components/LanguageSwitcher";
+import { Button } from "~/components/Ui/Button";
+import { Link } from "~/components/Ui/Link";
+import { MenuMobile } from "~/components/MenuMobile";
+import { ContactDialog } from "~/components/ContactDialog";
+import styles from "./Header.module.css";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export const Header = () => {
 	return (
@@ -41,5 +41,5 @@ export const Header = () => {
 				<MenuMobile />
 			</div>
 		</header>
-	)
-}
+	);
+};

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import styles from './Clock.module.css';
@@ -54,4 +54,4 @@ const Clock = ({ className }) => {
 	);
 };
 
-export default Clock
+export default Clock;

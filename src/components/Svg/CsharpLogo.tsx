@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 export const CsharpLogo = (props: SVGProps<SVGSVGElement>) => (
 	<svg
@@ -16,4 +16,4 @@ export const CsharpLogo = (props: SVGProps<SVGSVGElement>) => (
 			/>
 		</g>
 	</svg>
-)
+);

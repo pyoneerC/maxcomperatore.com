@@ -1,6 +1,6 @@
-import clsx from "clsx"
-import { CopyEmailButton } from "~/components/CopyEmailButton"
-import styles from "./ContactSection.module.css"
+import clsx from "clsx";
+import { CopyEmailButton } from "~/components/CopyEmailButton";
+import styles from "./ContactSection.module.css";
 
 export const ContactSection = () => {
 	return (
@@ -10,5 +10,5 @@ export const ContactSection = () => {
 			</h2>
 			<CopyEmailButton />
 		</section>
-	)
-}
+	);
+};

@@ -1,11 +1,11 @@
 import { socialMediaLinks } from "~/data/links";
 import { Link } from "~/components/Ui/Link";
 import styles from "./Footer.module.css";
-import { LinkedInIcon } from "~/components/Svg/LinkedInIcon"
-import { ItchioIcon } from "~/components/Svg/ItchioIcon"
-import { YoutubeIcon } from "~/components/Svg/YoutubeIcon"
-import { GithubIcon } from "~/components/Svg/GithubIcon"
-import EmailIcon2 from "~/components/Svg/EmailIcon2"
+import { LinkedInIcon } from "~/components/Svg/LinkedInIcon";
+import { ItchioIcon } from "~/components/Svg/ItchioIcon";
+import { YoutubeIcon } from "~/components/Svg/YoutubeIcon";
+import { GithubIcon } from "~/components/Svg/GithubIcon";
+import EmailIcon2 from "~/components/Svg/EmailIcon2";
 
 const iconComponents: any = {
 	LinkedInIcon : < LinkedInIcon />,
@@ -13,7 +13,7 @@ const iconComponents: any = {
 	EmailIcon : < EmailIcon2 />,
 	YoutubeIcon : < YoutubeIcon />,
 	ItchioIcon : < ItchioIcon />,
-}
+};
 
 export const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -45,4 +45,4 @@ export const Footer = () => {
 			</div>
 		</footer>
 	);
-}
+};

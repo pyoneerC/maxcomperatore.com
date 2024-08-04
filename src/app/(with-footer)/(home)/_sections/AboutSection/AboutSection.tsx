@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './AboutSection.module.css'
+import React from 'react';
+import styles from './AboutSection.module.css';
 
 export const AboutSection = () => {
 	return (
@@ -32,5 +32,5 @@ export const AboutSection = () => {
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};

@@ -1,4 +1,4 @@
-import { Footer } from "~/components/Footer"
+import { Footer } from "~/components/Footer";
 
 export default function WithFooterLayout({
 	children,
@@ -10,5 +10,5 @@ export default function WithFooterLayout({
 			{children}
 			<Footer />
 		</>
-	)
+	);
 }

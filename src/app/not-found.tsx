@@ -1,11 +1,11 @@
-import Link from "next/link"
-import { Button } from "~/components/Ui/Button"
-import { Footer404 } from "~/components/Footer404"
-import styles from "./not-found.module.css"
+import Link from "next/link";
+import { Button } from "~/components/Ui/Button";
+import { Footer404 } from "~/components/Footer404";
+import styles from "./not-found.module.css";
 
 export const metadata = {
 	title: "Maximo Comperatore - 404",
-}
+};
 
 export default function NotFound() {
 	return (
@@ -19,5 +19,5 @@ export default function NotFound() {
 			</main>
 			<Footer404 />
 		</>
-	)
+	);
 }

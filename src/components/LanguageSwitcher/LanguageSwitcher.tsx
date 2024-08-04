@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import styles from "./LanguageSwitcher.module.css"
+import { useState, useEffect } from "react";
+import styles from "./LanguageSwitcher.module.css";
 
 export const LanguageSwitcher = () => {
-	const [isSpanish, setIsSpanish] = useState(true)
+	const [isSpanish, setIsSpanish] = useState(true);
 
 	useEffect(() => {
-		const savedLanguage = localStorage.getItem("language")
+		const savedLanguage = localStorage.getItem("language");
 		if (savedLanguage) {
-			setIsSpanish(savedLanguage === "es")
+			setIsSpanish(savedLanguage === "es");
 		}
-	}, [])
+	}, []);
 
 	const handleOnClick = () => {
-		const newLanguage = isSpanish ? "en" : "es"
-		setIsSpanish(!isSpanish)
-		localStorage.setItem("language", newLanguage)
+		const newLanguage = isSpanish ? "en" : "es";
+		setIsSpanish(!isSpanish);
+		localStorage.setItem("language", newLanguage);
 
-		document.documentElement.lang = newLanguage
-	}
+		document.documentElement.lang = newLanguage;
+	};
 
 	return (
 		<button
@@ -37,7 +37,7 @@ export const LanguageSwitcher = () => {
 				width={24}
 			/>
 		</button>
-	)
-}
+	);
+};
 
-export default LanguageSwitcher
+export default LanguageSwitcher;

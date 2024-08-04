@@ -5,7 +5,7 @@ import { CopyEmailSmallButton } from "~/components/CopyEmailSmallButton";
 import styles from "./HeroSection.module.css";
 import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton";
 import Clock from "~/components/Clock/Clock";
-import ArgentinaFlag from "~/components/Svg/ArgentinaFlag"
+import ArgentinaFlag from "~/components/Svg/ArgentinaFlag";
 
 export const HeroSection = () => {
 

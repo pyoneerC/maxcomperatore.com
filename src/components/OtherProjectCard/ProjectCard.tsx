@@ -1,5 +1,5 @@
-import type { CoverProject } from '~/types'
-import styles from './ProjectCard.module.css'
+import type { CoverProject } from '~/types';
+import styles from './ProjectCard.module.css';
 
 interface Props extends CoverProject {}
 
@@ -20,5 +20,5 @@ export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description
 			<h3 className={styles.title}>{name}</h3>
 			<p>{description}</p>
 		</article>
-	)
-}
+	);
+};

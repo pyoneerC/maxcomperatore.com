@@ -1,39 +1,39 @@
-import NextLink from "next/link"
-import { notFound } from "next/navigation"
-import { projects } from "~/data/projects"
-import { getPrevAndNextProjectSlug, getProjectBySlug } from "~/helpers/get-projects"
-import { Link } from "~/components/Ui/Link"
-import styles from "./page.module.css"
+import NextLink from "next/link";
+import { notFound } from "next/navigation";
+import { projects } from "~/data/projects";
+import { getPrevAndNextProjectSlug, getProjectBySlug } from "~/helpers/get-projects";
+import { Link } from "~/components/Ui/Link";
+import styles from "./page.module.css";
 
 interface Props {
 	params: { slug: string }
 }
 
 export function generateMetadata({ params }: Props) {
-	const project = getProjectBySlug(params.slug)
+	const project = getProjectBySlug(params.slug);
 
 	if (!project) {
-		return notFound()
+		return notFound();
 	}
 
 	return {
 		title: `Max Comperatore - Proyecto | ${project.name}`,
 		description: project.description,
-	}
+	};
 }
 
 export function generateStaticParams() {
 	return projects.map(({ slug }) => ({
 		params: { slug },
-	}))
+	}));
 }
 
 export default function Project({ params }: Props) {
-	const project = getProjectBySlug(params.slug)!
+	const project = getProjectBySlug(params.slug)!;
 
-	const { index, name, description, mobileImages, desktopImages, links, tags } = project
+	const { index, name, description, mobileImages, desktopImages, links, tags } = project;
 
-	const [prevProjectSlug, nextProjectSlug] = getPrevAndNextProjectSlug(index)
+	const [prevProjectSlug, nextProjectSlug] = getPrevAndNextProjectSlug(index);
 
 	return (
 		<>
@@ -118,5 +118,5 @@ export default function Project({ params }: Props) {
 				</NextLink>
 			</nav>
 		</>
-	)
+	);
 }

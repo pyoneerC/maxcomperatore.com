@@ -1,11 +1,11 @@
-import { PythonLogo } from "~/components/Svg/PythonLogo"
-import { PostgreSqlLogo } from "~/components/Svg/PostgreSqlLogo"
-import { TypescriptLogo } from "~/components/Svg/TypeScriptLogo"
-import { UnityLogo } from "~/components/Svg/UnityLogo"
-import { UnrealLogo } from "~/components/Svg/UnrealEngineLogo"
-import { CsharpLogo } from "~/components/Svg/CsharpLogo"
-import CppLogo from "~/components/Svg/CppLogo"
-import { ExpressLogo } from "~/components/Svg/ExpressLogo"
+import { PythonLogo } from "~/components/Svg/PythonLogo";
+import { PostgreSqlLogo } from "~/components/Svg/PostgreSqlLogo";
+import { TypescriptLogo } from "~/components/Svg/TypeScriptLogo";
+import { UnityLogo } from "~/components/Svg/UnityLogo";
+import { UnrealLogo } from "~/components/Svg/UnrealEngineLogo";
+import { CsharpLogo } from "~/components/Svg/CsharpLogo";
+import CppLogo from "~/components/Svg/CppLogo";
+import { ExpressLogo } from "~/components/Svg/ExpressLogo";
 
 export const skills = [
 	// Backend skills
@@ -71,4 +71,4 @@ export const skills = [
 		icon: <CppLogo />,
 		brandColor: "#659AD2",
 	},
-]
+];

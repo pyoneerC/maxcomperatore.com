@@ -1,1 +1,1 @@
-export * from "./CopyEmailButton"
+export * from "./CopyEmailButton";

@@ -1,17 +1,17 @@
-import { GeistSans } from "geist/font/sans"
-import { ThemeProvider } from "next-themes"
-import { SvgMasks } from "~/components/Svg/SvgMasks"
-import { Header } from "~/components/Header"
-import "~/styles/reset.css"
-import "~/styles/globals.css"
-import "~/styles/utils.css"
+import { GeistSans } from "geist/font/sans";
+import { ThemeProvider } from "next-themes";
+import { SvgMasks } from "~/components/Svg/SvgMasks";
+import { Header } from "~/components/Header";
+import "~/styles/reset.css";
+import "~/styles/globals.css";
+import "~/styles/utils.css";
 export const metadata = {
 	metadataBase: new URL("https://maxcomperatore.com"),
 	title: "Max Comperatore - Desarrollador Backend y de Videojuegos",
 	description: "Un desarrollador pragmático enfocado en backend y desarrollo de videojuegos.",
 	authors: [{ name: "Max Comperatore" }],
 	creator: "Max Comperatore",
-}
+};
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="es" suppressHydrationWarning>
@@ -74,5 +74,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		</ThemeProvider>
 		</body>
 		</html>
-	)
+	);
 }

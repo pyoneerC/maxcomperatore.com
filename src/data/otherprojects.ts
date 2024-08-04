@@ -1,5 +1,5 @@
-import { CoverProjectOther } from "~/types"
-import { Tag } from "./tags"
+import { CoverProjectOther } from "~/types";
+import { Tag } from "./tags";
 
 export const projectMetadata = {
 	unrealengineprojectcleaner: {
@@ -34,7 +34,7 @@ export const projectMetadata = {
 		slug: "thegreatchocolatecaper",
 		name: "The Great Chocolate Caper",
 	},
-}
+};
 
 export const coverProjects: CoverProjectOther[] = [
 	{
@@ -84,4 +84,4 @@ export const coverProjects: CoverProjectOther[] = [
 		tags: [Tag.powershell, Tag.cli],
 		link: "https://github.com/pyoneerC/Unreal-Engine-Project-Cleaner"
 	},
-]
+];
