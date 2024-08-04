@@ -1,6 +1,6 @@
-import Link from "next/link"
-import styles from "./layout.module.css"
-import React from "react"
+import Link from "next/link";
+import styles from "./layout.module.css";
+import React from "react";
 
 export default function PostsLayout({
 	children,
@@ -24,5 +24,5 @@ export default function PostsLayout({
 				</Link>
 			</article>
 		</main>
-	)
+	);
 }

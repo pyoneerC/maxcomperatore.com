@@ -1,19 +1,19 @@
-import { getPosts } from "~/helpers/get-posts"
-import { sortPostsByDate } from "~/helpers/sort-posts"
-import { PostCard } from "~/components/PostCard"
-import styles from "./page.module.css"
-import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton"
-import Link from "next/link"
-import React from "react"
+import { getPosts } from "~/helpers/get-posts";
+import { sortPostsByDate } from "~/helpers/sort-posts";
+import { PostCard } from "~/components/PostCard";
+import styles from "./page.module.css";
+import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton";
+import Link from "next/link";
+import React from "react";
 
 export const metadata = {
 	title: "Max Comperatore - Blog",
 	description: "Tutoriales sobre desarrollo de software y videojuegos.",
-}
+};
 
 export default async function Blog() {
-	const posts = await getPosts()
-	const sortedPosts = sortPostsByDate({ posts })
+	const posts = await getPosts();
+	const sortedPosts = sortPostsByDate({ posts });
 
 	return (
 		<main className={styles.wrapper}>
@@ -44,5 +44,5 @@ export default async function Blog() {
 			</div>
 			<ScrollToTopButton />
 		</main>
-	)
+	);
 }

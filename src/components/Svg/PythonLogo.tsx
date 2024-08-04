@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 export const PythonLogo = (props: SVGProps<SVGSVGElement>) => (
 	<svg
@@ -14,4 +14,4 @@ export const PythonLogo = (props: SVGProps<SVGSVGElement>) => (
 			stroke="currentColor"
 		/>
 	</svg>
-)
+);

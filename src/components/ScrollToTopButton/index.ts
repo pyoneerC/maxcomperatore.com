@@ -1,1 +1,1 @@
-export * from "./ScrollToTopButton"
+export * from "./ScrollToTopButton";

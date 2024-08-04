@@ -1,1 +1,1 @@
-export * from "./SkillCard"
+export * from "./SkillCard";

@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 export const DotNetLogo = (props: SVGProps<SVGSVGElement>) => (
 	<svg
@@ -21,4 +21,4 @@ export const DotNetLogo = (props: SVGProps<SVGSVGElement>) => (
 			</clipPath>
 		</defs>
 	</svg>
-)
+);

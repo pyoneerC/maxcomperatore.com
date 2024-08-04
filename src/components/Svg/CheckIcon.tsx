@@ -1,4 +1,4 @@
-import type { SVGProps } from "react"
+import type { SVGProps } from "react";
 
 export const CheckIcon = (props: SVGProps<SVGSVGElement>) => (
 	<svg
@@ -16,4 +16,4 @@ export const CheckIcon = (props: SVGProps<SVGSVGElement>) => (
 		<path stroke="none" d="M0 0h24v24H0z" />
 		<path d="m5 12 5 5L20 7" />
 	</svg>
-)
+);

@@ -1,4 +1,4 @@
-import { HOST_URL } from "~/constants"
+import { HOST_URL } from "~/constants";
 
 export default function robots() {
 	return {
@@ -10,5 +10,5 @@ export default function robots() {
 		],
 		sitemap: `${HOST_URL}/sitemap.xml`,
 		host: HOST_URL,
-	}
+	};
 }

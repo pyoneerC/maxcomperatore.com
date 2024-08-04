@@ -6,7 +6,7 @@ import { ProjectCard } from "~/components/OtherProjectCard";
 export const metadata = {
 	title: "Max Comperatore - Otros proyectos",
 	description: "Proyectos personales de Max Comperatore."
-}
+};
 
 export default function Blog() {
 	return (

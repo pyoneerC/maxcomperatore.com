@@ -1,4 +1,4 @@
-import { Post } from "~/types"
+import { Post } from "~/types";
 
 interface Props {
 	posts: Post[]
@@ -6,13 +6,13 @@ interface Props {
 }
 
 export const sortPostsByDate = ({ posts, descMode = true }: Props) => {
-	if (!posts.length) return []
+	if (!posts.length) return [];
 
 	const sortedPosts = posts.sort((postA, postB) => {
-		const dateATime = new Date(postA.publishedOn).getTime()
-		const dateBTime = new Date(postB.publishedOn).getTime()
-		return descMode ? dateBTime - dateATime : dateATime - dateBTime
-	})
+		const dateATime = new Date(postA.publishedOn).getTime();
+		const dateBTime = new Date(postB.publishedOn).getTime();
+		return descMode ? dateBTime - dateATime : dateATime - dateBTime;
+	});
 
-	return sortedPosts
-}
+	return sortedPosts;
+};

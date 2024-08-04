@@ -1,11 +1,11 @@
-import type { Post } from "~/types"
-import NextLink from "next/link"
-import styles from "./PostCard.module.css"
+import type { Post } from "~/types";
+import NextLink from "next/link";
+import styles from "./PostCard.module.css";
 
 interface Props extends Post {}
 
 export const PostCard: React.FC<Props> = ({ slug, title, description, emoji }) => {
-	const href = `/blog/${slug}`
+	const href = `/blog/${slug}`;
 
 	return (
 		<article className={styles.card}>
@@ -16,5 +16,5 @@ export const PostCard: React.FC<Props> = ({ slug, title, description, emoji }) =
 			</div>
 			<span className={styles.emoji}>{emoji}</span>
 		</article>
-	)
-}
+	);
+};

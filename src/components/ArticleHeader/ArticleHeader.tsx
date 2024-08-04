@@ -1,7 +1,7 @@
-import { localFormatDate } from "~/helpers/local-format-date"
-import { Link } from "~/components/Ui/Link"
-import styles from "./ArticleHeader.module.css"
-import React from "react"
+import { localFormatDate } from "~/helpers/local-format-date";
+import { Link } from "~/components/Ui/Link";
+import styles from "./ArticleHeader.module.css";
+import React from "react";
 
 interface Props {
 	title: string
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const ArticleHeader: React.FC<Props> = ({ title, date }) => {
-	const formattedDate = localFormatDate(date)
+	const formattedDate = localFormatDate(date);
 
 	return (
 		<div className={styles.wrapper}>
@@ -26,5 +26,5 @@ export const ArticleHeader: React.FC<Props> = ({ title, date }) => {
 			<h1 className={styles.title}>{title}</h1>
 			<span className={styles.date}>{formattedDate}</span>
 		</div>
-	)
-}
+	);
+};

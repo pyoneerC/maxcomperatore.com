@@ -1,4 +1,4 @@
-import type { SVGProps } from "react"
+import type { SVGProps } from "react";
 
 export const ItchioIcon = (props: SVGProps<SVGSVGElement>) => (
 
@@ -9,6 +9,6 @@ export const ItchioIcon = (props: SVGProps<SVGSVGElement>) => (
 <path d="M10 16l2 -2l2 2" />
 <path d="M12 14v4" />
 	</svg>
-)
+);
 
-export default ItchioIcon
+export default ItchioIcon;

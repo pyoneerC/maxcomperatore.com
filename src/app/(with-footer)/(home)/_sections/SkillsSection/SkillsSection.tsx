@@ -1,6 +1,6 @@
-import { skills } from "~/data/skills"
-import { SkillCard } from "~/components/SkillCard"
-import styles from "./SkillsSection.module.css"
+import { skills } from "~/data/skills";
+import { SkillCard } from "~/components/SkillCard";
+import styles from "./SkillsSection.module.css";
 
 export const SkillsSection = () => {
 	return (
@@ -12,5 +12,5 @@ export const SkillsSection = () => {
 				))}
 			</div>
 		</section>
-	)
-}
+	);
+};
