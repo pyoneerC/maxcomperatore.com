@@ -10,6 +10,13 @@ export const ProjectsSection = () => {
 			<h2 className={styles.title}>
 				{t("title")}
 			</h2>
+			<p className={styles.subtitle}>
+				if pc {
+				"hover over the cards to see them in color"
+			} else {
+				"press the cards to see them in color"
+			}
+			</p>
 			<div className={styles.projectsWrapper}>
 				{coverProjects.map((project) => (
 					<ProjectCard key={project.name} {...project} />
