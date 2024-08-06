@@ -20,7 +20,7 @@ export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description
 					observer.unobserve(entry.target);
 				}
 			});
-		}, { threshold: 0.5 });
+		}, { threshold: 0.9 });
 
 		if (cardRef.current) {
 			observer.observe(cardRef.current);
