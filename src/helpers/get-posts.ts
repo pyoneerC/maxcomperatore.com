@@ -2,7 +2,7 @@ import type { Post } from "~/types"
 import { readdirSync } from "fs"
 
 export const getPosts = async (): Promise<Post[]> => {
-	const slugs = readdirSync(`./src/app/(with-footer)/blog/(posts)`, { withFileTypes: true }).filter(
+	const slugs = readdirSync(`${process.cwd()}/src/app/(with-footer)/blog/(posts)`, { withFileTypes: true }).filter(
 		(dirent) => dirent.isDirectory()
 	)
 
