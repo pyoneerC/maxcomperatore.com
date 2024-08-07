@@ -72,7 +72,7 @@ export const projects = [
 		...projectMetadata.monedasAPI,
 		index: 1,
 		description:
-			"Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis para garantizar respuestas en menos de 500 ms. Accesible a través del protocolo RESTful y diseñada para la eficiencia y la escalabilidad.",
+			"Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis para garantizar respuestas en menos de 500 ms. Accesible a través del protocolo RESTful y diseñado para la eficiencia y la escalabilidad.",
 		mobileImages:
 			[
 				`/assets/images/projects/monedasapi/json.avif`,
