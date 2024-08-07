@@ -136,6 +136,9 @@ const FAQ = () => {
           <p className={styles.paragraph}>
             {t("a72")}
           </p>
+          <p className={styles.paragraph}>
+            {t("a73")}
+          </p>
         </section>
         <br />
         <section className={styles.section}>
