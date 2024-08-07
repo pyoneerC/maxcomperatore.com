@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './AboutSection.module.css'
 import {useTranslations} from "next-intl"
+import { Button } from "~/components/Ui/Button"
+import Link from "next/link"
 
 export const AboutSection = () => {
 	const t = useTranslations("AboutSection")
@@ -32,9 +34,9 @@ export const AboutSection = () => {
 					<p className={styles.paragraph}>
 						{t("d2")}
 					</p>
-					<p className={styles.paragraph}>
-						{t("d3")}
-					</p>
+					<Link className={styles.goFAQLink} href="/faq">
+						Mas sobre mi
+					</Link>
 				</div>
 			</div>
 		</section>

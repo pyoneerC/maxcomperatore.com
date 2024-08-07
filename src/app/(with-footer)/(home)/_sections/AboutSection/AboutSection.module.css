@@ -19,6 +19,15 @@
 	gap: 20px;
 }
 
+.goFAQLink {
+	font-size: 1.1em;
+	color: var(--text-color);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	border: #4de635 2px solid;
+}
+
 .textWrapper {
 	line-height: 1.6;
 	text-align: center;
