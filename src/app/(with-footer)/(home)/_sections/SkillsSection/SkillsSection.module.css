@@ -37,6 +37,7 @@
 .skillCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .skillCardImage {
@@ -65,13 +66,16 @@
         grid-template-columns: repeat(2, minmax(180px, 1fr));
         max-inline-size: 600px;
         gap: 20px;
+        -webkit-tap-highlight-color: transparent;
     }
     .skillCard {
         padding: 16px;
+        -webkit-tap-highlight-color: transparent;
     }
     .skillCardImage {
         width: 65px;
         height: 65px;
+        -webkit-tap-highlight-color: transparent;
     }
 }
 

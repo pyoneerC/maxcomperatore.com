@@ -41,6 +41,7 @@
 
 .card:focus {
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .iconWrapper {
@@ -84,4 +85,5 @@
 .skillName:focus-visible {
     outline: none;
     box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
 }
