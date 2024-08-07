@@ -132,7 +132,7 @@
 @keyframes circle-pulse {
 	0% {
 		transform: scale(0.875);
-		box-shadow: 0 0 0 0 #4ae1bb;
+		box-shadow: 0 0 0 0 #111111;
 	}
 	50% {
 		transform: scale(1);
