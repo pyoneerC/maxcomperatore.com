@@ -93,15 +93,44 @@
 	border-radius: 10px;
 	border: 3px solid #333;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	transition: filter 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease;
+	transition: filter 0.7s, box-shadow 0.7s, transform 0.7s;
 	filter: grayscale(100%) brightness(70%);
 	transform: scale(1) rotate(0deg);
 }
 
+@-webkit-keyframes shadow-pop-tr {
+	0% {
+		-webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+		box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+		-webkit-transform: translateX(0) translateY(0);
+		transform: translateX(0) translateY(0);
+	}
+	100% {
+		-webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+		box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+		-webkit-transform: translateX(-8px) translateY(8px);
+		transform: translateX(-8px) translateY(8px);
+	}
+}
+@keyframes shadow-pop-tr {
+	0% {
+		-webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+		box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+		-webkit-transform: translateX(0) translateY(0);
+		transform: translateX(0) translateY(0);
+	}
+	100% {
+		-webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+		box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+		-webkit-transform: translateX(-8px) translateY(8px);
+		transform: translateX(-8px) translateY(8px);
+	}
+}
+
 .photoWrapper:hover .photo {
 	filter: grayscale(0%) brightness(100%);
-	transform: scale(1.05) rotate(3deg);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+	animation: shadow-pop-tr 0.7s forwards;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
