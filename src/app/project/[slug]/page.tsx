@@ -6,6 +6,8 @@ import { Link } from "~/components/Ui/Link"
 import styles from "./page.module.css"
 import React from "react"
 
+export const dynamic = 'force-static'
+
 interface Props {
 	params: { slug: string }
 }
@@ -51,7 +53,6 @@ export default function Project({ params }: Props) {
 				<div className={styles.topWrapper}>
 					<section className={styles.detailsSection}>
 						<h1 className={styles.title}>{name}</h1>
-						<p>{renderDescription(description)}</p>
 						<div className={styles.tagsWrapper}>
 							{tags.map((tag) => (
 								<span key={tag} className={styles.tagPill}>
