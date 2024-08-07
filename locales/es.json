@@ -73,7 +73,7 @@
     "a102": "Gracias a la orientación de Santiago Ariel, aprendí a implementar traducciones utilizando i18next y JSON, lo que me permitió llegar a nuevas audiencias de manera eficiente.",
     "q11": "Un momento en el que tuviste que aprender algo nuevo rápidamente?",
     "a111": "Quise desarrollar una API para capturar en tiempo real los precios del dólar en Argentina. Al inicio, el proceso parecía complicado, pero con Python, FASTAPI y una dedicación intensa a estudiar la documentación pertinente, logré construirla con éxito.",
-    "a112": "Esta API, llamada ArgentoFX, logra en solo 400 líneas de Python lo que otros proyectos realizan en miles.",
+    "a112": "Esta API, llamada ArgentoFX, logra en solo 200 líneas de Python lo que otros proyectos realizan en miles.",
     "a113": "Actualmente, es consumida por mi otro proyecto, Mercadix.",
     "q12": "Proyectos que te gustaría hacer en el futuro?",
     "a121": "Una red neuronal compleja para hacer simulaciones en motores gráficos.",
