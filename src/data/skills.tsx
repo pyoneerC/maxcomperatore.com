@@ -5,7 +5,7 @@ import { UnityLogo } from "~/components/Svg/UnityLogo"
 import { UnrealLogo } from "~/components/Svg/UnrealEngineLogo"
 import { CsharpLogo } from "~/components/Svg/CsharpLogo"
 import CppLogo from "~/components/Svg/CppLogo"
-import { ExpressLogo } from "~/components/Svg/ExpressLogo"
+import { RedisLogo } from "~/components/Svg/RedisLogo"
 
 export const skills = [
 	// Backend skills
@@ -20,9 +20,9 @@ export const skills = [
 		brandColor: "#3178C6",
 	},
 	{
-		name: "Express",
-		icon: <ExpressLogo />,
-		brandColor: "#828282"
+		name: "Redis",
+		icon: <RedisLogo />,
+		brandColor: "#D8291F",
 	},
 	{
 		name: "PostgreSQL",
