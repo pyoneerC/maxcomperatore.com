@@ -16,7 +16,9 @@
   },
   "ProjectsSection": {
     "title": "Proyectos Destacados",
-    "seemore": "Ver más iniciativas"
+    "seemore": "Ver más iniciativas",
+    "pc": "Pasa el ratón por encima de las imágenes para verlas en color!",
+    "mobile": "¡Presiona sobre las imágenes para verlas en color!"
   },
   "AboutSection": {
     "title": "Sobre mí",

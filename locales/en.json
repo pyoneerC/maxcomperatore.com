@@ -16,7 +16,9 @@
   },
   "ProjectsSection": {
     "title": "Featured Projects",
-    "seemore": "See more initiatives"
+    "seemore": "See more initiatives",
+    "pc": "Hover over the cards to see them in color!",
+    "mobile": "Press on the cards to see them in color!"
   },
   "AboutSection": {
     "title": "About me",
@@ -128,5 +130,5 @@
     "description": "A puzzle game featuring challenging riddles in a macabre setting.",
     "linkItchIo": "View on itch.io",
     "linkViewVideos": "View game videos"
-    }
   }
+}

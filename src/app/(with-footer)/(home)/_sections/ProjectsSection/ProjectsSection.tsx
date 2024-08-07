@@ -1,21 +1,38 @@
+"use client"
+
 import { coverProjects } from "~/data/projects";
 import { ProjectCard } from "~/components/ProjectCard";
 import styles from "./ProjectsSection.module.css";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react"
 
 export const ProjectsSection = () => {
 	const t = useTranslations("ProjectsSection");
+	const [IsPC, setIsPC] = useState(false);
+	const pc = t("pc");
+	const mobile = t("mobile");
+
+	useEffect(() => {
+		const detectDevice = () => {
+			const isMobileDevice = 'ontouchstart' in window || window.innerWidth < 768;
+			setIsPC(!isMobileDevice);
+		};
+
+		detectDevice();
+
+		window.addEventListener('resize', detectDevice);
+
+		return () => window.removeEventListener('resize', detectDevice);
+	}, []);
+
+	// @ts-ignore
 	return (
 		<section className="section-wrapper">
 			<h2 className={styles.title}>
 				{t("title")}
 			</h2>
 			<p className={styles.subtitle}>
-				if pc {
-				"hover over the cards to see them in color"
-			} else {
-				"press the cards to see them in color"
-			}
+				{IsPC ? pc : mobile}
 			</p>
 			<div className={styles.projectsWrapper}>
 				{coverProjects.map((project) => (
