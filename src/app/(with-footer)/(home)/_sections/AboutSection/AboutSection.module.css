@@ -26,12 +26,19 @@
 	display: flex;
 	justify-content: center;
 	border: 2px solid var(--color-background-tertiary);
-	transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 	padding: 10px 20px;
 }
 
 .goFAQLink:hover {
 	color: var(--color-explanation);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px);
+}
+
+.link:active {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transform: translateY(2px);
 }
 
 .textWrapper {
