@@ -28,9 +28,15 @@
 
 .button {
 	padding-inline: 0;
-	font-size: clamp(25px, 19.424px + 1.489vw, 48px);
+	font-size: 22px;
 	text-decoration: underline;
 	-webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 1024px) {
+	.button {
+		font-size: 30px;
+	}
 }
 
 .hintMessage {
