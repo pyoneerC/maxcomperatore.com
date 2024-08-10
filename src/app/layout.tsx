@@ -27,7 +27,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<meta name="author" content="Max Comperatore" />
 			<meta name="creator" content="Max Comperatore" />
 			<meta property="og:image"
-						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.webp" />
+						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.avif" />
 			{/* Open Graph / Facebook */}
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://maxcomperatore.com/" />
@@ -35,7 +35,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<meta property="og:description"
 						content="Descubre soluciones avanzadas en backend y desarrollo de videojuegos con Max." />
 			<meta property="og:image"
-						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.webp"
+						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.avif"
 						style={{ width: 1200, height: 630 }} />
 			{/* Twitter */}
 			<meta name="twitter:card" content="summary_large_image" />
@@ -43,14 +43,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<meta property="twitter:description"
 						content="Descubre soluciones avanzadas en backend y desarrollo de videojuegos con Max." />
 			<meta property="twitter:image"
-						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.webp"
+						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.avif"
 						style={{ width: 1200, height: 630 }} />
 			<meta property="og:url" content="https://maxcomperatore.com/" />
 			<meta property="og:title" content="Max Comperatore - Desarrollador Backend y de Videojuegos" />
 			<meta property="og:description"
 						content="Descubre soluciones avanzadas en backend y desarrollo de videojuegos con Max." />
 			<meta property="og:image"
-						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.webp"
+						content="https://maxcomperatore.com/assets/images/projects/otherprojectscover/portfolio.avif"
 						style={{ width: 1200, height: 630 }} />
 			<meta property="twitter:creator" content="@pyoneerC" />
 			<meta property="twitter:site" content="@pyoneerC" />
