@@ -30,6 +30,16 @@
 	padding: 10px 20px;
 }
 
+@media (min-width: 1024px) {
+	.goFAQLink {
+		font-size: 1.2em;
+		gap: 8px;
+		display: inline-block;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
 .goFAQLink:hover {
 	color: var(--color-explanation);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
