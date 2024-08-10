@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './AboutSection.module.css'
 import {useTranslations} from "next-intl"
-import { Button } from "~/components/Ui/Button"
 import Link from "next/link"
 
 export const AboutSection = () => {
@@ -26,7 +25,10 @@ export const AboutSection = () => {
 				</div>
 				<div className={styles.textWrapper}>
 					<p className={styles.paragraph}>
-						{t("d0")}
+						{t.rich('d0', {
+							strong: (children) => <strong>{children}</strong>,
+							em: (children) => <em>{children}</em>
+						})}
 					</p>
 					<p className={styles.paragraph}>
 						{t("d1")}
