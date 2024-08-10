@@ -22,10 +22,10 @@
   },
   "AboutSection": {
     "title": "About me",
-    "d0": "Meet Máximo Comperatore, aspiring developer with specialization in Backend and Game Development.",
-    "d1": "Currently, I am studying Game Development at the University of Mendoza and I am also self-taught, constantly looking for new ways to expand my knowledge and skills.",
-    "d2": "I am characterized for being meticulous, organized and friendly, always willing to learn and collaborate in a team.",
-    "d3": "I maintain a proactive, decisive mentality focused on software optimization.",
+    "d0": "Meet <strong>Máximo Comperatore</strong>, aspiring developer with specialization in <strong>Backend</strong> and <strong>Game Development</strong>.",
+    "d1": "Currently, I am studying <strong>Game Development at the University of Mendoza</strong> and I am also <strong>self-taught</strong>, constantly looking for new ways to expand my knowledge and skills.",
+    "d2": "I am characterized for being <strong>meticulous, organized and friendly</strong>, always willing to learn and collaborate in a team.",
+    "d3": "I maintain a <strong>proactive, decisive mentality focused on software optimization</strong>.",
     "mab": "More about me"
   },
   "SkillsSection": {

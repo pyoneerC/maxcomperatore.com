@@ -31,13 +31,21 @@ export const AboutSection = () => {
 						})}
 					</p>
 					<p className={styles.paragraph}>
-						{t("d1")}
+						{t.rich('d1', {
+							strong: (children) => <strong>{children}</strong>
+						})}
 					</p>
 					<p className={styles.paragraph}>
-						{t("d2")}
+						{t.rich('d2', {
+							strong: (children) => <strong>{children}</strong>,
+							em: (children) => <em>{children}</em>
+						})}
 					</p>
 					<p className={styles.paragraph}>
-						{t("d3")}
+						{t.rich('d3', {
+							strong: (children) => <strong>{children}</strong>,
+							em: (children) => <em>{children}</em>
+						})}
 					</p>
 					<Link className={styles.goFAQLink} href="/faq">
 						{t("mab")}&nbsp;
