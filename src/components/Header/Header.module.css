@@ -38,8 +38,8 @@
 }
 
 .homeLogo:hover {
-	filter: brightness(1.3);
-	transform: rotate(-6deg) scale(1.1);
+	filter: brightness(1.5);
+	animation: flicker-3 2.5s infinite both;
 }
 
 .nav {
@@ -75,6 +75,115 @@
 @keyframes fill {
 	to {
 		fill: currentColor;
+	}
+}
+
+@-webkit-keyframes flicker-3 {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	32.98% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0;
+	}
+	34% {
+		opacity: 0;
+	}
+	34.02% {
+		opacity: 1;
+	}
+	34.98% {
+		opacity: 1;
+	}
+	35% {
+		opacity: 0;
+	}
+	35.9% {
+		opacity: 0;
+	}
+	35.92% {
+		opacity: 1;
+	}
+	38.98% {
+		opacity: 1;
+	}
+	39% {
+		opacity: 0;
+	}
+	39.8% {
+		opacity: 0;
+	}
+	39.82% {
+		opacity: 1;
+	}
+	83.98% {
+		opacity: 1;
+	}
+	84% {
+		opacity: 0;
+	}
+	84.9% {
+		opacity: 0;
+	}
+	84.92% {
+		opacity: 1;
+	}
+}
+@keyframes flicker-3 {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	32.98% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0;
+	}
+	34% {
+		opacity: 0;
+	}
+	34.02% {
+		opacity: 1;
+	}
+	34.98% {
+		opacity: 1;
+	}
+	35% {
+		opacity: 0;
+	}
+	35.9% {
+		opacity: 0;
+	}
+	35.92% {
+		opacity: 1;
+	}
+	38.98% {
+		opacity: 1;
+	}
+	39% {
+		opacity: 0;
+	}
+	39.8% {
+		opacity: 0;
+	}
+	39.82% {
+		opacity: 1;
+	}
+	83.98% {
+		opacity: 1;
+	}
+	84% {
+		opacity: 0;
+	}
+	84.9% {
+		opacity: 0;
+	}
+	84.92% {
+		opacity: 1;
 	}
 }
 
