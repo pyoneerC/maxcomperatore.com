@@ -105,13 +105,24 @@ const FAQ = () => {
           <h2 className={styles.title1}>
             {t("q5")}
           </h2>
-            {t("a51")}&nbsp;
-          <span style={{ color: "skyblue", textDecoration: "underline", fontFamily: "inherit", fontSize: "inherit" }}>
+          <ul>
+            <li>
+              <span style={{ color: "skyblue", textDecoration: "underline", fontFamily: "inherit", fontSize: "inherit" }}>
       <a href="https://gist.github.com/pyoneerC/b06fc1390048ff9ef094e70211dc68f8" target="_blank" rel="noopener noreferrer"
          style={{ color: "inherit", textDecoration: "inherit" }}>
+        {t("a51")}
+      </a>
+      </span>
+            </li>
+            <li>
+              <span style={{ color: "skyblue", textDecoration: "underline", fontFamily: "inherit", fontSize: "inherit" }}>
+      <a href="https://gist.github.com/pyoneerC/ca6d52d08562986b39b2932de0327915" target="_blank" rel="noopener noreferrer"
+          style={{ color: "inherit", textDecoration: "inherit" }}>
         {t("a52")}
       </a>
-          </span>
+              </span>
+            </li>
+          </ul>
         </section>
         <br /><br />
         <section className={styles.section}>
