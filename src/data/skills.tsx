@@ -1,6 +1,6 @@
 import { PythonLogo } from "~/components/Svg/PythonLogo"
 import { PostgreSqlLogo } from "~/components/Svg/PostgreSqlLogo"
-import { TypescriptLogo } from "~/components/Svg/TypeScriptLogo"
+import { GitHubActionsLogo } from "~/components/Svg/GitHubActionsLogo"
 import { UnityLogo } from "~/components/Svg/UnityLogo"
 import { UnrealLogo } from "~/components/Svg/UnrealEngineLogo"
 import { CsharpLogo } from "~/components/Svg/CsharpLogo"
@@ -15,9 +15,9 @@ export const skills = [
 		brandColor: "#FFD445",
 	},
 	{
-		name: "TypeScript",
-		icon: <TypescriptLogo />,
-		brandColor: "#3178C6",
+		name: "Actions",
+		icon: <GitHubActionsLogo />,
+		brandColor: "#1E87FF",
 	},
 	{
 		name: "Redis",
