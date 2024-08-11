@@ -18,7 +18,26 @@
     "title": "Featured Projects",
     "seemore": "See more initiatives",
     "pc": "Hover over the cards to see them in color!",
-    "mobile": "Press on the cards to see them in color!"
+    "mobile": "Press on the cards to see them in color!",
+
+    "mercadolibrepricechart": {
+      "name": "Mercadix",
+      "description": "View a live price histogram for any product on MercadoLibre.",
+      "linkVisitSite": "Visit site",
+      "linkViewCode": "View code"
+    },
+    "monedasAPI": {
+      "name": "ArgentoFX",
+      "description": "A RESTful API for obtaining live foreign currency quotes in Argentina.",
+      "linkVisitDocs": "Visit documentation",
+      "linkViewCode": "View code"
+    },
+    "TheDungeon": {
+      "name": "Ephemera",
+      "description": "A puzzle game featuring challenging riddles in a macabre setting.",
+      "linkItchIo": "View on itch.io",
+      "linkViewVideos": "View game videos"
+    }
   },
   "AboutSection": {
     "title": "About me",
@@ -114,23 +133,5 @@
   "Initiatives": {
     "title": "Other initiatives",
     "subtitle": "Personal projects developed to explore new technologies and improve my skills."
-  },
-  "mercadolibrepricechart": {
-    "name": "Mercadix",
-    "description": "View a live price histogram for any product on MercadoLibre.",
-    "linkVisitSite": "Visit site",
-    "linkViewCode": "View code"
-  },
-  "monedasAPI": {
-    "name": "ArgentoFX",
-    "description": "A RESTful API for obtaining live foreign currency quotes in Argentina.",
-    "linkVisitDocs": "Visit documentation",
-    "linkViewCode": "View code"
-  },
-  "TheDungeon": {
-    "name": "Ephemera",
-    "description": "A puzzle game featuring challenging riddles in a macabre setting.",
-    "linkItchIo": "View on itch.io",
-    "linkViewVideos": "View game videos"
   }
 }

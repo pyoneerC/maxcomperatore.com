@@ -18,7 +18,26 @@
     "title": "Proyectos Destacados",
     "seemore": "Ver más iniciativas",
     "pc": "¡Pasa el ratón por encima de las imágenes para verlas en color!",
-    "mobile": "¡Presiona sobre las imágenes para verlas en color!"
+    "mobile": "¡Presiona sobre las imágenes para verlas en color!",
+
+    "mercadolibrepricechart": {
+      "name": "Mercadix",
+      "description": "Visualiza un histograma de precios en vivo para cualquier producto en MercadoLibre.",
+      "linkVisitSite": "Visitar sitio",
+      "linkViewCode": "Ver código"
+    },
+    "monedasAPI": {
+      "name": "ArgentoFX",
+      "description": "API RESTful para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
+      "linkVisitDocs": "Visitar documentación",
+      "linkViewCode": "Ver código"
+    },
+    "TheDungeon": {
+      "name": "Ephemera",
+      "description": "Juego de puzzles que presenta acertijos desafiantes en un entorno maquiavélico.",
+      "linkItchIo": "Ver en itch.io",
+      "linkViewVideos": "Ver vídeos del juego"
+    }
   },
   "AboutSection": {
     "title": "Sobre mí",
@@ -114,23 +133,5 @@
   "Initiatives": {
     "title": "Otras iniciativas",
     "subtitle": "Proyectos personales desarrollados para explorar nuevas tecnologías y mejorar mis habilidades."
-  },
-  "mercadolibrepricechart": {
-    "name": "Mercadix",
-    "description": "Visualiza un histograma de precios en vivo para cualquier producto en MercadoLibre.",
-    "linkVisitSite": "Visitar sitio",
-    "linkViewCode": "Ver código"
-  },
-  "monedasAPI": {
-    "name": "ArgentoFX",
-    "description": "API RESTful para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
-    "linkVisitDocs": "Visitar documentación",
-    "linkViewCode": "Ver código"
-  },
-  "TheDungeon": {
-    "name": "Ephemera",
-    "description": "Juego de puzzles que presenta acertijos desafiantes en un entorno maquiavélico.",
-    "linkItchIo": "Ver en itch.io",
-    "linkViewVideos": "Ver vídeos del juego"
-    }
   }
+}
