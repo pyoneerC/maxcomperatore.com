@@ -1,0 +1,15 @@
+name: Lighthouse
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4.1.7
+      - name: Lighthouse
+        uses: foo-software/lighthouse-check-action@12.0.1
+        with:
+          urls: 'https://maxcomperatore.com'
