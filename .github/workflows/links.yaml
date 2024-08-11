@@ -14,14 +14,3 @@ jobs:
               with:
                   start-url: 'https://maxcomperatore.com'
                   broken-link-message: 'broken link!'
-
-    crawl_for_broken_links:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Check for broken links
-              uses: ScholliYT/Broken-Links-Crawler-Action@v3.3.1
-              with:
-                  website_url: 'https://maxcomperatore.com'
-                  verbose: 'true'
-                  max_retry_time: 30
-                  max_retries: 5

@@ -8,8 +8,8 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4.1.7
+      - uses: actions/checkout@master
       - name: Lighthouse
-        uses: foo-software/lighthouse-check-action@12.0.1
+        uses: foo-software/lighthouse-check-action@master
         with:
           urls: 'https://maxcomperatore.com'
