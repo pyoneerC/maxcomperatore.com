@@ -13,3 +13,5 @@ jobs:
         uses: foo-software/lighthouse-check-action@master
         with:
           urls: 'https://maxcomperatore.com'
+          device: 'all'
+          verbose: 'true'
