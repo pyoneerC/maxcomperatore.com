@@ -3,6 +3,7 @@ export interface CoverProject {
 	name: string
 	imageUrl: string
 	description: string
+	i18nDescriptionKey?: string
 }
 
 export interface Post {
