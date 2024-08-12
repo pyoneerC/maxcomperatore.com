@@ -57,7 +57,7 @@ export const HeroSection = () => {
             <path d="M9.5 14.5l2.5 2.5l2.5 -2.5" />
           </svg>
           <NextLink
-            href="/assets/files/maximocomperatoreresume.pdf"
+            href="/assets/files/Maximo Comperatore Resume.pdf"
             target="_blank"
             prefetch={false}
           >
