@@ -18,6 +18,76 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 	const messages = await getMessages();
 	const canonicalUrl = "https://maxcomperatore.com";
 
+	const structuredData = {
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: "Maximo Comperatore",
+		jobTitle: "Backend & Game Developer",
+		url: "https://maxcomperatore.com",
+		image: "https://maxcomperatore.com/assets/images/maximo_comperatore.avif",
+		sameAs: [
+			"https://www.linkedin.com/in/maxcomperatore/",
+			"https://github.com/maxcomperatore",
+			"https://www.youtube.com/channel/UCgZDAjllREu-3YeU-961EBg",
+			"https://pyoneerc1.itch.io/"
+		],
+		worksFor: {
+			"@type": "Organization",
+			name: "Max Comperatore",
+			url: "https://maxcomperatore.com"
+		},
+		address: {
+			"@type": "PostalAddress",
+			addressLocality: "Mendoza",
+			addressRegion: "Argentina",
+			addressCountry: "AR"
+		},
+		alumniOf: {
+			"@type": "CollegeOrUniversity",
+			name: "University of Mendoza",
+			sameAs: "https://um.edu.ar/"
+		},
+		contactPoint: {
+			"@type": "ContactPoint",
+			contactType: "Work",
+			email: "mailto:maxcomperatore@gmail.com",
+			url: "https://maxcomperatore.com",
+			availableLanguage: ["Spanish", "English"],
+			areaServed: "Global",
+			hoursAvailable: {
+				"@type": "OpeningHoursSpecification",
+				dayOfWeek: [
+					"Monday",
+					"Tuesday",
+					"Wednesday",
+					"Thursday",
+					"Friday"
+				],
+				opens: "09:00",
+				closes: "18:00",
+				timeZone: "America/Argentina/Mendoza"
+			}
+		},
+		knowsLanguage: [
+			{
+				"@type": "Language",
+				name: "Spanish",
+				alternateName: "es"
+			},
+			{
+				"@type": "Language",
+				name: "English",
+				alternateName: "en"
+			}
+		],
+		hasOccupation: {
+			"@type": "Occupation",
+			name: "Software Developer",
+			description: "Specializing in backend development and game development.",
+			occupationalCategory: "15-1132.00",
+			}
+		}
+
 	return (
 		<html lang="es" suppressHydrationWarning>
 		<head>
