@@ -14,7 +14,7 @@ export default function Blog() {
 	return (
 		<main className={styles.wrapper}>
 		<section className={styles.projectsWrapper}>
-			<h2 className={styles.title}>{t("title")}</h2>
+			<h1 className={styles.title}>{t("title")}</h1>
 			<p className={styles.paragraph}>
 				{t("subtitle")}
 			</p>
