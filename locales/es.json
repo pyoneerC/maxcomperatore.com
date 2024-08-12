@@ -24,19 +24,22 @@
       "name": "Mercadix",
       "description": "Visualiza un histograma de precios en vivo para cualquier producto en MercadoLibre.",
       "linkVisitSite": "Visitar sitio",
-      "linkViewCode": "Ver código"
+      "linkViewCode": "Ver código",
+      "about": "Aplicación web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma.\n Utiliza web scraping para obtener los precios, la API ArgentoFX (desarrollada por mí) para el tipo de cambio actualizado a dólares, y Matplotlib para generar gráficos claros y concisos que representan eficazmente la variabilidad de los precios."
     },
     "monedasAPI": {
       "name": "ArgentoFX",
       "description": "API RESTful para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
       "linkVisitDocs": "Visitar documentación",
-      "linkViewCode": "Ver código"
+      "linkViewCode": "Ver código",
+      "about": "Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis, Dockerizado para asegurar un entorno consistente y fácil de desplegar, garantizando respuestas en menos de 500 ms. El servicio es accesible a través del protocolo RESTful y está diseñado para la eficiencia y la escalabilidad."
     },
     "TheDungeon": {
       "name": "Ephemera",
       "description": "Juego de puzzles que presenta acertijos desafiantes en un entorno maquiavélico.",
       "linkItchIo": "Ver en itch.io",
-      "linkViewVideos": "Ver vídeos del juego"
+      "linkViewVideos": "Ver vídeos del juego",
+      "about" : "Te encuentras atrapado en un lugar que parece una oficina, pero algo no cuadra. El ambiente es perturbador.\n Con sólo tu ingenio y algunas herramientas esporádicas, debes enfrentarte a una serie de acertijos y rompecabezas diseñados para poner a prueba tu astucia.\n ¿Serás capaz de encontrar una salida a esta pesadilla?"
     }
   },
   "AboutSection": {
