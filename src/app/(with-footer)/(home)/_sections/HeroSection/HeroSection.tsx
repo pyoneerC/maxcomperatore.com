@@ -36,9 +36,9 @@ export const HeroSection = () => {
       <div className={styles.buttonContainer}>
         <Button rounded="full" size="small" asChild className={styles.button}>
           <NextLink
-            href="https://www.linkedin.com/in/maximo-comperatore-74399b278"
+            href="https://www.linkedin.com/in/maxcomperatore/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
           >
             <span className={styles.availableCircle}></span>
             {t("availability")}
