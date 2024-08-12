@@ -1,9 +1,12 @@
-import type { CoverProject } from '~/types'
-import styles from './ProjectCard.module.css'
+import React from 'react';
+import { useTranslations } from "next-intl"
+import type { CoverProject } from '~/types';
+import styles from './ProjectCard.module.css';
 
 interface Props extends CoverProject {}
 
-export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description }) => {
+export const ProjectCard: React.FC<Props> = ({ imageUrl, name, description }) => {
+	const t = useTranslations("Initiatives");
 
 	return (
 		<article className={styles.card}>
@@ -18,7 +21,7 @@ export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description
 				/>
 			</figure>
 			<h3 className={styles.title}>{name}</h3>
-			<p>{description}</p>
+			<p>{t(description)}</p>
 		</article>
-	)
-}
+	);
+};

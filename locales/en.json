@@ -132,6 +132,7 @@
   },
   "Initiatives": {
     "title": "Other initiatives",
-    "subtitle": "Personal projects developed to explore new technologies and improve my skills."
+    "subtitle": "Personal projects developed to explore new technologies and improve my skills.",
+    "hcr" : "Recreation in Unity with improvements in physics, interface and sound for a more challenging and immersive experience. Inspired by my love for this childhood game."
   }
 }

@@ -135,6 +135,7 @@
   },
   "Initiatives": {
     "title": "Otras iniciativas",
-    "subtitle": "Proyectos personales desarrollados para explorar nuevas tecnologías y mejorar mis habilidades."
+    "subtitle": "Proyectos personales desarrollados para explorar nuevas tecnologías y mejorar mis habilidades.",
+    "hcr" : "Recreación en Unity con mejoras en física, interfaz y sonido para una experiencia más desafiante e inmersiva. Inspirado por mi amor por este juego de la infancia."
   }
 }

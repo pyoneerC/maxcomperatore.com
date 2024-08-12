@@ -40,8 +40,7 @@ export const coverProjects: CoverProjectOther[] = [
 	{
 		...projectMetadata.HillClimbRacing,
 		imageUrl: `/assets/images/projects/otherprojectscover/hcr.avif`,
-		description:
-			"Recreación en Unity con mejoras en física, interfaz y sonido para una experiencia más desafiante e inmersiva. Inspirado por mi amor por este juego de la infancia.",
+		description: "hcr",
 		tags: [Tag.unity, Tag.cSharp],
 		link: "https://github.com/pyoneerC/Hill-Climb-Racing"
 	},
