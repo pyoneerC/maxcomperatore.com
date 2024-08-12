@@ -16,6 +16,8 @@ export const metadata = {
 }
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	const messages = await getMessages();
+	const canonicalUrl = "https://maxcomperatore.com";
+
 	return (
 		<html lang="es" suppressHydrationWarning>
 		<head>
@@ -28,6 +30,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<meta name="creator" content="Max Comperatore" />
 			<meta property="og:image"
 						content="https://maxcomperatore.com/assets/images/socialpreview.webp" />
+
+			<link rel="canonical" href={canonicalUrl} />
+			<link rel="icon" href="/favicon.ico" />
+
 			{/* Open Graph / Facebook */}
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://maxcomperatore.com/" />
