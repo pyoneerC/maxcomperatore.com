@@ -1,6 +1,6 @@
 "use client"
 
-import { coverProjects } from "~/data/projects";
+import { coverProjects, projects } from "~/data/projects"
 import { ProjectCard } from "~/components/ProjectCard";
 import styles from "./ProjectsSection.module.css";
 import { useTranslations } from "next-intl";
@@ -35,8 +35,8 @@ export const ProjectsSection = () => {
 				{IsPC ? pc : mobile}
 			</p>
 			<div className={styles.projectsWrapper}>
-				{coverProjects.map((project) => (
-					<ProjectCard key={project.name} {...project} />
+				{coverProjects.map(({ i18nDescriptionKey, ...projects }) => (
+					<ProjectCard key={projects.name} description={t(i18nDescriptionKey)}  {...projects} />
 				))}
 				<div className={"styles.button-wrapper"}>
 					<a href="/iniciativas" className={styles.link}>

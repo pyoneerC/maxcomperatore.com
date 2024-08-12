@@ -20,19 +20,17 @@ export const coverProjects: CoverProject[] = [
 	{
 		...projectMetadata.mercadolibrepricechart,
 		imageUrl: `/assets/images/projects/cover/mercadolibre.avif`,
-		description: "Visualiza un histograma de precios en vivo para cualquier producto en MercadoLibre.",
+		i18nDescriptionKey: "mercadolibrepricechart.description",
 	},
 	{
 		...projectMetadata.monedasAPI,
 		imageUrl: `/assets/images/projects/cover/monedasapi.avif`,
-		description:
-			"API RESTful para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
+		i18nDescriptionKey: "monedasAPI.description",
 	},
 	{
 		...projectMetadata.TheDungeon,
 		imageUrl: `/assets/images/projects/cover/thedungeon.avif`,
-		description:
-			"Juego de puzzles que presenta acertijos desafiantes en un entorno maquiavélico."
+		i18nDescriptionKey: "TheDungeon.description",
 	},
 ]
 
