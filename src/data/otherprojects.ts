@@ -47,16 +47,14 @@ export const coverProjects: CoverProjectOther[] = [
 	{
 		...projectMetadata.arrayutils,
 		imageUrl: `/assets/images/projects/otherprojectscover/arrayutils.avif`,
-		description:
-			"Colección de funciones adaptadas de la Biblioteca de Plantillas Estándar (STL) de C++, diseñadas para interoperar con el lenguaje de scripting de Unreal Engine.",
+		description: "arrayutils",
 		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
 		link: "https://github.com/pyoneerC/Array-Utils"
 	},
 	{
 		...projectMetadata.thegreatchocolatecaper,
 		imageUrl: `/assets/images/projects/otherprojectscover/thegreatchocolatecaper.avif`,
-		description:
-			"Simulador interactivo donde el jugador asume el papel de una bola de chocolate intentando escapar de una casa laberíntica llena de robots hambrientos.",
+		description: "tgcp",
 		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
 		link: "https://github.com/pyoneerC/The-Great-Chocolate-Caper"
 	},
