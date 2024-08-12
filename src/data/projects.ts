@@ -38,8 +38,7 @@ export const projects = [
 	{
 		...projectMetadata.mercadolibrepricechart,
 		index: 0,
-		description:
-			"Aplicación web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma.\n Utiliza web scraping para obtener los precios, la API ArgentoFX (desarrollada por mí) para el tipo de cambio actualizado a dólares, y Matplotlib para generar gráficos claros y concisos que representan eficazmente la variabilidad de los precios.",
+		description: "mercadolibrepricechart.about",
 		mobileImages:
 			[
 				`/assets/images/projects/mercadolibre/mercadolibrepcmobile.avif`,
@@ -69,8 +68,7 @@ export const projects = [
 	{
 		...projectMetadata.monedasAPI,
 		index: 1,
-		description:
-			"Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis, Dockerizado para asegurar un entorno consistente y fácil de desplegar, garantizando respuestas en menos de 500 ms. El servicio es accesible a través del protocolo RESTful y está diseñado para la eficiencia y la escalabilidad.",
+		description: "monedasAPI.about",
 		mobileImages:
 			[
 				`/assets/images/projects/monedasapi/json.avif`,
@@ -99,8 +97,7 @@ export const projects = [
 	{
 		...projectMetadata.TheDungeon,
 		index: 2,
-		description:
-			"Te encuentras atrapado en un lugar que parece una oficina, pero algo no cuadra. El ambiente es perturbador.\n Con sólo tu ingenio y algunas herramientas esporádicas, debes enfrentarte a una serie de acertijos y rompecabezas diseñados para poner a prueba tu astucia.\n ¿Serás capaz de encontrar una salida a esta pesadilla?",
+		description: "TheDungeon.about",
 		mobileImages:
 			[
 				`/assets/images/projects/thedungeon/library.avif`,

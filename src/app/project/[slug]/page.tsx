@@ -5,8 +5,7 @@ import { getPrevAndNextProjectSlug, getProjectBySlug } from "~/helpers/get-proje
 import { Link } from "~/components/Ui/Link"
 import styles from "./page.module.css"
 import React from "react"
-
-export const dynamic = 'force-static'
+import { useTranslations} from "next-intl"
 
 interface Props {
 	params: { slug: string }
@@ -37,6 +36,7 @@ export default function Project({ params }: Props) {
 	const { index, name, description, mobileImages, desktopImages, links, tags } = project
 
 	const [prevProjectSlug, nextProjectSlug] = getPrevAndNextProjectSlug(index)
+	const t = useTranslations("ProjectsSection")
 
 	const renderDescription = (text: string) => {
 		return text.split('\n').map((item, key) => {
@@ -53,7 +53,7 @@ export default function Project({ params }: Props) {
 				<div className={styles.topWrapper}>
 					<section className={styles.detailsSection}>
 						<h1 className={styles.title}>{name}</h1>
-						<p>{renderDescription(description)}</p>
+						<p>{renderDescription(t(description))}</p>
 						<div className={styles.tagsWrapper}>
 							{tags.map((tag) => (
 								<span key={tag} className={styles.tagPill}>
