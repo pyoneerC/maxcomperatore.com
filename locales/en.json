@@ -28,7 +28,7 @@
     },
     "monedasAPI": {
       "name": "ArgentoFX",
-      "description": "A RESTful API for obtaining live foreign currency quotes in Argentina.",
+      "description": "Real-time foreign exchange rates API, for Argentina.",
       "linkVisitDocs": "Visit documentation",
       "linkViewCode": "View code"
     },
