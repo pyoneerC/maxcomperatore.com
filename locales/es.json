@@ -138,6 +138,9 @@
     "subtitle": "Proyectos personales desarrollados para explorar nuevas tecnologías y mejorar mis habilidades.",
     "hcr" : "Recreación en Unity con mejoras en física, interfaz y sonido para una experiencia más desafiante e inmersiva. Inspirado por mi amor por este juego de la infancia.",
     "arrayutils" : "Colección de funciones adaptadas de la Biblioteca de Plantillas Estándar (STL) de C++, diseñadas para interoperar con el lenguaje de scripting de Unreal Engine.",
-    "tgcp" : "Simulador interactivo donde el jugador asume el papel de una bola de chocolate intentando escapar de una casa laberíntica llena de robots hambrientos."
+    "tgcp" : "Simulador interactivo donde el jugador asume el papel de una bola de chocolate intentando escapar de una casa laberíntica llena de robots hambrientos.",
+    "pd" : "Simulador de manejo ambientado en una ciudad gótica con gráficos al estilo de la PlayStation 2.",
+    "crmp" : "Herramienta web diseñada para calcular la ganancia de inversiones a lo largo del tiempo, ofreciendo una interfaz intuitiva y respuestas inmediatas.",
+    "uepc" : "Script de línea de comandos que optimiza el mantenimiento de proyectos de Unreal Engine eliminando carpetas temporales de forma efectiva, segura y rápida."
   }
 }

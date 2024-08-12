@@ -61,23 +61,21 @@ export const coverProjects: CoverProjectOther[] = [
 	{
 		...projectMetadata.pixelateddrift,
 		imageUrl: `/assets/images/projects/otherprojectscover/pixelateddrift.avif`,
-		description:
-			"Simulador de manejo ambientado en una ciudad gótica con gráficos al estilo de la PlayStation 2.",
+		description: "pd",
 		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
 		link: "https://pyoneerc1.itch.io/pixelateddrift"
 	},
 	{
 		...projectMetadata.calculadorarendimientosmercadopago,
 		imageUrl: `/assets/images/projects/otherprojectscover/calculadorarendimientosmercadopago.avif`,
-		description:
-			"Herramienta web diseñada para calcular la ganancia de inversiones a lo largo del tiempo, ofreciendo una interfaz intuitiva y respuestas inmediatas.",
+		description: "crmp",
 		tags: [Tag.javascript, Tag.html, Tag.css],
 		link: "https://pyoneerc.github.io/rendimientos-mercado-pago/"
 	},
 	{
 		...projectMetadata.unrealengineprojectcleaner,
 		imageUrl: `/assets/images/projects/otherprojectscover/unrealengineprojectcleaner.avif`,
-		description: "Script de línea de comandos que optimiza el mantenimiento de proyectos de Unreal Engine eliminando carpetas temporales de forma efectiva, segura y rápida.",
+		description: "uepc",
 		tags: [Tag.powershell, Tag.cli],
 		link: "https://github.com/pyoneerC/Unreal-Engine-Project-Cleaner"
 	},
