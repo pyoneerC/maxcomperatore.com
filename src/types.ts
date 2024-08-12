@@ -1,9 +1,9 @@
 export interface CoverProject {
-	slug: string
-	name: string
-	imageUrl: string
-	description: string
-	i18nDescriptionKey?: string
+	slug: string,
+	name: string,
+	imageUrl: string,
+	i18nDescriptionKey?: string,
+	description?: string
 }
 
 export interface Post {
