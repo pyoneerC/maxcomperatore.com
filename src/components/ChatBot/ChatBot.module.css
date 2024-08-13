@@ -63,6 +63,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
     margin: 0;
     position: relative;
+    transform: translateY(5px);
     z-index: 1;
     overflow: hidden;
     border-image: linear-gradient(45deg, #0070f3, #00aaff, #0070f3, #005bb5) 1;
@@ -160,11 +161,6 @@
     100% {
         border-image-source: linear-gradient(405deg, #0070f3, #00aaff, #0070f3, #005bb5);
     }
-}
-
-
-.button:active {
-    transform: translateY(0);
 }
 
 .button:disabled {
