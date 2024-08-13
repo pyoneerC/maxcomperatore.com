@@ -65,7 +65,6 @@ export const HeroSection = () => {
             {t("download")}
           </NextLink>
         </Button>
-        <Chatbot />
         <ContactDialog
           trigger={
             <Button className={styles.actionBtn} type="button">
@@ -74,6 +73,7 @@ export const HeroSection = () => {
           }
         />
         <CopyEmailSmallButton className={styles.copyEmailButton} />
+        <Chatbot />
         <ScrollToTopButton />
       </div>
     </section>
