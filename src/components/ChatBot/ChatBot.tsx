@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
+import styles from './ChatBot.module.css';
 
 const Chatbot = () => {
 	const [input, setInput] = useState('');
@@ -68,14 +69,14 @@ const Chatbot = () => {
 
 	// @ts-ignore
 	return (
-		<div className="chatbot-container">
-			<div className="chatbox">
+		<div>
+			<div>
 				{messages.map((message, index) => (
-					<div key={index} className={`message ${message["role"]}`}>
+					<div key={index} className={`${styles.message} ${styles[message["role"]]}`}>
 						{message["content"]}
 					</div>
 				))}
-				{loading && <div className="message assistant">Loading...</div>}
+				{loading && <div className={`${styles.message} ${styles.assistant}`}>Typing...</div>}
 			</div>
 			<input
 				type="text"
@@ -83,9 +84,9 @@ const Chatbot = () => {
 				onChange={handleInputChange}
 				onKeyPress={handleKeyPress}
 				placeholder="Chat with Max AI..."
-				className="chat-input"
+				className={styles['chat-input']}
 			/>
-			<button onClick={sendMessage} disabled={loading} className="send-button">
+			<button onClick={sendMessage} disabled={loading} className={styles.button}>
 				Send
 			</button>
 		</div>
