@@ -19,24 +19,24 @@
 }
 
 .message.assistant {
-    background-color: #f3f4f6;
-    color: #333333;
+    background-color: var(--color-background-tertiary);
+    color: var(--color-text);
     text-align: left;
     border-bottom-left-radius: 0;
 }
 
 .message.assistant.typing {
     font-style: italic;
-    color: #888888;
+    color: var(--color-text);
 }
 
 .chat-input {
     width: calc(100% - 40px);
     padding: 14px;
     margin: 15px 10px;
-    border: 2px solid #eaeaea;
+    border: 2px solid var(--color-background-tertiary);
     border-radius: 10px;
-    background-color: #fafafa;
+    background-color: var(--color-background);
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -45,16 +45,15 @@
 }
 
 .chat-input:focus {
-    background-color: #ffffff;
-    border-color: #0070f3;
+    background-color: var(--color-background);
+    border-color: var(--color-background-tertiary);
 }
 
 .button {
-    padding: 12px 25px;
-    margin: 15px 10px;
-    background-color: #0070f3;
-    color: white;
-    border: none;
+    background-color: var(--color-background);
+    padding: 14px 25px;
+    border: 2px solid #0070f3;
+    color: var(--color-text);
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
