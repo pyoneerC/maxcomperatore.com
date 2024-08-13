@@ -31,9 +31,9 @@
 }
 
 .chat-input {
-    width: calc(100% - 40px);
+    margin-top: 20px;
+    flex: 1;
     padding: 14px;
-    margin: 15px 10px;
     border: 2px solid var(--color-background-tertiary);
     border-radius: 10px;
     background-color: var(--color-background);
@@ -54,12 +54,13 @@
     padding: 14px 25px;
     border: 2px solid #0070f3;
     color: var(--color-text);
-    border-radius: 10px;
+    border-radius: 0 8px 8px 0;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 118, 255, 0.3);
     transition: background-color 0.2s ease, transform 0.2s ease;
+    margin: 0;
 }
 
 .button:disabled {
