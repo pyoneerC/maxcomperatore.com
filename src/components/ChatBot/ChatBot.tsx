@@ -70,8 +70,8 @@ const Chatbot = () => {
 		<div className="chatbot-container">
 			<div className="chatbox">
 				{messages.map((message, index) => (
-					<div key={index} className={`message ${message.role}`}>
-						{message.content}
+					<div key={index} className={`message ${message["role"]}`}>
+						{message["content"]}
 					</div>
 				))}
 				{loading && <div className="message assistant">Loading...</div>}
