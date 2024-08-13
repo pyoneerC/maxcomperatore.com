@@ -68,6 +68,20 @@
     animation: borderAnimation 5s infinite linear;
 }
 
+@media (max-width: 768px) {
+    
+    .chat-input {
+        border-radius: 8px 0 0 8px;
+        padding: 12px;
+    }
+
+    .button {
+        border-radius: 0 8px 8px 0;
+        padding: 12px 20px;
+        flex-shrink: 0;
+    }
+}
+
 @keyframes borderAnimation {
     0% {
         border-image-source: linear-gradient(45deg, #0070f3, #00aaff, #0070f3, #005bb5);
