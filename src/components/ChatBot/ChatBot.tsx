@@ -38,7 +38,9 @@ const Chatbot = () => {
 					],
 					max_tokens: 40,
 					stop: ['\n', '.'],
-					temperature: 1.2,
+					temperature: 0.75,
+					top_p: 1,
+					frequency_penalty: 0,
 				}),
 			});
 
