@@ -56,6 +56,11 @@
 	transition: filter 250ms ease-in-out, transform 250ms ease-in-out;
 	transform-origin: center;
 	will-change: transform, filter;
+	mask-image: linear-gradient(
+		to bottom,
+		black 70%,
+		transparent
+	);
 }
 
 .card:hover .image {
