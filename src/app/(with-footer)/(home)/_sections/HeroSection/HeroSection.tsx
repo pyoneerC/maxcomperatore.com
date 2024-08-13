@@ -7,6 +7,7 @@ import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton"
 import Clock from "~/components/Clock/Clock";
 import ArgentinaFlag from "~/components/Svg/ArgentinaFlag"
 import { useTranslations } from 'next-intl';
+import Chatbot from "~/components/ChatBot/ChatBot"
 
 export const HeroSection = () => {
   const t = useTranslations('HeroSection');
@@ -64,6 +65,7 @@ export const HeroSection = () => {
             {t("download")}
           </NextLink>
         </Button>
+        <Chatbot />
         <ContactDialog
           trigger={
             <Button className={styles.actionBtn} type="button">
