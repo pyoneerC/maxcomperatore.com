@@ -60,7 +60,7 @@ export const HeroSection = () => {
           <NextLink
             href={t("resumeUrl")}
             target="_blank"
-            prefetch={false}
+            prefetch={true}
           >
             {t("download")}
           </NextLink>
