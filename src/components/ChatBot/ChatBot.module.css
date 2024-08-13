@@ -49,7 +49,6 @@
     border-color: var(--color-background-tertiary);
 }
 
-/* Estilo del botón con animación de borde en movimiento */
 .button {
     background-color: var(--color-background);
     padding: 14px 25px;
@@ -95,14 +94,12 @@
     transform: translateY(0);
 }
 
-
 .button:disabled {
-    background-color: #a0a0a0;
+    background-color: var(--color-background-tertiary);
     cursor: not-allowed;
 }
 
 .button:hover:not(:disabled) {
-    background-color: #005bb5;
     transform: translateY(-2px);
 }
 
