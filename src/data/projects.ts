@@ -42,11 +42,11 @@ export const projects = [
 		mobileImages:
 			[
 				`/assets/images/projects/mercadolibre/mercadolibrepcmobile.avif`,
-				`/assets/images/projects/mercadolibre/mercadolibrepchistograma.avif`
+				`/assets/images/projects/mercadolibre/mercadolibrepchistograma.avif`,
+				`/assets/images/projects/mercadolibre/mercadolibrepcmac.avif`,
 			],
 		desktopImages:
 			[
-				`/assets/images/projects/mercadolibre/mercadolibrepcmac.avif`,
 				`/assets/images/projects/mercadolibre/mercadolibrepcdiagrama.avif`
 			],
 		links: [
@@ -72,10 +72,10 @@ export const projects = [
 		mobileImages:
 			[
 				`/assets/images/projects/monedasapi/json.avif`,
+				`/assets/images/projects/monedasapi/mac.avif`,
 			],
 		desktopImages:
 			[
-				`/assets/images/projects/monedasapi/mac.avif`,
 				`/assets/images/projects/monedasapi/architecturediagram.avif`
 			],
 		links: [
@@ -101,11 +101,11 @@ export const projects = [
 		mobileImages:
 			[
 				`/assets/images/projects/thedungeon/library.avif`,
-				`/assets/images/projects/thedungeon/thedungeon.gif`
+				`/assets/images/projects/thedungeon/thedungeon.gif`,
+				`/assets/images/projects/thedungeon/pistol.avif`,
 			],
 		desktopImages: [
 			`/assets/images/projects/thedungeon/streamer.avif`,
-			`/assets/images/projects/thedungeon/pistol.avif`,
 		],
 		links: [
 			{

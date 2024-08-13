@@ -20,6 +20,8 @@
     "seemore": "See more initiatives",
     "pc": "Hover over the cards to see them in color!",
     "mobile": "Press on the cards to see them in color!",
+    "next" : "Next",
+    "previous" : "Previous",
 
     "mercadolibrepricechart": {
       "name": "Mercadix",
