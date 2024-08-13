@@ -49,10 +49,11 @@
     border-color: var(--color-background-tertiary);
 }
 
+/* Estilo del botón con animación de borde en movimiento */
 .button {
     background-color: var(--color-background);
     padding: 14px 25px;
-    border: 2px solid #0070f3;
+    border: 2px solid transparent;
     color: var(--color-text);
     border-radius: 0 8px 8px 0;
     font-family: 'Inter', sans-serif;
@@ -61,7 +62,39 @@
     box-shadow: 0 4px 12px rgba(0, 118, 255, 0.3);
     transition: background-color 0.2s ease, transform 0.2s ease;
     margin: 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-image: linear-gradient(45deg, #0070f3, #00aaff, #0070f3, #005bb5) 1;
+    animation: borderAnimation 5s infinite linear;
 }
+
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(45deg, #0070f3, #00aaff, #0070f3, #005bb5);
+    }
+    25% {
+        border-image-source: linear-gradient(135deg, #005bb5, #0070f3, #00aaff, #0070f3);
+    }
+    50% {
+        border-image-source: linear-gradient(225deg, #0070f3, #005bb5, #0070f3, #00aaff);
+    }
+    75% {
+        border-image-source: linear-gradient(315deg, #00aaff, #0070f3, #005bb5, #0070f3);
+    }
+    100% {
+        border-image-source: linear-gradient(405deg, #0070f3, #00aaff, #0070f3, #005bb5);
+    }
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
 
 .button:disabled {
     background-color: #a0a0a0;
