@@ -90,6 +90,7 @@ const Chatbot = () => {
 			</div>
 			<input
 				type="text"
+				required={true}
 				value={input}
 				onChange={handleInputChange}
 				onKeyPress={handleKeyPress}
