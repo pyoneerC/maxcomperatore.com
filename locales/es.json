@@ -45,7 +45,8 @@
   },
   "AI" : {
     "placeholder": "Chatea con Max IA...",
-    "send": "Enviar"
+    "send": "Enviar",
+    "typing": "Max IA está escribiendo..."
   },
   "AboutSection": {
     "title": "Sobre mí",

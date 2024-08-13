@@ -53,7 +53,8 @@
   },
   "AI" : {
     "placeholder": "Chat with Max AI...",
-    "send": "Send"
+    "send": "Send",
+    "typing": "Max AI is typing..."
   },
   "SkillsSection": {
     "title": "Recently used technologies"
