@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import styles from './ChatBot.module.css';
+import {useTranslations} from "next-intl"
 
 const Chatbot = () => {
 	const [input, setInput] = useState('');
@@ -72,6 +73,8 @@ const Chatbot = () => {
 	const getLastMessages = (messages: any) => {
 		return messages.slice(Math.max(messages.length - 3, 0));
 	};
+
+	const t = useTranslations("AI");
 	
 	// @ts-ignore
 	return (
@@ -82,18 +85,19 @@ const Chatbot = () => {
 						{message.content}
 					</div>
 				))}
-				{loading && <div className={`${styles.message} ${styles.assistant}`}>Typing...</div>}
+				{loading && <div className={`${styles.message} ${styles.assistant}`}>Typing...
+				</div>}
 			</div>
 			<input
 				type="text"
 				value={input}
 				onChange={handleInputChange}
 				onKeyPress={handleKeyPress}
-				placeholder="Chat with Max AI..."
+				placeholder={t("placeholder")}
 				className={styles['chat-input']}
 			/>
 			<button onClick={sendMessage} disabled={loading} className={styles.button}>
-				Send
+				{t("send")}
 			</button>
 		</div>
 	);

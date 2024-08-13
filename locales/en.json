@@ -51,6 +51,10 @@
     "d3": "I maintain a <strong>proactive, decisive mentality focused on software optimization</strong>.",
     "mab": "More about me"
   },
+  "AI" : {
+    "placeholder": "Chat with Max AI...",
+    "send": "Send"
+  },
   "SkillsSection": {
     "title": "Recently used technologies"
   },
