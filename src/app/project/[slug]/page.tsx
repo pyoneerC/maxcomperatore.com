@@ -7,6 +7,8 @@ import styles from "./page.module.css"
 import React from "react"
 import { useTranslations} from "next-intl"
 
+export const dynamic = 'auto'
+
 interface Props {
 	params: { slug: string }
 }
@@ -24,7 +26,7 @@ export function generateMetadata({ params }: Props) {
 	}
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
 	return projects.map(({ slug }) => ({
 		params: { slug },
 	}))
