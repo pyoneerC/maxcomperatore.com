@@ -7,8 +7,6 @@ import styles from "./page.module.css"
 import React from "react"
 import { useTranslations} from "next-intl"
 
-export const dynamic = 'force-static'
-
 interface Props {
 	params: { slug: string }
 }
