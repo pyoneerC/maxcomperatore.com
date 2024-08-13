@@ -69,13 +69,17 @@ const Chatbot = () => {
 		}
 	};
 
+	const getLastMessages = (messages: any) => {
+		return messages.slice(Math.max(messages.length - 3, 0));
+	};
+	
 	// @ts-ignore
 	return (
 		<div>
-			<div>
-				{messages.map((message, index) => (
-					<div key={index} className={`${styles.message} ${styles[message["role"]]}`}>
-						{message["content"]}
+			<div className={styles.chatContainer}>
+				{getLastMessages(messages).map((message: { role: string | number; content: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | null | undefined; }, index: React.Key | null | undefined) => (
+					<div key={index} className={`${styles.message} ${styles[message.role]}`}>
+						{message.content}
 					</div>
 				))}
 				{loading && <div className={`${styles.message} ${styles.assistant}`}>Typing...</div>}
