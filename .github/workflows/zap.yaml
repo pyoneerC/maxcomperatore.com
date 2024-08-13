@@ -1,12 +1,6 @@
 name: Run ZAP Scan
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *'
-
 jobs:
   scan:
     runs-on: ubuntu-latest
