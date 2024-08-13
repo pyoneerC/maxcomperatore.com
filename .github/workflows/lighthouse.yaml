@@ -1,4 +1,5 @@
-name: Lighthouse
+name: Run Lighthouse Check
+
 on:
   push:
     branches:
