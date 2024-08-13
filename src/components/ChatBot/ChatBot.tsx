@@ -7,7 +7,7 @@ const Chatbot = () => {
 	const [messages, setMessages] = useState([]);
 	const [loading, setLoading] = useState(false);
 
-	const handleInputChange = (e) => {
+	const handleInputChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
 		setInput(e.target.value);
 	};
 
@@ -18,6 +18,7 @@ const Chatbot = () => {
 
 		const userMessage = { role: 'user', content: input };
 		const newMessages = [...messages, userMessage];
+		// @ts-ignore
 		setMessages(newMessages);
 
 		try {
@@ -45,10 +46,12 @@ const Chatbot = () => {
 				content: data.choices[0].message.content,
 			};
 
+			// @ts-ignore
 			setMessages((prevMessages) => [...prevMessages, botMessage]);
 		} catch (error) {
 			console.error('Error fetching AI response:', error);
 			const errorMessage = { role: 'assistant', content: 'Sorry, something went wrong. Please try again later.' };
+			// @ts-ignore
 			setMessages((prevMessages) => [...prevMessages, errorMessage]);
 		}
 
@@ -56,12 +59,13 @@ const Chatbot = () => {
 		setLoading(false);
 	};
 
-	const handleKeyPress = (e) => {
+	const handleKeyPress = (e: { key: string; }) => {
 		if (e.key === 'Enter') {
 			sendMessage();
 		}
 	};
 
+	// @ts-ignore
 	return (
 		<div className="chatbot-container">
 			<div className="chatbox">
