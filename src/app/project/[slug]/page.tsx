@@ -24,7 +24,7 @@ export function generateMetadata({ params }: Props) {
 	}
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
 	return projects.map(({ slug }) => ({
 		params: { slug },
 	}))
