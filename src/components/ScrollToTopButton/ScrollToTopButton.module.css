@@ -4,7 +4,7 @@
     right: 20px;
     width: 40px;
     height: 40px;
-    background-color: var(--color-background);
+    background-color: var(--color-background-tertiary);
     color: var(--color-explanation);
     border-radius: 50%;
     display: flex;
