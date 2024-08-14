@@ -27,7 +27,7 @@
 	will-change: transform, filter;
 	mask-image: linear-gradient(
 			to bottom,
-			black 65%,
+			black 60%,
 			transparent
 	);
 }
