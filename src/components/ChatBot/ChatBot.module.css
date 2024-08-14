@@ -53,7 +53,7 @@
     padding: 14px 25px;
     border: 2px solid transparent;
     color: var(--color-text);
-    border-radius: 0 8px 8px 0;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 118, 255, 0.3);
@@ -62,22 +62,19 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    border-image: linear-gradient(45deg, #0070f3, #00aaff, #0070f3, #005bb5) 1;
-    animation: borderAnimation 5s infinite linear;
+    border-color: #0070f3;
 }
 
 .button::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    background: radial-gradient(circle, rgba(0, 118, 255, 0.4), rgba(0, 170, 255, 0.1));
-    transform: translate(-50%, -50%) scale(0.6);
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
     z-index: -1;
+    border-radius: inherit;
+    animation: borderAnimation 5s infinite linear;
 }
 
 .button:hover::before {
@@ -86,7 +83,6 @@
 }
 
 .button:hover {
-    color: #fff;
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 118, 255, 0.7), 0 0 20px rgba(0, 118, 255, 0.5);
 }
