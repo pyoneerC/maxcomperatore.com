@@ -41,7 +41,7 @@
 }
 
 .scrollToTop:hover {
-    background-color: var(--color-background-tertiary);
+    background-color: var(--color-background-fourth);
 }
 
 @media (min-width: 768px) {
