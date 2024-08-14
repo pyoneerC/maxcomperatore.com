@@ -35,7 +35,7 @@
       "description": "API para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
       "linkVisitDocs": "Visitar documentación",
       "linkViewCode": "Ver código",
-      "about": "Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis, Dockerizado para asegurar un entorno consistente y fácil de desplegar, garantizando respuestas en menos de 500 ms. El servicio es accesible a través del protocolo RESTful y está diseñado para la eficiencia y la escalabilidad."
+      "about": "Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis, Dockerizado para asegurar un entorno consistente y fácil de desplegar, garantizando respuestas en menos de 400 ms. El servicio es accesible a través del protocolo RESTful y está diseñado para la eficiencia y la escalabilidad."
     },
     "TheDungeon": {
       "name": "Ephemera",
