@@ -34,6 +34,10 @@ export const projectMetadata = {
 		slug: "thegreatchocolatecaper",
 		name: "The Great Chocolate Caper",
 	},
+	roadmapsh: {
+		slug: "roadmapsh",
+		name: "Roadmap.sh",
+	},
 }
 
 export const coverProjects: CoverProjectOther[] = [
@@ -43,6 +47,12 @@ export const coverProjects: CoverProjectOther[] = [
 		description: "hcr",
 		tags: [Tag.unity, Tag.cSharp],
 		link: "https://github.com/pyoneerC/Hill-Climb-Racing"
+	},
+	{
+		...projectMetadata.roadmapsh,
+		imageUrl: `/assets/images/projects/otherprojectscover/roadmapsh.avif`,
+		description: "roadmapsh",
+		link: "https://roadmap.sh"
 	},
 	{
 		...projectMetadata.arrayutils,
