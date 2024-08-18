@@ -8,7 +8,7 @@ export const projectMetadata = {
 	},
 	monedasAPI: {
 		slug: "monedasAPI",
-		name: "ArgentoFX",
+		name: "BlinkLink",
 	},
 	TheDungeon: {
 		slug: "the-dungeon",
