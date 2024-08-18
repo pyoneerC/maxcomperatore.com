@@ -71,7 +71,7 @@ export const projects = [
 		description: "monedasAPI.about",
 		mobileImages:
 			[
-				`/assets/images/projects/monedasapi/json.avif`,
+				`/assets/images/projects/monedasapi/postman.gif`,
 				`/assets/images/projects/monedasapi/mac.avif`,
 			],
 		desktopImages:
