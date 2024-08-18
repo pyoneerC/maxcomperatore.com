@@ -35,7 +35,7 @@
       "description": "API robusta para acortar URLs, utilizando operaciones CRUD.",
       "linkVisitDocs": "Visitar documentación",
       "linkViewCode": "Ver código",
-      "about": "Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis, Dockerizado para asegurar un entorno consistente y fácil de desplegar, garantizando respuestas en menos de 400 ms. El servicio es accesible a través del protocolo RESTful y está diseñado para la eficiencia y la escalabilidad."
+      "about": "Con el objetivo de profundizar en el desarrollo de APIs y la administración de bases de datos, desarrollé BlinkLink, una API pública que ofrece un servicio avanzado de acortamiento de URLs. \n\nBlinkLink está diseñada para proporcionar un rendimiento eficiente y escalable, integrando operaciones CRUD que permiten una gestión completa y segura de los enlaces."
     },
     "TheDungeon": {
       "name": "Ephemera",
