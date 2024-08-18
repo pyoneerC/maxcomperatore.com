@@ -14,9 +14,9 @@ export const projectMetadata = {
 		slug: "hangman",
 		name: "Hangman",
 	},
-	calculadorarendimientosmercadopago: {
-		slug: "calculadorarendimientosmercadopago",
-		name: "Calculadora de Rendimientos MercadoPago",
+	argentofx: {
+		slug: "argentofx",
+		name: "ArgentoFX",
 	},
 	pixelateddrift: {
 		slug: "pixelateddrift",
@@ -42,17 +42,24 @@ export const projectMetadata = {
 
 export const coverProjects: CoverProjectOther[] = [
 	{
+		...projectMetadata.roadmapsh,
+		imageUrl: `/assets/images/projects/otherprojectscover/roadmapsh.avif`,
+		description: "roadmapsh",
+		link: "https://roadmap.sh"
+	},
+	{
+		...projectMetadata.argentofx,
+		imageUrl: `/assets/images/projects/cover/monedasapi.avif`,
+		description: "afx",
+		tags: [Tag.python, Tag.redis, Tag.docker],
+		link: "https://maxcomperatore.online/docs",
+	},
+	{
 		...projectMetadata.HillClimbRacing,
 		imageUrl: `/assets/images/projects/otherprojectscover/hcr.avif`,
 		description: "hcr",
 		tags: [Tag.unity, Tag.cSharp],
 		link: "https://github.com/pyoneerC/Hill-Climb-Racing"
-	},
-	{
-		...projectMetadata.roadmapsh,
-		imageUrl: `/assets/images/projects/otherprojectscover/roadmapsh.avif`,
-		description: "roadmapsh",
-		link: "https://roadmap.sh"
 	},
 	{
 		...projectMetadata.arrayutils,
@@ -74,19 +81,5 @@ export const coverProjects: CoverProjectOther[] = [
 		description: "pd",
 		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
 		link: "https://pyoneerc1.itch.io/pixelateddrift"
-	},
-	{
-		...projectMetadata.calculadorarendimientosmercadopago,
-		imageUrl: `/assets/images/projects/otherprojectscover/calculadorarendimientosmercadopago.avif`,
-		description: "crmp",
-		tags: [Tag.javascript, Tag.html, Tag.css],
-		link: "https://pyoneerc.github.io/rendimientos-mercado-pago/"
-	},
-	{
-		...projectMetadata.unrealengineprojectcleaner,
-		imageUrl: `/assets/images/projects/otherprojectscover/unrealengineprojectcleaner.avif`,
-		description: "uepc",
-		tags: [Tag.powershell, Tag.cli],
-		link: "https://github.com/pyoneerC/Unreal-Engine-Project-Cleaner"
 	},
 ]

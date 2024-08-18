@@ -120,7 +120,7 @@
     "a131": "Durante una game jam organizada por la universidad a la que asisto, un compañero no sabía muy bien como hacer cierta funcionalidad con el scripting de Unreal Engine.",
     "a132": "Le enseñé varias funcionalidades clave, recomendé recursos útiles y juntos revisamos su código. Al final, logramos terminar el juego a tiempo y con éxito.",
     "q14": "Agradecimientos",
-    "a141": "Quiero expresar mi profundo agradecimiento a Colin Schmale, Franco Yudica, y Enzo Notario, quienes han sido fundamentales en mi carrera por sus valiosos consejos y constante apoyo.",
+    "a141": "Quiero expresar mi profundo agradecimiento a Colin Schmale, Javier Andres Solarte, y Enzo Notario, quienes han sido fundamentales en mi carrera por sus valiosos consejos y constante apoyo.",
     "a142": "También agradezco a mis compañeros de equipo en la Universidad y a los usuarios de varios servidores de Discord de programación en español, cuya disposición para ayudar y compartir sus conocimientos ha sido crucial para mi desarrollo profesional.",
     "a143": "Por último, quiero dar las gracias a Lucas Pope, Markus Persson y Charlie Cleveland por su inspirador trabajo en la industria del desarrollo de juegos, que también ha sido una enorme motivación para que yo siga una carrera en este campo. Y claro, mi juego favorito: Rocket League (y su magnífica banda sonora).",
     "a144": "Inspirado por estos ejemplos, aspiro a ofrecer el mismo nivel de apoyo y orientación a otros, perpetuando la cultura de colaboración y aprendizaje mutuo.",
@@ -148,7 +148,7 @@
     "arrayutils" : "Colección de funciones adaptadas de la Biblioteca de Plantillas Estándar (STL) de C++, diseñadas para interoperar con el lenguaje de scripting de Unreal Engine.",
     "tgcp" : "Simulador interactivo donde el jugador asume el papel de una bola de chocolate intentando escapar de una casa laberíntica llena de robots hambrientos.",
     "pd" : "Simulador de manejo ambientado en una ciudad gótica con gráficos al estilo de la PlayStation 2.",
-    "crmp" : "Herramienta web diseñada para calcular la ganancia de inversiones a lo largo del tiempo, ofreciendo una interfaz intuitiva y respuestas inmediatas.",
+    "afx" : "API para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
     "uepc" : "Script de línea de comandos que optimiza el mantenimiento de proyectos de Unreal Engine eliminando carpetas temporales de forma efectiva, segura y rápida.",
     "roadmapsh" : "Como colaborador principal del 6to repositorio con más estrellas de GitHub, he contribuido significativamente en las hojas de ruta para desarrolladores de backend y videojuegos."
   }

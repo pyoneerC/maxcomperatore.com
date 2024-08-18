@@ -120,7 +120,7 @@
     "a131": "During a game jam hosted by my current university, a teammate was not sure how to implement a certain functionality with Unreal Engine scripting.",
     "a132": "I showed him several key functionalities, recommended useful resources and together we reviewed his code. In the end, we managed to successfully finish the game on time.",
     "q14": "Acknowledgments",
-    "a141": "I would like to express my deep gratitude to Colin Schmale, Franco Yudica, and Enzo Notario, who have been instrumental in my career for their valuable advice and constant support.",
+    "a141": "I would like to express my deep gratitude to Colin Schmale, Javier Andres Solarte, and Enzo Notario, who have been instrumental in my career for their valuable advice and constant support.",
     "a142": "I also thank my teammates at the University and the users of several Spanish programming Discord servers, whose willingness to help and share their knowledge has been crucial for my professional development.",
     "a143": "Lastly, I want to thank Lucas Pope, Markus Persson, and Charlie Cleveland for their inspiring work in the game development industry, which has also been a huge motivation for me to pursue a career in this field. And of course, my favorite game: Rocket League (and its magnificent soundtrack).",
     "a144": "Inspired by these examples, I aspire to offer the same level of support and guidance to others, perpetuating the culture of collaboration and mutual learning.",
@@ -148,7 +148,7 @@
     "arrayutils" : "Collection of functions adapted from the C++ Standard Template Library (STL), designed to interoperate with the Unreal Engine scripting language.",
     "tgcp" : "Interactive simulator where the player assumes the role of a chocolate ball trying to escape from a labyrinthine house full of hungry robots.",
     "pd" : "Driving simulator set in a gothic city with PlayStation 2-style graphics.",
-    "crmp" : "Web tool designed to calculate investment returns over time, offering an intuitive interface and immediate answers.",
+    "afx" : "Real-time foreign exchange rates API for the Argentinean market.",
     "uepc" : "Command line script that optimizes the maintenance of Unreal Engine projects by deleting temporary folders effectively, securely and quickly.",
     "roadmapsh" : "As a top contributor for the 6th most starred repository on GitHub, I have made significant contributions to the project, especially in the game developer and backend roadmaps."
   }
