@@ -90,7 +90,9 @@ export const projects = [
 		tags:
 			[
 			Tag.python,
-			Tag.fastAPI
+			Tag.postgreSQL,
+			Tag.fastAPI,
+			Tag.redis,
 		],
 	},
 	{
