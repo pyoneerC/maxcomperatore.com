@@ -79,12 +79,12 @@ export const projects = [
 			],
 		links: [
 			{
-				label: "Visitar documentación",
-				url: "https://maxcomperatore.online/docs",
+				label: "Ver demostración",
+				url: "https://www.youtube.com/watch?v=Y98QjiMnePE&t=12s",
 			},
 			{
 				label: "Ver código",
-				url: "https://github.com/pyoneerC/monedas-api",
+				url: "https://github.com/pyoneerC/BlinkLink",
 			},
 		],
 		tags:
