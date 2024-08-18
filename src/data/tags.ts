@@ -24,5 +24,4 @@ export const Tag = {
 	powershell: "PowerShell",
 	cli: "CLI",
 	redis: "Redis",
-	docker: "Docker",
 }
