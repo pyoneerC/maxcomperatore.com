@@ -72,7 +72,6 @@ export const projects = [
 		mobileImages:
 			[
 				`/assets/images/projects/monedasapi/postman.gif`,
-				`/assets/images/projects/monedasapi/mac.avif`,
 			],
 		desktopImages:
 			[
