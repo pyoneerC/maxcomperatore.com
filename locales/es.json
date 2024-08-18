@@ -31,8 +31,8 @@
       "about": "Aplicación web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma.\n Utiliza web scraping para obtener los precios, la API ArgentoFX (desarrollada por mí) para el tipo de cambio actualizado a dólares, y Matplotlib para generar gráficos claros y concisos que representan eficazmente la variabilidad de los precios."
     },
     "monedasAPI": {
-      "name": "ArgentoFX",
-      "description": "API para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
+      "name": "BlinkLink",
+      "description": "API robusta para acortar URLs, utilizando operaciones CRUD.",
       "linkVisitDocs": "Visitar documentación",
       "linkViewCode": "Ver código",
       "about": "Servicio web robusto desarrollado con FastAPI, especializado en tasas de cambio para el mercado argentino, incluyendo USD, Euro y Real Brasileño.\n\n Implementa extracción de datos en tiempo real y almacenamiento en Redis, Dockerizado para asegurar un entorno consistente y fácil de desplegar, garantizando respuestas en menos de 400 ms. El servicio es accesible a través del protocolo RESTful y está diseñado para la eficiencia y la escalabilidad."

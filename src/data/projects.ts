@@ -24,7 +24,7 @@ export const coverProjects: CoverProject[] = [
 	},
 	{
 		...projectMetadata.monedasAPI,
-		imageUrl: `/assets/images/projects/cover/monedasapi.avif`,
+		imageUrl: `/assets/images/projects/cover/blinklink.avif`,
 		i18nDescriptionKey: "monedasAPI.description",
 	},
 	{

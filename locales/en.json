@@ -31,8 +31,8 @@
       "about" : "Web application that allows you to query product prices in MercadoLibre and visualize them in a histogram.\n It uses web scraping to obtain prices, the ArgentoFX API (developed by me) for the exchange rate updated to dollars, and Matplotlib to generate clear and concise graphs that effectively represent the variability of prices."
     },
     "monedasAPI": {
-      "name": "ArgentoFX",
-      "description": "Real-time foreign exchange rates API for the Argentinean market.",
+      "name": "BlinkLink",
+      "description": "Robust API for URL shortening, employing CRUD operations",
       "linkVisitDocs": "Visit documentation",
       "linkViewCode": "View code",
       "about" : "Robust web service developed with FastAPI, specialized in exchange rates for the Argentinean market, including USD, Euro and Brazilian Real.\n\n It implements real-time data extraction and storage in Redis, Dockerized to ensure a consistent and easy to deploy environment, guaranteeing responses in less than 400 ms. The service is accessible via RESTful protocol and is designed for efficiency and scalability."
