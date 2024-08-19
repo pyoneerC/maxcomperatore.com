@@ -42,8 +42,6 @@ export const projects = [
 		mobileImages:
 			[
 				`/assets/images/projects/mercadolibre/mercadolibrepcmobile.avif`,
-				`/assets/images/projects/mercadolibre/mercadolibrepchistograma.avif`,
-				`/assets/images/projects/mercadolibre/mercadolibrepcmac.avif`,
 			],
 		desktopImages:
 			[
