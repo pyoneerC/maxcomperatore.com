@@ -33,7 +33,7 @@
     },
     "monedasAPI": {
       "name": "BlinkLink",
-      "description": "Robust API for URL shortening, employing CRUD operations",
+      "description": "Robust API for URL shortening, employing CRUD operations.",
       "linkVisitDocs": "Visit documentation",
       "linkViewCode": "View code",
       "linkViewVideo": "View video",
