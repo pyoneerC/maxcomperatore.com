@@ -110,7 +110,6 @@ export const projects = [
 			[
 				`/assets/images/projects/thedungeon/library.avif`,
 				`/assets/images/projects/thedungeon/thedungeon.gif`,
-				`/assets/images/projects/thedungeon/pistol.avif`,
 			],
 		desktopImages: [
 			`/assets/images/projects/thedungeon/streamer.avif`,
