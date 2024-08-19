@@ -6,8 +6,8 @@ export const projectMetadata = {
 		slug: "mercadolibrepricechart",
 		name: "Mercadix",
 	},
-	monedasAPI: {
-		slug: "monedasAPI",
+	BlinkLink: {
+		slug: "blinklink",
 		name: "BlinkLink",
 	},
 	TheDungeon: {
@@ -23,7 +23,7 @@ export const coverProjects: CoverProject[] = [
 		i18nDescriptionKey: "mercadolibrepricechart.description",
 	},
 	{
-		...projectMetadata.monedasAPI,
+		...projectMetadata.BlinkLink,
 		imageUrl: `/assets/images/projects/cover/blinklink.avif`,
 		i18nDescriptionKey: "monedasAPI.description",
 	},
@@ -66,7 +66,7 @@ export const projects = [
 		],
 	},
 	{
-		...projectMetadata.monedasAPI,
+		...projectMetadata.BlinkLink,
 		index: 1,
 		description: "monedasAPI.about",
 		mobileImages:
