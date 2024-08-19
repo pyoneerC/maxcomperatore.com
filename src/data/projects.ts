@@ -79,12 +79,12 @@ export const projects = [
 			],
 		links: [
 			{
-				label: "Ver vídeo",
-				url: "https://www.youtube.com/watch?v=Y98QjiMnePE&t=12s",
-			},
-			{
 				label: "Visitar sitio",
 				url: "https://shorturl-web.vercel.app/shorten/12dc9f",
+			},
+			{
+				label: "Ver vídeo",
+				url: "https://www.youtube.com/watch?v=Y98QjiMnePE&t=12s",
 			},
 			{
 				label: "Ver código",
