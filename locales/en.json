@@ -28,6 +28,7 @@
       "description": "Live price histogram for any product on MercadoLibre.",
       "linkVisitSite": "Visit site",
       "linkViewCode": "View code",
+      "linkViewVideo": "View video",
       "about" : "Web application that allows you to query product prices in MercadoLibre and visualize them in a histogram.\n It uses web scraping to obtain prices, the ArgentoFX API (developed by me) for the exchange rate updated to dollars, and Matplotlib to generate clear and concise graphs that effectively represent the variability of prices."
     },
     "monedasAPI": {
@@ -35,13 +36,15 @@
       "description": "Robust API for URL shortening, employing CRUD operations",
       "linkVisitDocs": "Visit documentation",
       "linkViewCode": "View code",
+      "linkViewVideo": "View video",
+      "linkViewSite": "Visit site",
       "about" : "With the goal of delving deeper into API development and database management, I developed BlinkLink, a public API that provides an advanced URL shortening service. \n\nBlinkLink is designed to provide efficient and scalable performance, integrating CRUD operations that enable complete and secure link management."
     },
     "TheDungeon": {
       "name": "Ephemera",
       "description": "Puzzle game featuring challenging riddles in a macabre setting.",
       "linkItchIo": "View on itch.io",
-      "linkViewVideos": "View game videos",
+      "linkViewVideos": "View gameplay",
       "about" : "You find yourself trapped in a place that looks like an office, but something is amiss.\n The atmosphere is unsettling.With only your wits and a few sporadic tools, you must face a series of riddles and puzzles designed to test your wits.\n Will you be able to find a way out of this nightmare?"
     }
   },

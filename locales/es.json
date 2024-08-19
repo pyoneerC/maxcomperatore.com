@@ -28,6 +28,7 @@
       "description": "Histograma de precios en vivo para cualquier producto en MercadoLibre.",
       "linkVisitSite": "Visitar sitio",
       "linkViewCode": "Ver código",
+      "linkViewVideo": "Ver vídeo",
       "about": "Aplicación web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma.\n Utiliza web scraping para obtener los precios, la API ArgentoFX (desarrollada por mí) para el tipo de cambio actualizado a dólares, y Matplotlib para generar gráficos claros y concisos que representan eficazmente la variabilidad de los precios."
     },
     "monedasAPI": {

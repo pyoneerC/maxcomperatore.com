@@ -66,7 +66,7 @@ export default function Project({ params }: Props) {
 						<div className={styles.linksWrapper}>
 							{links.map(({ url, label }, index) => (
 								<Link key={index} href={url} target="_blank">
-									{label}
+									{t(label)}
 								</Link>
 							))}
 						</div>

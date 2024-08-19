@@ -51,11 +51,15 @@ export const projects = [
 			],
 		links: [
 			{
-				label: "Visitar sitio",
+				label: "mercadolibrepricechart.linkVisitSite",
 				url: "https://mercado-libre-price-chart.vercel.app",
 			},
 			{
-				label: "Ver código",
+				label: "mercadolibrepricechart.linkViewVideo",
+				url: "https://www.youtube.com/watch?v=o_DtaMIOuaM&t",
+			},
+			{
+				label: "mercadolibrepricechart.linkViewCode",
 				url: "https://github.com/pyoneerC/mercado-libre-price-chart",
 			},
 		],
@@ -63,6 +67,7 @@ export const projects = [
 			[
 			Tag.python,
 			Tag.flask,
+			Tag.beautifulSoup,
 		],
 	},
 	{
@@ -79,15 +84,15 @@ export const projects = [
 			],
 		links: [
 			{
-				label: "Visitar sitio",
+				label: "monedasAPI.linkViewSite",
 				url: "https://shorturl-web.vercel.app/shorten/12dc9f",
 			},
 			{
-				label: "Ver vídeo",
+				label: "monedasAPI.linkViewVideo",
 				url: "https://www.youtube.com/watch?v=Y98QjiMnePE&t=12s",
 			},
 			{
-				label: "Ver código",
+				label: "monedasAPI.linkViewCode",
 				url: "https://github.com/pyoneerC/BlinkLink",
 			},
 		],
@@ -114,11 +119,11 @@ export const projects = [
 		],
 		links: [
 			{
-				label: "Ver en itch.io",
+				label: "TheDungeon.linkItchIo",
 				url: "https://pyoneerc1.itch.io/the-dungeon",
 			},
 			{
-				label: "Ver vídeos del juego",
+				label: "TheDungeon.linkViewVideos",
 				url: "https://www.youtube.com/playlist?list=PLRFx0xkqiuISCnQBv0af1v3Kn7fOHcoLT",
 			},
 		],
