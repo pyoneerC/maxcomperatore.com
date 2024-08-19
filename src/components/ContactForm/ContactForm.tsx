@@ -42,6 +42,14 @@ const ContactForm = () => {
 			if (data.ok) {
 				setResponseMessage("Gracias por tu consulta. Responderé a la brevedad.");
 				setHasError(false);
+
+				setNameValid(false);
+				setEmailValid(false);
+				setMessageValid(false);
+				setNameError("");
+				setEmailError("");
+				setMessageError("");
+
 				// @ts-ignore
 				formRef.current?.reset();
 			} else {
@@ -68,6 +76,7 @@ const ContactForm = () => {
 	};
 
 	const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setResponseMessage("");
 		const name = event.target.value;
 		validateName(name);
 	};
@@ -87,6 +96,7 @@ const ContactForm = () => {
 	};
 
 	const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setResponseMessage("");
 		const email = event.target.value;
 		validateEmail(email);
 	};
@@ -106,6 +116,7 @@ const ContactForm = () => {
 	const handleMessageChange = (
 		event: React.ChangeEvent<HTMLTextAreaElement>
 	) => {
+		setResponseMessage("");
 		const message = event.target.value;
 		validateMessage(message);
 	};
