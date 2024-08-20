@@ -50,10 +50,10 @@
   },
   "AboutSection": {
     "title": "About me",
-    "d0": "Meet <strong>Máximo Comperatore</strong>, a developer with specialization in <strong>Backend</strong> and <strong>Game Development</strong>.",
-    "d1": "Currently, I am studying <strong>Game Development at the University of Mendoza</strong> and I am also <strong>self-taught</strong>, constantly looking for new ways to expand my knowledge and skills.",
-    "d2": "I am characterized for being <strong>meticulous, organized and friendly</strong>, always willing to learn and collaborate in a team.",
-    "d3": "I maintain a <strong>proactive, decisive mentality focused on software optimization</strong>.",
+    "d0": "I am <strong>Máximo Comperatore</strong>, a developer specialized in <strong>Backend</strong> and <strong>Video Game Development</strong>.",
+    "d1": "I am currently pursuing a <strong>Technical Degree in Video Game Development at the University of Mendoza</strong> and also consider myself a <strong>self-taught learner</strong>, committed to continuously expanding my knowledge and skills.",
+    "d2": "I am known for being <strong>meticulous, organized, and courteous</strong>, always ready to learn and collaborate effectively in a team.",
+    "d3": "I maintain a <strong>proactive, problem-solving mindset focused on software optimization</strong>, always seeking efficient and high-quality solutions."
     "mab": "More about me"
   },
   "AI" : {
