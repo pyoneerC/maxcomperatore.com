@@ -45,7 +45,7 @@
       "description": "Juego de puzzles que presenta acertijos desafiantes en un entorno maquiavélico.",
       "linkItchIo": "Ver en itch.io",
       "linkViewVideos": "Ver vídeos del juego",
-      "about" : "Te encuentras atrapado en un lugar que parece una oficina, pero algo no cuadra. El ambiente es perturbador.\n Con sólo tu ingenio y algunas herramientas esporádicas, debes enfrentarte a una serie de acertijos y rompecabezas diseñados para poner a prueba tu astucia.\n ¿Serás capaz de encontrar una salida a esta pesadilla?"
+      "about": "En este juego de rompecabezas inmersivo, te encuentras atrapado en un entorno de oficina inquietante donde algo no está bien. \n Con solo tu ingenio y algunas herramientas dispersas, deberás resolver una serie de acertijos y rompecabezas desafiantes que pondrán a prueba tu inteligencia y habilidades para resolver problemas.\n ¿Podrás escapar de esta pesadilla y encontrar el camino hacia la libertad?"
     }
   },
   "AI" : {
@@ -58,7 +58,7 @@
     "d0": "Soy <strong>Máximo Comperatore</strong>, un desarrollador especializado en <strong>Backend</strong> y <strong>Desarrollo de Videojuegos</strong>.",
     "d1": "Actualmente, estoy cursando la <strong>Tecnicatura en Desarrollo de Videojuegos en la Universidad de Mendoza</strong> y también me considero un <strong>autodidacta</strong>, comprometido con la continua expansión de mis conocimientos y habilidades.",
     "d2": "Me distingo por ser <strong>meticuloso, organizado y cordial</strong>, con una disposición constante para aprender y colaborar eficazmente en equipo.",
-    "d3": "Adopto una <strong>mentalidad proactiva, resolutiva y enfocada en la optimización del software</strong>, siempre buscando soluciones eficientes y de alta calidad."
+    "d3": "Adopto una <strong>mentalidad proactiva, resolutiva y enfocada en la optimización del software</strong>, siempre buscando soluciones eficientes y de alta calidad.",
     "mab": "Más sobre mí"
   },
   "SkillsSection": {
