@@ -137,7 +137,11 @@
     "home": "Back to home",
     "faq": "Visit FAQ",
     "post0" : "Concurrency in C++ by Example",
-    "post0desc" : "A detailed analysis of how concurrency and its various forms are handled in C++."
+    "post0desc" : "An in-depth look at concurrency and its implementations in C++.",
+    "post1" : "The People Behind RDR2",
+    "post1desc" : "An exploration of the team behind the legendary game.",
+    "post2" : "The People Behind GTA V",
+    "post2desc" : "Insights into the team that crafted one of history's top-selling games."
   },
   "Header": {
     "contact": "Contact"

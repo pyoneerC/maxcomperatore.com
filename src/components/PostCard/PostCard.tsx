@@ -14,7 +14,7 @@ export const PostCard: React.FC<Props> = ({ slug, title, description, emoji }) =
 			<NextLink className={styles.linkWrapper} href={href}></NextLink>
 			<div className={styles.infoWrapper}>
 				<h3 className={styles.title}>{t(title)}</h3>
-				<p>{description}</p>
+				<p>{t(description)}</p>
 			</div>
 			<span className={styles.emoji}>{emoji}</span>
 		</article>

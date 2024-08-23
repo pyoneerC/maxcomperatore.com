@@ -137,7 +137,11 @@
     "home": "Volver al inicio",
     "faq": "Ver preguntas frecuentes",
     "post0" : "Concurrencia en C++, explicada con ejemplos",
-    "post0desc" : "Un análisis detallado de cómo se maneja la concurrencia y sus varias formas en C++."
+    "post0desc" : "Un análisis en profundidad de la concurrencia y sus implementaciones en C++.",
+    "post1" : "Las Personas Detrás de RDR2",
+    "post1desc" : "Una exploración del equipo detrás del legendario juego.",
+    "post2" : "Las Personas Detrás de GTA V",
+    "post2desc" : "Perspectivas del equipo que creó uno de los juegos más vendidos de la historia."
   },
   "Header": {
     "contact": "Contacto"
