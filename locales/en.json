@@ -135,7 +135,9 @@
   "Blog": {
     "subtitle": "Articles on software development and videogames.",
     "home": "Back to home",
-    "faq": "Visit FAQ"
+    "faq": "Visit FAQ",
+    "post0" : "Concurrency in C++ by Example",
+    "post0desc" : "A detailed analysis of how concurrency and its various forms are handled in C++."
   },
   "Header": {
     "contact": "Contact"

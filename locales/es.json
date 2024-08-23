@@ -135,7 +135,9 @@
   "Blog": {
     "subtitle": "Artículos sobre desarrollo de software y videojuegos.",
     "home": "Volver al inicio",
-    "faq": "Ver preguntas frecuentes"
+    "faq": "Ver preguntas frecuentes",
+    "post0" : "Concurrencia en C++, explicada con ejemplos",
+    "post0desc" : "Un análisis detallado de cómo se maneja la concurrencia y sus varias formas en C++."
   },
   "Header": {
     "contact": "Contacto"
