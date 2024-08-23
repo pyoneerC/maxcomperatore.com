@@ -2,6 +2,7 @@ import { localFormatDate } from "~/helpers/local-format-date"
 import { Link } from "~/components/Ui/Link"
 import styles from "./ArticleHeader.module.css"
 import React from "react"
+import { useTranslations} from "next-intl"
 
 interface Props {
 	title: string
@@ -10,6 +11,7 @@ interface Props {
 
 export const ArticleHeader: React.FC<Props> = ({ title, date }) => {
 	const formattedDate = localFormatDate(date)
+	const t = useTranslations("Blog")
 
 	return (
 		<div className={styles.wrapper}>
@@ -23,7 +25,7 @@ export const ArticleHeader: React.FC<Props> = ({ title, date }) => {
 				</svg>
 				Volver al Blog
 			</Link>
-			<h1 className={styles.title}>{title}</h1>
+			<h1 className={styles.title}>{t(title)}</h1>
 			<span className={styles.date}>{formattedDate}</span>
 		</div>
 	)
