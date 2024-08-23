@@ -135,13 +135,17 @@
   "Blog": {
     "subtitle": "Artículos sobre desarrollo de software y videojuegos.",
     "home": "Volver al inicio",
+    "blog": "Volver al blog",
     "faq": "Ver preguntas frecuentes",
     "post0" : "Concurrencia en C++, explicada con ejemplos",
     "post0desc" : "Un análisis en profundidad de la concurrencia y sus implementaciones en C++.",
     "post1" : "Las Personas Detrás de RDR2",
     "post1desc" : "Una exploración del equipo detrás del legendario juego.",
     "post2" : "Las Personas Detrás de GTA V",
-    "post2desc" : "Perspectivas del equipo que creó uno de los juegos más vendidos de la historia."
+
+    "post0date" : "20 de Julio de 2024",
+    "post1date" : "8 de Julio de 2024",
+    "post2date" : "3 de Mayo de 2024"
   },
   "Header": {
     "contact": "Contacto"

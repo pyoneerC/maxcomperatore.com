@@ -10,7 +10,6 @@ interface Props {
 }
 
 export const ArticleHeader: React.FC<Props> = ({ title, date }) => {
-	const formattedDate = localFormatDate(date)
 	const t = useTranslations("Blog")
 
 	return (
@@ -23,10 +22,10 @@ export const ArticleHeader: React.FC<Props> = ({ title, date }) => {
 						<circle cx="24" cy="12" r="8" />
 					</g>
 				</svg>
-				Volver al Blog
+				{t("blog")}
 			</Link>
 			<h1 className={styles.title}>{t(title)}</h1>
-			<span className={styles.date}>{formattedDate}</span>
+			<span className={styles.date}>{t(date)} </span>
 		</div>
 	)
 }
