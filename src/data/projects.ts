@@ -100,6 +100,7 @@ export const projects = [
 			Tag.postgreSQL,
 			Tag.redis,
 			Tag.fastAPI,
+			Tag.docker,
 		],
 	},
 	{
