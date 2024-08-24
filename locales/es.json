@@ -168,6 +168,13 @@
   "Form": {
     "name": "Ingrese su nombre completo",
     "email": "ejemplo@correo.com",
-    "message": "Escriba su mensaje aquí"
+    "message": "Escriba su mensaje aquí",
+    "messageError": "Por favor, ingrese un mensaje más largo.",
+    "emailError": "Por favor, ingrese un correo válido.",
+    "nameError": "Por favor, ingrese su nombre completo.",
+    "success": "Gracias por tu consulta. Responderé a la brevedad.",
+    "submit": "Enviar",
+    "somethingWrong": "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
+    "networkError": "Error de red. Intente nuevamente."
   }
 }

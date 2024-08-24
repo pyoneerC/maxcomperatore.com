@@ -24,7 +24,6 @@ const ContactForm = () => {
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		console.log("Submitting form");
 
 		// Reset global response message
 		setResponseMessage("");
@@ -43,7 +42,7 @@ const ContactForm = () => {
 
 			const data = await response.json();
 			if (data.ok) {
-				setResponseMessage("Gracias por tu consulta. Responderé a la brevedad.");
+				setResponseMessage(t("success"));
 				setHasError(false);
 
 				setNameValid(false);
@@ -56,19 +55,18 @@ const ContactForm = () => {
 				// @ts-ignore
 				formRef.current?.reset();
 			} else {
-				setResponseMessage(data.error || "Oops! Algo salió mal.");
+				setResponseMessage(data.error || t("somethingWrong"));
 				setHasError(true);
 			}
 		} catch (error) {
-			console.error("Form submit error:", error);
-			setResponseMessage("Error de red. Intente nuevamente.");
+			setResponseMessage(t("networkError"));
 			setHasError(true);
 		}
 	};
 
 	const validateName = (name: string) => {
 		if (name.length < 5) {
-			setNameError("Por favor, ingrese su nombre completo.");
+			setNameError(t("nameError"));
 			setNameValid(false);
 			setHasError(true);
 		} else {
@@ -88,7 +86,7 @@ const ContactForm = () => {
 		const emailRegex =
 			/^(?=.{1,254}$)(?=.{1,64}@.{1,255}$)(?=[a-zA-Z0-9._%+-]{1,64}@)[a-zA-Z0-9][a-zA-Z0-9._%+-]{0,63}@[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]\.[a-zA-Z]{2,24}$/;
 		if (!emailRegex.test(email)) {
-			setEmailError("Por favor, ingrese un correo válido.");
+			setEmailError(t("emailError"));
 			setEmailValid(false);
 			setHasError(true);
 		} else {
@@ -106,7 +104,7 @@ const ContactForm = () => {
 
 	const validateMessage = (message: string) => {
 		if (message.length < 10) {
-			setMessageError("Por favor, ingrese un mensaje más largo.");
+			setMessageError(t("messageError"));
 			setMessageValid(false);
 			setHasError(true);
 		} else {
@@ -240,7 +238,7 @@ const ContactForm = () => {
 				)}
 			</Label>
 			<Button type="submit" size="medium" disabled={hasError}>
-				Enviar
+				{t("submit")}
 			</Button>
 			{responseMessage && (
 				<MessageCard variant={hasError ? "error" : "success"}>

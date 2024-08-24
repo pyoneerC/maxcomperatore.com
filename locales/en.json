@@ -169,6 +169,13 @@
   "Form": {
     "name": "Enter your full name",
     "email": "example@domain.com",
-    "message": "Type your message here"
+    "message": "Type your message here",
+    "messageError": "Please enter a longer message.",
+    "emailError": "Please enter a valid email address.",
+    "nameError": "Please enter your full name.",
+    "success": "Thank you for your inquiry. I will get back to you shortly.",
+    "submit": "Send",
+    "somethingWrong": "An error occurred. Please try again later.",
+    "networkError": "Network error. Please try again later."
   }
 }
