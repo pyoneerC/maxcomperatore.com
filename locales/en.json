@@ -165,5 +165,10 @@
     "afx" : "Real-time foreign exchange rates API for the Argentinean market.",
     "uepc" : "Command line script that optimizes the maintenance of Unreal Engine projects by deleting temporary folders effectively, securely and quickly.",
     "roadmapsh" : "As a top contributor for the 6th most starred repository on GitHub, I have made significant contributions to the project, especially in the game developer and backend roadmaps."
+  },
+  "Form": {
+    "name": "Enter your full name",
+    "email": "example@domain.com",
+    "message": "Type your message here"
   }
 }

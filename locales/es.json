@@ -164,5 +164,10 @@
     "afx" : "API para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
     "uepc" : "Script de línea de comandos que optimiza el mantenimiento de proyectos de Unreal Engine eliminando carpetas temporales de forma efectiva, segura y rápida.",
     "roadmapsh" : "Como colaborador principal del 6to repositorio con más estrellas de GitHub, he contribuido significativamente en las hojas de ruta para desarrolladores de backend y videojuegos."
+  },
+  "Form": {
+    "name": "Ingrese su nombre completo",
+    "email": "ejemplo@correo.com",
+    "message": "Escriba su mensaje aquí"
   }
 }

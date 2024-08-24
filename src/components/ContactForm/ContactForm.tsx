@@ -7,6 +7,7 @@ import { Input } from "~/components/Ui/Input";
 import { Textarea } from "~/components/Ui/TextArea";
 import { MessageCard } from "~/components/MessageCard";
 import styles from "./ContactForm.module.css";
+import { useTranslations } from "next-intl";
 
 const ContactForm = () => {
 	const formRef = useRef(null);
@@ -18,6 +19,8 @@ const ContactForm = () => {
 	const [nameValid, setNameValid] = useState(false);
 	const [emailValid, setEmailValid] = useState(false);
 	const [messageValid, setMessageValid] = useState(false);
+
+	const t = useTranslations("Form");
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -133,7 +136,7 @@ const ContactForm = () => {
 				<div className={styles.inputWithIcon}>
 					<Input
 						className={styles.inputField}
-						placeholder="Ingrese su nombre completo"
+						placeholder={t("name")}
 						name="name"
 						autoComplete="name"
 						required
@@ -170,7 +173,7 @@ const ContactForm = () => {
 				<span className={styles.labelWrapper}>Correo</span>
 				<div className={styles.inputWithIcon}>
 					<Input
-						placeholder="ejemplo@correo.com"
+						placeholder={t("email")}
 						type="email"
 						name="email"
 						autoComplete="email"
@@ -197,7 +200,7 @@ const ContactForm = () => {
 				<span className={styles.labelWrapper}>Mensaje</span>
 				<div className={styles.inputWithIcon}>
 					<Textarea
-						placeholder="Escriba su mensaje aquí"
+						placeholder={t("message")}
 						name="message"
 						required
 						onChange={handleMessageChange}
