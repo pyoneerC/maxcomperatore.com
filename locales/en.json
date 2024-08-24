@@ -36,7 +36,7 @@
       "description": "Robust API for URL shortening, employing CRUD operations.",
       "linkVisitDocs": "Visit documentation",
       "linkViewCode": "View code",
-      "linkViewVideo": "View video",
+      "linkViewVideo": "View in Dockerhub",
       "linkViewSite": "Visit site",
       "about" : "With the goal of delving deeper into API development and database management, I developed BlinkLink, a public API that provides an advanced URL shortening service. \n\nBlinkLink is designed to provide efficient and scalable performance, integrating CRUD operations that enable complete and secure link management."
     },

@@ -87,7 +87,7 @@ export const projects = [
 			},
 			{
 				label: "monedasAPI.linkViewVideo",
-				url: "https://www.youtube.com/watch?v=Y98QjiMnePE&t=12s",
+				url: "https://hub.docker.com/r/maxcomperatore/bliklink",
 			},
 			{
 				label: "monedasAPI.linkViewCode",
