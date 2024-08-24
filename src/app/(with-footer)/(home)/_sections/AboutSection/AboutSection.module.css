@@ -24,6 +24,7 @@
 	color: var(--text-color);
 	align-items: center;
 	display: flex;
+	border-radius: 20px;
 	justify-content: center;
 	border: 2px solid var(--color-background-tertiary);
 	transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
