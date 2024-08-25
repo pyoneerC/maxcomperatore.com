@@ -6,12 +6,11 @@ import {useTranslations} from "next-intl"
 interface Props extends Post {}
 
 export const PostCard: React.FC<Props> = ({ slug, title, description, emoji }) => {
-	const href = `/blog/${slug}`
 	const t = useTranslations("Blog")
 
 	return (
 		<article className={styles.card}>
-			<NextLink className={styles.linkWrapper} href={href}></NextLink>
+			<NextLink className={styles.linkWrapper} href={slug}></NextLink>
 			<div className={styles.infoWrapper}>
 				<h3 className={styles.title}>{t(title)}</h3>
 				<p>{t(description)}</p>

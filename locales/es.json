@@ -141,12 +141,12 @@
     "post0desc" : "Un análisis en profundidad de la concurrencia y sus implementaciones en C++.",
     "post1" : "Las Personas Detrás de RDR2",
     "post1desc" : "Una exploración del equipo detrás del legendario juego.",
-    "post2" : "Las Personas Detrás de GTA V",
-    "post2desc" : "Un vistazo a los creadores de uno de los juegos más vendidos de la historia.",
+    "post2" : "La importancia de los prototipos en el desarrollo de videojuegos",
+    "post2desc" : "Descubre por qué los prototipos son esenciales en el desarrollo de juegos.",
 
     "post0date" : "20 de Julio de 2024",
     "post1date" : "8 de Julio de 2024",
-    "post2date" : "3 de Mayo de 2024"
+    "post2date" : "25 de Agosto de 2024"
   },
   "Header": {
     "contact": "Contacto"
