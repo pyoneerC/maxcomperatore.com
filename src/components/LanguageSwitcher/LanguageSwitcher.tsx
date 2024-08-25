@@ -30,7 +30,7 @@ export const LanguageSwitcher = () => {
 			<img
 				className={styles.flag}
 				aria-hidden="true"
-				src={locale == "es" ? "/assets/icons/spain.avif" : "/assets/icons/uk.avif"}
+				src={locale == "es" ? "/assets/flags/spain.avif" : "/assets/flags/uk.avif"}
 				alt={`Switch to ${locale == "en" ? "English" : "Spanish"}`}
 				height={24}
 				width={24}
