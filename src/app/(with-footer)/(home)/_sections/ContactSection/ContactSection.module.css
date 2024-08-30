@@ -6,16 +6,26 @@
 
 .title {
 	text-align: center;
-	font-size: clamp(2rem, 0.4rem + 8vw, 4rem);
+	font-size: 2.5em;
 	font-weight: 900;
 	margin-bottom: 2rem;
 }
 
 .subtitle {
 	text-align: center;
-	font-size: 1.75rem;
+	font-size: 1.5em;
 	font-weight: 400;
 	margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 2em;
+	}
+
+	.subtitle {
+		font-size: 1.2em;
+	}
 }
 
 .servicesContainer {
