@@ -29,6 +29,18 @@
 
 .title {
 	padding-block-end: 8px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.icon {
+	margin-left: 4px;
+	font-size: 14px;
+	color: gray;
+	transition: color 150ms ease-in-out;
+	flex-shrink: 0;
 }
 
 .emoji {
@@ -39,4 +51,16 @@
 .card:hover .emoji {
 	transform: scale(1.15);
 	cursor: url('~/public/assets/cursor/hand-pointer.png'), auto;
+}
+
+.card:hover .icon {
+	color: var(--color-text);
+}
+
+
+@media (max-width: 600px) {
+	.icon {
+		vertical-align: text-bottom;
+		display: flex;
+	}
 }
