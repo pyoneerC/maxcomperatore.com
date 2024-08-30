@@ -17,24 +17,24 @@ export const ContactSection = () => {
 			<div className={styles.servicesContainer}>
 				<div className={styles.serviceCard}>
 					<div className={styles.serviceCategory}>Desarrollo:</div>
-					<p>
-						• Desarrollo y programación de videojuegos<br />
-						• Desarrollo Backend
-					</p>
+					<ul>
+						<li>Desarrollo y programación de videojuegos</li>
+						<li>Desarrollo Backend</li>
+					</ul>
 				</div>
 				<div className={styles.serviceCard}>
 					<div className={styles.serviceCategory}>Medios Digitales:</div>
-					<p>
-						• Creación de contenido<br />
-						• SEO y optimización de páginas web
-					</p>
+					<ul>
+						<li>Creación de contenido</li>
+						<li>SEO y optimización de páginas web</li>
+					</ul>
 				</div>
 				<div className={styles.serviceCard}>
 					<div className={styles.serviceCategory}>Otros:</div>
-					<p>
-						• Entrevistas informativas<br />
-						• Traducciones (Inglés, Español)
-					</p>
+					<ul>
+						<li>Entrevistas informativas</li>
+						<li>Traducciones (Inglés, Español)</li>
+					</ul>
 				</div>
 			</div>
 			<CopyEmailButton />
