@@ -9,6 +9,7 @@ import { CheckIcon } from "~/components/Svg/CheckIcon"
 import { CopyIcon } from "~/components/Svg/CopyIcon"
 import { EmailIcon } from "~/components/Svg/EmailIcon"
 import styles from "./CopyEmailSmallButton.module.css"
+import { ArrowUpRight } from "~/components/Svg/ArrowUpRight"
 
 const RESET_FEEDBACK_TIME = 2000
 
@@ -26,12 +27,13 @@ export const CopyEmailSmallButton: React.FC<Props> = ({ className }) => {
 	const handleOnClick = async () => {
 		const isCopied = await copyToClipboard(DRESAN_EMAIL)
 		setDisplayFeedback(isCopied)
+		window.location.href = `mailto:${DRESAN_EMAIL}`
 	}
 
 	return (
 		<button className={clsx(styles.button, className)} onClick={handleOnClick}>
 			<EmailIcon /> {DRESAN_EMAIL}
-			<CopyIcon className={clsx(styles.icon, { [styles.showIcon]: !displayFeedback })} />
+			<ArrowUpRight className={clsx(styles.icon, { [styles.showIcon]: !displayFeedback })} />
 			<CheckIcon className={clsx(styles.icon, { [styles.showIcon]: displayFeedback })} />
 		</button>
 	)
