@@ -225,3 +225,9 @@
 		padding-inline: 15px;
 	}
 }
+
+@media (min-width: 1024px) {
+	.goHomeLink {
+		display: none;
+	}
+}
