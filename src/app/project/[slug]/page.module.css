@@ -90,10 +90,10 @@
 
 @media screen and (min-width: 1024px) {
 	.navLink svg {
-		width: 4vw;
+		width: 3vw;
 	}
 	.navLink {
-		font-size: 42px;
+		font-size: 40px;
 	}
 }
 
