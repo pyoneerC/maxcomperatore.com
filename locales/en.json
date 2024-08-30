@@ -6,6 +6,9 @@
   "LanguageSwitcher": {
     "switchLanguage": "Switch to Spanish"
   },
+  "ContactDialog": {
+    "title": "Contact me"
+  },
   "HeroSection": {
     "availability": "Available for new projects",
     "contact": "Contact",
