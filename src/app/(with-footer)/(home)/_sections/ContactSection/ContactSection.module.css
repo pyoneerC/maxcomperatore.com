@@ -13,9 +13,9 @@
 
 .subtitle {
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: 400;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -64,9 +64,14 @@
 	margin-bottom: 0.5rem;
 }
 
+.subtitle svg {
+	display: flex;
+	margin: 0.4rem auto 0;
+}
+
 @media (min-width: 768px) {
 	.servicesContainer {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, 0.21fr);
 		gap: 1rem;
 	}
 
