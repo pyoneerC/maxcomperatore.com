@@ -35,8 +35,9 @@
 .actions {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
 	gap: 16px;
-	padding: var(--space-inline);
+	padding: 12PX;
 }
 
 .copyEmailButton {

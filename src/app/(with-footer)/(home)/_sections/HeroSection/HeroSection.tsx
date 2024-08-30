@@ -65,10 +65,10 @@ export const HeroSection = () => {
             {t("download")}
           </NextLink>
         </Button>
-        <CopyEmailSmallButton className={styles.copyEmailButton} />
-        <Chatbot />
-        <ScrollToTopButton />
       </div>
+      <CopyEmailSmallButton className={styles.copyEmailButton} />
+      <Chatbot />
+      <ScrollToTopButton />
     </section>
   );
 };
