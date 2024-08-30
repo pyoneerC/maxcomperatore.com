@@ -16,17 +16,17 @@ export const ContactSection = () => {
 			</p>
 			<div className={styles.servicesContainer}>
 				<div className={styles.serviceCard}>
-					<div className={styles.serviceCategory}>{t("servicesDevelopment")}</div>
-					<ul>
-						<li>{t("gameDevelopment")}</li>
-						<li>{t("backendDevelopment")}</li>
-					</ul>
-				</div>
-				<div className={styles.serviceCard}>
 					<div className={styles.serviceCategory}>{t("servicesDigitalMarketing")}</div>
 					<ul>
 						<li>{t("servicesContentCreation")}</li>
 						<li>{t("servicesSEO")}</li>
+					</ul>
+				</div>
+				<div className={styles.serviceCard}>
+					<div className={styles.serviceCategory}>{t("servicesDevelopment")}</div>
+					<ul>
+						<li>{t("gameDevelopment")}</li>
+						<li>{t("backendDevelopment")}</li>
 					</ul>
 				</div>
 				<div className={styles.serviceCard}>

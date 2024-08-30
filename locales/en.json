@@ -66,7 +66,7 @@
   },
   "ContactSection": {
     "question": "Need help with a project?",
-    "services": "My services:",
+    "services": "Available services",
     "servicesDevelopment": "Development",
     "gameDevelopment": "Video game development and programming",
     "backendDevelopment": "Backend development",
