@@ -8,12 +8,12 @@ export const ContactSection = () => {
 
 	return (
 		<section className={clsx("section-wrapper", styles.section)}>
-			<h2 className={styles.title}>
+			<h1 className={styles.title}>
 				{t("question")}
-			</h2>
-			<p className={styles.subtitle}>
+			</h1>
+			<h2 className={styles.subtitle}>
 				{t("services")}
-			</p>
+			</h2>
 			<div className={styles.servicesContainer}>
 				<div className={styles.serviceCard}>
 					<div className={styles.serviceCategory}>{t("servicesDigitalMarketing")}
