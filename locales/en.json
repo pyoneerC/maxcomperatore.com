@@ -67,15 +67,15 @@
   "ContactSection": {
     "question": "Need help with a project?",
     "services": "Available services",
-    "servicesDevelopment": "Development",
-    "gameDevelopment": "Video game development and programming",
+    "servicesDevelopment": "Programming",
+    "gameDevelopment": "Video game development",
     "backendDevelopment": "Backend development",
     "servicesDigitalMarketing": "Digital Media",
     "servicesContentCreation": "Content Creation",
     "servicesSEO": "SEO and website optimization",
     "servicesOther": "Other",
     "servicesInformationalInterviews": "Informational interviews",
-    "servicesTranslation": "Translation (English, Spanish)"
+    "servicesTranslation": "Translation (Spanish, English)"
   },
   "FAQ": {
     "subtitle": "Personal questions to reflect on and practice for interviews.",

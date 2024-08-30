@@ -45,6 +45,10 @@
 	font-size: 1.2rem;
 	font-weight: 700;
 	text-align: center;
+	align-items: center;
+	display: flex;
+	gap: 6px;
+	margin-right: 10px;
 	margin-bottom: 0.5rem;
 }
 

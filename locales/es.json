@@ -67,8 +67,8 @@
   "ContactSection": {
     "question": "¿Necesitas ayuda con tu proyecto?",
     "services": "Servicios disponibles",
-    "servicesDevelopment": "Desarollo",
-    "gameDevelopment": "Desarrollo y programación de videojuegos",
+    "servicesDevelopment": "Programación",
+    "gameDevelopment": "Desarrollo de videojuegos",
     "backendDevelopment": "Desarrollo Backend",
     "servicesDigitalMarketing": "Medios Digitales",
     "servicesContentCreation": "Creación de Contenido",
