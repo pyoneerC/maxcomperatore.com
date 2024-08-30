@@ -1,24 +1,64 @@
 .section {
 	max-inline-size: 1920px;
 	margin-inline: auto;
+	padding: 2rem;
 }
 
 .title {
 	text-align: center;
-	font-size: clamp(2rem, 0.4rem + 8vw, 10rem);
+	font-size: clamp(2rem, 0.4rem + 8vw, 4rem);
 	font-weight: 900;
-	line-height: normal;
+	margin-bottom: 2rem;
 }
 
-.title > span:last-of-type {
-	justify-self: self-end;
+.subtitle {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-bottom: 4rem;
+}
+
+.servicesContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.5rem;
+	justify-content: center;
+}
+
+.serviceCard {
+	background-color: #1e1e1e;
+	color: #ffffff;
+	border-radius: 8px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.serviceCard:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.serviceCategory {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
-	.title {
-            font-size: 64px;
-            font-weight: 900;
-            line-height: normal;
-		text-align: center;
+	.servicesContainer {
+		grid-template-columns: repeat(3, minmax(0, 0.25fr));
+		gap: 0.25rem;
+	}
+
+	.serviceCard {
+		padding: 2rem;
+		max-width: none;
+	}
+
+	.serviceCategory {
+		font-size: 1.5rem;
 	}
 }
