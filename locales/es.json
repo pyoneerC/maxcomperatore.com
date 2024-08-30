@@ -65,7 +65,9 @@
     "title": "Tecnologías empleadas recientemente"
   },
   "ContactSection": {
-    "question": "¿Quieres iniciar un proyecto?"
+    "question": "¿Quieres iniciar un proyecto?",
+    "services": "Mis servicios:",
+    "servicesDevelopment": "Desarollo"
   },
   "FAQ": {
     "subtitle": "Preguntas personales para reflexionar y practicar para entrevistas.",

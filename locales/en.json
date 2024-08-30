@@ -65,7 +65,9 @@
     "title": "Recently used technologies"
   },
   "ContactSection": {
-    "question": "Want to start a project?"
+    "question": "Want to start a project?",
+    "services": "My services:",
+    "servicesDevelopment": "Development"
   },
   "FAQ": {
     "subtitle": "Personal questions to reflect on and practice for interviews.",

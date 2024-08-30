@@ -12,11 +12,11 @@ export const ContactSection = () => {
 				{t("question")}
 			</h2>
 			<p className={styles.subtitle}>
-				Mis servicios incluyen:
+				{t("services")}
 			</p>
 			<div className={styles.servicesContainer}>
 				<div className={styles.serviceCard}>
-					<div className={styles.serviceCategory}>Desarrollo:</div>
+					<div className={styles.serviceCategory}>{t("servicesDevelopment")}</div>
 					<ul>
 						<li>Desarrollo y programación de videojuegos</li>
 						<li>Desarrollo Backend</li>
