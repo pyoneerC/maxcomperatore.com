@@ -26,8 +26,8 @@
 }
 
 .serviceCard {
-	background-color: #1e1e1e;
-	color: #ffffff;
+	background-color: var(--color-background-tertiary);
+	color: var(--color-text);
 	border-radius: 8px;
 	padding: 1.5rem;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
