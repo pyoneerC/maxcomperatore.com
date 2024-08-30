@@ -18,22 +18,22 @@ export const ContactSection = () => {
 				<div className={styles.serviceCard}>
 					<div className={styles.serviceCategory}>{t("servicesDevelopment")}</div>
 					<ul>
-						<li>Desarrollo y programación de videojuegos</li>
-						<li>Desarrollo Backend</li>
+						<li>{t("gameDevelopment")}</li>
+						<li>{t("backendDevelopment")}</li>
 					</ul>
 				</div>
 				<div className={styles.serviceCard}>
-					<div className={styles.serviceCategory}>Medios Digitales:</div>
+					<div className={styles.serviceCategory}>{t("servicesDigitalMarketing")}</div>
 					<ul>
-						<li>Creación de contenido</li>
-						<li>SEO y optimización de páginas web</li>
+						<li>{t("servicesContentCreation")}</li>
+						<li>{t("servicesSEO")}</li>
 					</ul>
 				</div>
 				<div className={styles.serviceCard}>
-					<div className={styles.serviceCategory}>Otros:</div>
+					<div className={styles.serviceCategory}>{t("servicesOther")}</div>
 					<ul>
-						<li>Entrevistas informativas</li>
-						<li>Traducciones (Inglés, Español)</li>
+						<li>{t("servicesInformationalInterviews")}</li>
+						<li>{t("servicesTranslation")}</li>
 					</ul>
 				</div>
 			</div>

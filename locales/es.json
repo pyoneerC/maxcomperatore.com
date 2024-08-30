@@ -67,7 +67,15 @@
   "ContactSection": {
     "question": "¿Quieres iniciar un proyecto?",
     "services": "Mis servicios:",
-    "servicesDevelopment": "Desarollo"
+    "servicesDevelopment": "Desarollo",
+    "gameDevelopment": "Desarrollo y programación de videojuegos",
+    "backendDevelopment": "Desarrollo Backend",
+    "servicesDigitalMarketing": "Medios Digitales",
+    "servicesContentCreation": "Creación de Contenido",
+    "servicesSEO": "SEO y optimización de páginas web",
+    "servicesOther": "Otros",
+    "servicesInformationalInterviews": "Entrevistas informativas",
+    "servicesTranslation": "Traducciones (Inglés, Español)"
   },
   "FAQ": {
     "subtitle": "Preguntas personales para reflexionar y practicar para entrevistas.",
