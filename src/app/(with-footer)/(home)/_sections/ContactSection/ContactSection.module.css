@@ -3,38 +3,32 @@
 	margin-inline: auto;
 	padding: 2rem;
 }
-
 .title {
 	text-align: center;
 	font-size: 2.5em;
 	font-weight: 900;
 	margin-bottom: 2rem;
 }
-
 .subtitle {
 	text-align: center;
 	font-size: 1.4em;
 	font-weight: 400;
 	margin-bottom: 2rem;
 }
-
 @media (max-width: 768px) {
 	.title {
 		font-size: 2em;
 	}
-
 	.subtitle {
 		font-size: 1.2em;
 	}
 }
-
 .servicesContainer {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1rem;
 	justify-content: center;
 }
-
 .serviceCard {
 	background-color: var(--color-background-tertiary);
 	color: var(--color-text);
@@ -47,12 +41,10 @@
 	min-width: 300px;
 	margin: 0 auto;
 }
-
 .serviceCard:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-
 .serviceCategory {
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -63,37 +55,28 @@
 	margin-right: 10px;
 	margin-bottom: 0.5rem;
 }
-
 .contactDialogContainer {
 	display: flex;
 	justify-content: center;
 	padding-bottom: 2.5rem;
 	padding-top: 2rem;
 }
-
-.actionBtn {
-
-}
-
-
 .subtitle svg {
 	display: flex;
 	margin: 0.4rem auto 0;
 }
-
 @media (min-width: 768px) {
 	.servicesContainer {
 		grid-template-columns: repeat(3, 0.21fr);
 		gap: 1rem;
 	}
-
 	.serviceCard {
 		padding: 2rem;
 		max-width: none;
 		min-width: 0;
 	}
-
 	.serviceCategory {
 		font-size: 1.5rem;
 	}
 }
+ 
