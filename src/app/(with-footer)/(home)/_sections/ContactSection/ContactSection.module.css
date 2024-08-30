@@ -64,6 +64,18 @@
 	margin-bottom: 0.5rem;
 }
 
+.contactDialogContainer {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}
+
+.actionBtn {
+
+}
+
+
 .subtitle svg {
 	display: flex;
 	margin: 0.4rem auto 0;

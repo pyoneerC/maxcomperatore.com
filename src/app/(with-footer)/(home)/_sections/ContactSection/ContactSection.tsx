@@ -2,6 +2,8 @@ import clsx from "clsx"
 import { CopyEmailButton } from "~/components/CopyEmailButton"
 import styles from "./ContactSection.module.css"
 import { useTranslations } from "next-intl"
+import { Button } from "~/components/Ui/Button"
+import { ContactDialog } from "~/components/ContactDialog"
 
 export const ContactSection = () => {
 	const t = useTranslations("ContactSection")
@@ -78,7 +80,15 @@ export const ContactSection = () => {
 					</ul>
 				</div>
 			</div>
-			<CopyEmailButton />
+			<div className={styles.contactDialogContainer}>
+			<ContactDialog
+				trigger={
+					<Button className={styles.actionBtn} type="button">
+						{t("contact")}
+					</Button>
+				}
+			/>
+			</div>
 		</section>
 	)
 }
