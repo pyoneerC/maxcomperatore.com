@@ -34,14 +34,15 @@
 
 .actions {
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	gap: 16px;
-	padding: 12PX;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: fit-content;
 }
 
 .copyEmailButton {
-	align-self: center;
+	display: block;
+	margin: 10px auto;
 }
 
 .flag {
