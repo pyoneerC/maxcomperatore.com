@@ -12,6 +12,7 @@ import { ContactDialog } from "~/components/ContactDialog"
 import { ThemeSwitcher } from "../ThemeSwitcher"
 import styles from "./MenuMobile.module.css"
 import { track } from '@vercel/analytics'
+import { useTranslations } from "next-intl"
 
 export const MenuMobile = () => {
 	const [open, setOpen] = useState(false)
@@ -30,6 +31,8 @@ export const MenuMobile = () => {
 		track('Menu Toggle', {}, { flags: [newOpenState ? 'menu-open' : 'menu-closed'] })
 	}
 
+	const t = useTranslations("Header")
+
 	return (
 		<>
 			<button
@@ -47,7 +50,7 @@ export const MenuMobile = () => {
 						{APP_ROUTES.map(({ href, label }) => (
 							<li key={href}>
 								<Link className={styles.navLink} href={href}>
-									{label}
+									{t(label)}
 								</Link>
 							</li>
 						))}
@@ -57,7 +60,7 @@ export const MenuMobile = () => {
 					<ContactDialog
 						trigger={
 							<Button className={styles.contactButton} size="medium" type="button">
-								Contactar
+								{t("contact")}
 							</Button>
 						}
 					/>
