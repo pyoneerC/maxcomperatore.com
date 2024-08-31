@@ -22,7 +22,7 @@ export const HeroSection = () => {
       <div className={styles.intro}>
         <p className={styles.introSubtitle}>
           {t.rich('subtitle', {
-            em: (children) => <em>{children}</em>
+            em: (children) => <strong>{children}</strong>
           })}
         </p>
         <p className={styles.introSubtitle}>
