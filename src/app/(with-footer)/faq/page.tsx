@@ -1,13 +1,40 @@
+"use client";
+
 import React from 'react'
 import styles from './page.module.css'
 import ScrollToTopButton from '~/components/ScrollToTopButton/ScrollToTopButton'
 import Link from 'next/link'
 import { useTranslations} from "next-intl"
+import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  ChakraProvider,
+  extendTheme,
+} from "@chakra-ui/react"
 
-export const metadata = {
-  title: 'Max Comperatore - FAQ',
-  description: 'Preguntas personales para reflexionar, y practicar para entrevistas de trabajo.',
-}
+const customTheme = extendTheme({
+  colors: {
+    brand: {
+      900: "#ff0000",
+      800: "#ff0000",
+      700: "#ff0000",
+    },
+  },
+  components: {
+    AccordionButton: {
+      baseStyle: {
+        bgGradient: "linear(to-r, #7928CA, #FF0080)",
+        _hover: {
+          transform: "scale(1.02)",
+          bgGradient: "linear(to-r, #FF0080, #7928CA)",
+        },
+      },
+    },
+  },
+});
 
 const FAQ = () => {
   const t = useTranslations("FAQ")
@@ -38,266 +65,424 @@ const FAQ = () => {
         </Link>
         <div className={styles.separator} />
         <section className={styles.section}>
-          <h2 className={styles.title1}>{t("q0")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a01")}
-            <br/><br/>
-          </p>
-          <p className={styles.paragraph}>
-            {t("a02")}
-          </p>
+          <ChakraProvider>
+            <Accordion allowToggle>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      <h2 className={styles.title1}>
+                        {t("q0")}
+                      </h2>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <p className={styles.paragraph}>
+                    {t("a01")}
+                    <br /><br />
+                  </p>
+                  <p className={styles.paragraph}>
+                    {t("a02")}
+                  </p>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </ChakraProvider>
         </section>
         <br />
         <section className={styles.section}>
-          <h2 className={styles.title1}>{t("q1")}</h2>
-          <p className={styles.paragraph}>
-            {t("a11")}
-            <br /><br />
-            {t("a12")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a13")}
-          </p>
+          <ChakraProvider theme={customTheme}>
+            <Accordion allowToggle>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      <h2 className={styles.title1}>{t("q1")}</h2>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <p className={styles.paragraph}>
+                    {t("a11")}
+                    <br /><br />
+                    {t("a12")}
+                  </p>
+                  <p className={styles.paragraph}>
+                    {t("a13")}
+                  </p>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </ChakraProvider>
         </section>
         <br />
         <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q2")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a21")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a22")}
-          </p>
-        </section>
-
-        <br />
-        <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q3")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a31")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a32")}
-          </p>
-        </section>
-        <br />
-        <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q4")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a41")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a42")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a43")}
-          </p>
+          <ChakraProvider>
+            <Accordion allowToggle>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      <h2 className={styles.title1}>
+                        {t("q2")}
+                      </h2>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <p className={styles.paragraph}>
+                    {t("a21")}
+                  </p>
+                  <p className={styles.paragraph}>
+                    {t("a22")}
+                  </p>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </ChakraProvider>
         </section>
         <br />
         <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q5")}
-          </h2>
-          <ul>
-            <li>
-              <span style={{ color: "skyblue", textDecoration: "underline", fontFamily: "inherit", fontSize: "inherit" }}>
-      <a href="https://gist.github.com/pyoneerC/b06fc1390048ff9ef094e70211dc68f8" target="_blank" rel="noopener noreferrer"
+          <ChakraProvider>
+            <Accordion allowToggle>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      <h2 className={styles.title1}>
+                        {t("q3")}
+                      </h2>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <p className={styles.paragraph}>
+                    {t("a31")}
+                  </p>
+                  <p className={styles.paragraph}>
+                    {t("a32")}
+                  </p>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </ChakraProvider>
+        </section>
+        <br />
+        <section className={styles.section}>
+          <ChakraProvider>
+            <Accordion allowToggle>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      <h2 className={styles.title1}>
+                        {t("q4")}
+                      </h2>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <p className={styles.paragraph}>
+                    {t("a41")}
+                  </p>
+                  <p className={styles.paragraph}>
+                    {t("a42")}
+                  </p>
+                  <p className={styles.paragraph}>
+                    {t("a43")}
+                  </p>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </ChakraProvider>
+        </section>
+        <br />
+        <section className={styles.section}>
+          <ChakraProvider>
+            <Accordion allowToggle>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      <h2 className={styles.title1}>
+                        {t("q5")}
+                      </h2>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <ul>
+                    <li>
+              <span
+                style={{ color: "skyblue", textDecoration: "underline", fontFamily: "inherit", fontSize: "inherit" }}>
+      <a href="https://gist.github.com/pyoneerC/b06fc1390048ff9ef094e70211dc68f8" target="_blank"
+         rel="noopener noreferrer"
          style={{ color: "inherit", textDecoration: "inherit" }}>
         {t("a51")}
       </a>
       </span>
-            </li>
-            <li>
-              <span style={{ color: "skyblue", textDecoration: "underline", fontFamily: "inherit", fontSize: "inherit" }}>
-      <a href="https://gist.github.com/pyoneerC/ca6d52d08562986b39b2932de0327915" target="_blank" rel="noopener noreferrer"
-          style={{ color: "inherit", textDecoration: "inherit" }}>
+                    </li>
+                    <li>
+              <span
+                style={{ color: "skyblue", textDecoration: "underline", fontFamily: "inherit", fontSize: "inherit" }}>
+      <a href="https://gist.github.com/pyoneerC/ca6d52d08562986b39b2932de0327915" target="_blank"
+         rel="noopener noreferrer"
+         style={{ color: "inherit", textDecoration: "inherit" }}>
         {t("a52")}
       </a>
               </span>
-            </li>
-          </ul>
+                    </li>
+                  </ul>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </ChakraProvider>
         </section>
         <br /><br />
         <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q6")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a61")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a62")}
-          </p>
+          <ChakraProvider>
+            <Accordion allowToggle>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      <h2 className={styles.title1}>
+                        {t("q6")}
+                      </h2>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <p className={styles.paragraph}>
+                    {t("a61")}
+                  </p>
+                  <p className={styles.paragraph}>
+                    {t("a62")}
+                  </p>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </ChakraProvider>
         </section>
         <br />
         <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q7")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a71")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a72")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a73")}
-          </p>
+          <ChakraProvider>
+          <Accordion allowToggle>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left">
+                    <h2 className={styles.title1}>
+                      {t("q7")}
+                    </h2>
+                  </Box>
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <p className={styles.paragraph}>
+                  {t("a71")}
+                </p>
+                <p className={styles.paragraph}>
+                  {t("a72")}
+                </p>
+                <p className={styles.paragraph}>
+                  {t("a73")}
+                </p>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          </ChakraProvider>
         </section>
         <br />
         <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q8")}
-          </h2>
-          <ul className={styles.paragraph}>
-            <li><strong>{t("q9")}</strong></li>
-            <p>
-              {t("a91")}
-              <br /><br />
-              {t("a92")}
-              <br /><br />
-              {t("a93")}
-            </p>
-            <br />
-            <li><strong>{t("q10")}</strong></li>
-            <p>
-              {t("a101")}
-              <br /><br />
-              {t("a102")}
-            </p>
-            <br />
-            <li><strong>{t("q11")}</strong></li>
-            <p>
-              {t("a111")}
-            </p>
-            <br />
-            <p>
-              {t("a112")}
-            </p>
-            <br />
-            <p>
-              {t("a113")}
-            </p>
-            <br />
-            <li><strong>{t("q12")}</strong></li>
-            <blockquote>
-              <ul>
-                <li>{t("a121")}</li>
-                <li>{t("a122")}</li>
-                <li>{t("a123")}</li>
-                <li>{t("a124")}</li>
-                <li>{t("a125")}</li>
-                <li>{t("a126")}</li>
-                <li>{t("a127")}</li>
-                <li>{t("a128")}</li>
-              </ul>
-            </blockquote>
-            <br />
-            <li><strong>{t("q13")}</strong></li>
-            <p>
-              {t("a131")}
-            </p>
-            <br />
-            <p>
-              {t("a132")}
-            </p>
-          </ul>
+          <ChakraProvider>
+          <Accordion allowToggle>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left">
+                    <h2 className={styles.title1}>
+                      {t("q8")}
+                    </h2>
+                  </Box>
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <ul className={styles.paragraph}>
+                  <li><strong>{t("q9")}</strong></li>
+                  <p>
+                    {t("a91")}
+                    <br /><br />
+                    {t("a92")}
+                    <br /><br />
+                    {t("a93")}
+                  </p>
+                  <br />
+                  <li><strong>{t("q10")}</strong></li>
+                  <p>
+                    {t("a101")}
+                    <br /><br />
+                    {t("a102")}
+                  </p>
+                  <br />
+                  <li><strong>{t("q11")}</strong></li>
+                  <p>
+                    {t("a111")}
+                  </p>
+                  <br />
+                  <p>
+                    {t("a112")}
+                  </p>
+                  <br />
+                  <p>
+                    {t("a113")}
+                  </p>
+                  <br />
+                  <li><strong>{t("q12")}</strong></li>
+                  <blockquote>
+                    <ul>
+                      <li>{t("a121")}</li>
+                      <li>{t("a122")}</li>
+                      <li>{t("a123")}</li>
+                      <li>{t("a124")}</li>
+                      <li>{t("a125")}</li>
+                      <li>{t("a126")}</li>
+                      <li>{t("a127")}</li>
+                      <li>{t("a128")}</li>
+                    </ul>
+                  </blockquote>
+                  <br />
+                  <li><strong>{t("q13")}</strong></li>
+                  <p>
+                    {t("a131")}
+                  </p>
+                  <br />
+                  <p>
+                    {t("a132")}
+                  </p>
+                </ul>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          </ChakraProvider>
         </section>
         <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q14")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a141")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a142")}
-          </p>
-          <p className={styles.paragraph}>
-            {t("a143")}
-          </p>
-          <p>
-            {t("a144")}
-          </p>
+          <ChakraProvider>
+          <Accordion allowToggle>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left">
+                    <h2 className={styles.title1}>
+                      {t("q14")}
+                    </h2>
+                  </Box>
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <p className={styles.paragraph}>
+                  {t("a141")}
+                </p>
+                <p className={styles.paragraph}>
+                  {t("a142")}
+                </p>
+                <p className={styles.paragraph}>
+                  {t("a143")}
+                </p>
+                <p>
+                  {t("a144")}
+                </p>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          </ChakraProvider>
         </section>
         <br />
         <section className={styles.section}>
-          <h2 className={styles.title1}>
-            {t("q15")}
-          </h2>
-          <p className={styles.paragraph}>
-            {t("a151")}
-          </p>
-          <ul>
-            <ul>
-              <li>
+          <ChakraProvider>
+          <Accordion allowToggle>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left">
+                    <h2 className={styles.title1}>
+                      {t("q15")}
+                    </h2>
+                  </Box>
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <p className={styles.paragraph}>
+                  {t("a151")}
+                </p>
+                <ul>
+                  <ul>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=Tt3F2x0RuZI" target="_blank" rel="noopener noreferrer">Runaway (U & I) - Galantis</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=xY66ucVK-RM" target="_blank" rel="noopener noreferrer">Good 4 Me - Vindata</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=zubYYZ0fTyQ" target="_blank" rel="noopener noreferrer">Cutting Shapes - Don</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=RhR_Z5wVvJM" target="_blank" rel="noopener noreferrer">Play - Tokyo Machine</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=XmIgg9De9hY" target="_blank" rel="noopener noreferrer">The Nights - Avicii</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=j43PGdl03WA" target="_blank" rel="noopener noreferrer">She Wants Me Dead - CAZZ</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=FgApngD5faY" target="_blank" rel="noopener noreferrer">Silhouette (Feed Me Remix)</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=qcE__zJ4L6E" target="_blank"
              rel="noopener noreferrer">Still - Glacier</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=A8pOVirjGF0" target="_blank"
              rel="noopener noreferrer">Overkill - RIOT</a>
           </span>
-              </li>
-              <li>
+                    </li>
+                    <li>
           <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
           <a href="https://www.youtube.com/watch?v=mype6RcMMmY" target="_blank"
              rel="noopener noreferrer">Jungle Fury - RIOT</a>
           </span>
-              </li>
-            </ul>
-          </ul>
+                    </li>
+                  </ul>
+                </ul>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          </ChakraProvider>
         </section>
         <br />
         <br />
         <div className={styles.dashedseparator} />
         <div className={styles.imageContainer}>
-        <img src={"/assets/images/faq_pic_m_c.avif"} alt="Max Comperatore" className={styles.image} />
+          <img src={"/assets/images/faq_pic_m_c.avif"} alt="Max Comperatore" className={styles.image} />
         </div>
         <p className={styles.paragraph} style={{ textAlign: "center" }}>
   <span className={styles.paragraph1} style={{ color: "lime" }}>
