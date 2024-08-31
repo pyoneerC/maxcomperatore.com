@@ -25,7 +25,7 @@ export const CopyEmailSmallButton: React.FC<Props> = ({ className }) => {
 	useTimeout(hideFeedback, RESET_FEEDBACK_TIME)
 
 	const handleOnClick = async () => {
-		const isCopied = await copyToClipboard(DRESAN_EMAIL)
+		const isCopied = true
 		setDisplayFeedback(isCopied)
 		window.location.href = `mailto:${DRESAN_EMAIL}`
 	}
