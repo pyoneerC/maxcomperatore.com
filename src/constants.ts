@@ -5,10 +5,10 @@ export const FORMSPREE_URL = "https://formspree.io/f"
 export const APP_ROUTES = [
 	{
 		href: "/blog",
-		label: "Blog",
+		label: "blog",
 	},
 	{
 		href: "/faq",
-		label: "FAQ",
+		label: "about",
 	},
 ]

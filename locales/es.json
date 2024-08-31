@@ -163,7 +163,9 @@
     "post2date" : "25 de Agosto de 2024"
   },
   "Header": {
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "about": "Acerca de mí",
+    "blog": "Blog"
   },
   "CopyEmailButton": {
     "copy": "Click para copiar",

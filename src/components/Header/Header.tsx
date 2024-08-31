@@ -23,7 +23,7 @@ export const Header = () => {
 						{APP_ROUTES.map(({ href, label }) => (
 							<li key={href}>
 								<Link href={href}>
-									{label}
+									{t(label)}
 								</Link>
 							</li>
 						))}
