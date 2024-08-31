@@ -1,6 +1,6 @@
 "use client"
 
-import { coverProjects, projects } from "~/data/projects"
+import { coverProjects } from "~/data/projects"
 import { ProjectCard } from "~/components/ProjectCard";
 import styles from "./ProjectsSection.module.css";
 import { useTranslations } from "next-intl";

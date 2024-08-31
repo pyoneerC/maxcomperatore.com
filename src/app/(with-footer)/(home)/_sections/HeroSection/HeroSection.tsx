@@ -1,6 +1,5 @@
 import NextLink from "next/link";
 import { Button } from "~/components/Ui/Button";
-import { ContactDialog } from "~/components/ContactDialog";
 import { CopyEmailSmallButton } from "~/components/CopyEmailSmallButton";
 import styles from "./HeroSection.module.css";
 import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton";

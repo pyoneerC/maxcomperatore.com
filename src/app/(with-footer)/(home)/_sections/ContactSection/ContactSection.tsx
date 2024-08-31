@@ -1,5 +1,4 @@
 import clsx from "clsx"
-import { CopyEmailButton } from "~/components/CopyEmailButton"
 import styles from "./ContactSection.module.css"
 import { useTranslations } from "next-intl"
 import { Button } from "~/components/Ui/Button"
