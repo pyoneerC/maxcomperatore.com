@@ -403,9 +403,38 @@ const FAQ = () => {
         </section>
         <br />
         <section className={styles.section}>
-          <ChakraProvider>
+        <ChakraProvider>
           <Accordion allowToggle>
             <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left">
+                    <h2 className={styles.title1}>
+                      {t("q16")}
+                    </h2>
+                  </Box>
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <p className={styles.paragraph}>
+                  {t("a161")}
+                </p>
+                <p className={styles.paragraph}>
+                  {t("a162")}
+                </p>
+                <span className={styles.paragraph} style={{ color: "skyblue", textDecoration: "underline" }}>
+          <a href="https://steamcommunity.com/profiles/76561199088424553" target="_blank" rel="noopener noreferrer">Steam.</a>
+          </span>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        </ChakraProvider>
+        </section>
+        <br />
+        <section className={styles.section}>
+          <ChakraProvider>
+            <Accordion allowToggle>
+              <AccordionItem>
               <h2>
                 <AccordionButton>
                   <Box flex="1" textAlign="left">
