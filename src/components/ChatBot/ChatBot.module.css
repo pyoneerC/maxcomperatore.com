@@ -75,6 +75,16 @@
     }
 }
 
+@media (max-width: 768px) {
+    .message {
+        margin-right: 45px;
+    }
+
+    .message.assistant {
+        margin-left: 45px;
+    }
+}
+
 .button::before {
     content: "";
     position: absolute;
