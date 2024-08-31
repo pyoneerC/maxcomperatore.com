@@ -44,7 +44,7 @@ const FAQ = () => {
       <div className={styles.container}>
         <ScrollToTopButton />
         <h1 className={styles.title}>
-          {t("title")}
+          {t("about")}
         </h1>
         <p className={styles.subtitle}>
           {t("subtitle")}
