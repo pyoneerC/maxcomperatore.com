@@ -241,7 +241,7 @@ const FAQ = () => {
             </Accordion>
           </ChakraProvider>
         </section>
-        <br /><br />
+        <br />
         <section className={styles.section}>
           <ChakraProvider>
             <Accordion allowToggle>
@@ -369,6 +369,7 @@ const FAQ = () => {
           </Accordion>
           </ChakraProvider>
         </section>
+        <br />
         <section className={styles.section}>
           <ChakraProvider>
           <Accordion allowToggle>
