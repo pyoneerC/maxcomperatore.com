@@ -20,7 +20,7 @@ export const projectMetadata = {
 	},
 	pixelateddrift: {
 		slug: "pixelateddrift",
-		name: "Blackout Boulevard",
+		name: "Mercadix",
 	},
 	portfolio: {
 		slug: "portfolio",
@@ -77,7 +77,7 @@ export const coverProjects: CoverProjectOther[] = [
 	},
 	{
 		...projectMetadata.pixelateddrift,
-		imageUrl: `/assets/images/projects/otherprojectscover/pixelateddrift.avif`,
+		imageUrl: `/assets/images/projects/cover/mercadolibre.avif`,
 		description: "pd",
 		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
 		link: "https://pyoneerc1.itch.io/pixelateddrift"

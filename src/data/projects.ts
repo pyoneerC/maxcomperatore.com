@@ -4,7 +4,7 @@ import { Tag } from "./tags"
 export const projectMetadata = {
 	mercadolibrepricechart: {
 		slug: "mercadolibrepricechart",
-		name: "Mercadix",
+		name: "Cinemax",
 	},
 	BlinkLink: {
 		slug: "blinklink",
@@ -19,7 +19,7 @@ export const projectMetadata = {
 export const coverProjects: CoverProject[] = [
 	{
 		...projectMetadata.mercadolibrepricechart,
-		imageUrl: `/assets/images/projects/cover/mercadolibre.avif`,
+		imageUrl: `/assets/images/projects/cinemax/cinemax.avif`,
 		i18nDescriptionKey: "mercadolibrepricechart.description",
 	},
 	{
