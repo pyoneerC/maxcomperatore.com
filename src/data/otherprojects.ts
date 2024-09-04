@@ -28,7 +28,7 @@ export const projectMetadata = {
 	},
 	HillClimbRacing: {
 		slug: "hillclimbracingclone",
-		name: "Hill Climb Racing Clone",
+		name: "Hill Climb Racing",
 	},
 	thegreatchocolatecaper: {
 		slug: "thegreatchocolatecaper",
@@ -42,17 +42,11 @@ export const projectMetadata = {
 
 export const coverProjects: CoverProjectOther[] = [
 	{
-		...projectMetadata.roadmapsh,
-		imageUrl: `/assets/images/projects/otherprojectscover/roadmapsh.avif`,
-		description: "roadmapsh",
-		link: "https://roadmap.sh"
-	},
-	{
-		...projectMetadata.argentofx,
-		imageUrl: `/assets/images/projects/cover/monedasapi.avif`,
-		description: "afx",
-		tags: [Tag.python, Tag.redis, Tag.docker],
-		link: "https://maxcomperatore.online/docs",
+		...projectMetadata.pixelateddrift,
+		imageUrl: `/assets/images/projects/cover/mercadolibre.avif`,
+		description: "pd",
+		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
+		link: "https://pyoneerc1.itch.io/pixelateddrift"
 	},
 	{
 		...projectMetadata.HillClimbRacing,
@@ -60,6 +54,13 @@ export const coverProjects: CoverProjectOther[] = [
 		description: "hcr",
 		tags: [Tag.unity, Tag.cSharp],
 		link: "https://github.com/pyoneerC/Hill-Climb-Racing"
+	},
+	{
+		...projectMetadata.argentofx,
+		imageUrl: `/assets/images/projects/cover/monedasapi.avif`,
+		description: "afx",
+		tags: [Tag.python, Tag.redis, Tag.docker],
+		link: "https://maxcomperatore.online/docs",
 	},
 	{
 		...projectMetadata.arrayutils,
@@ -76,10 +77,9 @@ export const coverProjects: CoverProjectOther[] = [
 		link: "https://github.com/pyoneerC/The-Great-Chocolate-Caper"
 	},
 	{
-		...projectMetadata.pixelateddrift,
-		imageUrl: `/assets/images/projects/cover/mercadolibre.avif`,
-		description: "pd",
-		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
-		link: "https://pyoneerc1.itch.io/pixelateddrift"
+		...projectMetadata.roadmapsh,
+		imageUrl: `/assets/images/projects/otherprojectscover/roadmapsh.avif`,
+		description: "roadmapsh",
+		link: "https://roadmap.sh"
 	},
 ]
