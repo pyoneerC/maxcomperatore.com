@@ -41,24 +41,26 @@ export const projects = [
 		description: "mercadolibrepricechart.about",
 		mobileImages:
 			[
-				`/assets/images/projects/mercadolibre/mercadolibrepcmobile.avif`,
+				`/assets/images/projects/cinemax/phone.avif`,
 			],
 		desktopImages:
 			[
-				`/assets/images/projects/mercadolibre/mercadolibrepcdiagrama.avif`
+				`/assets/images/projects/cinemax/seats.avif`,
+				`/assets/images/projects/cinemax/pycharm.avif`,
+				`/assets/images/projects/cinemax/receipt.avif`,
 			],
 		links: [
 			{
 				label: "mercadolibrepricechart.linkVisitSite",
-				url: "https://mercado-libre-price-chart.vercel.app",
+				url: "https://cinemaximo.netlify.app/",
 			},
 			{
 				label: "mercadolibrepricechart.linkViewVideo",
-				url: "https://www.youtube.com/watch?v=o_DtaMIOuaM&t",
+				url: "https://youtu.be/0zoD_jpB_t4",
 			},
 			{
 				label: "mercadolibrepricechart.linkViewCode",
-				url: "https://github.com/pyoneerC/mercado-libre-price-chart",
+				url: "https://github.com/pyoneerC/Cinemax-B",
 			},
 		],
 		tags:

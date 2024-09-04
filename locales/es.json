@@ -25,11 +25,11 @@
 
     "mercadolibrepricechart": {
       "name": "Cinemax",
-      "description": "Sitio web para reservar entradas de cine, con diseño intuitivo y un backend a medida.",
+      "description": "Plataforma de última generación para reservar entradas de cine.",
       "linkVisitSite": "Visitar sitio",
       "linkViewCode": "Ver código",
       "linkViewVideo": "Ver vídeo",
-      "about": "Cinemax es un sitio web que permite a los usuarios reservar entradas de cine de forma rápida y sencilla. \n\nCon un diseño intuitivo y atractivo, Cinemax ofrece una experiencia de usuario inmersiva y eficiente, respaldada por un backend personalizado que garantiza un rendimiento óptimo y una gestión segura de los datos."
+      "about": "Cinemax es una aplicación web que permite a los usuarios reservar entradas de cine con facilidad y eficiencia.\n La plataforma cuenta con un diseño intuitivo que simplifica el proceso de reserva, mientras que el backend, desarrollado desde cero, garantiza un rendimiento seguro y confiable.\n Cinemax está diseñado para ofrecer una experiencia de usuario fluida, proporcionando una solución conveniente y amigable para los amantes del cine."
     },
     "monedasAPI": {
       "name": "BlinkLink",
