@@ -32,7 +32,7 @@
       "linkVisitSite": "Visit site",
       "linkViewCode": "View code",
       "linkViewVideo": "View video",
-      "about" : "Web application that allows you to query product prices in MercadoLibre and visualize them in a histogram.\n It uses web scraping to obtain prices, the ArgentoFX API (developed by me) for the exchange rate updated to dollars, and Matplotlib to generate clear and concise graphs that effectively represent the variability of prices."
+      "about" : "Cinemax is a web application that allows users to book movie tickets with ease and efficiency. \n\nThe platform features an intuitive design that simplifies the booking process, while the backend, developed from scratch, ensures secure and reliable performance. \n\nCinemax is designed to provide a seamless user experience, offering a convenient and user-friendly solution for moviegoers."
     },
     "monedasAPI": {
       "name": "BlinkLink",

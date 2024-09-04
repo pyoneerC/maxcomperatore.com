@@ -64,8 +64,10 @@ export const projects = [
 		tags:
 			[
 			Tag.python,
-			Tag.flask,
-			Tag.beautifulSoup,
+			Tag.fastAPI,
+			Tag.postgreSQL,
+			Tag.docker,
+			Tag.html,
 		],
 	},
 	{

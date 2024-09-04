@@ -29,7 +29,7 @@
       "linkVisitSite": "Visitar sitio",
       "linkViewCode": "Ver código",
       "linkViewVideo": "Ver vídeo",
-      "about": "Aplicación web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma.\n Utiliza web scraping para obtener los precios, la API ArgentoFX (desarrollada por mí) para el tipo de cambio actualizado a dólares, y Matplotlib para generar gráficos claros y concisos que representan eficazmente la variabilidad de los precios."
+      "about": "Cinemax es un sitio web que permite a los usuarios reservar entradas de cine de forma rápida y sencilla. \n\nCon un diseño intuitivo y atractivo, Cinemax ofrece una experiencia de usuario inmersiva y eficiente, respaldada por un backend personalizado que garantiza un rendimiento óptimo y una gestión segura de los datos."
     },
     "monedasAPI": {
       "name": "BlinkLink",
