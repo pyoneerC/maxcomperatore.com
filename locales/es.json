@@ -25,7 +25,7 @@
 
     "mercadolibrepricechart": {
       "name": "Cinemax",
-      "description": "Histograma de precios en vivo para cualquier producto en MercadoLibre.",
+      "description": "Sitio web para reservar entradas de cine, con diseño intuitivo y un backend a medida.",
       "linkVisitSite": "Visitar sitio",
       "linkViewCode": "Ver código",
       "linkViewVideo": "Ver vídeo",
@@ -184,7 +184,8 @@
     "pd" : "Simulador de manejo ambientado en una ciudad gótica con gráficos al estilo de la PlayStation 2.",
     "afx" : "API para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
     "uepc" : "Script de línea de comandos que optimiza el mantenimiento de proyectos de Unreal Engine eliminando carpetas temporales de forma efectiva, segura y rápida.",
-    "roadmapsh" : "Como colaborador principal del 6to repositorio con más estrellas de GitHub, he contribuido significativamente en las hojas de ruta para desarrolladores de backend y videojuegos."
+    "roadmapsh" : "Como colaborador principal del 6to repositorio con más estrellas de GitHub, he contribuido significativamente en las hojas de ruta para desarrolladores de backend y videojuegos.",
+    "mercadix" : "Sitio web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma."
   },
   "Form": {
     "name": "Ingrese su nombre completo",

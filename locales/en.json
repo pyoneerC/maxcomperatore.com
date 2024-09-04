@@ -28,7 +28,7 @@
 
     "mercadolibrepricechart": {
       "name": "Cinemax",
-      "description": "Live price histogram for any product on MercadoLibre.",
+      "description": "Web app for booking movie tickets, with an intuitive design and a hand-made backend.",
       "linkVisitSite": "Visit site",
       "linkViewCode": "View code",
       "linkViewVideo": "View video",
@@ -184,7 +184,8 @@
     "pd" : "Driving simulator set in a gothic city with PlayStation 2-style graphics.",
     "afx" : "Real-time foreign exchange rates API for the Argentinean market.",
     "uepc" : "Command line script that optimizes the maintenance of Unreal Engine projects by deleting temporary folders effectively, securely and quickly.",
-    "roadmapsh" : "As a top contributor for the 6th most starred repository on GitHub, I have made significant contributions to the project, especially in the game developer and backend roadmaps."
+    "roadmapsh" : "As a top contributor for the 6th most starred repository on GitHub, I have made significant contributions to the project, especially in the game developer and backend roadmaps.",
+    "mercadix": "Website that allows users to check product prices on MercadoLibre and visualize them in a histogram."
   },
   "Form": {
     "name": "Enter your full name",

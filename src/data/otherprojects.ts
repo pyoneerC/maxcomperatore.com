@@ -44,9 +44,9 @@ export const coverProjects: CoverProjectOther[] = [
 	{
 		...projectMetadata.pixelateddrift,
 		imageUrl: `/assets/images/projects/cover/mercadolibre.avif`,
-		description: "pd",
-		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
-		link: "https://pyoneerc1.itch.io/pixelateddrift"
+		description: "mercadix",
+		tags: [Tag.python, Tag.flask, Tag.html],
+		link: "https://maxcomperatore.store/"
 	},
 	{
 		...projectMetadata.HillClimbRacing,
