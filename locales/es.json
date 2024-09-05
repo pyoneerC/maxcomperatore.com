@@ -29,7 +29,7 @@
       "linkVisitSite": "Visitar sitio",
       "linkViewCode": "Ver código",
       "linkViewVideo": "Ver vídeo",
-      "about": "Cinemax es una aplicación web que permite a los usuarios reservar entradas de cine con facilidad. La plataforma cuenta con un diseño intuitivo que simplifica el proceso de reserva, mientras que el backend, desarrollado desde cero, garantiza un rendimiento seguro y confiable. \nAdemás, Cinemax ofrece un asistente de ayuda impulsado por inteligencia artificial de vanguardia, diseñado para asistir a los usuarios durante todo el proceso de reserva y resolver cualquier consulta que puedan tener. \nCinemax está desarrollado para ofrecer una experiencia de usuario fluida, proporcionando una solución conveniente y única para los amantes del cine."
+      "about": "Cinemax es una aplicación web que simplifica la reserva de entradas de cine con un diseño intuitivo. \nSu backend, desarrollado desde cero, asegura un rendimiento seguro y confiable. \nAdemás, incluye un asistente de IA avanzado para ayudar a los usuarios durante la reserva y resolver cualquier consulta que puedan tener."
     },
     "monedasAPI": {
       "name": "BlinkLink",
