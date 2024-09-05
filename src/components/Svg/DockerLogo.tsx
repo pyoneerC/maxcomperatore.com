@@ -3,8 +3,8 @@ import { SVGProps } from "react"
 export const DockerLogo = (props: SVGProps<SVGSVGElement>) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width={60}
-		height={60}
+		width={65}
+		height={65}
 		viewBox="-1.5 -1 18 18"
 		fill="none"
 		{...props}

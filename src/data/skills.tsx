@@ -1,11 +1,11 @@
 import { PythonLogo } from "~/components/Svg/PythonLogo"
 import { PostgreSqlLogo } from "~/components/Svg/PostgreSqlLogo"
-import { GitHubActionsLogo } from "~/components/Svg/GitHubActionsLogo"
 import { UnityLogo } from "~/components/Svg/UnityLogo"
 import { UnrealLogo } from "~/components/Svg/UnrealEngineLogo"
 import { CsharpLogo } from "~/components/Svg/CsharpLogo"
 import CppLogo from "~/components/Svg/CppLogo"
 import { RedisLogo } from "~/components/Svg/RedisLogo"
+import { DockerLogo } from "~/components/Svg/DockerLogo"
 
 export const skills = [
 	// Backend skills
@@ -15,9 +15,9 @@ export const skills = [
 		brandColor: "#FFD445",
 	},
 	{
-		name: "Actions",
-		icon: <GitHubActionsLogo />,
-		brandColor: "#1E87FF",
+		name: "Docker",
+		icon: <DockerLogo />,
+		brandColor: "#099CEC",
 	},
 	{
 		name: "Redis",
