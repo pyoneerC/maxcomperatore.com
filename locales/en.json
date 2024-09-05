@@ -32,7 +32,7 @@
       "linkVisitSite": "Visit site",
       "linkViewCode": "View code",
       "linkViewVideo": "View video",
-      "about" : "Cinemax is a web application that allows users to book movie tickets with ease and efficiency. \n\nThe platform features an intuitive design that simplifies the booking process, while the backend, developed from scratch, ensures secure and reliable performance. \n\nCinemax is designed to provide a seamless user experience, offering a convenient and user-friendly solution for moviegoers."
+      "about" : "Cinemax is a web application that allows users to book movie tickets with ease. The platform features an intuitive design that simplifies the booking process, while the backend, developed from scratch, ensures secure and reliable performance. \nAdditionally, Cinemax offers a specialized help assistant powered by cutting-edge artificial intelligence, designed to assist users throughout the booking process and address any questions they may have. \nCinemax is developed to provide a seamless user experience, offering a convenient and user-first solution for moviegoers."
     },
     "monedasAPI": {
       "name": "BlinkLink",

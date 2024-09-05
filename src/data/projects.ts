@@ -45,6 +45,7 @@ export const projects = [
 			],
 		desktopImages:
 			[
+				`/assets/images/projects/cinemax/index.avif`,
 				`/assets/images/projects/cinemax/seats.avif`,
 				`/assets/images/projects/cinemax/pycharm.avif`,
 				`/assets/images/projects/cinemax/receipt.avif`,
