@@ -67,7 +67,7 @@ export const coverProjects: CoverProjectOther[] = [
 		imageUrl: `/assets/images/projects/otherprojectscover/arrayutils.avif`,
 		description: "arrayutils",
 		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
-		link: "https://github.com/pyoneerC/Array-Utils"
+		link: "https://www.unrealengine.com/marketplace/en-US/product/array-utils"
 	},
 	{
 		...projectMetadata.thegreatchocolatecaper,
