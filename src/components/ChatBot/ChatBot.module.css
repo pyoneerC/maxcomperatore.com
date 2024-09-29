@@ -82,7 +82,8 @@
     }
 
     .message.user {
-        
+        margin-left: auto;
+        margin-right: 65px;
     }
 
     .message.assistant {
