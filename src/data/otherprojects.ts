@@ -49,6 +49,13 @@ export const coverProjects: CoverProjectOther[] = [
 		link: "https://maxcomperatore.store/"
 	},
 	{
+		...projectMetadata.arrayutils,
+		imageUrl: `/assets/images/projects/otherprojectscover/arrayutils.avif`,
+		description: "arrayutils",
+		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
+		link: "https://www.unrealengine.com/marketplace/en-US/product/array-utils"
+	},
+	{
 		...projectMetadata.HillClimbRacing,
 		imageUrl: `/assets/images/projects/otherprojectscover/hcr.avif`,
 		description: "hcr",
@@ -61,13 +68,6 @@ export const coverProjects: CoverProjectOther[] = [
 		description: "afx",
 		tags: [Tag.python, Tag.redis, Tag.docker],
 		link: "https://maxcomperatore.online/docs",
-	},
-	{
-		...projectMetadata.arrayutils,
-		imageUrl: `/assets/images/projects/otherprojectscover/arrayutils.avif`,
-		description: "arrayutils",
-		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
-		link: "https://www.unrealengine.com/marketplace/en-US/product/array-utils"
 	},
 	{
 		...projectMetadata.thegreatchocolatecaper,

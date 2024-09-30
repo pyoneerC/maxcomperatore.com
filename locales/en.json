@@ -179,7 +179,7 @@
     "title": "Other initiatives",
     "subtitle": "Projects and contributions made to learn new technologies and refine my skills.",
     "hcr" : "Recreation in Unity with improvements in physics, interface and sound for a more challenging and immersive experience. Inspired by my love for this childhood game.",
-    "arrayutils" : "Collection of functions adapted from the C++ Standard Template Library (STL), designed to interoperate with the Unreal Engine scripting language.",
+    "arrayutils" : "Functions adapted from the C++ Standard Template Library (STL) for arrays in Unreal Engine Blueprints, with over 12k downloads.",
     "tgcp" : "Interactive simulator where the player assumes the role of a chocolate ball trying to escape from a labyrinthine house full of hungry robots.",
     "pd" : "Driving simulator set in a gothic city with PlayStation 2-style graphics.",
     "afx" : "Real-time foreign exchange rates API for the Argentinean market.",
