@@ -20,9 +20,9 @@ export const skills = [
 		brandColor: "#099CEC",
 	},
 	{
-		name: "Redis",
+		name: "Azure",
 		icon: <RedisLogo />,
-		brandColor: "#D8291F",
+		brandColor: "#34BDEE",
 	},
 	{
 		name: "PostgreSQL",
