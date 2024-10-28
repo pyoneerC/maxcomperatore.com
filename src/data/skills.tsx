@@ -51,9 +51,9 @@ export const skills = [
 	//	brandColor: "#007FFF",
 	//},
 	{
-		name: "C#",
+		name: "DotNet",
 		icon: <CsharpLogo />,
-		brandColor: "#A27ADD",
+		brandColor: "#512BD4",
 	},
 	// Game development skills
 	{
