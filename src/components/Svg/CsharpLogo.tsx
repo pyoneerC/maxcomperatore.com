@@ -5,7 +5,7 @@ export const CsharpLogo = (props: SVGProps<SVGSVGElement>) => (
 		xmlns="http://www.w3.org/2000/svg"
 		width={75}
 		height={75}
-		viewBox="0 0 25 30"
+		viewBox="0 -1 25 30"
 		fill="none"
 		{...props}
 	>
