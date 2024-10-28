@@ -15,6 +15,34 @@
 	font-weight: 400;
 	margin-bottom: 2rem;
 }
+.arrow1 {
+	display: flex;
+	padding: 0;
+	justify-content: flex-start;
+	position: absolute;
+	left: 700px;
+	margin-top: 1.1rem;
+}
+
+.arrow2 {
+	display: flex;
+	padding: 0;
+	justify-content: flex-end;
+	position: absolute;
+	right: 785px;
+	margin-top: -5rem;
+	transform: scale(0.8);
+}
+
+@media (max-width: 768px) {
+	.arrow1 {
+		display: none;
+	}
+	.arrow2 {
+		display: none;
+	}
+}
+
 @media (max-width: 768px) {
 	.title {
 		font-size: 2em;
