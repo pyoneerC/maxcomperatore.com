@@ -20,8 +20,9 @@
 	padding: 0;
 	justify-content: flex-start;
 	position: absolute;
-	left: 700px;
-	margin-top: 1.1rem;
+	left: 785px;
+	margin-top: -4.5rem;
+	transform: scale(0.9);
 }
 
 .arrow2 {
