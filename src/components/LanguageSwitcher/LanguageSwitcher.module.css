@@ -10,11 +10,13 @@
 	-webkit-tap-highlight-color: transparent;
 	cursor: pointer;
 	transition: color var(--theme-transition-duration) ease;
+	caret-color: transparent;
 }
 
 .button:hover {
 	color: var(--color-text);
 	cursor: url('~/public/assets/cursor/hand-pointer.png'), auto;
+	caret-color: transparent;
 }
 
 .sunAndMoon {
