@@ -5,8 +5,8 @@ const CppLogo = () => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width={60}
-			height={60}
+			width={62.5}
+			height={62.5}
 			viewBox="0 0.5 25 25"
 			fill="none"
 		>
