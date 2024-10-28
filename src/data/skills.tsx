@@ -67,8 +67,8 @@ export const skills = [
 		brandColor: "#818181",
 	},
 	{
-		name: "C++",
+		name: "React",
 		icon: <CppLogo />,
-		brandColor: "#659AD2",
+		brandColor: "#61DAFB",
 	},
 ]
