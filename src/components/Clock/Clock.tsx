@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './Clock.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 // @ts-ignore
 const Clock = ({ className }) => {

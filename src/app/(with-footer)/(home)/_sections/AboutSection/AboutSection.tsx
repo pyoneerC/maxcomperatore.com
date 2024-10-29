@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './AboutSection.module.css'
 import {useTranslations} from "next-intl"
-import Link from "next/link"
 
 export const AboutSection = () => {
 	const t = useTranslations("AboutSection")

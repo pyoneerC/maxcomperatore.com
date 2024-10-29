@@ -1,6 +1,6 @@
 import type { SVGProps } from "react"
 
-export const YoutubeIcon = (props: SVGProps<SVGSVGElement>) => (
+export const YoutubeIcon = () => (
 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentColor" fill="none"
 			 strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" data-icon="SvgYouTube"
 			 aria-hidden="true">

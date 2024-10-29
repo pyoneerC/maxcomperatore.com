@@ -1,6 +1,6 @@
 import { SVGProps } from "react"
 
-export const RedisLogo = (props: SVGProps<SVGSVGElement>) => (
+export const RedisLogo = () => (
 	<svg fill="currentColor" width="58" height="58" viewBox="0 0 19 19" role="img" focusable="false" aria-hidden="true" style={{ marginTop: '10px', marginLeft: '12px' }}
 			 xmlns="http://www.w3.org/2000/svg">
 		<path
