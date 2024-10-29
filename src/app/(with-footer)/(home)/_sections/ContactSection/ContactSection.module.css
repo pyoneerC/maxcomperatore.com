@@ -35,6 +35,10 @@
 	transform: scale(0.8);
 }
 
+.mobilearrow {
+	display: none;
+}
+
 @media (max-width: 768px) {
 	.arrow1 {
 		display: none;
@@ -42,7 +46,19 @@
 	.arrow2 {
 		display: none;
 	}
+	.mobilearrow {
+		display: flex;
+		padding: 0;
+		justify-content: center;
+		position: absolute;
+		left: 40%;
+		margin-top: -6.5rem;
+		transform: scale(0.6);
+	}
 }
+
+/* make the button more down in mobile */
+
 
 @media (max-width: 768px) {
 	.title {
