@@ -130,7 +130,7 @@ const ContactForm = () => {
 			method="POST"
 		>
 			<Label>
-				<span className={styles.labelWrapper}>Nombre</span>
+				<span className={styles.labelWrapper}>{t("nameLabel")}</span>
 				<div className={styles.inputWithIcon}>
 					<Input
 						className={styles.inputField}
@@ -168,7 +168,7 @@ const ContactForm = () => {
 				)}
 			</Label>
 			<Label>
-				<span className={styles.labelWrapper}>Correo</span>
+				<span className={styles.labelWrapper}>{t("emailLabel")}</span>
 				<div className={styles.inputWithIcon}>
 					<Input
 						placeholder={t("email")}
@@ -195,7 +195,7 @@ const ContactForm = () => {
 					)}
 			</Label>
 			<Label>
-				<span className={styles.labelWrapper}>Mensaje</span>
+				<span className={styles.labelWrapper}>{t("messageLabel")}</span>
 				<div className={styles.inputWithIcon}>
 					<Textarea
 						placeholder={t("message")}

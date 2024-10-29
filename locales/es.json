@@ -197,6 +197,9 @@
     "success": "Gracias por tu consulta. Responderé a la brevedad.",
     "submit": "Enviar",
     "somethingWrong": "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
-    "networkError": "Error de red. Intente nuevamente."
+    "networkError": "Error de red. Intente nuevamente.",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo",
+    "messageLabel": "Mensaje"
   }
 }

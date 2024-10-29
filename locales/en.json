@@ -197,6 +197,9 @@
     "success": "Thank you for your inquiry. I will respond shortly.",
     "submit": "Send",
     "somethingWrong": "Something went wrong. Please try again later.",
-    "networkError": "Network error. Please try again."
+    "networkError": "Network error. Please try again.",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message"
   }
 }
