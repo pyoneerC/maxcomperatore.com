@@ -188,12 +188,12 @@
     "mercadix" : "Sitio web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma."
   },
   "Form": {
-    "name": "Ingrese su nombre completo",
+    "name": "Ingrese su nombre",
     "email": "ejemplo@correo.com",
     "message": "Escriba su mensaje aquí",
     "messageError": "Por favor, ingrese un mensaje más largo.",
     "emailError": "Por favor, ingrese un correo válido.",
-    "nameError": "Por favor, ingrese su nombre completo.",
+    "nameError": "Por favor, ingrese su nombre.",
     "success": "Gracias por tu consulta. Responderé a la brevedad.",
     "submit": "Enviar",
     "somethingWrong": "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
