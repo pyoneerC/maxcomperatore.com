@@ -203,5 +203,8 @@
     "nameLabel": "Nombre",
     "emailLabel": "Correo",
     "messageLabel": "Mensaje"
+  },
+  "Page": {
+    "tohome": "← Volver al inicio"
   }
 }
