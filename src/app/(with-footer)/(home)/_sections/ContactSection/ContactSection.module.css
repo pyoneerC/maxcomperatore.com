@@ -53,12 +53,16 @@
 		position: absolute;
 		left: 40%;
 		margin-top: -6.5rem;
-		transform: scale(0.6);
+		transform: scale(0.6) rotate(-10deg);
 	}
 }
 
 /* make the button more down in mobile */
-
+@media (max-width: 768px) {
+	.actionBtn {
+		margin-top: 4rem;
+	}
+}
 
 @media (max-width: 768px) {
 	.title {
