@@ -14,7 +14,7 @@ export const LanguageSwitcher = () => {
 	const handleOnClick = () => {
 		// localStorage.setItem("language", isSpanish ? "en" : "es");
 		startTransition(() => {
-			setUserLocale(locale === "es" ? "en" : "es")
+			setUserLocale(locale === "es" ? "en" : "es").then(r => r);
 			// setIsSpanish(!isSpanish);
 		})
 	}

@@ -188,15 +188,15 @@
     "mercadix": "Website that allows users to check product prices on MercadoLibre and visualize them in a histogram."
   },
   "Form": {
-    "name": "Enter your name",
-    "email": "example@domain.com",
-    "message": "Type your message here",
+    "name": "John Doe",
+    "email": "example@gmail.com",
+    "message": "Hi Max! I'm reaching out because...",
     "messageError": "Please enter a longer message.",
-    "emailError": "Please enter a valid email address.",
+    "emailError": "Please enter a valid email.",
     "nameError": "Please enter your name.",
-    "success": "Thank you for your inquiry. I will get back to you shortly.",
+    "success": "Thank you for your inquiry. I will respond shortly.",
     "submit": "Send",
-    "somethingWrong": "An error occurred. Please try again later.",
-    "networkError": "Network error. Please try again later."
+    "somethingWrong": "Something went wrong. Please try again later.",
+    "networkError": "Network error. Please try again."
   }
 }
