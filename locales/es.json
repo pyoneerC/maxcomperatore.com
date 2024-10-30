@@ -192,7 +192,7 @@
   "Form": {
     "name": "Juan Pérez",
     "email": "ejemplo@gmail.com",
-    "message": "¡Hola Max! Me estoy comunicando porque...",
+    "message": "¡Hola Max! Me comunico porque...",
     "messageError": "Por favor, ingrese un mensaje más largo.",
     "emailError": "Por favor, ingrese un correo válido.",
     "nameError": "Por favor, ingrese su nombre.",
