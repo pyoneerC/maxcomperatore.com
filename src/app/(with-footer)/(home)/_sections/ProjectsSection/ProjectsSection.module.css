@@ -8,6 +8,8 @@
 	margin-block-start: 32px;
 	position: relative;
 	justify-content: center;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .subtitle {
@@ -107,6 +109,8 @@
 		display: block;
 		margin: 0 auto;
 		text-align: center;
+		outline: none;
+		-webkit-tap-highlight-color: transparent;
 	}
 }
 
