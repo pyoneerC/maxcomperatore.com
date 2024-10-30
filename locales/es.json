@@ -36,7 +36,7 @@
       "description": "API robusta para acortar URLs, utilizando operaciones CRUD.",
       "linkVisitDocs": "Visitar documentación",
       "linkViewCode": "Ver código",
-      "linkViewVideo": "Ver en Docker Hub",
+      "linkViewVideo": "Ver en Docker",
       "linkViewSite": "Visitar sitio",
       "about": "Con el objetivo de profundizar en el desarrollo de APIs y la administración de bases de datos, desarrollé BlinkLink, una API pública que ofrece un servicio avanzado de acortamiento de URLs. \n\nBlinkLink está diseñada para proporcionar un rendimiento eficiente y escalable, integrando operaciones CRUD que permiten una gestión completa y segura de los enlaces."
     },
