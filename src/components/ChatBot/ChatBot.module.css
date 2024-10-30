@@ -49,6 +49,7 @@
     box-sizing: border-box;
     border-color: whitesmoke;
     caret-color: var(--color-text);
+    outline: none;
 }
 
 .button {
