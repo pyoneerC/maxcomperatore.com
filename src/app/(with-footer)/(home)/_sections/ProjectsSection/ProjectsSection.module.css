@@ -79,12 +79,16 @@
 	transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 	cursor: pointer;
 	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .link:hover {
 	background-color: var(--color-background-tertiary);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 	transform: translateY(-2px);
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .link:active {
