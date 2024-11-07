@@ -222,3 +222,74 @@
 	pointer-events: none;
 	display: none;
 }
+
+.arrowwave {
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 50px;
+	margin-bottom: -50px;
+	font-size: 0;
+	transform: scale(1.5);
+}
+
+@media (max-width: 767px) {
+	.arrowwave {
+		margin-top: 30px;
+		margin-bottom: -10px;
+		transform: scale(1.2);
+	}
+}
+
+.arrowwave span {
+	display: block;
+	position: relative;
+	height: 10px;
+	width: 16px;
+	opacity: 0.2;
+}
+
+.arrowwave span::before,
+.arrowwave span::after {
+	display: block;
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 12px;
+	background-color: #454545;
+}
+
+.arrowwave span::before {
+	top: -2px;
+	left: 0;
+	transform-origin: left center;
+	transform: rotate(45deg);
+}
+
+.arrowwave span::after {
+	top: -2px;
+	right: 0;
+	transform-origin: right center;
+	transform: rotate(-45deg);
+}
+
+.arrowwave span:nth-child(1n) {
+	animation: animate-arrow-wave 2s infinite;
+	animation-delay: .25s;
+}
+.arrowwave span:nth-child(2n) {
+	animation: animate-arrow-wave 2s infinite;
+	animation-delay: .50s;
+}
+
+.arrowwave span:nth-child(3n) {
+	animation: animate-arrow-wave 2s infinite;
+	animation-delay: .75s;
+}
+
+@keyframes animate-arrow-wave {
+	0%   { opacity: 0.2; }
+	25%  { opacity: 0.2; }
+	50%  { opacity: 0.2; }
+	75%  { opacity: 1.0; }
+	100% { opacity: 0.2; }
+}

@@ -67,6 +67,13 @@ export const HeroSection = () => {
       </div>
       <CopyEmailSmallButton className={styles.copyEmailButton} />
       <Chatbot />
+
+      <div className={styles.arrowwave}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ScrollToTopButton />
     </section>
   );
