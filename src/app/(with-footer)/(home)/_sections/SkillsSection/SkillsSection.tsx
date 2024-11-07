@@ -15,6 +15,13 @@ export const SkillsSection = () => {
 					<SkillCard key={skill.name} {...skill} />
 				))}
 			</div>
+			<div className={styles.container}>
+			<div className={styles.arrowwave}>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			</div>
 		</section>
 	)
 }
