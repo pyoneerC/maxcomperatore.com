@@ -293,3 +293,30 @@
 	75%  { opacity: 1.0; }
 	100% { opacity: 0.2; }
 }
+
+.arrow {
+	position: absolute;
+	top: 70px;
+	right: 140px;
+	font-size: 0;
+	transform: rotate(290deg) scale(0.70); /* Combine rotation and scale */
+	pointer-events: none; /* Makes it non-interactive */
+	margin: 0; /* Removes any extra space around the element */
+}
+
+.language {
+	top: 220px;
+	right: 70px;
+	position: absolute;
+
+}
+
+@media (max-width: 767px) {
+	.arrow {
+		display: none;
+	}
+
+	.language {
+		display: none;
+	}
+}
