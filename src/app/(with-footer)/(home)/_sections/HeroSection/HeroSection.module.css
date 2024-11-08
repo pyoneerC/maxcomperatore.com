@@ -224,7 +224,7 @@
 }
 
 .arrowwave {
-	display: inline-block;
+	display: none; /* AS ITS TRANSLATES AUTOMATICALLY */
 	cursor: pointer;
 	margin-top: 50px;
 	margin-bottom: -50px;
@@ -302,13 +302,14 @@
 	transform: rotate(290deg) scale(0.70); /* Combine rotation and scale */
 	pointer-events: none; /* Makes it non-interactive */
 	margin: 0; /* Removes any extra space around the element */
+	display: none; /* AS ITS TRANSLATES AUTOMATICALLY */
 }
 
 .language {
 	top: 220px;
 	right: 70px;
 	position: absolute;
-
+	display: none; /* AS ITS TRANSLATES AUTOMATICALLY */
 }
 
 @media (max-width: 767px) {
