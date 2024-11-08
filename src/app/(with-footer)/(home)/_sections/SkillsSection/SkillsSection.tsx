@@ -1,3 +1,6 @@
+"use client"
+
+import { SetStateAction, useState } from "react"
 import { skills } from "~/data/skills"
 import { SkillCard } from "~/components/SkillCard"
 import styles from "./SkillsSection.module.css"
@@ -5,6 +8,16 @@ import { useTranslations } from "next-intl"
 
 export const SkillsSection = () => {
 	const t = useTranslations("SkillsSection")
+	const [currentTooltip, setCurrentTooltip] = useState("") // State to store the current tooltip
+
+	const handleMouseEnter = (tooltip: SetStateAction<string>) => {
+		setCurrentTooltip(tooltip)
+	}
+
+	const handleMouseLeave = () => {
+		setCurrentTooltip("")
+	}
+
 	return (
 		<section className="section-wrapper">
 			<h2 className={styles.title}>
@@ -12,7 +25,12 @@ export const SkillsSection = () => {
 			</h2>
 			<div className={styles.skillWrapper}>
 				{skills.map((skill) => (
-					<SkillCard key={skill.name} {...skill} />
+					<SkillCard
+						key={skill.name}
+						{...skill}
+						onMouseEnter={() => handleMouseEnter(t(skill.name))}
+						onMouseLeave={handleMouseLeave}
+					/>
 				))}
 			</div>
 			<div className={styles.container}>
@@ -23,8 +41,10 @@ export const SkillsSection = () => {
 				</div>
 			</div>
 			<p className={styles.description}>
-				Framework for building scalable, enterprise-grade applications.
+				{currentTooltip || t("defaultDescription")} {/* Default description if no skill is hovered */}
 			</p>
 		</section>
 	)
 }
+
+export default SkillsSection
