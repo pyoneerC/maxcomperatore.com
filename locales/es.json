@@ -63,7 +63,8 @@
     "mab": "Más sobre mí"
   },
   "SkillsSection": {
-    "title": "Tecnologías empleadas recientemente"
+    "title": "Tecnologías empleadas recientemente",
+    "defaultDescription": "Pasa el cursor sobre una habilidad para ver más detalles."
   },
   "ContactDialog": {
     "title": "Contactar"
