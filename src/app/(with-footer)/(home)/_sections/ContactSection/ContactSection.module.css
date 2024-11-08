@@ -39,6 +39,29 @@
 	display: none;
 }
 
+@media (max-width: 1024px) {
+	.arrow1 {
+		display: none;
+	}
+	.arrow2 {
+		display: none;
+	}
+	.mobilearrow {
+		display: flex;
+		padding: 0;
+		justify-content: center;
+		position: absolute;
+		left: 45%;
+		margin-top: -6rem;
+		transform: scale(0.525) rotate(-20deg);
+	}
+
+	.actionBtn {
+		margin-top: 5rem;
+		margin-bottom: -10px;
+	}
+}
+
 @media (max-width: 768px) {
 	.arrow1 {
 		display: none;
