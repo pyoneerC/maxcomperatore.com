@@ -64,7 +64,16 @@
   },
   "SkillsSection": {
     "title": "Tecnologías empleadas recientemente",
-    "defaultDescription": "Pasa el cursor sobre una habilidad para ver más detalles."
+    "defaultDescription": "Pasa el cursor sobre una habilidad para ver más detalles.",
+
+    "Python": "Lenguaje versátil para análisis de datos, automatización y desarrollo web.",
+    "Docker": "Empaqueta apps en contenedores seguros para un despliegue confiable.",
+    "Azure": "Nube de Microsoft para apps escalables, IA y datos.",
+    "PostgreSQL": "Base de datos segura y de código abierto para gestionar datos.",
+    "DotNet": "Framework para aplicaciones empresariales y soluciones de negocio.",
+    "Unity": "Motor para crear juegos interactivos en 2D y 3D.",
+    "Unreal": "Motor líder en experiencias inmersivas de alta calidad.",
+    "React": "Herramienta para apps web dinámicas y rápidas (¡como esta!)."
   },
   "ContactDialog": {
     "title": "Contactar"

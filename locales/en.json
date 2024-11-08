@@ -67,7 +67,16 @@
   },
   "SkillsSection": {
     "title": "Recently used technologies",
-    "defaultDescription": "Hover over a skill to see more details!"
+    "defaultDescription": "Hover over a skill to see more details!",
+
+    "Python": "Flexible language for data analysis, automation, and building web services.",
+    "Docker": "Packages apps in secure containers for easy, consistent deployment.",
+    "Azure": "Microsoft’s cloud platform for apps, AI, and data solutions that scale.",
+    "PostgreSQL": "Reliable, open-source database for secure and scalable data management.",
+    "DotNet": "Framework for building business-grade apps and enterprise solutions.",
+    "Unity": "Engine for creating interactive 2D and 3D games with ease.",
+    "Unreal": "Top game engine for high-quality, immersive experiences.",
+    "React": "Tool for building fast, dynamic web apps (like this one!)."
   },
   "ContactSection": {
     "question": "Need help with a project?",

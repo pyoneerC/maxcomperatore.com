@@ -172,6 +172,7 @@
     text-align: center;
     font-size: 1.2em;
     color: var(--color-explanation);
+    caret-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
