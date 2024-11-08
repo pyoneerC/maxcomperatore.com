@@ -16,12 +16,15 @@ export const SkillsSection = () => {
 				))}
 			</div>
 			<div className={styles.container}>
-			<div className={styles.arrowwave}>
-				<span></span>
-				<span></span>
-				<span></span>
+				<div className={styles.arrowwave}>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
-			</div>
+			<p className={styles.description}>
+				Framework for building scalable, enterprise-grade applications.
+			</p>
 		</section>
 	)
 }

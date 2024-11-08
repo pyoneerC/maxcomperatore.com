@@ -103,6 +103,8 @@
     display: inline-block;
     cursor: pointer;
     transform: scale(1.5);
+    caret-color: transparent;
+    user-select: none;
 }
 
 @media (max-width: 767px) {
@@ -117,6 +119,7 @@
     height: 10px;
     width: 16px;
     opacity: 0.2;
+    top: 24px;
 }
 
 .arrowwave span::before,
@@ -163,4 +166,16 @@
     50%  { opacity: 0.2; }
     75%  { opacity: 1.0; }
     100% { opacity: 0.2; }
+}
+
+.description {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--color-explanation);
+}
+
+@media screen and (max-width: 768px) {
+    .description {
+        display: none;
+    }
 }
