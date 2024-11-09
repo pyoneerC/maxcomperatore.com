@@ -15,24 +15,33 @@
 	font-weight: 400;
 	margin-bottom: 2rem;
 }
-.arrow1 {
+
+.arrow1, .arrow2 {
 	display: flex;
 	padding: 0;
-	justify-content: flex-start;
 	position: absolute;
+	transform-origin: center;
+}
+
+.arrow1 {
+	justify-content: flex-start;
 	left: 785px;
 	margin-top: -4.5rem;
 	transform: scale(0.9);
 }
 
 .arrow2 {
-	display: flex;
-	padding: 0;
 	justify-content: flex-end;
-	position: absolute;
 	right: 785px;
 	margin-top: -5rem;
 	transform: scale(0.8);
+}
+
+/* Hide the arrow on pc screen resize */
+@media (max-width: 1878px) {
+	.arrow1, .arrow2 {
+		display: none;
+	}
 }
 
 .mobilearrow {
