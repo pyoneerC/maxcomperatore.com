@@ -1,15 +1,17 @@
 "use client"
 
 import { Footer } from "~/components/Footer"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function WithFooterLayout({
 																					 children,
 																				 }: Readonly<{
 	children: React.ReactNode
 }>) {
+	const [currentURL, setCurrentURL] = useState(window.location.href) // Track the current URL
+
 	useEffect(() => {
-		let targetScroll = window.scrollY // Start target scroll at current position
+		let targetScroll = 0 // Start target scroll at 0 initially
 		let isAnimating = false // Flag to track if animation is in progress
 		let lastScrollTime = 0 // Track the time of the last scroll event
 
@@ -52,16 +54,29 @@ export default function WithFooterLayout({
 			}
 		}
 
+		// Function to check for URL changes
+		const checkURLChange = () => {
+			if (window.location.href !== currentURL) {
+				setCurrentURL(window.location.href)
+				targetScroll = 0 // Reset target scroll position
+				window.scrollTo(0, 0) // Reset scroll position to the top
+			}
+		}
+
+		// Set up interval to check URL changes
+		const intervalId = setInterval(checkURLChange, 100) // Check URL every 100 ms
+
 		// Add event listeners
 		window.addEventListener("wheel", smoothScroll, { passive: false })
 		window.addEventListener("scroll", handleManualScroll)
 
 		return () => {
-			// Cleanup event listeners on unmount
+			// Cleanup event listeners and interval on unmount
 			window.removeEventListener("wheel", smoothScroll)
 			window.removeEventListener("scroll", handleManualScroll)
+			clearInterval(intervalId)
 		}
-	}, [])
+	}, [currentURL])
 
 	return (
 		<>
