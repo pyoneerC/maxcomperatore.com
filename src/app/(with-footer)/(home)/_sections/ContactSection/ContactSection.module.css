@@ -17,7 +17,7 @@
 }
 
 .arrow1, .arrow2 {
-	display: flex;
+	display: none;
 	padding: 0;
 	position: absolute;
 	transform-origin: center;
@@ -35,13 +35,6 @@
 	right: 785px;
 	margin-top: -5rem;
 	transform: scale(0.8);
-}
-
-/* Hide the arrow on pc screen resize */
-@media (max-width: 1878px) {
-	.arrow1, .arrow2 {
-		display: none;
-	}
 }
 
 .mobilearrow {
