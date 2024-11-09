@@ -180,3 +180,16 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .description {
+        display: none;
+    }
+
+    .arrowwave {
+        /*a bit up*/
+        margin-top: -50px;
+        /*more space down*/
+        margin-bottom: 10px;
+    }
+}
