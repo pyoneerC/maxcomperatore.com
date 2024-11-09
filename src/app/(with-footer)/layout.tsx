@@ -11,6 +11,7 @@ export default function WithFooterLayout({
 	useEffect(() => {
 		let targetScroll = window.scrollY // Start target scroll at current position
 		let isAnimating = false // Flag to track if animation is in progress
+		let lastScrollTime = 0 // Track the time of the last scroll event
 
 		const smoothScroll = (event: { preventDefault: () => void; deltaY: number }) => {
 			event.preventDefault()
@@ -23,6 +24,9 @@ export default function WithFooterLayout({
 				isAnimating = true
 				requestAnimationFrame(animateScroll)
 			}
+
+			// Update the last scroll time
+			lastScrollTime = Date.now()
 		}
 
 		const animateScroll = () => {
@@ -41,12 +45,21 @@ export default function WithFooterLayout({
 			}
 		}
 
+		const handleManualScroll = () => {
+			// If the user scrolls manually, update targetScroll to prevent snap-back
+			if (Date.now() - lastScrollTime > 825) { // Debounce threshold
+				targetScroll = window.scrollY
+			}
+		}
+
 		// Add event listeners
 		window.addEventListener("wheel", smoothScroll, { passive: false })
+		window.addEventListener("scroll", handleManualScroll)
 
 		return () => {
 			// Cleanup event listeners on unmount
 			window.removeEventListener("wheel", smoothScroll)
+			window.removeEventListener("scroll", handleManualScroll)
 		}
 	}, [])
 
