@@ -11,6 +11,7 @@
 	border-block-end: 1px solid var(--color-stroke);
 	transition: border-block-end-color var(--theme-transition-duration),
 	background-color var(--theme-transition-duration);
+	caret-color: transparent;
 }
 
 .contentWrapper {
@@ -19,6 +20,7 @@
 	column-gap: 32px;
 	max-inline-size: var(--max-inline-size);
 	inline-size: 100%;
+	caret-color: transparent;
 }
 
 .homeLogo > path {
@@ -35,6 +37,7 @@
 .homeLogo {
 	transition: transform 0.3s ease, filter 0.3s ease, color 0.5s ease;
 	animation: text-flicker-in-glow 4s linear;
+	caret-color: transparent;
 }
 
 .homeLogo:hover {
@@ -44,6 +47,7 @@
 
 .nav {
 	margin-inline-end: auto;
+	caret-color: transparent;
 }
 
 .navList {
@@ -51,12 +55,14 @@
 	gap: 0 var(--items-spacing);
 	list-style: none;
 	padding-inline-start: 0;
+	caret-color: transparent;
 }
 
 .optionsWrapper {
 	display: flex;
 	align-items: center;
 	gap: 0 var(--items-spacing);
+	caret-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
