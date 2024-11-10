@@ -98,6 +98,10 @@
 	caret-color: transparent;
 }
 
+.photo:hover {
+	animation: shadow-pop-tr 0.7s forwards;
+}
+
 @-webkit-keyframes shadow-pop-tr {
 	0% {
 		-webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
@@ -130,7 +134,6 @@
 .photoWrapper:hover .photo {
 	filter: grayscale(0%) brightness(100%);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-	animation: shadow-pop-tr 0.7s forwards;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -166,8 +169,7 @@
 	}
 }
 
-.photoWrapper:not(:hover) .photo {
-	filter: grayscale(100%) brightness(70%);
+.photo:not(:hover) {
 	animation: shadow-pop-tr-back 0.7s forwards;
 }
 
