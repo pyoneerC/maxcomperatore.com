@@ -7,6 +7,7 @@
 	text-align: center;
 	margin-block-start: -60px;
 	padding-block: 32px;
+	caret-color: transparent;
 }
 
 .wrapper {
@@ -17,12 +18,14 @@
 	align-items: center;
 	max-inline-size: var(--max-inline-size);
 	margin-inline: auto;
+	caret-color: transparent;
 }
 
 .year {
 	text-wrap: nowrap;
 	color: var(--text-color);
 	font-size: clamp(14px, 1.5vw, 18px);
+	caret-color: transparent;
 }
 
 .linksWrapper {
@@ -31,11 +34,13 @@
 	gap: 16px;
 	flex-wrap: wrap;
 	color: var(--text-color);
+	caret-color: transparent;
 }
 
 .icon {
 	margin-right: 4px;
 	font-size: 1.2em;
+	caret-color: transparent;
 }
 
 .link {
@@ -45,6 +50,7 @@
 	font-size: 16px;
 	color: var(--text-color);
 	transition: color 0.3s;
+	caret-color: transparent;
 }
 
 .link:hover {
@@ -54,6 +60,7 @@
 .link i {
 	margin-right: 8px;
 	font-size: 1.2em;
+	caret-color: transparent;
 }
 
 .link.linkedin:hover {
