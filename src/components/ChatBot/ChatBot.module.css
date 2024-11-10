@@ -2,17 +2,21 @@
     padding: 12px 18px;
     margin: 8px 0;
     border-radius: 15px;
-    max-width: 30%;
+    max-width: 40%; /* Adjusted width for more readable messages */
     font-size: 16px;
     line-height: 1.5;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word; /* Ensures text wraps within the box */
+    white-space: normal; /* Allows text to break to the next line */
+    box-sizing: border-box; /* Keeps padding within the width */
 }
 
 .message.user {
     background-color: #0070f3;
     color: #ffffff;
-    margin-left: 315px;
+    margin-left: auto; /* Moves user message to the right */
+    margin-right: 215px; /* Adds right margin for consistent spacing */
     text-align: right;
     border-bottom-right-radius: 0;
 }
@@ -21,7 +25,8 @@
     background-color: var(--color-background-tertiary);
     color: var(--color-text);
     text-align: left;
-    margin-left: 215px;
+    margin-left: 215px; /* Ensures consistent alignment from the left */
+    margin-right: auto; /* Ensures assistant messages stay to the left */
     border-bottom-left-radius: 0;
 }
 
