@@ -1,5 +1,6 @@
 .title {
 	text-align: center;
+	caret-color: transparent;
 }
 
 .projectsWrapper {
@@ -10,10 +11,12 @@
 	justify-content: center;
 	outline: none;
 	-webkit-tap-highlight-color: transparent;
+	caret-color: transparent;
 }
 
 .subtitle {
 	text-align: center;
+	caret-color: transparent;
 }
 
 .icon {
@@ -21,6 +24,7 @@
 	align-content: center;
 	display: flex;
 	justify-content: center;
+	caret-color: transparent;
 }
 
 .button-wrapper:hover {
@@ -56,6 +60,7 @@
 	text-align: center;
 	outline: none;
 	-webkit-tap-highlight-color: transparent;
+	caret-color: transparent;
 }
 
 .buttonWrapper {
@@ -66,6 +71,7 @@
 	grid-row: auto;
 	justify-self: center;
 	margin-top: 32px;
+	caret-color: transparent;
 }
 
 .link {
@@ -83,6 +89,7 @@
 	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
 	outline: none;
 	-webkit-tap-highlight-color: transparent;
+	caret-color: transparent;
 }
 
 .link:hover {

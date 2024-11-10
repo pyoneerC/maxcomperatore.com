@@ -2,18 +2,22 @@
 	max-inline-size: 1920px;
 	margin-inline: auto;
 	padding: 2rem;
+	caret-color: transparent;
+
 }
 .title {
 	text-align: center;
 	font-size: 2.5em;
 	font-weight: 900;
 	margin-bottom: 2rem;
+	caret-color: transparent;
 }
 .subtitle {
 	text-align: center;
 	font-size: 1.4em;
 	font-weight: 400;
 	margin-bottom: 2rem;
+	caret-color: transparent;
 }
 
 .arrow1, .arrow2 {
@@ -21,6 +25,7 @@
 	padding: 0;
 	position: absolute;
 	transform-origin: center;
+	caret-color: transparent;
 }
 
 .arrow1 {
@@ -28,6 +33,7 @@
 	left: 785px;
 	margin-top: -4.5rem;
 	transform: scale(0.9);
+	caret-color: transparent;
 }
 
 .arrow2 {
@@ -35,6 +41,7 @@
 	right: 785px;
 	margin-top: -5rem;
 	transform: scale(0.8);
+	caret-color: transparent;
 }
 
 .mobilearrow {

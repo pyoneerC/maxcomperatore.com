@@ -3,6 +3,7 @@
     font-size: 2em;
     margin-bottom: 20px;
     color: var(--color-text);
+    caret-color: transparent;
 }
 
 .skillWrapper {
@@ -19,6 +20,7 @@
     transition: border-color var(--theme-transition-duration);
     justify-content: center;
     background-color: var(--color-background);
+    caret-color: transparent;
 }
 
 .skillCard {
@@ -32,6 +34,7 @@
     padding: 12px;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    caret-color: transparent;
 }
 
 .skillCard:hover {
@@ -44,6 +47,7 @@
     width: 50px;
     height: 50px;
     object-fit: contain;
+    caret-color: transparent;
 }
 
 @media screen and (max-width: 1024px) {
@@ -97,11 +101,11 @@
     align-items: center;
     margin-top: 30px;
     margin-bottom: -50px;
+    caret-color: transparent;
 }
 
 .arrowwave {
     display: inline-block;
-    cursor: pointer;
     transform: scale(1.5);
     caret-color: transparent;
     user-select: none;
