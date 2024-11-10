@@ -4,6 +4,7 @@
 	margin-inline: auto;
 	padding-inline: 16px;
 	background-color: var(--color-background);
+	caret-color: transparent;
 }
 
 @-webkit-keyframes scale-in-ver-bottom {
@@ -46,6 +47,7 @@
 	row-gap: 24px;
 	padding-block: 32px 80px;
 	animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	caret-color: transparent;
 }
 
 .separator {
@@ -53,6 +55,7 @@
 	height: 1px;
 	background-color: #333;
 	margin: 16px 0;
+	caret-color: transparent;
 }
 
 .title {
@@ -63,6 +66,7 @@
 	color: var(--color-text);
 	font-weight: bold;
 	position: relative;
+	caret-color: transparent;
 }
 
 @-webkit-keyframes swing-in-top-fwd {
@@ -106,10 +110,12 @@
 	background-color: #0070f3;
 	margin: 8px auto 0;
 	transition: width 0.3s ease;
+	caret-color: transparent;
 }
 
 .title:hover::after {
 	width: 80px;
+	caret-color: transparent;
 }
 
 @-webkit-keyframes tilt-in-left-1 {
@@ -146,6 +152,7 @@
 	color: var(--color-explanation);
 	max-width: 800px;
 	animation: tilt-in-left-1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	caret-color: transparent;
 }
 
 .paragraph {
@@ -155,6 +162,7 @@
 	text-align: justify;
 	padding-inline: 210px;
 	color: #eaeaea;
+	caret-color: transparent;
 }
 
 .goHomeLink {
@@ -176,6 +184,7 @@
 	width: auto;
 	max-width: 300px;
 	animation: swing-in-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	caret-color: transparent;
 }
 
 .goHomeLink svg {

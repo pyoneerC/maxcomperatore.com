@@ -8,6 +8,7 @@
 .labelWrapper {
 	display: inline-block;
 	padding-block-end: 8px;
+	caret-color: transparent;
 }
 
 .error {
@@ -24,6 +25,7 @@
 	align-items: center;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	transition: background-color 0.3s ease, border-color 0.3s ease;
+	caret-color: transparent;
 }
 
 .error svg {
@@ -31,6 +33,7 @@
 	flex-shrink: 0;
 	width: 24px;
 	height: 24px;
+	caret-color: transparent;
 }
 
 .inputWithIcon {
