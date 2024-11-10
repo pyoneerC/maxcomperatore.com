@@ -1,11 +1,13 @@
 .wrapper {
 	padding-inline: var(--space-inline);
 	padding-block-start: 40px;
+	caret-color: transparent;
 }
 
 .title {
 	font-size: clamp(50px, 18.448px + 8.414vw, 80px);
 	font-weight: 900;
+	caret-color: transparent;
 }
 
 .tagsWrapper {
@@ -13,6 +15,7 @@
 	gap: 8px;
 	flex-wrap: wrap;
 	padding-block-start: 20px;
+	caret-color: transparent;
 }
 
 .tagPill {
@@ -22,21 +25,25 @@
 	font-weight: 500;
 	background-color: hsl(var(--color-text-hsl) / 0.1);
 	border-radius: 1rem;
+	caret-color: transparent;
 }
 
 .detailsSection {
 	padding-block-end: 50px;
+	caret-color: transparent;
 }
 
 .linksWrapper {
 	display: flex;
 	column-gap: 16px;
 	padding-block-start: 20px;
+	caret-color: transparent;
 }
 
 .image {
 	inline-size: 100%;
 	block-size: auto;
+	caret-color: transparent;
 }
 
 .mobileImages,
@@ -59,6 +66,7 @@
 	margin-block-start: 100px;
 	background-color: var(--color-stroke);
 	transition: background-color var(--theme-transition-duration);
+	caret-color: transparent;
 }
 
 .navLink {
@@ -70,6 +78,7 @@
 	font-size: clamp(28px, 17.808px + 2.718vw, 70px);
 	font-weight: 900;
 	background-color: var(--color-background);
+	caret-color: transparent;
 }
 
 .navLink svg {
