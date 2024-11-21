@@ -9,8 +9,8 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
 export const metadata = {
 	metadataBase: new URL("https://maxcomperatore.com"),
-	title: "Max Comperatore - Desarrollador Backend y de Videojuegos",
-	description: "Un desarrollador pragmático enfocado en backend y desarrollo de videojuegos.",
+	title: "Max Comperatore - Desarrollador de Software",
+	description: "Un desarrollador pragmático enfocado en el desarollo de software, especializado en backend y desarrollo de videojuegos.",
 	authors: [{ name: "Max Comperatore" }],
 	creator: "Max Comperatore",
 }
