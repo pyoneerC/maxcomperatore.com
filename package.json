@@ -47,5 +47,5 @@
   "optionalDependencies": {
     "@next/swc-win32-x64-msvc": "14.2.5"
   },
-  "packageManager": "pnpm@9.5.0"
+  "packageManager": "npm@10.8.2"
 }
