@@ -89,51 +89,52 @@
 	max-width: 250px;
 	width: 100%;
 	height: auto;
-	border-radius: 10px;
-	border: 3px solid #333;
+	aspect-ratio: 1;
+	border-radius: 30px;
+	padding: 10px; /* control the gap */
+	mask:
+			conic-gradient(#000 0 0) content-box,
+			linear-gradient(calc(mod(var(--a),180deg)*var(--i) + var(--_a,45deg)),
+			#0000 30%,#000 40% 60%,#0000 70%) subtract,
+			conic-gradient(#000 0 0) padding-box;
+	transition:
+			--i 0.5s,
+			--a 0s 0.5s,
+			filter 0.7s,
+			box-shadow 0.7s,
+			transform 0.7s;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	transition: filter 0.7s, box-shadow 0.7s, transform 0.7s;
 	filter: grayscale(100%) brightness(70%);
-	transform: scale(1) rotate(0deg);
+	cursor: pointer;
+	border: 4px solid #ccc;
 	caret-color: transparent;
 }
 
 .photo:hover {
-	animation: shadow-pop-tr 0.7s forwards;
-}
-
-@-webkit-keyframes shadow-pop-tr {
-	0% {
-		-webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-		box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-		-webkit-transform: translateX(0) translateY(0);
-		transform: translateX(0) translateY(0);
-	}
-	100% {
-		-webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-		box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-		-webkit-transform: translateX(-8px) translateY(8px);
-		transform: translateX(-8px) translateY(8px);
-	}
-}
-@keyframes shadow-pop-tr {
-	0% {
-		-webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-		box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-		-webkit-transform: translateX(0) translateY(0);
-		transform: translateX(0) translateY(0);
-	}
-	100% {
-		-webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-		box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-		-webkit-transform: translateX(-8px) translateY(8px);
-		transform: translateX(-8px) translateY(8px);
-	}
-}
-
-.photoWrapper:hover .photo {
+	--i: 1;
+	--a: 15turn;
+	transition:
+			--i 0s,
+			--a 30s linear,
+			filter 0.7s,
+			box-shadow 0.7s,
+			transform 0.7s;
 	filter: grayscale(0%) brightness(100%);
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@property --a {
+	syntax: "<angle>";
+	inherits: false;
+	initial-value: 0deg;
+}
+@property --i {
+	syntax: "<number>";
+	inherits: false;
+	initial-value: 0;
+}
+.photo.alt {
+	--_a: -45deg;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -156,21 +157,6 @@
 	.photo {
 		max-width: 300px;
 	}
-}
-
-@keyframes shadow-pop-tr-back {
-	0% {
-		box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-		transform: translateX(-8px) translateY(8px);
-	}
-	100% {
-		box-shadow: 0 0 #3e3e3e;
-		transform: translateX(0) translateY(0);
-	}
-}
-
-.photo:not(:hover) {
-	animation: shadow-pop-tr-back 0.7s forwards;
 }
 
 @media (min-width: 1025px) {
