@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl"
 
 export const LanguageSwitcher = () => {
 	const [isPending, startTransition] = useTransition()
-	const [locale, setLocale] = useState("es") // Default to Spanish ("es")
+	const [locale, setLocale] = useState("en")
 	const t = useTranslations("LanguageSwitcher")
 
 	const handleOnClick = () => {
