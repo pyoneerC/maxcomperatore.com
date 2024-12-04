@@ -108,6 +108,8 @@
 	cursor: pointer;
 	border: 4px solid #ccc;
 	caret-color: transparent;
+	user-select: none;
+
 }
 
 .photo:hover {
@@ -121,6 +123,9 @@
 			transform 0.7s;
 	filter: grayscale(0%) brightness(100%);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+	user-focus: none;
 }
 
 @property --a {
