@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react"
 import styles from "./ChatBot.module.css";
 import { useTranslations } from "next-intl";
 // @ts-ignore
@@ -12,6 +12,21 @@ const Chatbot = () => {
 	const [loading, setLoading] = useState(false);
 	const [lastMessageTime, setLastMessageTime] = useState(0); // Track the timestamp of the last message
 	const [hasTriggeredConfetti, setHasTriggeredConfetti] = useState(false); // Track if confetti has been triggered
+	const [placeholder, setPlaceholder] = useState("placeholderD");
+
+	useEffect(() => {
+		// Array of placeholders
+		const placeholders = ["placeholderA", "placeholderB", "placeholderC", "placeholderD"];
+		let index = 0;
+
+		// Cycle through placeholders slowly (every 2 seconds)
+		const interval = setInterval(() => {
+			index = (index + 1) % placeholders.length; // Increment index and loop back
+			setPlaceholder(placeholders[index]); // Update placeholder
+		}, 600); // Change every 2000ms (2 seconds)
+
+		return () => clearInterval(interval); // Cleanup interval on component unmount
+	}, []); // Empty dependency array ensures this runs once on mount
 
 	const handleInputChange = (e: { target: { value: React.SetStateAction<string> } }) => {
 		setInput(e.target.value);
@@ -150,7 +165,7 @@ const Chatbot = () => {
 				value={input}
 				onChange={handleInputChange}
 				onKeyPress={handleKeyPress}
-				placeholder={t("placeholder")}
+				placeholder={t(placeholder)}
 				className={styles["chat-input"]}
 			/>
 			<button

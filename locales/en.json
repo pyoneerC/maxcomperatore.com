@@ -62,7 +62,10 @@
     "mab": "More about me"
   },
   "AI" : {
-    "placeholder": "Chat with Max AI...",
+    "placeholderD": "Chat with Max AI...",
+    "placeholderC": "Chat with Max AI..",
+    "placeholderB": "Chat with Max AI.",
+    "placeholderA": "Chat with Max AI",
     "send": "Send",
     "typing": "Max AI is typing..."
   },

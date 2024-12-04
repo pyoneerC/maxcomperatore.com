@@ -51,7 +51,10 @@
     }
   },
   "AI" : {
-    "placeholder": "Chatear con Max IA...",
+    "placeholderD": "Chatear con Max IA...",
+    "placeholderC": "Chatear con Max IA..",
+    "placeholderB": "Chatear con Max IA.",
+    "placeholderA": "Chatear con Max IA",
     "send": "Enviar",
     "typing": "Max IA está escribiendo..."
   },
