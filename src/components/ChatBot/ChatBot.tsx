@@ -3,15 +3,30 @@
 import React, { useState } from "react";
 import styles from "./ChatBot.module.css";
 import { useTranslations } from "next-intl";
+// @ts-ignore
+import confetti from "canvas-confetti";
 
 const Chatbot = () => {
 	const [input, setInput] = useState("");
 	const [messages, setMessages] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [lastMessageTime, setLastMessageTime] = useState(0); // Track the timestamp of the last message
+	const [hasTriggeredConfetti, setHasTriggeredConfetti] = useState(false); // Track if confetti has been triggered
 
 	const handleInputChange = (e: { target: { value: React.SetStateAction<string> } }) => {
 		setInput(e.target.value);
+	};
+
+	const triggerConfetti = () => {
+		// Only trigger confetti once
+		if (!hasTriggeredConfetti) {
+			setHasTriggeredConfetti(true);
+			confetti({
+				particleCount: 100,
+				spread: 70,
+				origin: { y: 0.6 },
+			});
+		}
 	};
 
 	const sendMessage = async () => {
@@ -32,6 +47,8 @@ const Chatbot = () => {
 		}
 
 		if (input.trim() === "") return;
+
+		triggerConfetti(); // Trigger confetti on the first click
 
 		setLoading(true);
 		setLastMessageTime(currentTime); // Update the last message timestamp
@@ -138,8 +155,8 @@ const Chatbot = () => {
 			/>
 			<button
 				onClick={sendMessage}
-				disabled={loading}
-				className={styles.button}
+				disabled={loading || input.trim() === ""}
+				className={`${styles.button} ${input.trim() === "" ? styles.prohibited : ""}`}
 				style={{ transform: "translateY(5px)" }}
 			>
 				<svg
@@ -156,7 +173,8 @@ const Chatbot = () => {
 					className="icon icon-tabler icons-tabler-outline icon-tabler-send-2"
 				>
 					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-					<path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
+					<path
+						d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
 					<path d="M6.5 12h14.5" />
 				</svg>
 			</button>

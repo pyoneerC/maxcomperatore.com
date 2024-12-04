@@ -12,6 +12,23 @@
     box-sizing: border-box; /* Keeps padding within the width */
 }
 
+.button {
+    /* Add your default button styles here */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button.prohibited {
+    cursor: not-allowed; /* Change cursor to "not allowed" */
+    background-color: #ccc; /* Optional: Change background color to indicate it's disabled */
+    color: #666; /* Optional: Muted text color */
+}
+
+.button.prohibited:hover {
+    box-shadow: none; /* Remove hover effects */
+    transform: none; /* Disable the button's hover transform */
+}
+
 .message.user {
     background-color: #0070f3;
     color: #ffffff;
