@@ -90,7 +90,7 @@
 	width: 100%;
 	height: auto;
 	aspect-ratio: 1;
-	border-radius: 30px;
+	border-radius: 90% 65% 79% 63% / 92% 86% 70% 71%;
 	padding: 10px; /* control the gap */
 	mask:
 			conic-gradient(#000 0 0) content-box,
