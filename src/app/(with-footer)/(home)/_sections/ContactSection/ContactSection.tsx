@@ -4,11 +4,34 @@ import { useTranslations } from "next-intl"
 import { Button } from "~/components/Ui/Button"
 import { ContactDialog } from "~/components/ContactDialog"
 
+const Testimonials = () => {
+
+	const d = useTranslations("testim");
+	const testimonials = [
+		{ id: 1, text: d("a") },
+		{ id: 2, text: d("b") },
+		{ id: 3, text: d("c") },
+	];
+
+
+	return (
+		<div className={styles.testimonials}>
+			{testimonials.map(({ id, text }) => (
+				<blockquote key={id} className={styles.testimonial}>
+					<p>"{text}"</p>
+				</blockquote>
+			))}
+		</div>
+	);
+};
+
 export const ContactSection = () => {
-	const t = useTranslations("ContactSection")
+	const t = useTranslations("ContactSection");
 
 	return (
 		<section className={clsx("section-wrapper", styles.section)}>
+			<Testimonials />
+
 			<h1 className={styles.title}>
 				{t("question")}
 			</h1>
@@ -40,5 +63,5 @@ export const ContactSection = () => {
 				</svg>
 			</div>
 		</section>
-	)
-}
+	);
+};

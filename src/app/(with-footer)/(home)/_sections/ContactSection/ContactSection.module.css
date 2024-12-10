@@ -48,6 +48,34 @@
 	display: none;
 }
 
+.testimonials {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial {
+	margin: 1rem 0;
+	font-style: italic;
+	color: #666;
+	font-size: 0.95rem;
+	line-height: 1.4;
+}
+
+.testimonial p {
+	margin: 0;
+}
+
+/* Hide testimonials on mobile */
+@media (max-width: 768px) {
+	.testimonials {
+		display: none;
+	}
+}
+
+
 @media (max-width: 1024px) {
 	.arrow1 {
 		display: none;
