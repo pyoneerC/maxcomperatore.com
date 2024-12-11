@@ -130,6 +130,7 @@ export default function Project({ params }: Props) {
 					</svg>
 				</NextLink>
 			</nav>
+
 		</>
 	)
 }
