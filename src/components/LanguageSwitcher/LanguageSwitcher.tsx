@@ -7,21 +7,21 @@ import { useTranslations } from "next-intl"
 
 export const LanguageSwitcher = () => {
 	const [isPending, startTransition] = useTransition()
-	const [locale, setLocale] = useState("en")
+	const [locale, setLocale] = useState("es") // Default to Spanish
 	const t = useTranslations("LanguageSwitcher")
 
-	// Automatically set locale to English if query parameters exist
+	// Automatically set locale based on the 'lang' query parameter
 	useEffect(() => {
 		if (typeof window !== "undefined") {
 			const params = new URLSearchParams(window.location.search)
-			if (params.toString()) {
-				setLocale("en")
+			const lang = params.get("lang") // Get the 'lang' query parameter
+			if (lang === "en" || lang === "es") {
+				setLocale(lang)
 				// Optionally, sync with backend
-				setUserLocale("en")
-			}
-			else {
+				setUserLocale(lang)
+			} else {
+				// Default to Spanish if 'lang' is not specified or invalid
 				setLocale("es")
-				// Optionally, sync with backend
 				setUserLocale("es")
 			}
 		}
