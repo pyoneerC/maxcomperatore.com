@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useTransition } from "react"
+import { useEffect, useState, useTransition } from "react"
 import styles from "./LanguageSwitcher.module.css"
 import { setUserLocale } from "~/services/locale"
 import { useTranslations } from "next-intl"
@@ -9,6 +9,23 @@ export const LanguageSwitcher = () => {
 	const [isPending, startTransition] = useTransition()
 	const [locale, setLocale] = useState("en")
 	const t = useTranslations("LanguageSwitcher")
+
+	// Automatically set locale to English if query parameters exist
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			const params = new URLSearchParams(window.location.search)
+			if (params.toString()) {
+				setLocale("en")
+				// Optionally, sync with backend
+				setUserLocale("en")
+			}
+			else {
+				setLocale("es")
+				// Optionally, sync with backend
+				setUserLocale("es")
+			}
+		}
+	}, [])
 
 	const handleOnClick = () => {
 		startTransition(() => {
