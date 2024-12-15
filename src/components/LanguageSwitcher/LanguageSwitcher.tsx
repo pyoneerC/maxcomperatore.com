@@ -20,9 +20,9 @@ export const LanguageSwitcher = () => {
 				// Optionally, sync with backend
 				setUserLocale(lang)
 			} else {
-				// Default to Spanish if 'lang' is not specified or invalid
-				setLocale("es")
-				setUserLocale("es")
+				// Default to English if 'lang' is not specified or invalid
+				setLocale("en")
+				setUserLocale("en")
 			}
 		}
 	}, [])
