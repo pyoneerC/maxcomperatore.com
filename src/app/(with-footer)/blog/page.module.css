@@ -148,7 +148,7 @@
 	line-height: 1.6;
 	text-align: center;
 	padding: 0 20px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	color: var(--color-explanation);
 	max-width: 800px;
 	animation: tilt-in-left-1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
