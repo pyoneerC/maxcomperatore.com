@@ -30,7 +30,7 @@ body {
 
 	--color-primary: hsl(212 100% 48%);
 	--color-text: hsl(0 0% 1%);
-	--color-text-secondary: hsl(0, 0%, 62%);
+	--color-text-secondary: hsl(0, 0%, 30%);
 	--color-background: hsl(0 0% 99%);
 	--color-themed-background: hsl(0 0% 99%);
 	--color-background-secondary: hsl(10 0% 85%);
@@ -52,7 +52,7 @@ body {
 
 	--color-primary: hsl(212 100% 48%);
 	--color-text: hsl(0 0% 93%);
-	--color-text-secondary: hsl(0 0% 62%);
+	--color-text-secondary: hsl(0, 0%, 70%);
 	--color-background: #111111;
 	--color-themed-background: hsl(0 0% 4%);
 	--color-background-secondary: hsl(0 0% 6%);
