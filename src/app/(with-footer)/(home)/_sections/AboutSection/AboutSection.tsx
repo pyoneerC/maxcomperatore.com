@@ -20,6 +20,9 @@ export const AboutSection = () => {
 						loading="lazy"
 						width={300}
 						height={300}
+						style={{
+							objectFit: "cover", // Ensures the image fills the container without distortion
+						}}
 					/>
 				</div>
 				<div className={styles.textWrapper}>
