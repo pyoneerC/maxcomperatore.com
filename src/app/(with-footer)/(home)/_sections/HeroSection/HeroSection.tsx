@@ -13,7 +13,10 @@ const EightyEightThirtyOne = () => {
   return (
     <a href="https://eightyeightthirty.one/" style={{ position: "absolute", left: "-9999px", top: "0" }}>
       <img
-        alt=""
+        width="200"
+        height="100"
+        alt="Eighty Eight Thirty One"
+        aria-label="Visit Eighty Eight Thirty One website"
         src="https://assiel.neocities.org/images/eightyeight.png"
       />
     </a>

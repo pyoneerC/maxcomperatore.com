@@ -271,6 +271,7 @@ const Chatbot = () => {
 				className={styles["chat-input"]}
 			/>
 			<button
+				aria-label="Send message Button"
 				onClick={sendMessage}
 				disabled={input.trim() === ""}
 				className={`${styles.button} ${
