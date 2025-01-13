@@ -47,6 +47,7 @@ export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description
 					width={684}
 					height={385}
 					loading="lazy"
+					style={{ objectFit: "cover" }}
 				/>
 			</figure>
 			<h3 className={styles.title}>{name}</h3>
