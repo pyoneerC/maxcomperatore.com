@@ -158,7 +158,7 @@
 }
 
 .button {
-	display: inline-block;
+	display: inline-flex;
 	padding: 12px 24px;
 	font-size: 16px;
 	color: #fff;
@@ -171,6 +171,7 @@
 	caret-color: transparent;
 	min-width: 48px;
 	min-height: 48px;
+	margin: 8px;
 }
 
 .button:hover {

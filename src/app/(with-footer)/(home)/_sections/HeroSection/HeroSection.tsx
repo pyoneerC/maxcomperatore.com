@@ -9,23 +9,6 @@ import { useTranslations } from 'next-intl';
 import Chatbot from "~/components/ChatBot/ChatBot"
 import React from "react"
 
-const EightyEightThirtyOne = () => {
-  return (
-    <a href="https://eightyeightthirty.one/" style={{ position: "absolute", left: "-9999px", top: "0" }}>
-      <img
-        width="83"
-        height="31"
-        alt="Eighty Eight Thirty One"
-        aria-label="Visit Eighty Eight Thirty One website"
-        src="https://assiel.neocities.org/images/eightyeight.png"
-      />
-    </a>
-  );
-};
-
-export default EightyEightThirtyOne
-
-
 export const HeroSection = () => {
   const t = useTranslations('HeroSection');
 
@@ -37,8 +20,6 @@ export const HeroSection = () => {
       <h2 className={styles.subtitle}>
         {t("position")}
       </h2>
-
-      <EightyEightThirtyOne />
 
       <svg className={styles.arrow} width="144" height="141" viewBox="0 0 144 141" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
