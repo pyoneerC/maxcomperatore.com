@@ -69,7 +69,7 @@ export const HeroSection = () => {
             <path d="M9.5 14.5l2.5 2.5l2.5 -2.5" />
           </svg>
           <NextLink
-            href={t("resumeUrl")}
+            href="/assets/files/MaximoComperatore-Resume.pdf"
             target="_blank"
             prefetch={true}
           >
