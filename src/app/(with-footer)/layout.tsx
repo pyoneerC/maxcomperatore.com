@@ -8,9 +8,12 @@ export default function WithFooterLayout({
 																				 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const [currentURL, setCurrentURL] = useState(window.location.href); // Track the current URL
+	const [currentURL, setCurrentURL] = useState(""); // Initialize as an empty string
 
 	useEffect(() => {
+		// Set the current URL when the component mounts
+		setCurrentURL(window.location.href);
+
 		let targetScroll = 0; // Target scroll position
 		let isAnimating = false; // Animation flag
 		let lastScrollTime = 0; // Timestamp of last scroll
@@ -20,7 +23,10 @@ export default function WithFooterLayout({
 
 			// Update target scroll position based on scroll delta
 			targetScroll += event.deltaY;
-			targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight)); // Clamp to bounds
+			targetScroll = Math.max(
+				0,
+				Math.min(targetScroll, document.body.scrollHeight - window.innerHeight)
+			); // Clamp to bounds
 
 			// Start animation if it's not already running
 			if (!isAnimating) {
