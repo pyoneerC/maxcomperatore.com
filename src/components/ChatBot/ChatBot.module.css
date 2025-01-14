@@ -227,3 +227,17 @@
 .button:active:not(:disabled) {
     transform: translateY(0);
 }
+
+.image-upload-label {
+    cursor: pointer;
+    display: inline-block;
+    transform: translate(47px, -38px) scale(1.25);
+}
+
+/* Media Query for Mobile (example: devices narrower than 768px) */
+@media (max-width: 768px) {
+    .image-upload-label {
+        /* New transform for mobile */
+        transform: translate(50px, -34px) scale(1.15);
+    }
+}

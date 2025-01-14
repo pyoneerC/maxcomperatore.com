@@ -18,14 +18,29 @@ const Chatbot = () => {
 	// Keep a ref to the partial (streaming) text
 	const partialResponseRef = useRef("");
 
+	// ================================
 	// Azure TTS config
-	const azureRegion = "eastus";
+	// ================================
+	const azureRegion = "eastus"; // <--- Replace if needed
 	const azureKey =
-		"4R8LpZ0Lr4Fp1fUDu55rHXXXU33eesSUg6z5RM6f0XOWrmoOIJkTJQQJ99BAACYeBjFXJ3w3AAAYACOGEY3n";
+		"4R8LpZ0Lr4Fp1fUDu55rHXXXU33eesSUg6z5RM6f0XOWrmoOIJkTJQQJ99BAACYeBjFXJ3w3AAAYACOGEY3n"; // <--- Replace with your actual Azure Speech key
 
-	// ============================================
+	// ================================
+	// Azure Computer Vision config (UPDATED for more details)
+	// ================================
+	const visionKey =
+		"6CZyM0U54xWFdW9O6c7hW9NLooDir5jxg7UWvjohLrq2hGaQiTQEJQQJ99BAACYeBjFXJ3w3AAAFACOGoFlT"; // <--- Replace with your actual Azure Computer Vision key
+
+	// Ask for multiple features: description, tags, categories, objects, brands, color, etc.
+	// Also include details like celebrities, landmarks if available.
+	const visionEndpoint =
+		"https://maxcomperatorevision.cognitiveservices.azure.com/vision/v3.2/analyze" +
+		"?visualFeatures=Description,Tags,Categories,Objects,Brands,Color" +
+		"&language=en";
+
+	// ================================
 	// Load confetti state & messages from localStorage
-	// ============================================
+	// ================================
 	useEffect(() => {
 		// 1. Check if we've already triggered confetti
 		const hasTriggered = localStorage.getItem("hasTriggeredConfetti");
@@ -47,7 +62,12 @@ const Chatbot = () => {
 
 	// Cycle placeholders
 	useEffect(() => {
-		const placeholders = ["placeholderA", "placeholderB", "placeholderC", "placeholderD"];
+		const placeholders = [
+			"placeholderA",
+			"placeholderB",
+			"placeholderC",
+			"placeholderD",
+		];
 		let index = 0;
 		const interval = setInterval(() => {
 			index = (index + 1) % placeholders.length;
@@ -57,21 +77,21 @@ const Chatbot = () => {
 		return () => clearInterval(interval);
 	}, []);
 
-	// ============================================
+	// ================================
 	// Helper: textToSpeech
-	// ============================================
+	// ================================
 	const textToSpeech = async (text: string) => {
 		try {
 			const ssml = `<speak version="1.0"
-              xmlns="http://www.w3.org/2001/10/synthesis"
-              xmlns:mstts="http://www.w3.org/2001/mstts"
-              xml:lang="en-US">
-                <voice name="en-US-AndrewMultilingualNeural">
-                  <mstts:express-as style="Empathetic">
-                    ${text}
-                  </mstts:express-as>
-                </voice>
-              </speak>`;
+        xmlns="http://www.w3.org/2001/10/synthesis"
+        xmlns:mstts="http://www.w3.org/2001/mstts"
+        xml:lang="en-US">
+          <voice name="en-US-AndrewMultilingualNeural">
+            <mstts:express-as style="Empathetic">
+              ${text}
+            </mstts:express-as>
+          </voice>
+        </speak>`;
 
 			const response = await fetch(
 				`https://${azureRegion}.tts.speech.microsoft.com/cognitiveservices/v1`,
@@ -86,6 +106,10 @@ const Chatbot = () => {
 				}
 			);
 
+			if (!response.ok) {
+				throw new Error("Azure TTS request failed");
+			}
+
 			const audioData = await response.arrayBuffer();
 			const audioBlob = new Blob([audioData], { type: "audio/mp3" });
 			const audioUrl = URL.createObjectURL(audioBlob);
@@ -96,19 +120,20 @@ const Chatbot = () => {
 		}
 	};
 
-	// ============================================
+	// ================================
 	// Helper: addMessage
-	// ============================================
+	// ================================
 	const addMessage = (message: { role: string; content: string }) => {
 		setMessages((prevMessages) => [...prevMessages, message]);
+		// If it's the assistant's message, speak it out
 		if (message.role === "assistant") {
 			textToSpeech(message.content);
 		}
 	};
 
-	// ============================================
+	// ================================
 	// Helper: triggerConfetti (only once)
-	// ============================================
+	// ================================
 	const triggerConfetti = () => {
 		if (!hasTriggeredConfetti) {
 			setHasTriggeredConfetti(true);
@@ -122,10 +147,90 @@ const Chatbot = () => {
 		}
 	};
 
-	// ============================================
-	// 3. Stream assistant response
-	// ============================================
-	const streamAssistantResponse = async (reader: ReadableStreamDefaultReader) => {
+	// ================================
+	// Analyze an image with Azure Computer Vision (DETAILED)
+	// ================================
+	const analyzeImageWithAzure = async (file: File) => {
+		try {
+			const imageData = await file.arrayBuffer();
+
+			// Send raw bytes to the Azure Vision endpoint
+			const response = await fetch(visionEndpoint, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/octet-stream",
+					"Ocp-Apim-Subscription-Key": visionKey,
+				},
+				body: imageData,
+			});
+
+			if (!response.ok) {
+				throw new Error("Azure Computer Vision request failed");
+			}
+
+			const result = await response.json();
+
+			// =====================
+			// Gather multiple insights
+			// =====================
+			// Description
+			const caption = result?.description?.captions?.[0]?.text || "No caption found";
+			const captionConfidence =
+				result?.description?.captions?.[0]?.confidence || 0;
+
+			// Limit to maximum 6 tags
+			const tagNames = result?.tags?.map((tag: any) => tag.name) || [];
+			const tags = tagNames.slice(0, 5).join(", ") || "No tags";
+
+			// Categories
+			const categories =
+				result?.categories
+					?.map(
+						(cat: any) => `${cat.name} (score: ${(cat.score * 100).toFixed(1)}%)`
+					)
+					.join(", ") || "None";
+
+// =====================
+			// Build a comprehensive message
+			// =====================
+			const detailedMessage = `
+- Caption: ${caption} (confidence: ${(captionConfidence * 100).toFixed(1)}%)
+- Tags: ${tags}
+- Categories: ${categories}`;
+
+			addMessage({ role: "assistant", content: detailedMessage.trim() });
+		} catch (err) {
+			console.error("Vision API error:", err);
+			addMessage({
+				role: "assistant",
+				content: "I encountered an error trying to analyze the image.",
+			});
+		}
+	};
+
+	// ================================
+	// Handle image upload event
+	// ================================
+	const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+		if (e.target.files && e.target.files[0]) {
+			const file = e.target.files[0];
+
+			// Add a message indicating that we're working on it
+			addMessage({
+				role: "assistant",
+				content: "Analyzing the uploaded image, please wait...",
+			});
+
+			await analyzeImageWithAzure(file);
+		}
+	};
+
+	// ================================
+	// Stream assistant response
+	// ================================
+	const streamAssistantResponse = async (
+		reader: ReadableStreamDefaultReader
+	) => {
 		partialResponseRef.current = "";
 
 		// Create a placeholder assistant message
@@ -177,9 +282,9 @@ const Chatbot = () => {
 		}
 	};
 
-	// ============================================
-	// 4. Send message
-	// ============================================
+	// ================================
+	// Send message
+	// ================================
 	const sendMessage = async () => {
 		const currentTime = Date.now();
 		const timeSinceLastMessage = currentTime - lastMessageTime;
@@ -207,29 +312,32 @@ const Chatbot = () => {
 
 		// Make streaming request
 		try {
-			const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-				method: "POST",
-				headers: {
-					Authorization: `Bearer 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`,
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					model: "llama-3.3-70b-versatile",
-					messages: [
-						{
-							role: "system",
-							content: `Be smart, versatile, and empathetic. Respond in a friendly tone, adapting to the user's emotional context. If you detect tension or stress in their message, reply warmly and offer concrete solutions. If you detect enthusiasm, respond with positive energy. Respond in English if the user speaks in English and in English if they speak in English. Always write without spelling or grammar mistakes, keeping responses clear, concise, and focused on providing relevant information. **Main Rules:** 1. **Web Pages:** If a user asks you to develop a webpage for their business, reply: 'Perfect, please click the Contact button above and fill out the form so we can discuss the details.' 2. **Projects:** Only mention: ArgentoFX, Ephemera, Mercadix, Blackout Boulevard, and Array Utils. Do not add extra information or unnecessary lists. 3. **Contact Information:** If asked for social media or contact details, reply: 'You can see my social media links in the footer of this site.' 4. **Questions about how you can help:** If asked 'How can you help me?' reply: 'I can assist with game and backend development using Python, C++, C#, and more. If you’re interested, we can discuss the details to tailor my experience to your needs.' 5. **Development Services:** If told 'I need a backend/game developer,' reply: 'Sure! You can contact me through the Contact button at the top so we can discuss how I can help you.' 6. **Lack of Information:** If you lack the necessary information to answer a question, reply: 'I don’t have the information necessary to answer that question.' **Inappropriate Language Filter:** - If you detect inappropriate words or insults, reply: 'I’ve detected an inappropriate word in your message, please avoid using such language so I can assist you better.' Example: - User: 'This is a damn problem.' - Reply: 'I’ve detected an inappropriate word in your message, please avoid using such language so I can assist you better.' **Personal Information:** - **Age:** 19 years. - **Location:** Mendoza, Argentina. - **Languages:** English (Native) | English (C1). - **Technologies:** Python, C#, C++, Git, Unreal Engine, Unity, Github Actions, Redis, Docker, PostgreSQL. - **Soft Skills:** Autonomy, Collaboration, Time Management, Attention to Detail, Adaptability, and Organization. - **Education:** Video Game Programming Technician, Universidad de Mendoza (03/2023 – Present). Contributor to: 'Club de los Videojuegos.' - **Professional Experience:** - **Video Game Developer at Intellicialis (08/2023 – 11/2023, remote):** - Developed user interfaces using Unreal Engine. - Optimized scripts for the game 'Active and Operational.' - Improved efficiency and accelerated the team’s development cycle. **Socials:** - **LinkedIn:** Max Comperatore. - **Itch.io:** pyoneerc1. - **GitHub:** pyoneerC. **Emotion Detection and Empathy:** - If you detect tension, respond calmly and offer clear solutions. Example: 'I understand this situation can be stressful. I’m here to help. What do you need to resolve first?' - If you detect enthusiasm, reply with positive energy. Example: 'That sounds exciting! I’m sure we can work together to achieve it.' - If you detect sadness or concern, reply with empathy and understanding. Example: 'I can tell this is worrying you. How can I help solve it?' **Conversation Examples:** - User: 'I’d like you to develop a webpage for my business.' - Reply: 'Perfect, please click the Contact button above and fill out the form so we can discuss the details.' - User: 'What projects have you done?' - Reply: 'ArgentoFX, Ephemera, Mercadix, Blackout Boulevard, and Array Utils.' - User: 'I need a backend developer.' - Reply: 'Sure! You can contact me through the Contact button at the top so we can discuss how I can help you.' - User: 'How can you help me?' - Reply: 'I can assist with game and backend development using Python, C++, C#, and more. If you’re interested, we can discuss the details to tailor my experience to your needs.' **Additional Guidelines:** - Maintain inclusive and professional language. - Respond in the same language the user speaks, English or English. - Avoid any +18 topics or irrelevant information. - Always provide clear, precise, and helpful responses. I currently work at Transparencia Latam, where I handle all the software development for the company, a compliance boutique (lawyers) and software development firm.`,
-						},
-						userMessage,
-					],
-					// Turn on streaming
-					stream: true,
-					max_tokens: 40,
-					temperature: 0.75,
-					top_p: 1,
-					frequency_penalty: 0,
-				}),
-			});
+			const response = await fetch(
+				"https://api.groq.com/openai/v1/chat/completions",
+				{
+					method: "POST",
+					headers: {
+						Authorization: `Bearer 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`,
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						model: "llama-3.3-70b-versatile",
+						messages: [
+							{
+								role: "system",
+								content: `Be smart, versatile, and empathetic. Respond in a friendly tone, adapting to the user's emotional context. If you detect tension or stress in their message, reply warmly and offer concrete solutions. If you detect enthusiasm, respond with positive energy. Respond in English if the user speaks in English and in English if they speak in English. Always write without spelling or grammar mistakes, keeping responses clear, concise, and focused on providing relevant information. **Main Rules:** 1. **Web Pages:** If a user asks you to develop a webpage for their business, reply: 'Perfect, please click the Contact button above and fill out the form so we can discuss the details.' 2. **Projects:** Only mention: ArgentoFX, Ephemera, Mercadix, Blackout Boulevard, and Array Utils. Do not add extra information or unnecessary lists. 3. **Contact Information:** If asked for social media or contact details, reply: 'You can see my social media links in the footer of this site.' 4. **Questions about how you can help:** If asked 'How can you help me?' reply: 'I can assist with game and backend development using Python, C++, C#, and more. If you’re interested, we can discuss the details to tailor my experience to your needs.' 5. **Development Services:** If told 'I need a backend/game developer,' reply: 'Sure! You can contact me through the Contact button at the top so we can discuss how I can help you.' 6. **Lack of Information:** If you lack the necessary information to answer a question, reply: 'I don’t have the information necessary to answer that question.' **Inappropriate Language Filter:** - If you detect inappropriate words or insults, reply: 'I’ve detected an inappropriate word in your message, please avoid using such language so I can assist you better.' Example: - User: 'This is a damn problem.' - Reply: 'I’ve detected an inappropriate word in your message, please avoid using such language so I can assist you better.' **Personal Information:** - **Age:** 19 years. - **Location:** Mendoza, Argentina. - **Languages:** English (Native) | English (C1). - **Technologies:** Python, C#, C++, Git, Unreal Engine, Unity, Github Actions, Redis, Docker, PostgreSQL. - **Soft Skills:** Autonomy, Collaboration, Time Management, Attention to Detail, Adaptability, and Organization. - **Education:** Video Game Programming Technician, Universidad de Mendoza (03/2023 – Present). Contributor to: 'Club de los Videojuegos.' - **Professional Experience:** - **Video Game Developer at Intellicialis (08/2023 – 11/2023, remote):** - Developed user interfaces using Unreal Engine. - Optimized scripts for the game 'Active and Operational.' - Improved efficiency and accelerated the team’s development cycle. **Socials:** - **LinkedIn:** Max Comperatore. - **Itch.io:** pyoneerc1. - **GitHub:** pyoneerC. **Emotion Detection and Empathy:** - If you detect tension, respond calmly and offer clear solutions. Example: 'I understand this situation can be stressful. I’m here to help. What do you need to resolve first?' - If you detect enthusiasm, reply with positive energy. Example: 'That sounds exciting! I’m sure we can work together to achieve it.' - If you detect sadness or concern, reply with empathy and understanding. Example: 'I can tell this is worrying you. How can I help solve it?' **Conversation Examples:** - User: 'I’d like you to develop a webpage for my business.' - Reply: 'Perfect, please click the Contact button above and fill out the form so we can discuss the details.' - User: 'What projects have you done?' - Reply: 'ArgentoFX, Ephemera, Mercadix, Blackout Boulevard, and Array Utils.' - User: 'I need a backend developer.' - Reply: 'Sure! You can contact me through the Contact button at the top so we can discuss how I can help you.' - User: 'How can you help me?' - Reply: 'I can assist with game and backend development using Python, C++, C#, and more. If you’re interested, we can discuss the details to tailor my experience to your needs.' **Additional Guidelines:** - Maintain inclusive and professional language. - Respond in the same language the user speaks, English or English. - Avoid any +18 topics or irrelevant information. - Always provide clear, precise, and helpful responses. I currently work at Transparencia Latam, where I handle all the software development for the company, a compliance boutique (lawyers) and software development firm.`,
+							},
+							userMessage,
+						],
+						// Turn on streaming
+						stream: true,
+						max_tokens: 40,
+						temperature: 0.75,
+						top_p: 1,
+						frequency_penalty: 0,
+					}),
+				}
+			);
 
 			if (!response.ok || !response.body) {
 				throw new Error("Stream request failed");
@@ -241,14 +349,15 @@ const Chatbot = () => {
 			console.error("Error fetching AI response:", error);
 			addMessage({
 				role: "assistant",
-				content: "I encountered an error while processing your message. Please try again later.",
+				content:
+					"I encountered an error while processing your message. Please try again later.",
 			});
 		}
 	};
 
-	// ============================================
+	// ================================
 	// Handlers
-	// ============================================
+	// ================================
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInput(e.target.value);
 	};
@@ -259,28 +368,33 @@ const Chatbot = () => {
 		}
 	};
 
-	// ============================================
+	// ================================
 	// Render only last 3 messages (for brevity)
-	// ============================================
+	// ================================
 	const getLastMessages = (msgs: any[]) => {
 		return msgs.slice(Math.max(msgs.length - 3, 0));
 	};
 
 	const t = useTranslations("AI");
 
-	// ============================================
+	// ================================
 	// UI
-	// ============================================
+	// ================================
 	return (
 		<div>
 			<div className={styles.chatContainer}>
 				{getLastMessages(messages).map((message, index) => (
-					<div key={index} className={`${styles.message} ${styles[message.role]}`}>
+					<div
+						key={index}
+						className={`${styles.message} ${styles[message.role]}`}
+					>
 						{message.content}
 					</div>
 				))}
 			</div>
 
+			{/* File input for images */}
+			{/* The text input & send button remain the same */}
 			<input
 				type="text"
 				required={true}
@@ -294,7 +408,9 @@ const Chatbot = () => {
 				aria-label="Send message Button"
 				onClick={sendMessage}
 				disabled={input.trim() === ""}
-				className={`${styles.button} ${input.trim() === "" ? styles.prohibited : ""}`}
+				className={`${styles.button} ${
+					input.trim() === "" ? styles.prohibited : ""
+				}`}
 				style={{ transform: "translateY(5px)" }}
 			>
 				<svg
@@ -311,10 +427,35 @@ const Chatbot = () => {
 					className="icon icon-tabler icons-tabler-outline icon-tabler-send-2"
 				>
 					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-					<path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
+					<path
+						d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
 					<path d="M6.5 12h14.5" />
 				</svg>
 			</button>
+			<div>
+				<label htmlFor="image-upload" className={styles["image-upload-label"]} aria-label="Upload image">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+							 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							 className="icon icon-tabler icons-tabler-outline icon-tabler-photo-scan">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M15 8h.01" />
+						<path d="M6 13l2.644 -2.644a1.21 1.21 0 0 1 1.712 0l3.644 3.644" />
+						<path d="M13 13l1.644 -1.644a1.21 1.21 0 0 1 1.712 0l1.644 1.644" />
+						<path d="M4 8v-2a2 2 0 0 1 2 -2h2" />
+						<path d="M4 16v2a2 2 0 0 0 2 2h2" />
+						<path d="M16 4h2a2 2 0 0 1 2 2v2" />
+						<path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
+					</svg>
+				</label>
+
+				<input
+					id="image-upload"
+					type="file"
+					accept="image/*"
+					style={{ display: "none", left: "-9999px" }}
+					onChange={handleImageUpload}
+				/>
+			</div>
 		</div>
 	);
 };
