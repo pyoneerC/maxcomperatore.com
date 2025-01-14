@@ -59,7 +59,7 @@ export const HeroSection = () => {
       </div>
       <div className={styles.actions}>
         <NextLink
-          href="https://www.dropbox.com/scl/fi/22pl0ygfe1n39axhnt213/MaximoComperatore-Resume.pdf?rlkey=01uvnuruvm2yr3blql4nobqby&st=mt0hnre4&dl=0"
+          href="https://drive.google.com/file/d/1_50n0Bs0rCqbVyMfKCyeq-3G7837WRPW/view?usp=sharing"
           target="_blank"
           prefetch={true}
           passHref // Ensures proper anchor rendering
