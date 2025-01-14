@@ -8,9 +8,9 @@ import confetti from "canvas-confetti";
 
 const Chatbot = () => {
 	const [input, setInput] = useState("");
-	const [messages, setMessages] = useState<
-		{ role: string; content: string }[]
-	>([]);
+	const [messages, setMessages] = useState<{ role: string; content: string }[]>(
+		[]
+	);
 	const [lastMessageTime, setLastMessageTime] = useState(0);
 	const [hasTriggeredConfetti, setHasTriggeredConfetti] = useState(false);
 	const [placeholder, setPlaceholder] = useState("placeholderD");
@@ -62,14 +62,25 @@ const Chatbot = () => {
 	};
 
 	// 2. Add a new message to the chat
-	//    Narrate only if it's an "assistant" message and it’s the *final* chunk
 	const addMessage = (message: { role: string; content: string }) => {
 		setMessages((prevMessages) => [...prevMessages, message]);
 		if (message.role === "assistant") {
-			// Play TTS once final chunk is ready
 			textToSpeech(message.content);
 		}
 	};
+
+	// LOAD messages from localStorage on mount
+	useEffect(() => {
+		const savedMessages = localStorage.getItem("chatMessages");
+		if (savedMessages) {
+			setMessages(JSON.parse(savedMessages));
+		}
+	}, []);
+
+	// SAVE messages to localStorage every time they change
+	useEffect(() => {
+		localStorage.setItem("chatMessages", JSON.stringify(messages));
+	}, [messages]);
 
 	useEffect(() => {
 		// Cycle through placeholders every 600ms
@@ -104,12 +115,13 @@ const Chatbot = () => {
 	};
 
 	// 3. Streaming function to read the chunks from the response
-	const streamAssistantResponse = async (reader: ReadableStreamDefaultReader) => {
+	const streamAssistantResponse = async (
+		reader: ReadableStreamDefaultReader
+	) => {
 		// Clear any leftover partial text
 		partialResponseRef.current = "";
 
 		// Create a placeholder assistant message in messages
-		// We'll update this message's content with partial text
 		let assistantIndex = -1;
 		setMessages((prev) => {
 			const newMessages = [
@@ -160,6 +172,7 @@ const Chatbot = () => {
 				}
 			}
 		}
+
 		// Finally, do TTS with the entire message
 		if (partialResponseRef.current.trim().length > 0) {
 			textToSpeech(partialResponseRef.current);
@@ -242,7 +255,7 @@ const Chatbot = () => {
 	};
 
 	const getLastMessages = (msgs: any[]) => {
-		// Show last 3 for brevity, or you can remove this filter
+		// Show last 3 for brevity, or remove slicing if you want the entire history
 		return msgs.slice(Math.max(msgs.length - 3, 0));
 	};
 
