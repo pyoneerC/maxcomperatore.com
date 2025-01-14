@@ -23,7 +23,43 @@ const Chatbot = () => {
 	const azureKey =
 		"4R8LpZ0Lr4Fp1fUDu55rHXXXU33eesSUg6z5RM6f0XOWrmoOIJkTJQQJ99BAACYeBjFXJ3w3AAAYACOGEY3n";
 
-	// 1. Fetch TTS from Azure and play audio
+	// ============================================
+	// Load confetti state & messages from localStorage
+	// ============================================
+	useEffect(() => {
+		// 1. Check if we've already triggered confetti
+		const hasTriggered = localStorage.getItem("hasTriggeredConfetti");
+		if (hasTriggered) {
+			setHasTriggeredConfetti(true);
+		}
+
+		// 2. Load saved messages
+		const savedMessages = localStorage.getItem("chatMessages");
+		if (savedMessages) {
+			setMessages(JSON.parse(savedMessages));
+		}
+	}, []);
+
+	// Save messages to localStorage
+	useEffect(() => {
+		localStorage.setItem("chatMessages", JSON.stringify(messages));
+	}, [messages]);
+
+	// Cycle placeholders
+	useEffect(() => {
+		const placeholders = ["placeholderA", "placeholderB", "placeholderC", "placeholderD"];
+		let index = 0;
+		const interval = setInterval(() => {
+			index = (index + 1) % placeholders.length;
+			setPlaceholder(placeholders[index]);
+		}, 600);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	// ============================================
+	// Helper: textToSpeech
+	// ============================================
 	const textToSpeech = async (text: string) => {
 		try {
 			const ssml = `<speak version="1.0"
@@ -50,7 +86,6 @@ const Chatbot = () => {
 				}
 			);
 
-			// Convert response to audio Blob
 			const audioData = await response.arrayBuffer();
 			const audioBlob = new Blob([audioData], { type: "audio/mp3" });
 			const audioUrl = URL.createObjectURL(audioBlob);
@@ -61,7 +96,9 @@ const Chatbot = () => {
 		}
 	};
 
-	// 2. Add a new message to the chat
+	// ============================================
+	// Helper: addMessage
+	// ============================================
 	const addMessage = (message: { role: string; content: string }) => {
 		setMessages((prevMessages) => [...prevMessages, message]);
 		if (message.role === "assistant") {
@@ -69,43 +106,14 @@ const Chatbot = () => {
 		}
 	};
 
-	// LOAD messages from localStorage on mount
-	useEffect(() => {
-		const savedMessages = localStorage.getItem("chatMessages");
-		if (savedMessages) {
-			setMessages(JSON.parse(savedMessages));
-		}
-	}, []);
-
-	// SAVE messages to localStorage every time they change
-	useEffect(() => {
-		localStorage.setItem("chatMessages", JSON.stringify(messages));
-	}, [messages]);
-
-	useEffect(() => {
-		// Cycle through placeholders every 600ms
-		const placeholders = [
-			"placeholderA",
-			"placeholderB",
-			"placeholderC",
-			"placeholderD",
-		];
-		let index = 0;
-		const interval = setInterval(() => {
-			index = (index + 1) % placeholders.length;
-			setPlaceholder(placeholders[index]);
-		}, 600);
-
-		return () => clearInterval(interval);
-	}, []);
-
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setInput(e.target.value);
-	};
-
+	// ============================================
+	// Helper: triggerConfetti (only once)
+	// ============================================
 	const triggerConfetti = () => {
 		if (!hasTriggeredConfetti) {
 			setHasTriggeredConfetti(true);
+			// Save confetti state to localStorage
+			localStorage.setItem("hasTriggeredConfetti", "true");
 			confetti({
 				particleCount: 100,
 				spread: 70,
@@ -114,20 +122,16 @@ const Chatbot = () => {
 		}
 	};
 
-	// 3. Streaming function to read the chunks from the response
-	const streamAssistantResponse = async (
-		reader: ReadableStreamDefaultReader
-	) => {
-		// Clear any leftover partial text
+	// ============================================
+	// 3. Stream assistant response
+	// ============================================
+	const streamAssistantResponse = async (reader: ReadableStreamDefaultReader) => {
 		partialResponseRef.current = "";
 
-		// Create a placeholder assistant message in messages
+		// Create a placeholder assistant message
 		let assistantIndex = -1;
 		setMessages((prev) => {
-			const newMessages = [
-				...prev,
-				{ role: "assistant", content: "" }, // empty at first
-			];
+			const newMessages = [...prev, { role: "assistant", content: "" }];
 			assistantIndex = newMessages.length - 1;
 			return newMessages;
 		});
@@ -136,20 +140,15 @@ const Chatbot = () => {
 
 		while (true) {
 			const { value, done } = await reader.read();
-			if (done) break; // streaming finished
+			if (done) break;
 
-			// Decode chunk to text
 			const chunk = decoder.decode(value, { stream: true });
-
-			// The OpenAI-like format typically has lines starting with "data:"
 			const lines = chunk.split("\n").filter((line) => line.trim().length > 0);
 
 			for (const line of lines) {
-				// If event is done, break out
 				if (line.trim() === "data: [DONE]") {
 					break;
 				}
-				// Each chunk is like: data: {...json...}
 				if (line.startsWith("data: ")) {
 					const jsonStr = line.replace(/^data:\s*/, "");
 					try {
@@ -157,7 +156,6 @@ const Chatbot = () => {
 						const token = parsed.choices?.[0]?.delta?.content;
 						if (token) {
 							partialResponseRef.current += token;
-							// Update the assistant message content with partial text
 							setMessages((prev) => {
 								const updated = [...prev];
 								if (assistantIndex !== -1 && updated[assistantIndex]) {
@@ -173,16 +171,19 @@ const Chatbot = () => {
 			}
 		}
 
-		// Finally, do TTS with the entire message
+		// TTS after final chunk
 		if (partialResponseRef.current.trim().length > 0) {
 			textToSpeech(partialResponseRef.current);
 		}
 	};
 
+	// ============================================
+	// 4. Send message
+	// ============================================
 	const sendMessage = async () => {
 		const currentTime = Date.now();
 		const timeSinceLastMessage = currentTime - lastMessageTime;
-		const minInterval = 2000; // 2 seconds
+		const minInterval = 2000; // 2s
 
 		if (timeSinceLastMessage < minInterval) {
 			const spamWarning = {
@@ -195,16 +196,16 @@ const Chatbot = () => {
 
 		if (input.trim() === "") return;
 
-		triggerConfetti(); // Trigger confetti on first click
+		// Only call triggerConfetti once
+		triggerConfetti();
+
 		setLastMessageTime(currentTime);
 
-		// Add user message
 		const userMessage = { role: "user", content: input };
 		addMessage(userMessage);
-
 		setInput("");
 
-		// 4. Make the streaming request
+		// Make streaming request
 		try {
 			const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
 				method: "POST",
@@ -234,18 +235,22 @@ const Chatbot = () => {
 				throw new Error("Stream request failed");
 			}
 
-			// Stream the assistant's response
 			const reader = response.body.getReader();
 			await streamAssistantResponse(reader);
 		} catch (error) {
 			console.error("Error fetching AI response:", error);
-			const errorMessage = {
+			addMessage({
 				role: "assistant",
-				content:
-					"I encountered an error while processing your message. Please try again later.",
-			};
-			addMessage(errorMessage);
+				content: "I encountered an error while processing your message. Please try again later.",
+			});
 		}
+	};
+
+	// ============================================
+	// Handlers
+	// ============================================
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setInput(e.target.value);
 	};
 
 	const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -254,21 +259,23 @@ const Chatbot = () => {
 		}
 	};
 
+	// ============================================
+	// Render only last 3 messages (for brevity)
+	// ============================================
 	const getLastMessages = (msgs: any[]) => {
-		// Show last 3 for brevity, or remove slicing if you want the entire history
 		return msgs.slice(Math.max(msgs.length - 3, 0));
 	};
 
 	const t = useTranslations("AI");
 
+	// ============================================
+	// UI
+	// ============================================
 	return (
 		<div>
 			<div className={styles.chatContainer}>
 				{getLastMessages(messages).map((message, index) => (
-					<div
-						key={index}
-						className={`${styles.message} ${styles[message.role]}`}
-					>
+					<div key={index} className={`${styles.message} ${styles[message.role]}`}>
 						{message.content}
 					</div>
 				))}
@@ -287,9 +294,7 @@ const Chatbot = () => {
 				aria-label="Send message Button"
 				onClick={sendMessage}
 				disabled={input.trim() === ""}
-				className={`${styles.button} ${
-					input.trim() === "" ? styles.prohibited : ""
-				}`}
+				className={`${styles.button} ${input.trim() === "" ? styles.prohibited : ""}`}
 				style={{ transform: "translateY(5px)" }}
 			>
 				<svg
