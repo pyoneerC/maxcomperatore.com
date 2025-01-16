@@ -133,18 +133,22 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<link rel="canonical" href="https://maxcomperatore.com" />
 			<meta name="robots" content="index, follow" />
 			<link rel="alternate" hrefLang="en" href="https://maxcomperatore.com/" />
+			<meta name="keywords"
+						content="backend development, artificial intelligence, Max Comperatore, software developer, Python developer, C# developer, C++ developer, video game development, pragmatic software solutions, innovative backend design">
+			</meta>
 
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5ZZD243ZP"></script>
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `
+
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5ZZD243ZP"></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-N5ZZD243ZP');
       `,
-				}}
-			/>
+					}}
+				/>
 		</head>
 		<body className={`${GeistSans.className} ${GeistSans.variable}`}>
 		<NextIntlClientProvider messages={messages}>
