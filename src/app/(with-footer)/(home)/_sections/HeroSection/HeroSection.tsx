@@ -33,16 +33,16 @@ export const HeroSection = () => {
 
       <div className={styles.intro}>
         <p className={styles.introSubtitle}>
-          {t.rich('subtitle', {
-            em: (children) => <strong>{children}</strong>
+          {t.rich("subtitle", {
+            em: (children) => <strong>{children}</strong>,
           })}
         </p>
         <p className={styles.introSubtitle}>
-          {t("location")}
+          <a href="https://www.google.com/maps/place/Mendoza" target="_blank" rel="noopener noreferrer"
+             className={styles.link}>
+            {t("location")}
+          </a>
           <ArgentinaFlag className={styles.flag} />
-          <br />
-          {/*<TimeDifference />*/}
-          <Clock className={styles.clock} />
         </p>
       </div>
       <div className={styles.buttonContainer}>
