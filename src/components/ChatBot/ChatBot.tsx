@@ -22,12 +22,14 @@ const Chatbot = () => {
 	// Azure TTS config
 	// ================================
 	const azureRegion = "eastus"; // <--- Replace if needed
-	const azureKey = process.env.AZURE_TTS_KEY;
+	const azureKey =
+		"4R8LpZ0Lr4Fp1fUDu55rHXXXU33eesSUg6z5RM6f0XOWrmoOIJkTJQQJ99BAACYeBjFXJ3w3AAAYACOGEY3n"; // <--- Replace with your actual Azure Speech key
 
 	// ================================
 	// Azure Computer Vision config (UPDATED for more details)
 	// ================================
-	const visionKey = process.env.AZURE_VISION_KEY;
+	const visionKey =
+		"6CZyM0U54xWFdW9O6c7hW9NLooDir5jxg7UWvjohLrq2hGaQiTQEJQQJ99BAACYeBjFXJ3w3AAAFACOGoFlT"; // <--- Replace with your actual Azure Computer Vision key
 
 	// Ask for multiple features: description, tags, categories, objects, brands, color, etc.
 	// Also include details like celebrities, landmarks if available.
@@ -315,7 +317,7 @@ const Chatbot = () => {
 				{
 					method: "POST",
 					headers: {
-						Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+						Authorization: `Bearer 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`,
 						"Content-Type": "application/json",
 					},
 					body: JSON.stringify({
