@@ -16,8 +16,6 @@ export const metadata = {
 }
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	const messages = await getMessages();
-	const canonicalUrl = "https://maxcomperatore.com";
-
 	const structuredData = {
 		"@context": "https://schema.org",
 		"@type": "Person",
@@ -101,7 +99,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 			<meta property="og:image"
 						content="https://maxcomperatore.com/assets/images/socialpreview.webp" />
 
-			<link rel="canonical" href={canonicalUrl} />
 			<link rel="icon" href="/favicon.ico" />
 
 			{/* Open Graph / Facebook */}
