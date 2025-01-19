@@ -3,7 +3,6 @@ import { Button } from "~/components/Ui/Button";
 import { CopyEmailSmallButton } from "~/components/CopyEmailSmallButton";
 import styles from "./HeroSection.module.css";
 import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton";
-import Clock from "~/components/Clock/Clock";
 import ArgentinaFlag from "~/components/Svg/ArgentinaFlag"
 import { useTranslations } from 'next-intl';
 import Chatbot from "~/components/ChatBot/ChatBot"
