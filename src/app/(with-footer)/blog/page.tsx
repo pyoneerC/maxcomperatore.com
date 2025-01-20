@@ -20,7 +20,7 @@ export default async function Blog() {
 	return (
 		<main className={styles.wrapper}>
 			<h1 className={styles.title}>
-				<a href="https://maxcomperatore.hashnode.dev/">
+				<a href="https://blog.maxcomperatore.com">
 					Blog
 				</a>
 			</h1>
