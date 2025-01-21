@@ -4,7 +4,7 @@ export const FORMSPREE_URL = "https://formspree.io/f"
 
 export const APP_ROUTES = [
 	{
-		href: "/blog",
+		href: "https://blog.maxcomperatore.com",
 		label: "blog",
 	},
 ]
