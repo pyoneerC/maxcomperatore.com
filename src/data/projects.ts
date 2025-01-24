@@ -12,7 +12,7 @@ export const projectMetadata = {
 	},
 	TheDungeon: {
 		slug: "the-dungeon",
-		name: "Ephemera",
+		name: "S.P.U",
 	},
 }
 
