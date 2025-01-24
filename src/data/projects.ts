@@ -113,11 +113,10 @@ export const projects = [
 		description: "TheDungeon.about",
 		mobileImages:
 			[
-				`/assets/images/projects/thedungeon/library.avif`,
-				`/assets/images/projects/thedungeon/thedungeon.gif`,
+				`/assets/images/projects/thedungeon/streamer.avif`,
 			],
 		desktopImages: [
-			`/assets/images/projects/thedungeon/streamer.avif`,
+			`/assets/images/projects/thedungeon/library.avif`,
 		],
 		links: [
 			{
