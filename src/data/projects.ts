@@ -122,18 +122,18 @@ export const projects = [
 		links: [
 			{
 				label: "TheDungeon.linkItchIo",
-				url: "https://pyoneerc1.itch.io/the-dungeon",
+				url: "https://pyoneerc1.itch.io/spu",
 			},
 			{
 				label: "TheDungeon.linkViewVideos",
-				url: "https://www.youtube.com/playlist?list=PLRFx0xkqiuISCnQBv0af1v3Kn7fOHcoLT",
+				url: "https://www.youtube.com/watch?v=l8W4iZG-S3U&t=2s&ab_channel=pyoneerC",
 			},
 		],
 		tags:
 		[
-			Tag.unrealEngine,
-			Tag.blueprints,
-			Tag.cPlusPlus
+			Tag.python,
+			Tag.kivi,
+			Tag.llama31
 		],
 	},
 ]

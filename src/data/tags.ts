@@ -25,4 +25,6 @@ export const Tag = {
 	cli: "CLI",
 	redis: "Redis",
 	beautifulSoup: "bs4",
+	kivi: "Kivy",
+	llama31: "Llama 3.1",
 }

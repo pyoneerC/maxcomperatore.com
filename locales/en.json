@@ -51,11 +51,11 @@
       "about" : "With the goal of delving deeper into API development and database management, I developed BlinkLink, a public API that provides an advanced URL shortening service. \n\nBlinkLink is designed to provide efficient and scalable performance, integrating CRUD operations that enable complete and secure link management."
     },
     "TheDungeon": {
-      "name": "Ephemera",
+      "name": "S.P.U",
       "description": "AI-driven game where you judge souls and decide their fates.",
       "linkItchIo": "View on itch.io",
       "linkViewVideos": "View gameplay",
-      "about": "In this immersive puzzle game, you find yourself trapped in an unsettling office environment where something feels off. \nWith only your wits and a few scattered tools, you'll need to solve a series of challenging riddles and puzzles that will test your intelligence and problem-solving skills. \nCan you escape this nightmare and find your way to freedom?"
+      "about": "In this AI-powered simulation game, you step into the role of a cosmic judge tasked with deciding the fates of newly departed souls. \nUsing only your intuition and the stories shared by these AI-generated souls, you’ll uncover their regrets, desires, and deepest truths. \nEvery decision—whether to Save, Reincarnate, or Damn—will challenge your morality and shape their ultimate destiny. \nCan you navigate this moral maze and pass fair judgment in the Soul Processing Unit?"
     }
   },
   "AboutSection": {
