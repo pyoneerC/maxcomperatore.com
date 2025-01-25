@@ -67,7 +67,7 @@ export const coverProjects: CoverProjectOther[] = [
 		imageUrl: `/assets/images/projects/cover/monedasapi.avif`,
 		description: "afx",
 		tags: [Tag.python, Tag.redis, Tag.docker],
-		link: "https://maxcomperatore.online/docs",
+		link: "https://publicapi.dev/argento-fx-api",
 	},
 	{
 		...projectMetadata.thegreatchocolatecaper,
