@@ -35,7 +35,7 @@
 
     "mercadolibrepricechart": {
       "name": "Cinemax",
-      "description": "Next-generation platform for booking movie tickets.",
+      "description": "AI-powered platform for booking movie tickets.",
       "linkVisitSite": "Visit site",
       "linkViewCode": "View code",
       "linkViewVideo": "View video",
@@ -43,7 +43,7 @@
     },
     "monedasAPI": {
       "name": "BlinkLink",
-      "description": "Robust API for URL shortening, employing CRUD operations.",
+      "description": "Robust API for URL shortening, leveraging CRUD operations.",
       "linkVisitDocs": "Visit documentation",
       "linkViewCode": "View code",
       "linkViewVideo": "View in Dockerhub",
