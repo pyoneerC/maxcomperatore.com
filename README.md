@@ -101,6 +101,6 @@ Este proyecto está licenciado bajo la Licencia MIT.
 
 ## Contacto
 
-Para cualquier consulta, por favor contactar a [maxcomperatore@gmail.com](mailto:maxcomperatore@gmail.com).
+Para cualquier consulta, por favor contactar a [hi@maxcomperatore.com](mailto:hi@maxcomperatore.com).
 
 Hecho con ❤️ por Max Comperatore.
