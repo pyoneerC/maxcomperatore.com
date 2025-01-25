@@ -79,7 +79,7 @@ export default async function RootLayout({
 		contactPoint: {
 			"@type": "ContactPoint",
 			contactType: "Work",
-			email: "mailto:hi@maxcomperatore.com",
+			email: "mailto:maxcomperatutti@gmail.com",
 			url: "https://maxcomperatore.com",
 			availableLanguage: ["Spanish", "English"],
 			areaServed: "Global",
