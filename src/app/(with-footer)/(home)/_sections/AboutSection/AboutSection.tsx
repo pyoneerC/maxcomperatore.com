@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './AboutSection.module.css'
 import {useTranslations} from "next-intl"
+import { Experience } from "~/components/Experience"
 
 export const AboutSection = () => {
 	const t = useTranslations("AboutSection")
@@ -51,6 +52,11 @@ export const AboutSection = () => {
 					</p>
 				</div>
 			</div>
+			<div
+				style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "8vh", marginTop: "6rem", marginBottom: "2rem" }}>
+				<Experience />
+			</div>
+
 		</section>
 	)
 }
