@@ -53,7 +53,7 @@ export const AboutSection = () => {
 				</div>
 			</div>
 			<div
-				style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "8vh", marginTop: "6rem", marginBottom: "2rem" }}>
+				className={styles.experienceWrapper}>
 				<Experience />
 			</div>
 

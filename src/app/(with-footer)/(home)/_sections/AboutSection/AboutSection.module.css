@@ -275,3 +275,20 @@ body.light .textWrapper,
 body.light .paragraph {
 	color: #030303;
 }
+
+.experienceWrapper {
+	display: flex; /* Fixed CSS syntax */
+	justify-content: center;
+	align-items: center;
+	height: 8vh;
+	margin-top: 4rem; /* Default margin for larger screens */
+	margin-bottom: 2rem; /* Default margin for larger screens */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+	.experienceWrapper {
+		margin-top: 8rem; /* Increased margin for mobile */
+		margin-bottom: 6rem; /* Increased margin for mobile */
+	}
+}
