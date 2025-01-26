@@ -11,6 +11,11 @@
   "LanguageSwitcher": {
     "switchLanguage": "Cambiar a Inglés"
   },
+  "Experience": {
+    "remote": "Remoto",
+    "hybrid": "Híbrido",
+    "experience": "Experiencia"
+  },
   "HeroSection": {
     "availability": "Disponible para nuevos proyectos",
     "contact": "Contactar",

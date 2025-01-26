@@ -14,6 +14,11 @@
   "ContactDialog": {
     "title": "Contact me"
   },
+  "Experience": {
+    "remote": "Remote",
+    "hybrid": "Hybrid",
+    "experience": "Experience"
+  },
   "HeroSection": {
     "availability": "Available for new projects",
     "contact": "Contact",
