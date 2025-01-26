@@ -62,10 +62,12 @@
     pointer-events: none;
     mix-blend-mode: overlay;
     transition: opacity 0.4s ease;
+    will-change: transform;
 }
 
 .experience:hover::before {
     opacity: 1;
+    will-change: transform;
 }
 
 /* Secondary Glow Layer for Hover */

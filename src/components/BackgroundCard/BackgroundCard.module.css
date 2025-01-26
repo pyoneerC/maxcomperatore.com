@@ -29,9 +29,11 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 250ms;
+    will-change: transform;
 }
 .siteLink:hover::before {
     transform: scaleX(1);
+    will-change: transform;
 }
 .siteLink svg {
     transition: transform 250ms;
