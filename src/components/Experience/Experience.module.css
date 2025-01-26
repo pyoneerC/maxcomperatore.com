@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    font-size: clamp(14px, 14px + 0.129vw, 16px);
+    font-size: clamp(14px, 13.52px + 0.129vw, 16px);
 }
 
 /* Experience Card Styling */
@@ -21,33 +21,51 @@
     background-size: 200% 200%;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow:
-            0 8px 32px rgba(0, 0, 0, 0.2),
-            0 4px 16px rgba(0, 0, 0, 0.1);
+            0 8px 32px rgba(0, 0, 0, 0.3),
+            0 4px 16px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
     animation: gradientShift 12s ease infinite;
     transition:
-            transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+            transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
             box-shadow 0.4s ease,
-            background 0.8s ease;
+            background 0.4s ease; /* Smooth background transition */
+    perspective: 1000px; /* Enables 3D perspective */
+    transform-style: preserve-3d; /* Keeps child elements in 3D space */
 }
 
-/* Hover Effect on Experience Card */
+/* Hover Effect with Vercel Dark Background */
 .experience:hover {
-    transform: scale(1.05); /* Slightly larger for a more dynamic effect */
+    transform: scale(1.1) rotateX(7deg) rotateY(-7deg); /* Adds smooth 3D effect */
+    background: #111111; /* Sleek grey Vercel-like background */
     box-shadow:
-            0 16px 48px rgba(0, 0, 0, 0.3),
-            0 8px 24px rgba(0, 0, 0, 0.2);
+            0 16px 48px rgba(0, 0, 0, 0.5),
+            0 8px 24px rgba(0, 0, 0, 0.3); /* Deep shadow for a lifted look */
 }
 
-/* Background Animation */
-@keyframes gradientShift {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
+/* Neon Glow Layer */
+.experience::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background: linear-gradient(
+            90deg,
+            var(--color-background-tertiary),
+            var(--color-background-secondary),
+            var(--color-background-fourth),
+    );
+    background-size: 400% 400%;
+    animation: neonShift 6s linear infinite;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transition: opacity 0.4s ease;
+}
+
+.experience:hover::before {
+    opacity: 1;
 }
 
 /* Secondary Glow Layer for Hover */
@@ -58,7 +76,8 @@
     left: -150%;
     width: 300%;
     height: 300%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    transform: translate(var(--mouse-x), var(--mouse-y)) rotate(45deg);
     opacity: 0;
     z-index: 2;
     pointer-events: none;
@@ -68,14 +87,14 @@
 }
 
 .experience:hover::after {
-    opacity: 0.4;
+    opacity: 0.5; /* Slight glow */
     transform: translate(0, 0) rotate(45deg);
     transition-duration: 1s;
 }
 
-/* Card Heading Styling */
+/* Heading Styling */
 .experience h3 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
     margin: 0;
     color: var(--color-text);
@@ -83,14 +102,18 @@
     transition:
             transform 0.4s ease,
             text-shadow 0.4s ease;
+    transform-origin: center;
+    backface-visibility: hidden;
 }
 
 .experience:hover h3 {
-    transform: translateY(-3px);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) rotateX(5deg); /* Smooth tilt */
+    text-shadow:
+            0 2px 12px rgba(255, 255, 255, 0.3),
+            0 4px 16px rgba(0, 0, 0, 0.5); /* Subtle glow */
 }
 
-/* Card Paragraph Styling */
+/* Paragraph Styling */
 .experience p {
     font-size: 1em;
     line-height: 1.6;
@@ -101,9 +124,30 @@
     transition:
             transform 0.4s ease 0.1s,
             opacity 0.4s ease;
+    backface-visibility: hidden;
 }
 
 .experience:hover p {
-    transform: translateY(-2px);
+    transform: translateY(-2px) rotateY(5deg); /* Adds depth */
     opacity: 1;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Neon Animation */
+@keyframes neonShift {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
 }
