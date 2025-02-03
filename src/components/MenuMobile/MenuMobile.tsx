@@ -49,7 +49,7 @@ export const MenuMobile = () => {
 					<ul className={styles.navList}>
 						{APP_ROUTES.map(({ href, label }) => (
 							<li key={href}>
-								<Link className={styles.navLink} href={href}>
+								<Link className={styles.navLink} href={href} target={"_blank"} rel={"noopener"} className={styles.navLink}>
 									{t(label)}
 								</Link>
 							</li>

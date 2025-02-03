@@ -22,7 +22,7 @@ export const Header = () => {
 					<ul className={styles.navList}>
 						{APP_ROUTES.map(({ href, label }) => (
 							<li key={href}>
-								<Link href={href}>
+								<Link href={href} target={"_blank"} rel={"noopener"} className={styles.navLink}>
 									{t(label)}
 								</Link>
 							</li>
