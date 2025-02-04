@@ -110,75 +110,56 @@
 	user-select: none;
 	user-focus: none;
 
-	animation: smoothGooblyPortal 10s linear infinite;
+	animation: ultraGooeyPortal 10s linear infinite;
 }
 
-@keyframes smoothGooblyPortal {
-	0% {
-		border-radius: 90% 65% 65% 63% / 92% 80% 70% 71%;
+@keyframes ultraGooeyPortal {
+	0%, 100% {
+		border-radius: 88% 62% 70% 60% / 85% 80% 75% 70%;
+		box-shadow: 0 0 15px rgba(255, 0, 255, 0.2),
+		0 0 30px rgba(0, 255, 255, 0.3);
 	}
-	5% {
-		border-radius: 95% 70% 85% 65% / 88% 82% 75% 68%;
+	8% {
+		border-radius: 75% 90% 65% 85% / 88% 60% 85% 72%;
 	}
-	10% {
-		border-radius: 85% 72% 80% 60% / 90% 78% 72% 76%;
+	16% {
+		border-radius: 90% 75% 82% 68% / 72% 88% 95% 60%;
 	}
-	15% {
-		border-radius: 80% 68% 92% 75% / 85% 70% 80% 90%;
+	24% {
+		border-radius: 78% 65% 90% 75% / 85% 92% 70% 88%;
 	}
-	20% {
-		border-radius: 75% 82% 85% 68% / 82% 90% 88% 70%;
-	}
-	25% {
-		border-radius: 88% 75% 78% 80% / 78% 85% 75% 88%;
-	}
-	30% {
-		border-radius: 92% 88% 72% 85% / 75% 90% 78% 80%;
-	}
-	35% {
-		border-radius: 70% 95% 80% 75% / 88% 78% 85% 92%;
+	32% {
+		border-radius: 85% 95% 75% 85% / 90% 72% 88% 78%;
 	}
 	40% {
-		border-radius: 80% 75% 90% 85% / 72% 85% 90% 78%;
+		border-radius: 92% 70% 78% 85% / 72% 85% 95% 78%;
+		box-shadow: 0 0 20px rgba(255, 0, 255, 0.3),
+		0 0 40px rgba(0, 255, 255, 0.4);
 	}
-	45% {
-		border-radius: 95% 72% 85% 78% / 78% 90% 75% 88%;
+	48% {
+		border-radius: 75% 88% 90% 80% / 85% 92% 60% 85%;
 	}
-	50% {
-		border-radius: 70% 85% 95% 65% / 80% 75% 90% 88%;
+	56% {
+		border-radius: 85% 75% 80% 90% / 90% 70% 88% 72%;
 	}
-	55% {
-		border-radius: 90% 65% 80% 78% / 78% 88% 72% 85%;
+	64% {
+		border-radius: 80% 85% 92% 70% / 75% 90% 88% 72%;
 	}
-	60% {
-		border-radius: 85% 75% 60% 90% / 90% 75% 66% 78%;
-	}
-	65% {
-		border-radius: 80% 90% 70% 75% / 85% 88% 78% 85%;
-	}
-	70% {
-		border-radius: 75% 85% 95% 80% / 78% 85% 65% 88%;
-	}
-	75% {
-		border-radius: 88% 78% 80% 70% / 90% 72% 88% 78%;
+	72% {
+		border-radius: 78% 92% 88% 70% / 75% 85% 90% 80%;
+		box-shadow: 0 0 25px rgba(255, 0, 255, 0.3),
+		0 0 50px rgba(0, 255, 255, 0.4);
 	}
 	80% {
-		border-radius: 92% 65% 75% 78% / 88% 78% 70% 80%;
+		border-radius: 95% 75% 85% 72% / 88% 85% 78% 90%;
 	}
-	85% {
+	88% {
 		border-radius: 70% 78% 96% 75% / 80% 85% 78% 90%;
 	}
-	90% {
-		border-radius: 75% 75% 90% 85% / 78% 88% 90% 75%;
-	}
-	95% {
-		border-radius: 95% 78% 85% 72% / 90% 85% 78% 88%;
-	}
-	99% {
+	96% {
 		border-radius: 90% 65% 65% 63% / 92% 80% 70% 71%;
 	}
 }
-
 
 .photo:hover {
 	--i: 1;

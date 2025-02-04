@@ -83,7 +83,7 @@
 .card:hover .iconWrapper {
     color: var(--color-brand);
     transform: translateY(-8px) scale(1.2);
-    filter: drop-shadow(0 0 3px var(--color-brand));
+    filter: drop-shadow(0 0 2px var(--color-brand));
     transition:
             transform 400ms cubic-bezier(0.25, 1, 0.5, 1),
             color 400ms ease-in-out,
