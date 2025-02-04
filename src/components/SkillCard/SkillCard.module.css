@@ -28,6 +28,10 @@
     background: #101012;
 }
 
+.card:hover {
+    border-color: #68686c;
+}
+
 /* Make pixel-canvas behave like a background effect */
 .card pixel-canvas {
     position: absolute;
