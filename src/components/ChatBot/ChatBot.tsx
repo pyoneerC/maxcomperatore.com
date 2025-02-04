@@ -723,3 +723,24 @@ ${messages.map((msg) => msg.content).join(" | ")}
 
 // @ts-ignore
 export default Chatbot;
+
+const tools = [
+	{
+		type: "function",
+		function: {
+			name: "get_weather",
+			description:
+				"Retrieve current weather information and advice for a given location. The output should be a JSON string with keys: location, temperature, windspeed, advice.",
+			parameters: {
+				type: "object",
+				properties: {
+					location: {
+						type: "string",
+						description: "The name of the city",
+					},
+				},
+				required: ["location"],
+			},
+		},
+	},
+];
