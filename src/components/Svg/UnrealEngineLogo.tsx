@@ -5,7 +5,7 @@ export const UnrealLogo = (props: SVGProps<SVGSVGElement>) => (
 		xmlns="http://www.w3.org/2000/svg"
 		width="61"
 		height="61"
-		viewBox="+1 -1 20 30"
+		viewBox="+1 -1 22 30"
 		{...props}
 	>
 		<path
