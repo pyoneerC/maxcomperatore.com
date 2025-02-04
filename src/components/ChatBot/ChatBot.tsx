@@ -157,6 +157,20 @@ const Chatbot = () => {
 			"placeholderF",
 			"placeholderG",
 			"placeholderH",
+			"placeholderB",
+			"placeholderC",
+			"placeholderD",
+			"placeholderI",
+			"placeholderJ",
+			"placeholderK",
+			"placeholderL",
+			"placeholderB",
+			"placeholderC",
+			"placeholderD",
+			"placeholderM",
+			"placeholderN",
+			"placeholderO",
+			"placeholderP",
 		];
 		let index = 0;
 		const interval = setInterval(() => {

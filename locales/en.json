@@ -72,6 +72,14 @@
     "mab": "More about me"
   },
   "AI" : {
+    "placeholderP": "Analyze this image.",
+    "placeholderO": "Analyze this image",
+    "placeholderN": "Analyze this",
+    "placeholderM": "Analyze",
+    "placeholderL": "Speak in Russian!",
+    "placeholderK": "Speak in Russian",
+    "placeholderJ": "Speak in",
+    "placeholderI": "Speak",
     "placeholderH": "Weather in Dhaka?",
     "placeholderG": "Weather in Dhaka",
     "placeholderF": "Weather in",

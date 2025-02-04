@@ -61,6 +61,14 @@
     }
   },
   "AI" : {
+    "placeholderP": "Analiza esta imagen.",
+    "placeholderO": "Analiza esta imagen",
+    "placeholderN": "Analiza esta",
+    "placeholderM": "Analiza",
+    "placeholderL": "Habla en Ruso!",
+    "placeholderK": "Habla en Ruso",
+    "placeholderJ": "Habla en",
+    "placeholderI": "Habla",
     "placeholderH": "Weather in Dhaka?",
     "placeholderG": "Weather in Dhaka",
     "placeholderF": "Weather in",
