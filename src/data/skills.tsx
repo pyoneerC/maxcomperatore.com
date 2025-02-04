@@ -39,7 +39,7 @@ export const skills = [
 	{
 		name: "DotNet",
 		icon: <CsharpLogo />,
-		brandColor: "#4a15f3",
+		brandColor: "#6540e8",
 		tooltip: "Framework for building scalable, enterprise-grade applications.",
 		colors: ["#512BD4", "#683AB7", "#3C1E70"],
 	},
