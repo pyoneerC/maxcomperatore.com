@@ -30,11 +30,11 @@ export const skills = [
 		colors: ["#34BDEE", "#0078D4", "#00599C"],
 	},
 	{
-		name: "PostgreSQL",
+		name: "Supabase",
 		icon: <PostgreSqlLogo />,
-		brandColor: "#1c89e1",
-		tooltip: "Powerful database for managing complex data securely and reliably.",
-		colors: ["#336791", "#4179A4", "#1A4D8F"],
+		brandColor: "#3ECF8E",
+		tooltip: "Open-source Firebase alternative for databases, auth, and storage.",
+		colors: ["#2F9E6C", "#3ECF8E", "#249D63"],
 	},
 	{
 		name: "DotNet",

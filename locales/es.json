@@ -83,7 +83,7 @@
     "Python": "Lenguaje versátil para análisis de datos, automatización y desarrollo web.",
     "Docker": "Plataforma que facilita el despliegue de aplicaciones en entornos portables.",
     "Azure": "Nube de Microsoft con enfoque en IA avanzada, datos y escalabilidad.",
-    "PostgreSQL": "Base de datos robusta y confiable para el manejo eficiente de datos.",
+    "Supabase": "BaaS de código abierto para bases de datos, autenticación y almacenamiento.",
     "DotNet": "Framework para crear aplicaciones empresariales y soluciones de negocio.",
     "Unity": "Motor para crear experiencias interactivas en 2D y 3D.",
     "OpenAI": "Modelos y API de IA para automatización, chatbots y apps inteligentes.",
