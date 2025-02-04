@@ -72,10 +72,13 @@
     "mab": "More about me"
   },
   "AI" : {
+    "placeholderH": "Weather in Dhaka?",
+    "placeholderG": "Weather in Dhaka",
+    "placeholderF": "Weather in",
+    "placeholderE": "Weather",
     "placeholderD": "Chat with Max AI...",
     "placeholderC": "Chat with Max AI..",
     "placeholderB": "Chat with Max AI.",
-    "placeholderA": "Chat with Max AI",
     "send": "Send",
     "typing": "Max AI is typing..."
   },

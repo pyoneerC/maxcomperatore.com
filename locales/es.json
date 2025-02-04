@@ -61,10 +61,13 @@
     }
   },
   "AI" : {
+    "placeholderH": "Weather in Dhaka?",
+    "placeholderG": "Weather in Dhaka",
+    "placeholderF": "Weather in",
+    "placeholderE": "Weather",
     "placeholderD": "Chatear con Max IA...",
     "placeholderC": "Chatear con Max IA..",
     "placeholderB": "Chatear con Max IA.",
-    "placeholderA": "Chatear con Max IA",
     "send": "Enviar",
     "typing": "Max IA está escribiendo..."
   },

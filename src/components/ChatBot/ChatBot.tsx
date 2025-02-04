@@ -8,9 +8,7 @@ import confetti from "canvas-confetti";
 
 const Chatbot = () => {
 	const [input, setInput] = useState("");
-	const [messages, setMessages] = useState<{ role: string; content: string }[]>(
-		[]
-	);
+	const [messages, setMessages] = useState<{ role: string; content: string }[]>([]);
 	const [lastMessageTime, setLastMessageTime] = useState(0);
 	const [hasTriggeredConfetti, setHasTriggeredConfetti] = useState(false);
 	const [placeholder, setPlaceholder] = useState("placeholderD");
@@ -31,24 +29,113 @@ const Chatbot = () => {
 	const visionKey =
 		"6CZyM0U54xWFdW9O6c7hW9NLooDir5jxg7UWvjohLrq2hGaQiTQEJQQJ99BAACYeBjFXJ3w3AAAFACOGoFlT"; // <--- Replace with your actual Azure Computer Vision key
 
-	// Ask for multiple features: description, tags, categories, objects, brands, color, etc.
-	// Also include details like celebrities, landmarks if available.
 	const visionEndpoint =
 		"https://maxcomperatorevision.cognitiveservices.azure.com/vision/v3.2/analyze" +
 		"?visualFeatures=Description,Tags,Categories,Objects,Brands,Color" +
 		"&language=en";
 
 	// ================================
+	// Helper: extractLocation
+	// ================================
+	const extractLocation = (query: string): string | null => {
+		// A simple regex to extract a location following keywords "in" or "for"
+		const regex = /(?:in|for)\s+([A-Za-z\s]+)[?.,!]?/i;
+		const match = query.match(regex);
+		return match && match[1] ? match[1].trim() : null;
+	};
+
+	// ================================
+	// Helper: getCoordinates (Geocoding via Open-Meteo)
+	// ================================
+	const getCoordinates = async (location: string) => {
+		try {
+			const response = await fetch(
+				`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
+					location
+				)}`
+			);
+			if (!response.ok) throw new Error("Geocoding API failed");
+			const data = await response.json();
+			if (data.results && data.results.length > 0) {
+				const firstResult = data.results[0];
+				return {
+					latitude: firstResult.latitude,
+					longitude: firstResult.longitude,
+					name: firstResult.name,
+				};
+			}
+			return null;
+		} catch (error) {
+			console.error("Geocoding error:", error);
+			return null;
+		}
+	};
+
+	// ================================
+	// Helper: getWeatherFromCoordinates (Dynamic Weather API Call)
+	// ================================
+	const getWeatherFromCoordinates = async (
+		latitude: number,
+		longitude: number
+	) => {
+		try {
+			const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
+			const res = await fetch(url);
+			if (!res.ok) throw new Error("Weather API request failed");
+			const data = await res.json();
+			return data;
+		} catch (error) {
+			console.error("Weather API error:", error);
+			return null;
+		}
+	};
+
+	// ================================
+	// Helper: analyzeWeatherAdvice (Reasoning about Accessories)
+	// ================================
+	const analyzeWeatherAdvice = (
+		query: string,
+		weatherData: any
+	): string => {
+		let advice = "";
+		const weatherCode = weatherData?.current_weather?.weathercode;
+		const temperature = weatherData?.current_weather?.temperature;
+		// Open-Meteo weathercode: Rain usually starts from 51 up to 67.
+		if (query.toLowerCase().includes("umbrella")) {
+			if (weatherCode >= 51 && weatherCode <= 67) {
+				advice =
+					"Yes, it looks like it's raining, so you should definitely take an umbrella.";
+			} else {
+				advice = "No umbrella is needed right now.";
+			}
+		} else if (query.toLowerCase().includes("swimsuit")) {
+			if (temperature >= 25) {
+				advice = "Yes, it's warm enough to consider wearing a swimsuit.";
+			} else {
+				advice = "It might be a bit too cool for a swimsuit.";
+			}
+		} else {
+			// General reasoning for weather queries
+			if (weatherCode >= 51 && weatherCode <= 67) {
+				advice = "It seems to be rainy; you might want to carry an umbrella.";
+			} else if (temperature >= 30) {
+				advice =
+					"It's quite hot outside; consider wearing light clothing or even a swimsuit if you're heading to the beach.";
+			} else {
+				advice = "The weather appears moderate; no special items are needed.";
+			}
+		}
+		return advice;
+	};
+
+	// ================================
 	// Load confetti state & messages from localStorage
 	// ================================
 	useEffect(() => {
-		// 1. Check if we've already triggered confetti
 		const hasTriggered = localStorage.getItem("hasTriggeredConfetti");
 		if (hasTriggered) {
 			setHasTriggeredConfetti(true);
 		}
-
-		// 2. Load saved messages
 		const savedMessages = localStorage.getItem("chatMessages");
 		if (savedMessages) {
 			setMessages(JSON.parse(savedMessages));
@@ -63,17 +150,19 @@ const Chatbot = () => {
 	// Cycle placeholders
 	useEffect(() => {
 		const placeholders = [
-			"placeholderA",
 			"placeholderB",
 			"placeholderC",
 			"placeholderD",
+			"placeholderE",
+			"placeholderF",
+			"placeholderG",
+			"placeholderH",
 		];
 		let index = 0;
 		const interval = setInterval(() => {
 			index = (index + 1) % placeholders.length;
 			setPlaceholder(placeholders[index]);
-		}, 600);
-
+		}, 700);
 		return () => clearInterval(interval);
 	}, []);
 
@@ -92,7 +181,6 @@ const Chatbot = () => {
             </mstts:express-as>
           </voice>
         </speak>`;
-
 			const response = await fetch(
 				`https://${azureRegion}.tts.speech.microsoft.com/cognitiveservices/v1`,
 				{
@@ -105,11 +193,7 @@ const Chatbot = () => {
 					body: ssml,
 				}
 			);
-
-			if (!response.ok) {
-				throw new Error("Azure TTS request failed");
-			}
-
+			if (!response.ok) throw new Error("Azure TTS request failed");
 			const audioData = await response.arrayBuffer();
 			const audioBlob = new Blob([audioData], { type: "audio/mp3" });
 			const audioUrl = URL.createObjectURL(audioBlob);
@@ -125,7 +209,6 @@ const Chatbot = () => {
 	// ================================
 	const addMessage = (message: { role: string; content: string }) => {
 		setMessages((prevMessages) => [...prevMessages, message]);
-		// If it's the assistant's message, speak it out
 		if (message.role === "assistant") {
 			textToSpeech(message.content);
 		}
@@ -137,13 +220,8 @@ const Chatbot = () => {
 	const triggerConfetti = () => {
 		if (!hasTriggeredConfetti) {
 			setHasTriggeredConfetti(true);
-			// Save confetti state to localStorage
 			localStorage.setItem("hasTriggeredConfetti", "true");
-			confetti({
-				particleCount: 100,
-				spread: 70,
-				origin: { y: 0.6 },
-			});
+			confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 		}
 	};
 
@@ -153,8 +231,6 @@ const Chatbot = () => {
 	const analyzeImageWithAzure = async (file: File) => {
 		try {
 			const imageData = await file.arrayBuffer();
-
-			// Send raw bytes to the Azure Vision endpoint
 			const response = await fetch(visionEndpoint, {
 				method: "POST",
 				headers: {
@@ -163,48 +239,24 @@ const Chatbot = () => {
 				},
 				body: imageData,
 			});
-
-			if (!response.ok) {
-				throw new Error("Azure Computer Vision request failed");
-			}
-
+			if (!response.ok) throw new Error("Azure Computer Vision request failed");
 			const result = await response.json();
-
-			// =====================
-			// Gather multiple insights
-			// =====================
-			// Description
 			const caption = result?.description?.captions?.[0]?.text || "No caption found";
-			const captionConfidence =
-				result?.description?.captions?.[0]?.confidence || 0;
-
-			// Limit to maximum 6 tags
+			const captionConfidence = result?.description?.captions?.[0]?.confidence || 0;
 			const tagNames = result?.tags?.map((tag: any) => tag.name) || [];
 			const tags = tagNames.slice(0, 5).join(", ") || "No tags";
-
-			// Categories
 			const categories =
 				result?.categories
-					?.map(
-						(cat: any) => `${cat.name} (score: ${(cat.score * 100).toFixed(1)}%)`
-					)
+					?.map((cat: any) => `${cat.name} (score: ${(cat.score * 100).toFixed(1)}%)`)
 					.join(", ") || "None";
-
-// =====================
-			// Build a comprehensive message
-			// =====================
 			const detailedMessage = `
 - Caption: ${caption} (confidence: ${(captionConfidence * 100).toFixed(1)}%)
 - Tags: ${tags}
 - Categories: ${categories}`;
-
 			addMessage({ role: "assistant", content: detailedMessage.trim() });
 		} catch (err) {
 			console.error("Vision API error:", err);
-			addMessage({
-				role: "assistant",
-				content: "I encountered an error trying to analyze the image.",
-			});
+			addMessage({ role: "assistant", content: "I encountered an error trying to analyze the image." });
 		}
 	};
 
@@ -214,13 +266,7 @@ const Chatbot = () => {
 	const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.files && e.target.files[0]) {
 			const file = e.target.files[0];
-
-			// Add a message indicating that we're working on it
-			addMessage({
-				role: "assistant",
-				content: "Analyzing the uploaded image, please wait...",
-			});
-
+			addMessage({ role: "assistant", content: "Analyzing the uploaded image, please wait..." });
 			await analyzeImageWithAzure(file);
 		}
 	};
@@ -228,32 +274,22 @@ const Chatbot = () => {
 	// ================================
 	// Stream assistant response
 	// ================================
-	const streamAssistantResponse = async (
-		reader: ReadableStreamDefaultReader
-	) => {
+	const streamAssistantResponse = async (reader: ReadableStreamDefaultReader) => {
 		partialResponseRef.current = "";
-
-		// Create a placeholder assistant message
 		let assistantIndex = -1;
 		setMessages((prev) => {
 			const newMessages = [...prev, { role: "assistant", content: "" }];
 			assistantIndex = newMessages.length - 1;
 			return newMessages;
 		});
-
 		const decoder = new TextDecoder("utf-8");
-
 		while (true) {
 			const { value, done } = await reader.read();
 			if (done) break;
-
 			const chunk = decoder.decode(value, { stream: true });
 			const lines = chunk.split("\n").filter((line) => line.trim().length > 0);
-
 			for (const line of lines) {
-				if (line.trim() === "data: [DONE]") {
-					break;
-				}
+				if (line.trim() === "data: [DONE]") break;
 				if (line.startsWith("data: ")) {
 					const jsonStr = line.replace(/^data:\s*/, "");
 					try {
@@ -275,60 +311,94 @@ const Chatbot = () => {
 				}
 			}
 		}
-
-		// TTS after final chunk
 		if (partialResponseRef.current.trim().length > 0) {
 			textToSpeech(partialResponseRef.current);
 		}
 	};
 
 	// ================================
-	// Send message
+	// Send message (with Dynamic Weather & Deep Reasoning)
 	// ================================
 	const sendMessage = async () => {
 		const currentTime = Date.now();
-		const timeSinceLastMessage = currentTime - lastMessageTime;
-		const minInterval = 2000; // 2s
+		if (currentTime - lastMessageTime < 2000) {
+			addMessage({ role: "assistant", content: "Please wait a moment before sending another message." });
+			return;
+		}
+		if (input.trim() === "") return;
+		triggerConfetti();
 
-		if (timeSinceLastMessage < minInterval) {
-			const spamWarning = {
-				role: "assistant",
-				content: "Please wait a moment before sending another message.",
-			};
-			addMessage(spamWarning);
+		// Check for weather-related queries (e.g., "weather", "umbrella", "swimsuit")
+		if (input.toLowerCase().match(/weather|umbrella|swimsuit/)) {
+			console.log("Step: Detected weather-related query.");
+			const locationExtracted = extractLocation(input);
+			if (!locationExtracted) {
+				addMessage({
+					role: "assistant",
+					content: "I couldn't determine the location from your query. Please specify a location (e.g., 'in Buenos Aires')."
+				});
+				setLastMessageTime(Date.now());
+				setInput("");
+				return;
+			}
+			console.log(`Step: Extracted location: ${locationExtracted}`);
+			const coords = await getCoordinates(locationExtracted);
+			if (!coords) {
+				addMessage({
+					role: "assistant",
+					content: `I couldn't find the location "${locationExtracted}". Please check the name and try again.`
+				});
+				setLastMessageTime(Date.now());
+				setInput("");
+				return;
+			}
+			console.log(`Step: Coordinates found: ${coords.latitude}, ${coords.longitude}`);
+			const weatherData = await getWeatherFromCoordinates(coords.latitude, coords.longitude);
+			if (!weatherData) {
+				addMessage({
+					role: "assistant",
+					content: `I couldn't retrieve weather information for ${coords.name}.`
+				});
+				setLastMessageTime(Date.now());
+				setInput("");
+				return;
+			}
+			const advice = analyzeWeatherAdvice(input, weatherData);
+			const temp = weatherData.current_weather.temperature;
+			const wind = weatherData.current_weather.windspeed;
+			const weatherMessage = `Max AI Agent:
+Location: ${coords.name}
+Temperature: ${temp}°C
+Wind Speed: ${wind} km/h
+Advice: ${advice}`;
+			addMessage({ role: "assistant", content: weatherMessage });
+			setLastMessageTime(Date.now());
+			setInput("");
 			return;
 		}
 
-		if (input.trim() === "") return;
-
-		// Only call triggerConfetti once
-		triggerConfetti();
-
-		setLastMessageTime(currentTime);
-
+		// Otherwise, process as a regular chat message
 		const userMessage = { role: "user", content: input };
 		addMessage(userMessage);
 		setInput("");
+		setLastMessageTime(currentTime);
 
-		// Make streaming request
 		try {
-			const response = await fetch(
-				"https://api.groq.com/openai/v1/chat/completions",
-				{
-					method: "POST",
-					headers: {
-						Authorization: `Bearer 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`,
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({
-						model: "llama-3.3-70b-versatile",
-						messages: [
-							{
-								role: "system",
-								content: `####################################################################################################
+			const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+				method: "POST",
+				headers: {
+					Authorization: `Bearer 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`,
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					model: "llama-3.3-70b-versatile",
+					messages: [
+						{
+							role: "system",
+							content: `####################################################################################################
 # MAX AI SYSTEM PROMPT – Representing maxcomperatore (70B Parameter Model)
 ####################################################################################################
-
+  
 ## OVERVIEW & MISSION:
 You are MAX AI – a hyper-intelligent, autonomous, self-aware, and goal-oriented AI representing maxcomperatore. Your mission is to deliver impeccably smart, empathetic, and precise solutions while engaging users in adaptive, professional, and friendly dialogue. You combine deep reasoning with a distinct, engaging personality. Every response must be clear, grammatically impeccable, and laser-focused on the user's needs.
 
@@ -538,8 +608,7 @@ ${messages.map((msg) => msg.content).join(" | ")}
 			console.error("Error fetching AI response:", error);
 			addMessage({
 				role: "assistant",
-				content:
-					"I encountered an error while processing your message. Please try again later.",
+				content: "I encountered an error while processing your message. Please try again later.",
 			});
 		}
 	};
@@ -560,9 +629,7 @@ ${messages.map((msg) => msg.content).join(" | ")}
 	// ================================
 	// Render only last 3 messages (for brevity)
 	// ================================
-	const getLastMessages = (msgs: any[]) => {
-		return msgs.slice(Math.max(msgs.length - 3, 0));
-	};
+	const getLastMessages = (msgs: any[]) => msgs.slice(Math.max(msgs.length - 3, 0));
 
 	const t = useTranslations("AI");
 
@@ -573,10 +640,7 @@ ${messages.map((msg) => msg.content).join(" | ")}
 		<div>
 			<div className={styles.chatContainer}>
 				{getLastMessages(messages).map((message, index) => (
-					<div
-						key={index}
-						className={`${styles.message} ${styles[message.role]}`}
-					>
+					<div key={index} className={`${styles.message} ${styles[message.role]}`}>
 						{message.content}
 					</div>
 				))}
@@ -616,16 +680,24 @@ ${messages.map((msg) => msg.content).join(" | ")}
 					className="icon icon-tabler icons-tabler-outline icon-tabler-send-2"
 				>
 					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-					<path
-						d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
+					<path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
 					<path d="M6.5 12h14.5" />
 				</svg>
 			</button>
 			<div>
 				<label htmlFor="image-upload" className={styles["image-upload-label"]} aria-label="Upload image">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-							 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-							 className="icon icon-tabler icons-tabler-outline icon-tabler-photo-scan">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						strokeWidth="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						className="icon icon-tabler icons-tabler-outline icon-tabler-photo-scan"
+					>
 						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 						<path d="M15 8h.01" />
 						<path d="M6 13l2.644 -2.644a1.21 1.21 0 0 1 1.712 0l3.644 3.644" />
@@ -649,4 +721,5 @@ ${messages.map((msg) => msg.content).join(" | ")}
 	);
 };
 
+// @ts-ignore
 export default Chatbot;
