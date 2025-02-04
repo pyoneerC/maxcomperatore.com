@@ -51,11 +51,11 @@ export const skills = [
 		colors: ["#818181", "#A0A0A0", "#5C5C5C"],
 	},
 	{
-		name: "Unreal",
+		name: "OpenAI",
 		icon: <UnrealLogo />,
-		brandColor: "#B1B1B1",
-		tooltip: "Engine for high-quality, immersive 3D worlds and game environments.",
-		colors: ["#818181", "#9E9E9E", "#616161"],
+		brandColor: "#10A37F",
+		tooltip: "I use the OpenAI API to build intelligent applications, automate tasks, and enhance user experiences.",
+		colors: ["#0E7C63", "#15B091", "#087F6D"],
 	},
 	{
 		name: "React",
