@@ -82,7 +82,9 @@
 
 .card:hover .iconWrapper {
     color: var(--color-brand);
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.1);
+    transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1),
+    color 300ms ease-in-out;
     user-select: none;
     outline: none;
 }
