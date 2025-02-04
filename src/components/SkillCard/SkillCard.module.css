@@ -29,7 +29,8 @@
 }
 
 .card:hover {
-    border-color: #68686c;
+    border-color: var(--color-brand);
+    transition: border-color 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Make pixel-canvas behave like a background effect */
@@ -82,8 +83,11 @@
 .card:hover .iconWrapper {
     color: var(--color-brand);
     transform: translateY(-8px) scale(1.2);
-    transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1),
-    color 300ms ease-in-out;
+    filter: drop-shadow(0 0 3px var(--color-brand));
+    transition:
+            transform 400ms cubic-bezier(0.25, 1, 0.5, 1),
+            color 400ms ease-in-out,
+            filter 400ms ease-in-out;
     user-select: none;
     outline: none;
 }

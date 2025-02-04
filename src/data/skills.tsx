@@ -13,7 +13,7 @@ export const skills = [
 		icon: <PythonLogo />,
 		brandColor: "#f8c416",
 		tooltip: "A versatile language for data analysis, automation, and web apps.",
-		colors: ["#FFD445", "#FFE17D", "#FFCC00"],
+		colors: ["#eac347", "#FFE17D", "#caa30a"],
 	},
 	{
 		name: "Docker",
@@ -39,7 +39,7 @@ export const skills = [
 	{
 		name: "DotNet",
 		icon: <CsharpLogo />,
-		brandColor: "#3d0ae1",
+		brandColor: "#4a15f3",
 		tooltip: "Framework for building scalable, enterprise-grade applications.",
 		colors: ["#512BD4", "#683AB7", "#3C1E70"],
 	},
