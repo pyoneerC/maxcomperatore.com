@@ -12,35 +12,35 @@ export const skills = [
 	{
 		name: "Python",
 		icon: <PythonLogo />,
-		brandColor: "#B1B1B1", // **Dark muted gold (NO bright yellow blending)**
+		brandColor: "#f8c416", // **Dark muted gold (NO bright yellow blending)**
 		tooltip: "A versatile language for data analysis, automation, and web apps.",
 		colors: ["#FFD445", "#FFE17D", "#FFCC00"],
 	},
 	{
 		name: "Docker",
 		icon: <DockerLogo />,
-		brandColor: "#B1B1B1", // **Deep blue-green (No cyan blending)**
+		brandColor: "#00b8ff", // **Deep blue-green (No cyan blending)**
 		tooltip: "Deploys apps in isolated containers for consistent performance.",
 		colors: ["#099CEC", "#00ADEF", "#0077B5"],
 	},
 	{
 		name: "Azure",
 		icon: <RedisLogo />,
-		brandColor: "#B1B1B1", // **Deep azure blue, completely different from pixel shimmer**
+		brandColor: "#12c0fd", // **Deep azure blue, completely different from pixel shimmer**
 		tooltip: "Microsoft’s cloud for scalable apps, AI, and data solutions.",
 		colors: ["#34BDEE", "#0078D4", "#00599C"],
 	},
 	{
 		name: "PostgreSQL",
 		icon: <PostgreSqlLogo />,
-		brandColor: "#B1B1B1", // **Dark indigo, away from the blue shimmer**
+		brandColor: "#1c89e1", // **Dark indigo, away from the blue shimmer**
 		tooltip: "Powerful database for managing complex data securely and reliably.",
 		colors: ["#336791", "#4179A4", "#1A4D8F"],
 	},
 	{
 		name: "DotNet",
 		icon: <CsharpLogo />,
-		brandColor: "#B1B1B1", // **Light gray for high contrast**
+		brandColor: "#3d0ae1", // **Dark blue, similar to the pixel shimmer**
 		tooltip: "Framework for building scalable, enterprise-grade applications.",
 		colors: ["#512BD4", "#683AB7", "#3C1E70"],
 	},
@@ -62,7 +62,7 @@ export const skills = [
 	{
 		name: "React",
 		icon: <CppLogo />,
-		brandColor: "#B1B1B1", // **Dark navy (No bright cyan blending)**
+		brandColor: "#11bfed", // **Dark navy (No bright cyan blending)**
 		tooltip: "Library for creating fast, interactive user interfaces for web apps.",
 		colors: ["#61DAFB", "#2196F3", "#0D47A1"],
 	},
