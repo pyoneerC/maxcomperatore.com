@@ -8,61 +8,59 @@ import { RedisLogo } from "~/components/Svg/RedisLogo"
 import { DockerLogo } from "~/components/Svg/DockerLogo"
 
 export const skills = [
-	// Backend skills
 	{
 		name: "Python",
 		icon: <PythonLogo />,
-		brandColor: "#f8c416", // **Dark muted gold (NO bright yellow blending)**
+		brandColor: "#f8c416",
 		tooltip: "A versatile language for data analysis, automation, and web apps.",
 		colors: ["#FFD445", "#FFE17D", "#FFCC00"],
 	},
 	{
 		name: "Docker",
 		icon: <DockerLogo />,
-		brandColor: "#00b8ff", // **Deep blue-green (No cyan blending)**
+		brandColor: "#00b8ff",
 		tooltip: "Deploys apps in isolated containers for consistent performance.",
 		colors: ["#099CEC", "#00ADEF", "#0077B5"],
 	},
 	{
 		name: "Azure",
 		icon: <RedisLogo />,
-		brandColor: "#12c0fd", // **Deep azure blue, completely different from pixel shimmer**
+		brandColor: "#12c0fd",
 		tooltip: "Microsoft’s cloud for scalable apps, AI, and data solutions.",
 		colors: ["#34BDEE", "#0078D4", "#00599C"],
 	},
 	{
 		name: "PostgreSQL",
 		icon: <PostgreSqlLogo />,
-		brandColor: "#1c89e1", // **Dark indigo, away from the blue shimmer**
+		brandColor: "#1c89e1",
 		tooltip: "Powerful database for managing complex data securely and reliably.",
 		colors: ["#336791", "#4179A4", "#1A4D8F"],
 	},
 	{
 		name: "DotNet",
 		icon: <CsharpLogo />,
-		brandColor: "#3d0ae1", // **Dark blue, similar to the pixel shimmer**
+		brandColor: "#3d0ae1",
 		tooltip: "Framework for building scalable, enterprise-grade applications.",
 		colors: ["#512BD4", "#683AB7", "#3C1E70"],
 	},
-	// Game development skills
 	{
 		name: "Unity",
 		icon: <UnityLogo />,
-		brandColor: "#B1B1B1", // **Near-black gray for high contrast**
+		brandColor: "#B1B1B1",
 		tooltip: "Platform for developing interactive 2D and 3D gaming experiences.",
 		colors: ["#818181", "#A0A0A0", "#5C5C5C"],
 	},
 	{
 		name: "Unreal",
 		icon: <UnrealLogo />,
-		brandColor: "#B1B1B1", // **Darker gray than Unity for subtle separation**
+		brandColor: "#B1B1B1",
 		tooltip: "Engine for high-quality, immersive 3D worlds and game environments.",
 		colors: ["#818181", "#9E9E9E", "#616161"],
 	},
 	{
 		name: "React",
 		icon: <CppLogo />,
-		brandColor: "#11bfed", // **Dark navy (No bright cyan blending)**
+		brandColor: "#11bfed",
 		tooltip: "Library for creating fast, interactive user interfaces for web apps.",
 		colors: ["#61DAFB", "#2196F3", "#0D47A1"],
 	},
