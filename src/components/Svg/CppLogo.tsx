@@ -7,7 +7,7 @@ const CppLogo = () => {
 			xmlns="http://www.w3.org/2000/svg"
 			width={65}
 			height={65}
-			viewBox="0 0 25 25"
+			viewBox="0 0 23 25"
 			fill="none"
 		>
 			<path
