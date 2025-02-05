@@ -11,9 +11,9 @@ export const skills = [
 	{
 		name: "Python",
 		icon: <PythonLogo />,
-		brandColor: "#f8c416",
+		brandColor: "#ecc238",
 		tooltip: "A versatile language for data analysis, automation, and web apps.",
-		colors: ["#eac347", "#FFE17D", "#caa30a"],
+		colors: ["#eac347", "#FFE17D", "#caa30a", "#FFD700", "#FFDD44", "#F4C542", "#E6B800"]
 	},
 	{
 		name: "Docker",
