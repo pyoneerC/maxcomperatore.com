@@ -25,6 +25,7 @@ body {
 
 [data-theme="light"] {
 	--color-background-hsl: 0 0% 99%;
+	--color-card: hsl(0, 4%, 91%);
 	--color-text-hsl: 0 0% 1%;
 	--color-stroke-hsl: 0 3% 84%;
 
@@ -47,6 +48,7 @@ body {
 
 [data-theme="dark"] {
 	--color-background-hsl: 0 0% 1%;
+	--color-card: #101012;
 	--color-text-hsl: 0 0% 93%;
 	--color-stroke-hsl: 0 0% 12%;
 

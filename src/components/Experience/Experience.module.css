@@ -37,7 +37,7 @@
 /* Hover Effect with Vercel Dark Background */
 .experience:hover {
     transform: scale(1.1) rotateX(7deg) rotateY(-7deg); /* Adds smooth 3D effect */
-    background: #111111; /* Sleek grey Vercel-like background */
+    background: var(--color-card);
     box-shadow:
             0 16px 48px rgba(0, 0, 0, 0.5),
             0 8px 24px rgba(0, 0, 0, 0.3); /* Deep shadow for a lifted look */
