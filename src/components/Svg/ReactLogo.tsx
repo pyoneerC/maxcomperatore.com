@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CppLogo = () => {
+export const ReactLogo = () => {
 
 	return (
 		<svg
@@ -17,5 +17,3 @@ const CppLogo = () => {
 		</svg>
 	);
 };
-
-export default CppLogo;
