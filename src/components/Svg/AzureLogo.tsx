@@ -5,7 +5,7 @@ export const AzureLogo = (props: SVGProps<SVGSVGElement>) => (
 		xmlns="http://www.w3.org/2000/svg"
 		width={55}
 		height={55}
-		viewBox="-1 -1 18 18"
+		viewBox="-1 0 18 18"
 		fill="none"
 		{...props}
 	>
