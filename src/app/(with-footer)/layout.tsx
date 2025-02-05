@@ -9,18 +9,18 @@ export default function WithFooterLayout({
 	children: React.ReactNode;
 }) {
 	useEffect(() => {
-		// Initialize variables
-		let targetScroll = window.scrollY; // start at current scroll position
+		// Initialize our variables
+		let targetScroll = window.scrollY; // Start at current scroll position
 		let isAnimating = false;
 		let lastScrollTime = 0;
-		let lastURL = window.location.href; // to track URL changes
+		let lastURL = window.location.href; // To detect page changes
 		let animationFrameId: number | null = null;
 
-		// Smooth scroll handler for mouse wheel events
+		// Smooth scroll handler for wheel events
 		const smoothScroll = (event: WheelEvent) => {
 			event.preventDefault();
 
-			// Update target scroll position
+			// Update targetScroll based on the scroll delta
 			targetScroll += event.deltaY;
 			targetScroll = Math.max(
 				0,
@@ -36,52 +36,55 @@ export default function WithFooterLayout({
 			lastScrollTime = Date.now();
 		};
 
-		// The animation loop using requestAnimationFrame
+		// Animation loop that gradually scrolls to the target
 		const animateScroll = () => {
 			const currentScroll = window.scrollY;
 			const scrollDiff = targetScroll - currentScroll;
 
-			// Ease-out interpolation
+			// Ease-out interpolation for smooth deceleration
 			const easeOutFactor = 0.08;
 			const newScroll = currentScroll + scrollDiff * easeOutFactor;
-
 			window.scrollTo(0, newScroll);
 
-			// Continue animating until the remaining distance is small
+			// Continue animating until the difference is negligible
 			if (Math.abs(scrollDiff) > 0.5) {
 				animationFrameId = requestAnimationFrame(animateScroll);
 			} else {
 				isAnimating = false;
-				// Snap to the exact target position for accuracy
+				// Snap to the exact target to ensure accuracy
 				window.scrollTo(0, targetScroll);
 				animationFrameId = null;
 			}
 		};
 
-		// Update targetScroll if the user scrolls manually
+		// If the user scrolls manually (outside our wheel event), update targetScroll
 		const handleManualScroll = () => {
 			if (Date.now() - lastScrollTime > 825) {
 				targetScroll = window.scrollY;
 			}
 		};
 
-		// Check if the URL has changed (e.g. via navigation)
+		// Detect URL changes (page transitions)
 		const checkURLChange = () => {
 			if (window.location.href !== lastURL) {
 				lastURL = window.location.href;
-				targetScroll = 0; // Reset target scroll position
-				window.scrollTo(0, 0);
+				targetScroll = 0; // Set target to top of page
+				// Instead of an abrupt jump, start a smooth scroll to the top
+				if (!isAnimating) {
+					isAnimating = true;
+					animationFrameId = requestAnimationFrame(animateScroll);
+				}
 			}
 		};
 
-		// Set up an interval to detect URL changes every 100ms
+		// Check for URL changes every 100ms
 		const intervalId = setInterval(checkURLChange, 100);
 
 		// Add event listeners for wheel and scroll events
 		window.addEventListener("wheel", smoothScroll, { passive: false });
 		window.addEventListener("scroll", handleManualScroll);
 
-		// Cleanup: remove event listeners, cancel the interval, and cancel any animation frame.
+		// Cleanup on unmount
 		return () => {
 			window.removeEventListener("wheel", smoothScroll);
 			window.removeEventListener("scroll", handleManualScroll);
@@ -90,7 +93,7 @@ export default function WithFooterLayout({
 				cancelAnimationFrame(animationFrameId);
 			}
 		};
-	}, []); // empty dependency array: run only once on mount
+	}, []); // Runs once on mount
 
 	return (
 		<>
