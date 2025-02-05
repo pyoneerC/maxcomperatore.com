@@ -96,7 +96,7 @@
     "Azure": "Nube de Microsoft con enfoque en IA avanzada, datos y escalabilidad.",
     "Supabase": "BaaS de código abierto para bases de datos, autenticación y almacenamiento.",
     "DotNet": "Framework para crear aplicaciones empresariales y soluciones de negocio.",
-    "Unity": "Motor para crear experiencias interactivas en 2D y 3D.",
+    "n8n": "Automatización con agentes de IA inteligentes.",
     "OpenAI": "Modelos y API de IA para automatización, chatbots y apps inteligentes.",
     "React": "Herramienta para apps web dinámicas y rápidas (¡como esta!)."
   },

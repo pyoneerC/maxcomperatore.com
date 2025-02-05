@@ -44,11 +44,11 @@ export const skills = [
 		colors: ["#512BD4", "#683AB7", "#3C1E70"],
 	},
 	{
-		name: "Unity",
+		name: "n8n",
 		icon: <UnityLogo />,
-		brandColor: "#B1B1B1",
-		tooltip: "Platform for developing interactive 2D and 3D gaming experiences.",
-		colors: ["#818181", "#A0A0A0", "#5C5C5C"],
+		brandColor: "#EA4B71",
+		tooltip: "AI-powered workflow automation with intelligent agents for technical teams.",
+		colors: ["#E63964", "#FF5A7B", "#C72D52"],
 	},
 	{
 		name: "OpenAI",

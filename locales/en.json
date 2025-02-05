@@ -99,7 +99,7 @@
     "Azure": "Microsoft’s cloud platform for apps, AI, and data solutions that scale.",
     "Supabase": "Open-source BaaS for databases, auth, and storage.",
     "DotNet": "Framework for building business-grade apps and enterprise solutions.",
-    "Unity": "Engine for creating interactive 2D and 3D games with ease.",
+    "n8n": "AI-powered workflow automation with intelligent agents.",
     "OpenAI": "AI models and APIs for automation, chatbots, and smart apps.",
     "React": "Tool for building fast, dynamic web apps (like this one!)."
   },
