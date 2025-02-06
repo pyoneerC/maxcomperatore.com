@@ -57,7 +57,6 @@
 }
 
 .copyEmailButton {
-	display: block;
 	margin: 10px auto;
 }
 
@@ -173,20 +172,21 @@
 
 .button {
 	display: inline-flex;
-	padding: 12px 24px;
-	font-size: 16px;
-	color: #fff;
-	background-color: #0073b1;
+	padding: 6px 12px;
+	font-size: 14px;
+	color: var(--color-background);
+	background-color: var(--color-text);
 	border: none;
 	border-radius: 16px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 	text-align: center;
 	caret-color: transparent;
-	min-width: 48px;
+	min-width: 32px;
 	min-height: 48px;
 	margin: 8px;
 }
+
 
 .button:hover {
 	background-color: #005f8d;
