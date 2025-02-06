@@ -32,7 +32,7 @@ export const projectMetadata = {
 	},
 	thegreatchocolatecaper: {
 		slug: "thegreatchocolatecaper",
-		name: "The Great Chocolate Caper",
+		name: "0xwik1tr0n",
 	},
 	roadmapsh: {
 		slug: "roadmapsh",
@@ -73,8 +73,8 @@ export const coverProjects: CoverProjectOther[] = [
 		...projectMetadata.thegreatchocolatecaper,
 		imageUrl: `/assets/images/projects/otherprojectscover/thegreatchocolatecaper.avif`,
 		description: "tgcp",
-		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
-		link: "https://github.com/pyoneerC/The-Great-Chocolate-Caper"
+		tags: [Tag.python, Tag.pytorch, Tag.huggingface],
+		link: "https://github.com/pyoneerC/0xwik1tr0n"
 	},
 	{
 		...projectMetadata.roadmapsh,

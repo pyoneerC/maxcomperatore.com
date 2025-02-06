@@ -27,4 +27,6 @@ export const Tag = {
 	beautifulSoup: "bs4",
 	kivi: "Kivy",
 	llama31: "Llama 3.1",
+	pytorch: "PyTorch",
+	huggingface: "Hugging Face",
 }
