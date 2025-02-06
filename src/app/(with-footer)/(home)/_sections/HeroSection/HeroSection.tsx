@@ -1,3 +1,5 @@
+"use client"
+
 import NextLink from "next/link";
 import { Button } from "~/components/Ui/Button";
 import { CopyEmailSmallButton } from "~/components/CopyEmailSmallButton";
@@ -6,10 +8,28 @@ import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton"
 import ArgentinaFlag from "~/components/Svg/ArgentinaFlag"
 import { useTranslations } from 'next-intl';
 import Chatbot from "~/components/ChatBot/ChatBot"
-import React from "react"
+import React, { useEffect, useState } from "react";
 
 export const HeroSection = () => {
-  const t = useTranslations('HeroSection');
+	const t = useTranslations("HeroSection");
+
+	// Positions array
+	const positions = [
+		t("position"),
+		t("position2"),
+		t("position3"),
+		t("position4"),
+	];
+
+	const [positionIndex, setPositionIndex] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setPositionIndex((prevIndex: number) => (prevIndex + 1) % positions.length);
+		}, 7000); // Change every second
+
+		return () => clearInterval(interval); // Cleanup on unmount
+	}, []);
 
   return (
     <section aria-labelledby="hero-title" className={styles.section}>
@@ -17,7 +37,7 @@ export const HeroSection = () => {
         Max Comperatore
       </h1>
       <h2 className={styles.subtitle}>
-        {t("position")}
+        {positions[positionIndex]}
       </h2>
 
       <svg className={styles.arrow} width="144" height="141" viewBox="0 0 144 141" fill="none" xmlns="http://www.w3.org/2000/svg">

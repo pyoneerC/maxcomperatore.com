@@ -20,6 +20,20 @@
 	pointer-events: none;
 }
 
+.subtitle {
+	display: inline-block;
+	animation: fadeInOut 7s ease-in-out infinite;
+	will-change: opacity, transform;
+}
+
+@keyframes fadeInOut {
+	0%   { opacity: 0; transform: translateY(10px) scale(0.95); }
+	15%  { opacity: 1; transform: translateY(0) scale(1); }
+	45%  { opacity: 1; transform: translateY(0) scale(1); }
+	85%  { opacity: 0; transform: translateY(-10px) scale(0.95); }
+	100% { opacity: 0; transform: translateY(10px) scale(0.95); }
+}
+
 .introSubtitle {
 	padding: 10px 30px;
 	font-size: clamp(18px, 17px + 0.141vw, 20px);
