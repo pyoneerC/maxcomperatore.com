@@ -49,11 +49,11 @@ export const coverProjects: CoverProjectOther[] = [
 		link: "https://maxcomperatore.store/"
 	},
 	{
-		...projectMetadata.arrayutils,
-		imageUrl: `/assets/images/projects/otherprojectscover/arrayutils.avif`,
-		description: "arrayutils",
-		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
-		link: "https://www.unrealengine.com/marketplace/en-US/product/array-utils"
+		...projectMetadata.thegreatchocolatecaper,
+		imageUrl: `/assets/images/projects/otherprojectscover/thegreatchocolatecaper.avif`,
+		description: "tgcp",
+		tags: [Tag.python, Tag.pytorch, Tag.huggingface],
+		link: "https://github.com/pyoneerC/0xwik1tr0n"
 	},
 	{
 		...projectMetadata.HillClimbRacing,
@@ -70,11 +70,11 @@ export const coverProjects: CoverProjectOther[] = [
 		link: "https://publicapi.dev/argento-fx-api",
 	},
 	{
-		...projectMetadata.thegreatchocolatecaper,
-		imageUrl: `/assets/images/projects/otherprojectscover/thegreatchocolatecaper.avif`,
-		description: "tgcp",
-		tags: [Tag.python, Tag.pytorch, Tag.huggingface],
-		link: "https://github.com/pyoneerC/0xwik1tr0n"
+		...projectMetadata.arrayutils,
+		imageUrl: `/assets/images/projects/otherprojectscover/arrayutils.avif`,
+		description: "arrayutils",
+		tags: [Tag.unrealEngine, Tag.cPlusPlus, Tag.blueprints],
+		link: "https://www.unrealengine.com/marketplace/en-US/product/array-utils"
 	},
 	{
 		...projectMetadata.roadmapsh,
