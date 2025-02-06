@@ -26,7 +26,7 @@ export const HeroSection = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setPositionIndex((prevIndex: number) => (prevIndex + 1) % positions.length);
-		}, 7000); // Change every second
+		}, 6000); // Change every second
 
 		return () => clearInterval(interval); // Cleanup on unmount
 	}, []);

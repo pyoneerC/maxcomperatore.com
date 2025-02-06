@@ -22,7 +22,7 @@
 
 .subtitle {
 	display: inline-block;
-	animation: fadeInOut 7s ease-in-out infinite;
+	animation: fadeInOut 6s ease-in-out infinite;
 	will-change: opacity, transform;
 }
 
@@ -189,7 +189,7 @@
 
 
 .button:hover {
-	background-color: #005f8d;
+	background-color: var(--color-explanation);
 }
 
 .title {
