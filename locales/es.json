@@ -61,6 +61,18 @@
     }
   },
   "AI" : {
+    "placeholderA": "Cuéntame un chiste.",
+    "placeholderZ": "Cuéntame un chiste",
+    "placeholderY": "Cuéntame un",
+    "placeholderX": "Cuéntame",
+    "placeholderW": "¿Tema del último chat?",
+    "placeholderV": "Tema del último",
+    "placeholderU": "Tema del",
+    "placeholder1": "Tema",
+    "placeholderT": "¡Enséñame algo!",
+    "placeholderS": "¡Enséñame algo",
+    "placeholderR": "Enséñame algo",
+    "placeholderQ": "Enséñame",
     "placeholderP": "Analiza esta imagen.",
     "placeholderO": "Analiza esta imagen",
     "placeholderN": "Analiza esta",

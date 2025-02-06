@@ -72,6 +72,18 @@
     "mab": "More about me"
   },
   "AI" : {
+    "placeholderA": "Tell me a joke.",
+    "placeholderZ": "Tell me a",
+    "placeholderY": "Tell me",
+    "placeholderX": "Tell",
+    "placeholderW": "Last message topic?",
+    "placeholderV": "Last message topic",
+    "placeholderU": "Last message",
+    "placeholder1": "Last",
+    "placeholderT": "Teach me something!",
+    "placeholderS": "Teach me something",
+    "placeholderR": "Teach me",
+    "placeholderQ": "Teach",
     "placeholderP": "Analyze this image.",
     "placeholderO": "Analyze this image",
     "placeholderN": "Analyze this",
