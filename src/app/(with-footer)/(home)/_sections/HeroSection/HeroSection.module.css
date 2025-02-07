@@ -22,7 +22,7 @@
 
 .subtitle {
 	display: inline-block;
-	animation: fadeInOut 6s ease-in-out infinite;
+	animation: fadeInOut 6s infinite;
 	will-change: opacity, transform;
 }
 
@@ -30,7 +30,7 @@
 	0%   { opacity: 0; transform: translateY(10px) scale(0.95); }
 	15%  { opacity: 1; transform: translateY(0) scale(1); }
 	45%  { opacity: 1; transform: translateY(0) scale(1); }
-	85%  { opacity: 0; transform: translateY(-10px) scale(0.95); }
+	85%  { opacity: 0.35; transform: translateY(-10px) scale(0.95); }
 	100% { opacity: 0; transform: translateY(10px) scale(0.95); }
 }
 
