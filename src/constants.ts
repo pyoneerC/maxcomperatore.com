@@ -1,4 +1,4 @@
-export const DRESAN_EMAIL = "maxcomperatutti@gmail.com"
+export const DRESAN_EMAIL = "me@maxcomperatore.com"
 export const HOST_URL = "https://maxcomperatore.com"
 export const FORMSPREE_URL = "https://formspree.io/f"
 

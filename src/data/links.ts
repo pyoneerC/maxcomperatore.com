@@ -14,7 +14,7 @@ export const socialMediaLinks = [
 	},
 	{
 		label: "Email",
-		url: "mailto:maxcomperatutti@gmail.com",
+		url: "mailto:me@maxcomperatore.com",
 		icon: "EmailIcon",
 		className: "email",
 	},
