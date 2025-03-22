@@ -140,7 +140,7 @@ export const HeroSection = () => {
 					</Button>
 				</NextLink>
 			</div>
-			<CopyEmailSmallButton className={styles.copyEmailButton} ref={copyEmailButtonRef} />
+			<CopyEmailSmallButton className={styles.copyEmailButton}  />
 			<Chatbot />
 
 			<div className={styles.arrowwave} ref={arrowwaveRef}>
@@ -149,7 +149,7 @@ export const HeroSection = () => {
 				<span></span>
 			</div>
 
-			<ScrollToTopButton ref={scrollToTopButtonRef} />
+			<ScrollToTopButton />
 		</section>
 	);
 };
