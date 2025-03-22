@@ -25,8 +25,10 @@ const Testimonials = () => {
 	const testimonialRefs = useRef([]); // Ref to hold multiple testimonials
 
 	// Function to add testimonial refs
-	const addToTestimonialRefs = (el) => {
+	const addToTestimonialRefs = (el: any) => {
+		// @ts-ignore
 		if (el && !testimonialRefs.current.includes(el)) {
+			// @ts-ignore
 			testimonialRefs.current.push(el);
 		}
 	};
