@@ -89,7 +89,7 @@ export const AboutSection = () => {
 			);
 		});
 
-		tl.fromTo(experienceWrapperRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, "-=0.6");
+		tl.fromTo(experienceWrapperRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" });
 
 
 	}, []);
