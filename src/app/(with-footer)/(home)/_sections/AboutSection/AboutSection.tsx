@@ -22,8 +22,10 @@ export const AboutSection = () => {
 	const experienceWrapperRef = useRef(null);
 
 	// Function to add paragraph refs
-	const addToParagraphRefs = (el) => {
+	const addToParagraphRefs = (el: any) => {
+		// @ts-ignore
 		if (el && !paragraphRefs.current.includes(el)) {
+			// @ts-ignore
 			paragraphRefs.current.push(el);
 		}
 	};
