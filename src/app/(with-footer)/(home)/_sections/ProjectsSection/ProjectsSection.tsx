@@ -45,10 +45,17 @@ export const ProjectsSection = () => {
 			},
 		});
 
+		// @ts-ignore
+		let x = projectsWrapperRef.current.children;
+
+		// @ts-ignore
 		tl.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out" })
 			.fromTo(titleRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.6")
 			.fromTo(subtitleRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, "-=0.4")
-			.fromTo(projectsWrapperRef.current.children, { y: 30, opacity: 0, stagger: 0.1 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.1 }, "-=0.3");
+			.fromTo(x,
+				{ y: 30, opacity: 0, stagger: 0.1 },
+				{ y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.1 },
+				"-=0.3");
 
 	}, []);
 
@@ -67,12 +74,6 @@ export const ProjectsSection = () => {
 						key={projects.name}
 						description={t(i18nDescriptionKey)}
 						{...projects}
-						style={{ // ADD INLINE STYLES HERE
-							width: '100%',         // Ensure cards take full width of their container
-							maxWidth: '400px',    // Or whatever max width is appropriate
-							boxSizing: 'border-box', // Include padding/border in width
-							marginBottom: '20px',   // Add some spacing between cards
-						}}
 					/>
 				))}
 				<div className={"styles.button-wrapper"} ref={seemoreLinkRef}>
