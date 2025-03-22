@@ -38,9 +38,12 @@ export const SkillsSection = () => {
 			}
 		});
 
+		// @ts-ignore
+		let x = skillWrapperRef.current.children;
+
 		tl.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out" }) // Fade in section
 			.fromTo(titleRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.6") // Title slide up and fade in
-			.fromTo(skillWrapperRef.current.children, { y: 30, opacity: 0, stagger: 0.1 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.1 }, "-=0.4") // Skill cards stagger slide up and fade in
+			.fromTo(x, { y: 30, opacity: 0, stagger: 0.1 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.1 }, "-=0.4") // Skill cards stagger slide up and fade in
 			.fromTo(arrowwaveRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.5") // Arrowwave slide up and fade in
 			.fromTo(descriptionRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.4"); // Description slide up and fade in
 
