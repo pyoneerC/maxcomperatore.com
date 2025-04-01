@@ -48,7 +48,7 @@ export const HeroSection = () => {
 		"SEO gods are pleased!",
 		"Certified dev candy!",
 		"404 bugs found!",
-		"Just ship it!",
+		"Just ship it already!",
 	];
 
 	const [minecraftSubtitle] = useState(() =>
@@ -78,6 +78,8 @@ export const HeroSection = () => {
 	const copyEmailButtonRef = useRef(null);
 	const arrowwaveRef = useRef(null);
 	const scrollToTopButtonRef = useRef(null);
+	const minecraftSubtitleRef = useRef(null);
+
 
 
 	useEffect(() => {
@@ -85,6 +87,27 @@ export const HeroSection = () => {
 
 		tl.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out" }) // Fade in section
 			.fromTo(titleRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.6") // Title slide up and fade in
+			.fromTo(
+				minecraftSubtitleRef.current,
+				{ y: -100, scale: 0.6, rotate: -20, opacity: 0 },
+				{
+					y: 0,
+					scale: 1.1,
+					rotate: -20,
+					opacity: 1,
+					duration: 0.6,
+					ease: "elastic.out(1, 0.5)"
+				}
+			)
+			.to(
+				minecraftSubtitleRef.current,
+				{
+					scale: 1,
+					duration: 0.4,
+					ease: "power1.out"
+				},
+				"-=0.2" // slight overlap for extra pop
+			)
 			.fromTo(subtitleRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, "-=0.4") // Subtitle slide up and fade in
 			.fromTo(arrowRef.current, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.7)" }, "-=0.3") // Arrow scale up and fade in
 			.fromTo(languageRef.current, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" }, "-=0.5") // Language slide in from left
@@ -94,8 +117,6 @@ export const HeroSection = () => {
 			.fromTo(copyEmailButtonRef.current, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }, "-=0.3") // Copy email button slide in from left
 			.fromTo(arrowwaveRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.4") // Arrowwave slide up and fade in
 			.fromTo(scrollToTopButtonRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.3"); // Scroll to top button slide up and fade in
-
-
 	}, []);
 
 
@@ -104,7 +125,9 @@ export const HeroSection = () => {
 			<h1 id="hero-title" className={`text-gradient ${styles.title}`} ref={titleRef}>
 				Max Comperatore
 			</h1>
-			<p className={styles.minecraftsubtitle}>{minecraftSubtitle}</p>
+			<p className={styles.minecraftsubtitle} ref={minecraftSubtitleRef}>
+				{minecraftSubtitle}
+			</p>
 			<h2 className={styles.subtitle} ref={subtitleRef}>
 				{positions[positionIndex]}
 			</h2>
