@@ -359,13 +359,30 @@
 
 .minecraftsubtitle {
 	position: absolute;
-	color: yellow;
-	font-size: 150%;
+	color: #FBF915;
+	font-size: clamp(1rem, 1.5vw, 1.5rem);
 	transform: rotate(-20deg);
 	animation: minesubtitle 0.3s alternate infinite;
 	top: 26%;
-	right: 27%;
+	right: 28%;
 	font-family: 'Minecraft', monospace;
+	white-space: nowrap;
+}
+
+/* Push it more to the right on smaller screens like MacBook Air (approx. 1440px width) */
+@media (max-width: 1440px) {
+	.minecraftsubtitle {
+		right: -10%; /* adjust as needed */
+		top: 28%;
+	}
+}
+
+/* Even more shift on smaller laptops */
+@media (max-width: 1280px) {
+	.minecraftsubtitle {
+		right: 20%;
+		top: 30%;
+	}
 }
 
 
@@ -386,6 +403,12 @@
 }
 
 @media (max-width: 767px) {
+	.minecraftsubtitle {
+		display: none;
+	}
+}
+
+@media (max-width: 1024px) {
 	.minecraftsubtitle {
 		display: none;
 	}
