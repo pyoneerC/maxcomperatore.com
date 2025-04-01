@@ -95,7 +95,7 @@ export const HeroSection = () => {
 					scale: 1.1,
 					rotate: -20,
 					opacity: 1,
-					duration: 0.6,
+					duration: 0.5,
 					ease: "elastic.out(1, 0.5)"
 				}
 			)
@@ -103,7 +103,7 @@ export const HeroSection = () => {
 				minecraftSubtitleRef.current,
 				{
 					scale: 1,
-					duration: 0.4,
+					duration: 0.3,
 					ease: "power1.out"
 				},
 				"-=0.2" // slight overlap for extra pop
