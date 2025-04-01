@@ -356,3 +356,37 @@
 		display: none;
 	}
 }
+
+.minecraftsubtitle {
+	position: absolute;
+	color: yellow;
+	font-size: 150%;
+	transform: rotate(-20deg);
+	animation: minesubtitle 0.3s alternate infinite;
+	top: 26%;
+	right: 27%;
+	font-family: 'Minecraft', monospace;
+}
+
+
+@keyframes minesubtitle {
+	0% {
+		transform: scale(0.875) rotate(-20deg);
+	}
+	100% {
+		transform: scale(1) rotate(-20deg);
+	}
+}
+
+@font-face {
+	font-family: 'Minecraft';
+	src: url('/assets/fonts/Minecraft.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media (max-width: 767px) {
+	.minecraftsubtitle {
+		display: none;
+	}
+}
