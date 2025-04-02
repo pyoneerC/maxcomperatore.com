@@ -20,6 +20,7 @@ export const HeroSection = () => {
 		t("position2"),
 		t("position3"),
 		t("position4"),
+		t("position5"),
 	];
 
 	const minecraftSubtitles = [
