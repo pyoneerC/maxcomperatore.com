@@ -42,13 +42,12 @@ export const HeroSection = () => {
 		"No frameworks were harmed!",
 		"Deploy first, debug later!",
 		"Pixel perfect-ish!",
-		"Notch approves this build!",
 		"Better than the clones!",
 		"Dark mode supremacy!",
 		"SEO gods are pleased!",
 		"Certified dev candy!",
 		"404 bugs found!",
-		"Just ship it already!",
+		"Breaks on Fridays!",
 	];
 
 	const [minecraftSubtitle] = useState(() =>
