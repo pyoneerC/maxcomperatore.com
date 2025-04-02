@@ -34,7 +34,7 @@ export const AboutSection = () => {
 		(async function () {
 			const cal = await getCalApi({ namespace: "30min" });
 			cal("floatingButton", {
-				calLink: "maximo-comperatore/30min",
+				calLink: "maxcomperatore/30min",
 				config: { layout: "month_view" },
 				hideButtonIcon: false,
 				buttonPosition: "bottom-left",
