@@ -7,7 +7,7 @@ export interface BackgroundData {
 }
 export const experience: BackgroundData[] = [
 	{
-		role: "Lead Software Engineer",
+		role: "Software Engineer",
 		years: "2024 — 2025",
 		siteName: "Transparencia Latam",
 		siteUrl: "https://transparencialatam.com",
