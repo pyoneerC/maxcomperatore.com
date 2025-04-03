@@ -33,17 +33,39 @@ export const AboutSection = () => {
 	useEffect(() => {
 		(async function () {
 			const cal = await getCalApi({ namespace: "30min" });
+
 			cal("floatingButton", {
 				calLink: "maxcomperatore/30min",
 				config: { layout: "month_view" },
 				hideButtonIcon: false,
 				buttonPosition: "bottom-left",
-				buttonText:"Let's Talk"
+				buttonText: "Let's Talk"
 			});
-			cal("ui", {
-				hideEventTypeDetails: false,
-				layout: "month_view",
-			});
+
+			// Wait for buttons to render
+			setTimeout(() => {
+				// Only apply on desktop
+				if (window.innerWidth >= 768) {
+					const allCalButtons = document.querySelectorAll("cal-floating-button");
+
+					if (allCalButtons.length > 1) {
+						// Remove duplicates
+						for (let i = 1; i < allCalButtons.length; i++) {
+							allCalButtons[i].remove();
+						}
+					}
+
+					// Scale the remaining button
+					const shadowHost = allCalButtons[0];
+					if (shadowHost && shadowHost.shadowRoot) {
+						const btn = shadowHost.shadowRoot.querySelector("button");
+						if (btn) {
+							btn.style.transform = "scale(1.25)";
+							btn.style.transformOrigin = "bottom left";
+						}
+					}
+				}
+			}, 1000); // Delay to wait for rendering
 		})();
 	}, []);
 
