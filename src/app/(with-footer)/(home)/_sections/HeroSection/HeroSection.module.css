@@ -359,7 +359,7 @@
 
 .minecraftsubtitle {
 	position: absolute;
-	color: #FBF915;
+	color: var(--color-minecraft);
 	font-size: clamp(1rem, 1.5vw, 1.5rem);
 	transform: rotate(-20deg);
 	animation: minesubtitle 0.3s alternate infinite;

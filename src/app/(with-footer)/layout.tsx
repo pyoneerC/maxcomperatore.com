@@ -9,91 +9,101 @@ export default function WithFooterLayout({
 	children: React.ReactNode;
 }) {
 	useEffect(() => {
-		// Initialize our variables
-		let targetScroll = window.scrollY; // Start at current scroll position
+		// Initialize state variables
+		let targetScroll = window.scrollY;
 		let isAnimating = false;
 		let lastScrollTime = 0;
-		let lastURL = window.location.href; // To detect page changes
+		let lastURL = window.location.href;
 		let animationFrameId: number | null = null;
+		let lastFrameTime: number | null = null;
 
-		// Smooth scroll handler for wheel events
-		const smoothScroll = (event: WheelEvent) => {
+		/**
+		 * Animates the scroll using a time-based delta for smooth performance.
+		 * @param currentTime - The current timestamp from requestAnimationFrame.
+		 */
+		const animateScroll = (currentTime: number) => {
+			if (lastFrameTime === null) {
+				lastFrameTime = currentTime;
+			}
+			const deltaTime = currentTime - lastFrameTime;
+			lastFrameTime = currentTime;
+
+			const currentScroll = window.scrollY;
+			const scrollDiff = targetScroll - currentScroll;
+
+			// Calculate the scroll step based on the delta time
+			const scrollStep = scrollDiff * 0.1 * (deltaTime / 16.67);
+			const newScroll = currentScroll + scrollStep;
+			window.scrollTo(0, newScroll);
+
+			if (Math.abs(scrollDiff) > 0.5) {
+				animationFrameId = requestAnimationFrame(animateScroll);
+			} else {
+				isAnimating = false;
+				window.scrollTo(0, targetScroll); // Snap to target position
+				animationFrameId = null;
+				lastFrameTime = null;
+			}
+		};
+
+		/**
+		 * Handles wheel events to update the target scroll position and initiate the smooth scroll.
+		 */
+		const handleWheelEvent = (event: WheelEvent) => {
 			event.preventDefault();
 
-			// Update targetScroll based on the scroll delta
 			targetScroll += event.deltaY;
 			targetScroll = Math.max(
 				0,
 				Math.min(targetScroll, document.body.scrollHeight - window.innerHeight)
 			);
 
-			// Start the animation if not already running
 			if (!isAnimating) {
 				isAnimating = true;
+				lastFrameTime = null;
 				animationFrameId = requestAnimationFrame(animateScroll);
 			}
 
 			lastScrollTime = Date.now();
 		};
 
-		// Animation loop that gradually scrolls to the target
-		const animateScroll = () => {
-			const currentScroll = window.scrollY;
-			const scrollDiff = targetScroll - currentScroll;
-
-			// Ease-out interpolation for smooth deceleration
-			const easeOutFactor = 0.08;
-			const newScroll = currentScroll + scrollDiff * easeOutFactor;
-			window.scrollTo(0, newScroll);
-
-			// Continue animating until the difference is negligible
-			if (Math.abs(scrollDiff) > 0.5) {
-				animationFrameId = requestAnimationFrame(animateScroll);
-			} else {
-				isAnimating = false;
-				// Snap to the exact target to ensure accuracy
-				window.scrollTo(0, targetScroll);
-				animationFrameId = null;
-			}
-		};
-
-		// If the user scrolls manually (outside our wheel event), update targetScroll
+		/**
+		 * Updates targetScroll if the user scrolls manually.
+		 */
 		const handleManualScroll = () => {
 			if (Date.now() - lastScrollTime > 825) {
 				targetScroll = window.scrollY;
 			}
 		};
 
-		// Detect URL changes (page transitions)
+		/**
+		 * Detects URL changes and triggers a smooth scroll to the top.
+		 */
 		const checkURLChange = () => {
 			if (window.location.href !== lastURL) {
 				lastURL = window.location.href;
-				targetScroll = 0; // Set target to top of page
-				// Instead of an abrupt jump, start a smooth scroll to the top
+				targetScroll = 0;
 				if (!isAnimating) {
 					isAnimating = true;
+					lastFrameTime = null;
 					animationFrameId = requestAnimationFrame(animateScroll);
 				}
 			}
 		};
 
-		// Check for URL changes every 100ms
-		const intervalId = setInterval(checkURLChange, 100);
-
-		// Add event listeners for wheel and scroll events
-		window.addEventListener("wheel", smoothScroll, { passive: false });
+		const urlCheckInterval = setInterval(checkURLChange, 100);
+		window.addEventListener("wheel", handleWheelEvent, { passive: false });
 		window.addEventListener("scroll", handleManualScroll);
 
-		// Cleanup on unmount
 		return () => {
-			window.removeEventListener("wheel", smoothScroll);
+			window.removeEventListener("wheel", handleWheelEvent);
 			window.removeEventListener("scroll", handleManualScroll);
-			clearInterval(intervalId);
+			clearInterval(urlCheckInterval);
 			if (animationFrameId !== null) {
 				cancelAnimationFrame(animationFrameId);
 			}
 		};
-	}, []); // Runs once on mount
+	}, []);
 
 	return (
 		<>
