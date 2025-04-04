@@ -119,6 +119,23 @@ export const HeroSection = () => {
 			.fromTo(scrollToTopButtonRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.3"); // Scroll to top button slide up and fade in
 	}, []);
 
+	const clickSound = useRef<HTMLAudioElement | null>(null);
+
+	useEffect(() => {
+		clickSound.current = new Audio("/assets/sfx/WII-START.wav");
+
+		const handleInteraction = () => {
+			clickSound.current?.play();
+			window.removeEventListener("click", handleInteraction);
+		};
+
+		window.addEventListener("click", handleInteraction);
+
+		return () => {
+			window.removeEventListener("click", handleInteraction);
+		};
+	}, []);
+
 
 	return (
 		<section aria-labelledby="hero-title" className={styles.section} ref={sectionRef}>
