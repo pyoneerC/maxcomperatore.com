@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./ChatBot.module.css";
+import * as Tooltip from '@radix-ui/react-tooltip';
 import { useTranslations } from "next-intl";
 // @ts-ignore
 import confetti from "canvas-confetti";
@@ -12,6 +13,7 @@ const Chatbot = () => {
 	const [lastMessageTime, setLastMessageTime] = useState(0);
 	const [hasTriggeredConfetti, setHasTriggeredConfetti] = useState(false);
 	const [placeholder, setPlaceholder] = useState("placeholderD");
+	const [inputFocused, setInputFocused] = useState(false);
 
 	// Keep a ref to the partial (streaming) text
 	const partialResponseRef = useRef("");
@@ -683,15 +685,35 @@ ${messages.map((msg) => msg.content).join(" | ")}
 
 			{/* File input for images */}
 			{/* The text input & send button remain the same */}
-			<input
-				type="text"
-				required={true}
-				value={input}
-				onChange={handleInputChange}
-				onKeyPress={handleKeyPress}
-				placeholder={t(placeholder)}
-				className={styles["chat-input"]}
-			/>
+			<Tooltip.Provider delayDuration={300}>
+				<Tooltip.Root open={inputFocused}>
+					<Tooltip.Trigger asChild>
+						<input
+							type="text"
+							value={input}
+							onFocus={() => setInputFocused(true)}
+							onBlur={() => setInputFocused(false)}
+							onChange={handleInputChange}
+							onKeyPress={handleKeyPress}
+							placeholder={t(placeholder)}
+							className={styles["chat-input"]}
+						/>
+					</Tooltip.Trigger>
+					<Tooltip.Portal>
+						<Tooltip.Content
+							className={styles.tooltipContent}
+							side="bottom"
+							align="center"
+							sideOffset={6}
+						>
+							<span style={{ color: "#888" }}>Powered by</span>{" "}
+							<span className={styles.glow}>LLaMA 4 Scout</span>
+							<Tooltip.Arrow className={styles.tooltipArrow} />
+						</Tooltip.Content>
+					</Tooltip.Portal>
+				</Tooltip.Root>
+			</Tooltip.Provider>
+
 			<button
 				aria-label="Send message Button"
 				onClick={sendMessage}

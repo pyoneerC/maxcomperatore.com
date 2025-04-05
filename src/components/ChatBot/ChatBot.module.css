@@ -241,3 +241,50 @@
         transform: translate(50px, -34px) scale(1.15);
     }
 }
+
+.tooltipContent {
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-out 3s;
+    z-index: 999;
+    backdrop-filter: blur(6px);
+}
+
+.tooltipArrow {
+    fill: rgba(20, 20, 20, 0.9);
+}
+
+.glow {
+    background-image: linear-gradient(45deg, #0070F3, #00B0FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    animation: glowAnimation 1.5s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes glowAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
