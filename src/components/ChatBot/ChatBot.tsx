@@ -12,6 +12,7 @@ const Chatbot = () => {
 	const [lastMessageTime, setLastMessageTime] = useState(0);
 	const [hasTriggeredConfetti, setHasTriggeredConfetti] = useState(false);
 	const [placeholder, setPlaceholder] = useState("placeholderD");
+	const [inputFocused, setInputFocused] = useState(false);
 
 	// Keep a ref to the partial (streaming) text
 	const partialResponseRef = useRef("");
@@ -690,8 +691,15 @@ ${messages.map((msg) => msg.content).join(" | ")}
 				onChange={handleInputChange}
 				onKeyPress={handleKeyPress}
 				placeholder={t(placeholder)}
+				onFocus={() => setInputFocused(true)}
+				onBlur={() => setInputFocused(false)} // Optional: hide when unfocused
 				className={styles["chat-input"]}
 			/>
+			{inputFocused && (
+				<div style={{ marginTop: "6px", fontSize: "12px", color: "#888" }}>
+					Powered by LLaMA 4 Scout
+				</div>
+			)}
 			<button
 				aria-label="Send message Button"
 				onClick={sendMessage}
@@ -715,7 +723,8 @@ ${messages.map((msg) => msg.content).join(" | ")}
 					className="icon icon-tabler icons-tabler-outline icon-tabler-send-2"
 				>
 					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-					<path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
+					<path
+						d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
 					<path d="M6.5 12h14.5" />
 				</svg>
 			</button>
@@ -757,7 +766,7 @@ ${messages.map((msg) => msg.content).join(" | ")}
 };
 
 // @ts-ignore
-export default Chatbot;
+export default Chatbot
 
 const tools = [
 	{
