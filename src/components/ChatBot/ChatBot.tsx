@@ -707,7 +707,7 @@ ${messages.map((msg) => msg.content).join(" | ")}
 							sideOffset={6}
 						>
 							<span style={{ color: "#888" }}>Powered by</span>{" "}
-							<span className={styles.glow}>LLaMA 4 Scout</span>
+							<span className={styles.glow}>Llama 4 Scout</span>
 							<Tooltip.Arrow className={styles.tooltipArrow} />
 						</Tooltip.Content>
 					</Tooltip.Portal>
