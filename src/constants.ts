@@ -4,6 +4,10 @@ export const FORMSPREE_URL = "https://formspree.io/f"
 
 export const APP_ROUTES = [
 	{
+		href: "https://boxoflove.netlify.app",
+		label: "boxoflove",
+	},
+	{
 		href: "https://blog.maxcomperatore.com",
 		label: "blog",
 	},
