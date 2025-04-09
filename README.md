@@ -12,7 +12,6 @@ Basado en el [Geist Design System](https://vercel.com/geist/introduction) de [Ve
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fmaxcomperatore.com)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/pyoneerc/maxcomperatore.com)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3dddd0ee9efc48beb98129c150a57a85)](https://app.codacy.com/gh/pyoneerC/maxcomperatore.com/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-![GitHub License](https://img.shields.io/github/license/pyoneerc/maxcomperatore.com)
 
 ## Tabla de Contenidos
 
@@ -20,14 +19,13 @@ Basado en el [Geist Design System](https://vercel.com/geist/introduction) de [Ve
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Características](#características)
-- [Licencia](#licencia)
 - [Contacto](#contacto)
 
-![Captura de Pantalla en IPHONE X](/public/assets/readme/iphonex.avif)
+![img_1.png](public/assets/images/mobile.png)
 ---
-![Captura de Pantalla en MAC](/public/assets/readme/mac.avif)
+![img_2.png](public/assets/images/mac.png)
 ---
-![Captura de Pantalla en TABLET](/public/assets/readme/tablet.avif)
+![img_3.png](public/assets/images/ipad.png)
 
 ## Estructura del Proyecto
 
@@ -94,10 +92,6 @@ npm run build
 - **Cursor Personalizado**: Un cursor personalizado que cambia según la interacción del usuario.
 - **Botón de Volver Arriba**: Un botón que desplaza al usuario de vuelta al inicio de la página.
 - Y mucho más...
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT.
 
 ## Contacto
 
