@@ -428,7 +428,7 @@ Advice: ${advice}`;
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
-					model: "meta-llama/llama-4-scout-17b-16e-instruct",
+					model: "meta-llama/llama-4-maverick-17b-128e-instruct",
 					messages: [
 						{
 							role: "system",
@@ -707,7 +707,7 @@ ${messages.map((msg) => msg.content).join(" | ")}
 							sideOffset={6}
 						>
 							<span style={{ color: "#888" }}>Powered by</span>{" "}
-							<span className={styles.glow}>Llama 4 Scout</span>
+							<span className={styles.glow}>Llama 4 Maverick</span>
 							<Tooltip.Arrow className={styles.tooltipArrow} />
 						</Tooltip.Content>
 					</Tooltip.Portal>
