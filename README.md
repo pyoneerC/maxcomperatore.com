@@ -1,11 +1,11 @@
-# Portafolio de Max Comperatore
+# Max Comperatore's Portfolio
 
-Este proyecto es un fork del [portafolio original](https://github.com/dresandev/dresan.dev) de [Dresan](https://dresan.dev). 
-Permiso para usar y modificar el código fuente fue otorgado por el autor original en el día 16 de julio de 2024.
+This project is a fork of the [original portfolio](https://github.com/dresandev/dresan.dev) by [Dresan](https://dresan.dev).  
+Permission to use and modify the source code was granted by the original author on July 16, 2024.
 
-Incluye varias mejoras y personalizaciones para satisfacer necesidades específicas.
+It includes several improvements and customizations to meet specific needs.
 
-Basado en el [Geist Design System](https://vercel.com/geist/introduction) de [Vercel](https://vercel.com).
+Based on the [Geist Design System](https://vercel.com/geist/introduction) by [Vercel](https://vercel.com).
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pyoneerC/maxcomperatore.com)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/pyoneerc/maxcomperatore.com)
@@ -13,13 +13,13 @@ Basado en el [Geist Design System](https://vercel.com/geist/introduction) de [Ve
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/pyoneerc/maxcomperatore.com)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3dddd0ee9efc48beb98129c150a57a85)](https://app.codacy.com/gh/pyoneerC/maxcomperatore.com/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-## Tabla de Contenidos
+## Table of Contents
 
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Características](#características)
-- [Contacto](#contacto)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contact](#contact)
 
 ![img_1.png](public/assets/images/mobile.png)
 ---
@@ -27,7 +27,7 @@ Basado en el [Geist Design System](https://vercel.com/geist/introduction) de [Ve
 ---
 ![img_3.png](public/assets/images/ipad.png)
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 .
@@ -50,51 +50,53 @@ Basado en el [Geist Design System](https://vercel.com/geist/introduction) de [Ve
 └── tsconfig.json
 ```
 
-- **public**: Contiene los archivos estáticos utilizados en el proyecto.
-- **src**: Contiene el código fuente del proyecto.
-- **components**: Contiene los componentes React utilizados en el proyecto.
-- **helpers**: Contiene funciones auxiliares utilizadas en todo el proyecto.
-- **hooks**: Contiene hooks personalizados utilizados en todo el proyecto.
-- **styles**: Contiene los estilos globales utilizados en todo el proyecto.
-- **utils**: Contiene funciones utilitarias utilizadas en todo el proyecto.
-- **data**: Contiene los datos utilizados en todo el proyecto.
+## Project Structure
+
+- **public**: Contains the static files used in the project.
+- **src**: Contains the project's source code.
+- **components**: Contains the React components used in the project.
+- **helpers**: Contains helper functions used throughout the project.
+- **hooks**: Contains custom hooks used across the project.
+- **styles**: Contains global styles used in the project.
+- **utils**: Contains utility functions used throughout the project.
+- **data**: Contains the data used throughout the project.
 
 > [!NOTE]
-> Este proyecto utiliza NEXT.js, TypeScript y CSS.
+> This project uses NEXT.js, TypeScript, and CSS.
 
-## Instalación
+## Installation
 
-Para instalar las dependencias del proyecto, ejecuta:
+To install the project dependencies, run:
 
 ```bash
 npm install
 ```
 
-## Uso
+## Usage
 
-Para iniciar el servidor de desarrollo, ejecuta:
+To start the development server, run:
 
 ```bash
 npm start
 ```
 
-Para construir el proyecto para producción, ejecuta:
+To build the project for production, run:
 
 ```bash
 npm run build
 ```
 
-## Características
+## Features
 
-- **Diseño Modular**: El proyecto está organizado en componentes, acciones, helpers, hooks, estilos y utils.
-- **Gestión de Etiquetas**: Una lista de etiquetas utilizada en todo el proyecto para la categorización y filtrado.
-- **Diseño Responsivo**: Asegura que la aplicación se vea bien en todos los dispositivos.
-- **Cursor Personalizado**: Un cursor personalizado que cambia según la interacción del usuario.
-- **Botón de Volver Arriba**: Un botón que desplaza al usuario de vuelta al inicio de la página.
-- Y mucho más...
+- **Modular Design**: The project is organized into components, actions, helpers, hooks, styles, and utils.
+- **Tag Management**: A list of tags used throughout the project for categorization and filtering.
+- **Responsive Design**: Ensures the application looks good on all devices.
+- **Custom Cursor**: A custom cursor that changes based on user interaction.
+- **Back to Top Button**: A button that scrolls the user back to the top of the page.
+- And much more...
 
-## Contacto
+## Contact
 
-Para cualquier consulta, por favor contactar a [me@maxcomperatore.com](mailto:me@maxcomperatore.com).
+For any inquiries, please contact [me@maxcomperatore.com](mailto:me@maxcomperatore.com).
 
-Hecho con ❤️ por Max Comperatore.
+Made with ❤️ by Max Comperatore.
