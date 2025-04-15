@@ -13,8 +13,8 @@ export const socialMediaLinks = [
 		className: "github",
 	},
 	{
-		label: "Email",
-		url: "mailto:me@maxcomperatore.com",
+		label: "X",
+		url: "https://x.com/maxcompx",
 		icon: "EmailIcon",
 		className: "email",
 	},
