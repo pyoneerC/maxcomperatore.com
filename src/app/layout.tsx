@@ -10,7 +10,7 @@ import { getMessages } from "next-intl/server";
 
 export const metadata = {
 	metadataBase: new URL("https://maxcomperatore.com"),
-	title: "Max Comperatore - Expert AI & Backend Developer | Scalable Solutions",
+	title: "Max Comperatore / Mid-Level Fullstack Web Developer (Backend-leaning) – Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)",
 	description:
 		"Max Comperatore is a top-tier AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
 	authors: [{ name: "Max Comperatore" }],
@@ -18,7 +18,7 @@ export const metadata = {
 	openGraph: {
 		type: "website",
 		url: "https://maxcomperatore.com",
-		title: "Max Comperatore - Expert AI & Backend Developer | Scalable Solutions",
+		title: "Max Comperatore / Mid-Level Fullstack Web Developer (Backend-leaning) – Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)",
 		description:
 			"Max Comperatore is a top-tier AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
 		images: [
@@ -34,7 +34,7 @@ export const metadata = {
 		card: "summary_large_image",
 		site: "@pyoneerC",
 		creator: "@pyoneerC",
-		title: "Max Comperatore - Expert AI & Backend Developer | Scalable Solutions",
+		title: "Max Comperatore / Mid-Level Fullstack Web Developer (Backend-leaning) – Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)",
 		description:
 			"Max Comperatore is a top-tier AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
 		images: ["https://maxcomperatore.com/assets/images/socialpreview.webp"],
@@ -150,7 +150,7 @@ export default async function RootLayout({
 			<meta property="og:url" content="https://maxcomperatore.com/" />
 			<meta
 				property="og:title"
-				content="Max Comperatore - Expert AI & Backend Developer | Scalable Solutions"
+				content="Max Comperatore / Mid-Level Fullstack Web Developer (Backend-leaning) – Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)"
 			/>
 			<meta
 				property="og:description"
@@ -166,7 +166,7 @@ export default async function RootLayout({
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta
 				property="twitter:title"
-				content="Max Comperatore - Expert AI & Backend Developer | Scalable Solutions"
+				content="Max Comperatore / Mid-Level Fullstack Web Developer (Backend-leaning) – Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)"
 			/>
 			<meta
 				property="twitter:description"
