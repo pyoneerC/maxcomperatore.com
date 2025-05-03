@@ -418,7 +418,7 @@ const Chatbot = () => {
 			const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
 				method: "POST",
 				headers: {
-					Authorization: `Bearer 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`,
+					Authorization: `Bearer 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`,
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
