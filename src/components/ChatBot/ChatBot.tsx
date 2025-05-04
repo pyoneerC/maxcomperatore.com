@@ -415,14 +415,13 @@ const Chatbot = () => {
 
 
 		try {
-			const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+			const response = await fetch("https://text.pollinations.ai/", {
 				method: "POST",
 				headers: {
-					Authorization: `Bearer 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`,
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
-					model: "meta-llama/llama-4-maverick-17b-128e-instruct",
+					model: "OpenAI GPT-4.1",
 					messages: [
 						{
 							role: "system",
@@ -731,7 +730,7 @@ ${apiMessages.map((msg) => `${msg.role}: ${msg.content}`).join("\n")}
 						</Tooltip.Trigger>
 						<Tooltip.Portal>
 							<Tooltip.Content className={styles.tooltipContent} side="top" align="center" sideOffset={6}>
-								<span style={{ color: "#888" }}>Powered by</span>{" "} <span className={styles.glow}>Llama 4 Maverick</span>
+								<span style={{ color: "#888" }}>Powered by</span>{" "} <span className={styles.glow}>OpenAI GPT-4.1</span>
 								<Tooltip.Arrow className={styles.tooltipArrow} />
 							</Tooltip.Content>
 						</Tooltip.Portal>
