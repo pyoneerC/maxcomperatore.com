@@ -170,7 +170,7 @@ export const HeroSection = () => {
 			</div>
 			<div className={styles.actions} ref={actionsRef}>
 				<NextLink
-					href="https://drive.google.com/file/d/1EkrRZXcnaDCvB1HGdQwqibtLqf1zVaVd/view?usp=sharing"
+					href="https://drive.google.com/file/d/1En1RlPAl99JvT7PdsqTdPrxo-qst7clC/view?usp=sharing"
 					target="_blank"
 					prefetch={true}
 					passHref // Ensures proper anchor rendering
