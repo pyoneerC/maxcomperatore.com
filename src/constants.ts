@@ -12,6 +12,10 @@ export const APP_ROUTES = [
 		label: "blog",
 	},
 	{
+		href: "https://t.me/maxcomperatore",
+		label: "chat",
+	},
+	{
 		href: "https://meet.maxcomperatore.com",
 		label: "meet",
 	}
