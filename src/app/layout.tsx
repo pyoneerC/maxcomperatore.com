@@ -9,35 +9,23 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 export const metadata = {
-	metadataBase: new URL("https://maxcomperatore.com"),
-	title: "Max Comperatore / Fullstack Developer (Backend-leaning) – AI, Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)",
+	metadataBase: new URL("https://joacolivero.com"),
+	title: "Joaquín Olivero / Backend Developer – Java, JavaScript, React, MongoDB, Node.js, PostgreSQL",
 	description:
-		"Max Comperatore is a top-tier AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
-	authors: [{ name: "Max Comperatore" }],
-	creator: "Max Comperatore",
+		"Joaquín Olivero is a backend developer specialized in scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
+	authors: [{ name: "Joaquín Olivero" }],
+	creator: "Joaquín Olivero",
 	openGraph: {
 		type: "website",
-		url: "https://maxcomperatore.com",
-		title: "Max Comperatore / Fullstack Developer (Backend-leaning) – AI, Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)",
+		url: "https://joacolivero.com",
+		title: "Joaquín Olivero / Backend Developer – Java, JavaScript, React, MongoDB, Node.js, PostgreSQL",
 		description:
-			"Max Comperatore is a top-tier AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
+			"Joaquín Olivero is a backend developer specialized in scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
 		images: [
 			{
-				url: "https://maxcomperatore.com/assets/images/socialpreview.webp",
-				width: 1200,
-				height: 630,
-				alt: "Max Comperatore - AI & Backend Developer",
+				
 			},
 		],
-	},
-	twitter: {
-		card: "summary_large_image",
-		site: "@pyoneerC",
-		creator: "@pyoneerC",
-		title: "Max Comperatore / Fullstack Developer (Backend-leaning) – AI, Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)",
-		description:
-			"Max Comperatore is a top-tier AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide.",
-		images: ["https://maxcomperatore.com/assets/images/socialpreview.webp"],
 	},
 };
 
@@ -51,36 +39,35 @@ export default async function RootLayout({
 	const structuredData = {
 		"@context": "https://schema.org",
 		"@type": "Person",
-		name: "Maximo Comperatore",
-		jobTitle: "AI & Backend Developer",
-		url: "https://maxcomperatore.com",
-		image: "https://maxcomperatore.com/assets/images/maximo_comperatore.avif",
+		name: "Joaquín Olivero",
+		jobTitle: "Backend Developer",
+		url: "https://joacolivero.com",
+		image: "",
 		sameAs: [
-			"https://www.linkedin.com/in/maxcomperatore/",
-			"https://github.com/maxcomperatore",
-			"https://www.youtube.com/channel/UCgZDAjllREu-3YeU-961EBg",
+			"https://www.linkedin.com/in/joaquinolivero/",
+			"https://github.com/Pulpoide",
 		],
 		worksFor: {
 			"@type": "Organization",
-			name: "Max Comperatore",
-			url: "https://maxcomperatore.com",
+			name: "Joaquín Olivero",
+			url: "https://joacolivero.com",
 		},
 		address: {
 			"@type": "PostalAddress",
-			addressLocality: "Mendoza",
+			addressLocality: "Córdoba",
 			addressRegion: "Argentina",
 			addressCountry: "AR",
 		},
 		alumniOf: {
 			"@type": "CollegeOrUniversity",
-			name: "University of Mendoza",
-			sameAs: "https://um.edu.ar/",
+			name: "Aeronautical University Institute",
+			sameAs: "https://www.iua.edu.ar/",
 		},
 		contactPoint: {
 			"@type": "ContactPoint",
 			contactType: "Work",
-			email: "mailto:me@maxcomperatore.com",
-			url: "https://maxcomperatore.com",
+			email: "mailto:joacolivero.dev@gmail.com",
+			url: "https://joacolivero.com",
 			availableLanguage: ["Spanish", "English"],
 			areaServed: "Global",
 			hoursAvailable: {
@@ -88,7 +75,7 @@ export default async function RootLayout({
 				dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 				opens: "09:00",
 				closes: "18:00",
-				timeZone: "America/Argentina/Mendoza",
+				timeZone: "America/Argentina/Córdoba",
 			},
 		},
 		knowsLanguage: [
@@ -105,18 +92,13 @@ export default async function RootLayout({
 		],
 		hasOccupation: {
 			"@type": "Occupation",
-			name: "AI & Backend Developer",
+			name: "Backend Developer",
 			description:
-				"Specialized in artificial intelligence, machine learning, and backend development. Building scalable and innovative solutions for complex problems.",
+				"Specialized in backend development. Building scalable and innovative solutions for complex problems.",
 			occupationalCategory: "15-1132.00",
 		},
 		knowsAbout: [
-			"Artificial Intelligence",
-			"Machine Learning",
 			"Backend Development",
-			"Python",
-			"C#",
-			"C++",
 			"Cloud Computing",
 			"Data Engineering",
 			"APIs",
@@ -134,58 +116,20 @@ export default async function RootLayout({
 			<title>{metadata.title}</title>
 			<meta
 				name="description"
-				content="Max Comperatore is a leading AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Offering cutting-edge solutions for startups and enterprises worldwide."
+				content="Joaquín Olivero is a backend developer specialized in scalable backend systems. Delivering cutting-edge solutions for startups and enterprises worldwide."
 			/>
-			<meta name="author" content="Max Comperatore" />
-			<meta name="creator" content="Max Comperatore" />
-			<meta
-				property="og:image"
-				content="https://maxcomperatore.com/assets/images/socialpreview.webp"
-			/>
+			<meta name="author" content="Joaquín Olivero" />
+			<meta name="creator" content="Joaquín Olivero" />
+			
 
 			<link rel="icon" href="/favicon.ico" />
 
-			{/* Open Graph / Facebook */}
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="https://maxcomperatore.com/" />
-			<meta
-				property="og:title"
-				content="Max Comperatore / Mid-Level Fullstack Web Developer (Backend-leaning) – Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)"
-			/>
-			<meta
-				property="og:description"
-				content="Max Comperatore is a leading AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Offering cutting-edge solutions for startups and enterprises worldwide."
-			/>
-			<meta
-				property="og:image"
-				content="https://maxcomperatore.com/assets/images/socialpreview.webp"
-				style={{ width: 1200, height: 630 }}
-			/>
-
-			{/* Twitter */}
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta
-				property="twitter:title"
-				content="Max Comperatore / Mid-Level Fullstack Web Developer (Backend-leaning) – Python, React, FastAPI, Node.js, PostgreSQL / Remote LATAM (Argentina)"
-			/>
-			<meta
-				property="twitter:description"
-				content="Max Comperatore is a leading AI and backend developer specialized in artificial intelligence, machine learning, and scalable backend systems. Offering cutting-edge solutions for startups and enterprises worldwide."
-			/>
-			<meta
-				property="twitter:image"
-				content="https://maxcomperatore.com/assets/images/socialpreview.webp"
-				style={{ width: 1200, height: 630 }}
-			/>
-			<meta property="twitter:creator" content="@pyoneerC" />
-			<meta property="twitter:site" content="@pyoneerC" />
-
-			<link rel="canonical" href="https://maxcomperatore.com" />
+			<link rel="canonical" href="https://joacolivero.com" />
 			<meta name="robots" content="index, follow" />
-			<link rel="alternate" hrefLang="en" href="https://maxcomperatore.com/" />
+			<link rel="alternate" hrefLang="en" href="https://joacolivero.com/" />
 			<meta
 				name="keywords"
-				content="AI developer, artificial intelligence, machine learning, backend development, Max Comperatore, software developer, Python developer, C# developer, scalable systems, cloud computing, data engineering, APIs, microservices, DevOps, AI frameworks, innovative software solutions"
+				content="Backend development, Joaquín Olivero, software developer, scalable systems, cloud computing, data engineering, APIs, microservices, DevOps, innovative software solutions"
 			/>
 
 			{/* Structured Data */}

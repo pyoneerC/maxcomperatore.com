@@ -21,7 +21,7 @@ export function generateMetadata({ params }: Props) {
 	}
 
 	return {
-		title: `Max Comperatore - Proyecto | ${project.name}`,
+		title: `Joaquín Olivero - Proyecto | ${project.name}`,
 		description: project.description,
 	}
 }
