@@ -7,7 +7,6 @@ import styles from "./HeroSection.module.css";
 import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton";
 import ArgentinaFlag from "~/components/Svg/ArgentinaFlag"
 import { useTranslations } from 'next-intl';
-import Chatbot from "~/components/ChatBot/ChatBot"
 import React, { useEffect, useRef, useState } from "react";
 import gsap from 'gsap'; // Import GSAP
 
@@ -161,7 +160,6 @@ export const HeroSection = () => {
 				</NextLink>
 			</div>
 			<CopyEmailSmallButton className={styles.copyEmailButton} />
-			<Chatbot />
 
 			<div className={styles.arrowwave} ref={arrowwaveRef}>
 				<span></span>
