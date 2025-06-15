@@ -2,7 +2,7 @@
 export const socialMediaLinks = [
 	{
 		label: "LinkedIn",
-		url: "https://www.linkedin.com/in/maxcomperatore/",
+		url: "https://www.linkedin.com/in/joaquinolivero/",
 		icon: "LinkedInIcon",
 		className: "linkedin",
 	},

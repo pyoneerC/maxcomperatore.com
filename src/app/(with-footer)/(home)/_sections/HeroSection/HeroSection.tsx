@@ -18,42 +18,7 @@ export const HeroSection = () => {
 	const positions = [
 		t("position"),
 		t("position2"),
-		t("position3"),
-		t("position4"),
-		t("position5"),
 	];
-
-	const minecraftSubtitles = [
-		"100/100 Web Vitals!",
-		"Now with more divs!",
-		"Runs on 1 FPS on IE!",
-		"Made with too much coffee!",
-		"Best viewed on a fridge!",
-		"Unironically Typescript!",
-		"npm install braincells!",
-		"Light mode users reported!",
-		"Free cookies, zero tracking!",
-		"Hot reloading since 2023!",
-		"Now with 37 fonts!",
-		"Shipped it at 3AM!",
-		"Built while crying!",
-		"No bugs, just features!",
-		"Google said it slaps!",
-		"Optimized with vibes!",
-		"No frameworks were harmed!",
-		"Deploy first, debug later!",
-		"Pixel perfect-ish!",
-		"Better than the clones!",
-		"Dark mode supremacy!",
-		"SEO gods are pleased!",
-		"Certified dev candy!",
-		"404 bugs found!",
-		"Breaks on Fridays!",
-	];
-
-	const [minecraftSubtitle] = useState(() =>
-		minecraftSubtitles[Math.floor(Math.random() * minecraftSubtitles.length)]
-	);
 
 
 	const [positionIndex, setPositionIndex] = useState(0);
@@ -122,11 +87,8 @@ export const HeroSection = () => {
 	return (
 		<section aria-labelledby="hero-title" className={styles.section} ref={sectionRef}>
 			<h1 id="hero-title" className={`text-gradient ${styles.title}`} ref={titleRef}>
-				Max Comperatore
+				Joaquín Olivero
 			</h1>
-			<p className={styles.minecraftsubtitle} ref={minecraftSubtitleRef}>
-				{minecraftSubtitle}
-			</p>
 			<h2 className={styles.subtitle} ref={subtitleRef}>
 				{positions[positionIndex]}
 			</h2>
@@ -159,7 +121,7 @@ export const HeroSection = () => {
 			<div className={styles.buttonContainer} ref={buttonContainerRef}>
 				<Button rounded="full" size="small" asChild className={styles.button}>
 					<NextLink
-						href="https://www.linkedin.com/in/maxcomperatore/"
+						href="https://www.linkedin.com/in/joaquinolivero/"
 						target="_blank"
 						rel="noopener"
 					>

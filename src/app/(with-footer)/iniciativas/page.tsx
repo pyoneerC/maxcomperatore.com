@@ -5,8 +5,8 @@ import { ProjectCard } from "~/components/OtherProjectCard";
 import { useTranslations } from "next-intl";
 
 export const metadata = {
-	title: "Max Comperatore - Otros proyectos",
-	description: "Proyectos personales de Max Comperatore."
+	title: "Joaquín Olivero - Otros proyectos",
+	description: "Proyectos personales de Joaquín Olivero."
 }
 
 export default function Blog() {
