@@ -20,9 +20,9 @@ export const Header = () => {
 				</NextLink>
 				<nav className={styles.nav}>
 					<ul className={styles.navList}>
-						{APP_ROUTES.map(({ href, label }) => (
-							<li key={href}>
-								<Link href={href} target={"_blank"} rel={"noopener"} className={styles.navLink}>
+						{APP_ROUTES.map(({ href, label }, index) => (
+							<li key={`${href}-${index}`}>
+								<Link href={href} target="_blank" rel="noopener" className={styles.navLink}>
 									{t(label)}
 								</Link>
 							</li>
