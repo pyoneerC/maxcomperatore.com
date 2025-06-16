@@ -32,28 +32,25 @@ export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description
 	}, []);
 
 	return (
-		<Link href={href} legacyBehavior>
-			<a className={styles.linkWrapper}>
-				<article
-					ref={cardRef}
-					className={`${styles.card} ${isVisible ? styles.cardVisible : styles.cardInitial}`}
-				>
-					<figure className={styles.imageWrapper}>
-						<img
-							className={styles.image}
-							src={imageUrl}
-							alt={name}
-							width={684}
-							height={385}
-							loading="lazy"
-							style={{ objectFit: "cover" }}
-						/>
-					</figure>
-					<h3 className={styles.title}>{name}</h3>
-					<p>{description}</p>
-				</article>
-			</a>
+		<Link href={href} className={styles.linkWrapper}>
+			<article
+				ref={cardRef}
+				className={`${styles.card} ${isVisible ? styles.cardVisible : styles.cardInitial}`}
+			>
+				<figure className={styles.imageWrapper}>
+					<img
+						className={styles.image}
+						src={imageUrl}
+						alt={name}
+						width={684}
+						height={385}
+						loading="lazy"
+						style={{ objectFit: "cover" }}
+					/>
+				</figure>
+				<h3 className={styles.title}>{name}</h3>
+				<p>{description}</p>
+			</article>
 		</Link>
-
 	);
 }
