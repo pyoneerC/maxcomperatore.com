@@ -1,22 +1,18 @@
-export const DRESAN_EMAIL = "me@maxcomperatore.com"
-export const HOST_URL = "https://maxcomperatore.com"
+export const DRESAN_EMAIL = "joacolivero.dev@gmail.com"
+export const HOST_URL = "https://joacolivero.com"
 export const FORMSPREE_URL = "https://formspree.io/f"
 
 export const APP_ROUTES = [
 	{
-		href: "https://box.maxcomperatore.com/",
-		label: "boxoflove",
+		href: "",
+		label: "about",
 	},
 	{
-		href: "https://blog.maxcomperatore.com",
-		label: "blog",
+		href: "",
+		label: "projects",
 	},
 	{
-		href: "https://t.me/maxcomperatore",
-		label: "chat",
-	},
-	{
-		href: "https://meet.maxcomperatore.com",
-		label: "meet",
+		href: "",
+		label: "tech",
 	}
 ]
