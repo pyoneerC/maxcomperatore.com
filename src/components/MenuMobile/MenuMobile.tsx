@@ -47,8 +47,8 @@ export const MenuMobile = () => {
 			<div className={clsx(styles.menu, { [styles.open]: open })}>
 				<nav className={styles.nav}>
 					<ul className={styles.navList}>
-						{APP_ROUTES.map(({ href, label }) => (
-							<li key={href}>
+						{APP_ROUTES.map(({ href, label }, index) => (
+							<li key={`${href}-${index}`}>
 								<Link className={styles.navLink} href={href} target={"_blank"} rel={"noopener"}>
 									{t(label)}
 								</Link>
