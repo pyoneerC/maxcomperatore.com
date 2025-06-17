@@ -5,12 +5,12 @@ import { projects } from "~/data/projects";
 export default function sitemap(): MetadataRoute.Sitemap {
 	const currentDate = new Date().toISOString().split("T")[0];
 
-	const routes = APP_ROUTES.map(({ href }) => ({
-		url: `${HOST_URL}${href}`,
-		lastModified: currentDate,
-		changefreq: "monthly",
-		priority: 0.8,
-	}));
+	// const routes = APP_ROUTES.map(({ href }) => ({
+	// 	url: `${HOST_URL}${href}`,
+	// 	lastModified: currentDate,
+	// 	changefreq: "monthly",
+	// 	priority: 0.8,
+	// }));
 
 	const projectRoutes = projects.map(({ slug }) => ({
 		url: `${HOST_URL}/project/${slug}`,
@@ -47,5 +47,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		priority: 1.0,
 	};
 
-	return [homepage, ...routes, ...projectRoutes, ...additionalRoutes];
+	return [homepage, ...projectRoutes, ...additionalRoutes];
 }
