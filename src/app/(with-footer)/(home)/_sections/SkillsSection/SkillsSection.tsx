@@ -51,7 +51,7 @@ export const SkillsSection = () => {
 
 
 	return (
-		<section className="section-wrapper" ref={sectionRef}>
+		<section id="tech" className="section-wrapper" ref={sectionRef}>
 			<h2 className={styles.title} ref={titleRef}>
 				{t("title")}
 			</h2>

@@ -108,14 +108,14 @@ export const AboutSection = () => {
 	}, []);
 
 	return (
-		<section id="about-section" className={`section-wrapper ${styles.sectionWrapper}`} ref={sectionRef}>
+		<section id="about" className={`section-wrapper ${styles.sectionWrapper}`} ref={sectionRef}>
 			<h2 className={styles.title} ref={titleRef}>{t("title")}</h2>
 
 			<div className={styles.aboutMeContainer}>
 				<div className={styles.photoWrapper} ref={photoWrapperRef}>
 					<img
-						src="/assets/images/maximo_comperatore.avif"
-						alt="Maximo Comperatore"
+						src="/assets/images/joaquin_olivero.avif"
+						alt="Joaquín Olivero"
 						className={styles.photo}
 						loading="lazy"
 						width={300}

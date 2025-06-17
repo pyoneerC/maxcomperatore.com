@@ -61,7 +61,7 @@ export const ProjectsSection = () => {
 
 	// @ts-ignore
 	return (
-		<section className="section-wrapper" ref={sectionRef}>
+		<section id="projects" className="section-wrapper" ref={sectionRef}>
 			<h2 className={styles.title} ref={titleRef}>
 				{t("title")}
 			</h2>
