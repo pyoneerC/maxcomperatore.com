@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import clsx from "clsx"
-import { DRESAN_EMAIL } from "~/constants"
+import { JOACO_EMAIL } from "~/constants"
 import { useTimeout } from "~/hooks/use-timeout"
 import { CheckIcon } from "~/components/Svg/CheckIcon"
 import { EmailIcon } from "~/components/Svg/EmailIcon"
@@ -25,12 +25,12 @@ export const CopyEmailSmallButton: React.FC<Props> = ({ className }) => {
 	const handleOnClick = async () => {
 		const isCopied = true
 		setDisplayFeedback(isCopied)
-		window.location.href = `mailto:${DRESAN_EMAIL}`
+		window.location.href = `mailto:${JOACO_EMAIL}`
 	}
 
 	return (
 		<button className={clsx(styles.button, className)} onClick={handleOnClick}>
-			<EmailIcon /> {DRESAN_EMAIL}
+			<EmailIcon /> {JOACO_EMAIL}
 			<ArrowUpRight className={clsx(styles.icon, { [styles.showIcon]: !displayFeedback })} />
 			<CheckIcon className={clsx(styles.icon, { [styles.showIcon]: displayFeedback })} />
 		</button>

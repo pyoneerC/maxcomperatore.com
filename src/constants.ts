@@ -1,18 +1,22 @@
-export const DRESAN_EMAIL = "joacolivero.dev@gmail.com"
+export const JOACO_EMAIL = "joacolivero.dev@gmail.com"
 export const HOST_URL = "https://joacolivero.com"
 export const FORMSPREE_URL = "https://formspree.io/f"
 
 export const APP_ROUTES = [
-	{
-		href: "",
+	"/"
+]
+
+export const HOME_NAV_LINKS = [
+  	{	
+		href: "#about",
 		label: "about",
 	},
 	{
-		href: "",
+		href: "#projects",
 		label: "projects",
 	},
 	{
-		href: "",
+		href: "#tech",
 		label: "tech",
 	}
 ]

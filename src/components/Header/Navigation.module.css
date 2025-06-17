@@ -1,0 +1,10 @@
+.navList {
+	display: flex;
+	gap: var(--items-spacing);
+}
+
+@media screen and (max-width: 768px) {
+	.nav {
+		display: none;
+	}
+}

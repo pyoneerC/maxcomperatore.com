@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import clsx from "clsx"
-import { DRESAN_EMAIL } from "~/constants"
+import { JOACO_EMAIL } from "~/constants"
 import { copyToClipboard } from "~/utils"
 import { useTimeout } from "~/hooks/use-timeout"
 import styles from "./CopyEmailButton.module.css"
@@ -19,7 +19,7 @@ export const CopyEmailButton = () => {
 	useTimeout(hideFeedback, RESET_FEEDBACK_TIME)
 
 	const handleOnClick = async () => {
-		const isCopied = await copyToClipboard(DRESAN_EMAIL)
+		const isCopied = await copyToClipboard(JOACO_EMAIL)
 		setDisplayFeedback(isCopied)
 	}
 
@@ -29,7 +29,7 @@ export const CopyEmailButton = () => {
 				{t("toast")}
 			</div>
 			<button className={styles.button} type="button" onClick={handleOnClick}>
-				{DRESAN_EMAIL}
+				{JOACO_EMAIL}
 			</button>
 			<div className={styles.hintMessage}>{t("copy")}</div>
 		</div>
