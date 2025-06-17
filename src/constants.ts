@@ -7,13 +7,14 @@ export const APP_ROUTES = [
 ]
 
 export const HOME_NAV_LINKS = [
-  	{	
-		href: "#about",
-		label: "about",
-	},
+  	
 	{
 		href: "#projects",
 		label: "projects",
+	},
+	{	
+		href: "#about",
+		label: "about",
 	},
 	{
 		href: "#tech",
