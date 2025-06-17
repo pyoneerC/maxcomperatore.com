@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import clsx from "clsx"
-import { APP_ROUTES } from "~/constants"
 import { toggleBodyOverflow } from "~/utils"
 import { useOnPathnameChange } from "~/hooks/use-on-pathname-change"
 import { Link } from "~/components/Ui/Link"
@@ -13,9 +12,17 @@ import { ThemeSwitcher } from "../ThemeSwitcher"
 import styles from "./MenuMobile.module.css"
 import { track } from '@vercel/analytics'
 import { useTranslations } from "next-intl"
+import { HOME_NAV_LINKS } from "~/constants"
+import { useIsValidAppRoute } from "~/hooks/use-is-in-valid-path"	
 
 export const MenuMobile = () => {
 	const [open, setOpen] = useState(false)
+	const isValidAppRoute = useIsValidAppRoute()
+
+	const handleCloseMenu = () => {
+		setOpen(false)
+		toggleBodyOverflow(false)
+	}
 
 	useOnPathnameChange(() => {
 		setOpen(false)
@@ -45,17 +52,23 @@ export const MenuMobile = () => {
 				<span className={styles.buttonLine}></span>
 			</button>
 			<div className={clsx(styles.menu, { [styles.open]: open })}>
-				<nav className={styles.nav}>
-					<ul className={styles.navList}>
-						{APP_ROUTES.map(({ href, label }, index) => (
-							<li key={`${href}-${index}`}>
-								<Link className={styles.navLink} href={href} target={"_blank"} rel={"noopener"}>
-									{t(label)}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</nav>
+				{isValidAppRoute && (
+					<nav className={styles.nav}>
+						<ul className={styles.navList}>
+							{HOME_NAV_LINKS.map(({ href, label }) => (
+								<li key={href}>
+									<Link
+										className={styles.navLink}
+										href={href}
+										onClick={handleCloseMenu}
+									>
+										{t(label)}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
+				)}
 				<div className={styles.optionsWrapper}>
 					<ContactDialog
 						trigger={
