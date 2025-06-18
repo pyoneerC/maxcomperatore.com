@@ -357,18 +357,6 @@
 	}
 }
 
-.minecraftsubtitle {
-	position: absolute;
-	color: var(--color-minecraft);
-	font-size: clamp(1rem, 1.5vw, 1.5rem);
-	transform: rotate(-20deg);
-	animation: minesubtitle 0.3s alternate infinite;
-	top: 26%;
-	right: 28%;
-	font-family: 'Minecraft', monospace;
-	white-space: nowrap;
-}
-
 /* Push it more to the right on smaller screens like MacBook Air (approx. 1440px width) */
 @media (max-width: 1440px) {
 	.minecraftsubtitle {

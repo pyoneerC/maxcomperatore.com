@@ -1,6 +1,9 @@
 .navList {
 	display: flex;
 	gap: var(--items-spacing);
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 @media screen and (max-width: 768px) {
