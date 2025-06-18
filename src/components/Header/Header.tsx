@@ -20,6 +20,8 @@ export const Header = () => {
 				</NextLink>
 				<Navigation/>
 				<div className={styles.optionsWrapper}>
+					< ThemeSwitcher />
+					< LanguageSwitcher />
 					<ContactDialog
 						trigger={
 							<Button size="small" type="button">
@@ -27,8 +29,6 @@ export const Header = () => {
 							</Button>
 						}
 					/>
-					< ThemeSwitcher />
-					< LanguageSwitcher />
 				</div>
 				<MenuMobile />
 			</div>
