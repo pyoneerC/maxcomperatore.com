@@ -21,6 +21,7 @@
 	max-inline-size: var(--max-inline-size);
 	inline-size: 100%;
 	caret-color: transparent;
+	justify-content: space-between;
 }
 
 .homeLogo > path {
@@ -61,8 +62,9 @@
 .optionsWrapper {
 	display: flex;
 	align-items: center;
-	gap: 0 var(--items-spacing);
+	gap: var(--items-spacing);
 	caret-color: transparent;
+	margin-left: auto;
 }
 
 @media screen and (max-width: 768px) {
