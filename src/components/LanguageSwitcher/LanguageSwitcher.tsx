@@ -6,35 +6,33 @@ import { setUserLocale } from "~/services/locale"
 import { useTranslations } from "next-intl"
 
 export const LanguageSwitcher = () => {
+	const [mounted, setMounted] = useState(false)
 	const [isPending, startTransition] = useTransition()
-	const [locale, setLocale] = useState("es") // Default to Spanish
+	const [locale, setLocale] = useState("es")
 	const t = useTranslations("LanguageSwitcher")
 
-	// Automatically set locale based on the 'lang' query parameter
 	useEffect(() => {
-		if (typeof window !== "undefined") {
-			const params = new URLSearchParams(window.location.search)
-			const lang = params.get("lang") // Get the 'lang' query parameter
-			if (lang === "en" || lang === "es") {
-				setLocale(lang)
-				// Optionally, sync with backend
-				setUserLocale(lang)
-			} else {
-				// Default to English if 'lang' is not specified or invalid
-				setLocale("en")
-				setUserLocale("en")
-			}
-		}
+		setMounted(true)
 	}, [])
+
+	useEffect(() => {
+		if (!mounted) return
+		const params = new URLSearchParams(window.location.search)
+		const lang = params.get("lang")
+		const valid = lang === "en" || lang === "es" ? lang : "en"
+		setLocale(valid)
+		setUserLocale(valid)
+	}, [mounted])
 
 	const handleOnClick = () => {
 		startTransition(() => {
 			const newLocale = locale === "es" ? "en" : "es"
-			// @ts-ignore
 			setUserLocale(newLocale).then(() => setLocale(newLocale))
 		})
 	}
 
+	if (!mounted) return null
+	
 	return (
 		<button
 			className={styles.button}
