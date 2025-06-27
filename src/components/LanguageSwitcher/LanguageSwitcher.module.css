@@ -15,7 +15,7 @@
 
 .button:hover {
 	color: var(--color-text);
-	cursor: url('~/public/assets/cursor/hand-pointer.png'), auto;
+	cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
 	caret-color: transparent;
 }
 

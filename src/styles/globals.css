@@ -21,7 +21,7 @@
 }
 
 body {
-	cursor: url('~/public/assets/cursor/arrowhead.png'), auto;
+	cursor: url('/assets/cursor/arrowhead.png'), auto;
 }
 
 [data-theme="light"] {
@@ -137,7 +137,7 @@ a {
 	}
 
 	body {
-		cursor: url('~/public/assets/cursor/hand-pointer.png'), auto;
+		cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
 	}
 }
 
@@ -164,13 +164,13 @@ a {
 }
 
 body {
-	cursor: url('~/public/assets/cursor/arrowhead.png'), auto;
+	cursor: url('/assets/cursor/arrowhead.png'), auto;
 }
 
 a, button, input, textarea {
-	cursor: url('~/public/assets/cursor/hand-pointer.png'), pointer;
+	cursor: url('/assets/cursor/hand-pointer.png'), pointer;
 }
 
 .skillCard:hover {
-	cursor: url('~/public/assets/cursor/hand-pointer.png'), pointer;
+	cursor: url('/assets/cursor/hand-pointer.png'), pointer;
 }
