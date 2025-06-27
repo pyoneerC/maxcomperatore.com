@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./AboutSection.module.css";
 import { useTranslations } from "next-intl";
-import { getCalApi } from "@calcom/embed-react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
