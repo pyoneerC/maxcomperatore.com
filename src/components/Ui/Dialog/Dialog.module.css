@@ -49,7 +49,7 @@
 .close:hover {
 	opacity: 1;
 	transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
-	cursor: url('~/public/assets/cursor/hand-pointer.png'), auto;
+	cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
 }
 
 .title {

@@ -110,7 +110,7 @@ export const HeroSection = () => {
 					})}
 				</p>
 				<p className={styles.introSubtitle}>
-					<a href="https://www.google.com/maps/place/Mendoza" target="_blank" rel="noopener noreferrer"
+					<a href="https://www.google.com/maps/place/Villa+Carlos+Paz,+Córdoba,+Argentina/" target="_blank" rel="noopener noreferrer"
 						 className={styles.link}>
 						{t("location")}
 					</a>
@@ -131,10 +131,10 @@ export const HeroSection = () => {
 			</div>
 			<div className={styles.actions} ref={actionsRef}>
 				<NextLink
-					href="https://drive.google.com/file/d/1En1RlPAl99JvT7PdsqTdPrxo-qst7clC/view?usp=sharing"
+					href="https://drive.google.com/file/d/1fevdA01nCS-LsR5CR2TaAEzGHW3O0WPO/view?usp=sharing"
 					target="_blank"
 					prefetch={true}
-					passHref // Ensures proper anchor rendering
+					passHref 
 				>
 					<Button className={styles.actionBtn} variant="outlined">
 						<svg

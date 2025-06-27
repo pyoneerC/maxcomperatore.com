@@ -127,7 +127,7 @@
 
 .navLink:hover::before {
 	transform: scale(1.15);
-	cursor: url('~/public/assets/cursor/hand-pointer.png'), auto;
+	cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
 }
 
 @media screen and (min-width: 768px) {

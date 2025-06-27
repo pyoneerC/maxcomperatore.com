@@ -7,17 +7,22 @@ import styles from "./ThemeSwitcher.module.css";
 export const ThemeSwitcher = () => {
 	const { theme, setTheme } = useTheme();
 	const [isLightMode, setIsLightMode] = useState(theme === "light");
+	const [mounted, setMounted] = useState(false);
+
 
 	useEffect(() => {
-		setIsLightMode(theme === "light");
-	}, [theme]);
+		setMounted(true);
+	}, []);	
+
+	useEffect(() => {
+		if (mounted) setIsLightMode(theme === "light");
+	}, [theme, mounted]);
+
+	if (!mounted) return null;
 
 	const oppositeThemeName = isLightMode ? "oscuro" : "claro";
-
 	const handleOnClick = () => {
-		const oppositeTheme = isLightMode ? "dark" : "light";
-		setTheme(oppositeTheme);
-		setIsLightMode(!isLightMode);
+		    setTheme(isLightMode ? 'dark' : 'light');
 	};
 
 	return (
