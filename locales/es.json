@@ -19,11 +19,11 @@
   "HeroSection": {
     "availability": "Disponible para nuevos proyectos",
     "contact": "Contactar",
-    "download": "Descargar Currículum",
+    "download": "Currículum",
     "position": "Desarrollador de Software",
     "position2": "Especialista en Backend",
     "language": "(Click the flag to switch to English!)",
-    "location": "Operando desde Córdoba, Argentina",
+    "location": "Operando desde Villa Carlos Paz, Córdoba",
     "subtitle": "Dedicado a transformar <em>ideas complejas</em> en <em>soluciones eficaces</em>",
     "resumeUrl": "https://drive.google.com/file/d/1fevdA01nCS-LsR5CR2TaAEzGHW3O0WPO/view?usp=drive_link"
   },
