@@ -13,7 +13,7 @@
 
 .card:hover {
 	background-color: var(--color-background-secondary);
-	cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
+	cursor: url('/assets/cursor/hand-pointer.png'), auto;
 }
 
 .linkWrapper {
@@ -50,7 +50,7 @@
 
 .card:hover .emoji {
 	transform: scale(1.15);
-	cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
+	cursor: url('/assets/cursor/hand-pointer.png'), auto;
 }
 
 .card:hover .icon {

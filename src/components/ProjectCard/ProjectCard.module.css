@@ -66,7 +66,7 @@
 .card:hover .image {
 	filter: brightness(1.25) contrast(1.15) saturate(1.2); /* Subtle brightness boost */
 	transform: scale(1.12) rotate(1deg); /* Smooth scale and slight rotation */
-	cursor: url('/public/assets/cursor/hand-pointer.png'), auto; /* Custom cursor */
+	cursor: url('/assets/cursor/hand-pointer.png'), auto; /* Custom cursor */
 	transition:
 			transform 0.6s cubic-bezier(0.19, 1, 0.22, 1),
 			filter 0.5s ease,
