@@ -42,12 +42,12 @@
 @media (hover: hover) {
     .primary:hover {
         background-color: hsl(var(--color-text-hsl) / 0.8);
-        cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
+        cursor: url('/assets/cursor/hand-pointer.png'), auto;
     }
     .outlined:hover {
         background-color: var(--hover-color-background);
         border-color: var(--hover-color-stroke);
-        cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
+        cursor: url('/assets/cursor/hand-pointer.png'), auto;
     }
 }
 @media (max-width: 767px) {

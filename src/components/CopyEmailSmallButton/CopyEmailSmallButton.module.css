@@ -11,7 +11,7 @@
 
 .button:hover > .showIcon {
 	transition: opacity 200ms;
-	cursor: url('/public/assets/cursor/hand-pointer.png'), auto;
+	cursor: url('/assets/cursor/hand-pointer.png'), auto;
 }
 
 .button:is(:hover, :focus-visible) > .showIcon {
