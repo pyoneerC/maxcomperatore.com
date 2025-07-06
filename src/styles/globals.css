@@ -29,7 +29,6 @@ body {
 	--color-card: hsl(0, 4%, 91%);
 	--color-text-hsl: 0 0% 1%;
 	--color-stroke-hsl: 0 3% 84%;
-	--color-minecraft: #C4B900;
 
 	--color-primary: hsl(212 100% 48%);
 	--color-text: hsl(0 0% 1%);
@@ -53,7 +52,6 @@ body {
 	--color-card: #101012;
 	--color-text-hsl: 0 0% 93%;
 	--color-stroke-hsl: 0 0% 12%;
-	--color-minecraft: #FBF915;
 
 	--color-primary: hsl(212 100% 48%);
 	--color-text: hsl(0 0% 93%);

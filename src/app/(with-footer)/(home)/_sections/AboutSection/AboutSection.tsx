@@ -97,8 +97,12 @@ export const AboutSection = () => {
 			});
 
 			return () => {
-				if (titleSplit) titleSplit.revert();
-				paragraphSplits.forEach(split => split.revert());
+				if (titleSplit && titleSplit.elements && titleSplit.elements[0]?.isConnected) titleSplit.revert();
+				paragraphSplits.forEach(split => {
+					if(split.elements && split.elements[0]?.isConnected) {
+						split.revert();
+					}
+				});
 				tl.kill();
 			};
 		}, sectionRef);
