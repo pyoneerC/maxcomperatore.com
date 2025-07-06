@@ -21,18 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 	const additionalRoutes = [
 		{
-			url: `${HOST_URL}/faq`,
-			lastModified: currentDate,
-			changefreq: "monthly",
-			priority: 0.7,
-		},
-		{
-			url: `${HOST_URL}/blog`,
-			lastModified: currentDate,
-			changefreq: "weekly",
-			priority: 0.9,
-		},
-		{
 			url: `${HOST_URL}/iniciativas`,
 			lastModified: currentDate,
 			changefreq: "monthly",
