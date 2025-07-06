@@ -14,12 +14,12 @@ export const SkillsSection = () => {
 	const t = useTranslations("SkillsSection")
 	const [currentTooltip, setCurrentTooltip] = useState("") // State to store the current tooltip
 
-	// GSAP Refs
-	const sectionRef = useRef(null);
-	const titleRef = useRef(null);
-	const skillWrapperRef = useRef(null);
-	const arrowwaveRef = useRef(null);
-	const descriptionRef = useRef(null);
+	// GSAP Refs tipados correctamente
+	const sectionRef = useRef<HTMLElement | null>(null);
+	const titleRef = useRef<HTMLHeadingElement | null>(null);
+	const skillWrapperRef = useRef<HTMLDivElement | null>(null);
+	const arrowwaveRef = useRef<HTMLDivElement | null>(null);
+	const descriptionRef = useRef<HTMLParagraphElement | null>(null);
 
 	const handleMouseEnter = (tooltip: SetStateAction<string>) => {
 		setCurrentTooltip(tooltip)
@@ -30,6 +30,17 @@ export const SkillsSection = () => {
 	}
 
 	useEffect(() => {
+		if (
+			!sectionRef.current ||
+			!titleRef.current ||
+			!skillWrapperRef.current ||
+			!arrowwaveRef.current ||
+			!descriptionRef.current
+		) {
+			console.warn("GSAP Aborted: One or more refs not available.");
+			return;
+		}
+
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: sectionRef.current,
@@ -38,17 +49,18 @@ export const SkillsSection = () => {
 			}
 		});
 
-		// @ts-ignore
-		let x = skillWrapperRef.current.children;
+		const skillChildren = skillWrapperRef.current.children;
 
 		tl.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out" }) // Fade in section
 			.fromTo(titleRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.6") // Title slide up and fade in
-			.fromTo(x, { y: 30, opacity: 0, stagger: 0.1 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.1 }, "-=0.4") // Skill cards stagger slide up and fade in
+			.fromTo(skillChildren, { y: 30, opacity: 0, stagger: 0.1 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out", stagger: 0.1 }, "-=0.4") // Skill cards stagger slide up and fade in
 			.fromTo(arrowwaveRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.5") // Arrowwave slide up and fade in
 			.fromTo(descriptionRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.4"); // Description slide up and fade in
 
+		return () => {
+			tl.kill();
+		};
 	}, []);
-
 
 	return (
 		<section id="tech" className="section-wrapper" ref={sectionRef}>
