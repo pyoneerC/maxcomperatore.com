@@ -21,7 +21,6 @@ export const ProjectsSection = () => {
 	const titleRef = useRef<HTMLHeadingElement | null>(null);
 	const subtitleRef = useRef<HTMLParagraphElement | null>(null);
 	const projectsWrapperRef = useRef<HTMLDivElement | null>(null);
-	const seemoreLinkRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
 		const detectDevice = () => {
