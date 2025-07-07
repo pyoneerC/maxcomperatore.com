@@ -11,6 +11,9 @@
   "LanguageSwitcher": {
     "switchLanguage": "Cambiar a Inglés"
   },
+  "ContactDialog": {
+    "title": "Contactar"
+  },
   "Experience": {
     "remote": "Remoto",
     "hybrid": "Híbrido",
@@ -29,36 +32,42 @@
   },
   "ProjectsSection": {
     "title": "Proyectos Destacados",
-    "seemore": "Ver más iniciativas",
     "pc": "¡Pasa el ratón por encima de las imágenes para verlas en color!",
     "mobile": "¡Mantén presionadas las imágenes para verlas en color!",
     "next" : "Siguiente",
     "previous" : "Anterior",
     "home" : "← Volver al inicio",
 
-    "mercadolibrepricechart": {
-      "name": "Cinemax",
-      "description": "Reserva boletos de cine de manera inteligente con IA.",
-      "linkVisitSite": "Visitar sitio",
-      "linkViewCode": "Ver código",
-      "linkViewVideo": "Ver vídeo",
-      "about": "Cinemax es una aplicación web que simplifica la reserva de entradas de cine con un diseño intuitivo. \nSu backend, desarrollado desde cero, asegura un rendimiento seguro y confiable. \nAdemás, incluye un asistente de IA avanzado para ayudar a los usuarios durante la reserva y resolver cualquier consulta que puedan tener."
+    "Deporturnos": {
+      "name": "Deporturnos",
+      "description": "Plataforma para la gestión intergal de canchas deportivas.",
+      "linkVisitSite": "Sitio Web",
+      "linkViewCode": "Repositorio Backend",
+      "linkViewCode2": "Repositorio Frontend",
+      "linkVisitDocs": "Documentación",
+      "about": "Deporturnos es una aplicación web que simplifica la reserva canchas en centros deportivos con un diseño intuitivo. Su backend, desarrollado desde cero, asegura un rendimiento seguro y confiable. \nAdemás, proporciona una solución completa para la administración de reservas, gestión de usuarios y más."
     },
-    "monedasAPI": {
-      "name": "BlinkLink",
-      "description": "API robusta para acortar URLs, utilizando operaciones CRUD.",
-      "linkVisitDocs": "Visitar documentación",
-      "linkViewCode": "Ver código",
-      "linkViewVideo": "Ver en Docker",
-      "linkViewSite": "Visitar sitio",
-      "about": "Con el objetivo de profundizar en el desarrollo de APIs y la administración de bases de datos, desarrollé BlinkLink, una API pública que ofrece un servicio avanzado de acortamiento de URLs. \n\nBlinkLink está diseñada para proporcionar un rendimiento eficiente y escalable, integrando operaciones CRUD que permiten una gestión completa y segura de los enlaces."
+    "ProductManager": {
+      "name": "Product Manager App",
+      "description": "API RESTful diseñada para manejar un CRUD completo de productos.",
+      "linkVisitSite": "Sitio Web",
+      "linkViewCode": "Repositorio",
+      "linkVisitDocs": "Documentación",
+      "about": "Esta aplicación es una herramienta integral para la gestión de productos, diseñada para ser escalable y fácil de usar. Incluye autenticación JWT, carga de archivos, documentación Swagger, pruebas automatizadas y vistas con EJS."
     },
-    "TheDungeon": {
-      "name": "Ephemera",
-      "description": "Juego impulsado por IA donde juzgas almas y decides sus destinos.",
-      "linkItchIo": "Ver en itch.io",
-      "linkViewVideos": "Ver vídeos del juego",
-      "about": "En este juego de simulación impulsado por IA, asumes el papel de un juez cósmico encargado de decidir el destino de las almas recién fallecidas. \nUsando solo tu intuición y las historias compartidas por estas almas generadas por IA, descubrirás sus arrepentimientos, deseos y verdades más profundas. \nCada decisión—Salvar, Reencarnar o Condenar—pondrá a prueba tu moralidad y definirá su destino final. \n¿Podrás navegar este laberinto moral y emitir un juicio justo en la Unidad de Procesamiento de Almas?"
+    "Poui": {
+      "name": "Poui",
+      "description": "Página web diseñada para una emprendedora dedicada a la venta de velas aromáticas y difusores.",
+      "linkVisitSite": "Sitio Web",
+      "linkViewCode": "Repositorio",
+      "about": "El sitio ofrece una experiencia cálida y elegante que refleja la esencia del negocio, con un diseño centrado en destacar la calidad y variedad de productos relacionados con la aromaterapia y el bienestar. \nIncluye un catálogo interactivo, formulario de contacto y una sección 'Quiénes somos'."
+    },
+    "TaskList": {
+      "name": "TaskList",
+      "description": "Una simple lista de tareas que te ayudará mucho.",
+      "linkVisitSite": "Sitio Web",
+      "linkViewCode": "Repositorio",
+      "about": "Se trata de una simple lista de tareas, que utiliza React Router para la navegación y almacenamiento en localStorage."
     }
   },
   "AboutSection": {
@@ -71,7 +80,6 @@
   "SkillsSection": {
     "title": "Tecnologías empleadas recientemente",
     "defaultDescription": "Pasa el cursor sobre una habilidad para ver más detalles.",
-
     "Python": "Lenguaje versátil para análisis de datos, automatización y desarrollo web.",
     "Docker": "Plataforma que facilita el despliegue de aplicaciones en entornos portables.",
     "Azure": "Nube de Microsoft con enfoque en IA avanzada, datos y escalabilidad.",
@@ -80,9 +88,6 @@
     "n8n": "Automatización con IA y agentes inteligentes para flujos de trabajo modernos.",
     "OpenAI": "Modelos y API de IA para automatización, chatbots y apps inteligentes.",
     "React": "Herramienta para apps web dinámicas y rápidas (¡como esta!)."
-  },
-  "ContactDialog": {
-    "title": "Contactar"
   },
   "ContactSection": {
     "question": "¿Necesitas ayuda con tu proyecto?",
@@ -108,18 +113,6 @@
   "CopyEmailButton": {
     "copy": "Click para copiar",
     "toast": "¡Estaré esperando tu mensaje!"
-  },
-  "Initiatives": {
-    "title": "Otras iniciativas",
-    "subtitle": "Proyectos y contribuciones realizadas para aprender nuevas tecnologías y mejorar mis habilidades.",
-    "hcr" : "Recreación en Unity con mejoras en física, interfaz y sonido para una experiencia más desafiante e inmersiva. Inspirado por mi amor por este juego de la infancia.",
-    "arrayutils" : "Colección de funciones adaptadas de la STL de C++ para arreglos en Blueprints de Unreal Engine, con más de 12,000 descargas totales.",
-    "tgcp" : "Transformador Rápido y Optimizado con ONNX para Generación de Texto en Tiempo Real a Nivel de Caracteres.",
-    "pd" : "Simulador de manejo ambientado en una ciudad gótica con gráficos al estilo de la PlayStation 2.",
-    "afx" : "API para obtener cotizaciones de divisas extranjeras en vivo, en Argentina.",
-    "uepc" : "Script de línea de comandos que optimiza el mantenimiento de proyectos de Unreal Engine eliminando carpetas temporales de forma efectiva, segura y rápida.",
-    "roadmapsh" : "Como colaborador principal del 6to repositorio con más estrellas de GitHub, he contribuido significativamente en las hojas de ruta para desarrolladores de backend y videojuegos.",
-    "mercadix" : "Sitio web que permite consultar precios de productos en MercadoLibre y visualizarlos en un histograma."
   },
   "Form": {
     "name": "Juan Pérez",

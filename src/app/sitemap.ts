@@ -19,15 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		priority: 0.7,
 	}));
 
-	const additionalRoutes = [
-		{
-			url: `${HOST_URL}/iniciativas`,
-			lastModified: currentDate,
-			changefreq: "monthly",
-			priority: 0.8,
-		},
-	];
-
 	const homepage = {
 		url: `${HOST_URL}/`,
 		lastModified: currentDate,
@@ -35,5 +26,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		priority: 1.0,
 	};
 
-	return [homepage, ...projectRoutes, ...additionalRoutes];
+	return [homepage, ...projectRoutes];
 }

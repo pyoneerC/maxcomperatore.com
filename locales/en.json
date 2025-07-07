@@ -32,36 +32,42 @@
   },
   "ProjectsSection": {
     "title": "Featured Projects",
-    "seemore": "See more initiatives",
     "pc": "Hover over the cards to see them in color!",
     "mobile": "Hold in the pictures to see them in color!",
-    "next" : "Next",
-    "previous" : "Previous",
-    "home" : "← Back to home",
+    "next": "Next",
+    "previous": "Previous",
+    "home": "← Back to home",
 
-    "mercadolibrepricechart": {
-      "name": "Cinemax",
-      "description": "AI-powered platform for booking movie tickets.",
-      "linkVisitSite": "Visit site",
-      "linkViewCode": "View code",
-      "linkViewVideo": "View video",
-      "about" : "Cinemax is a web application that simplifies movie ticket booking with an intuitive design. \nIts backend, developed from scratch, ensures secure and reliable performance. \nAdditionally, it features an advanced AI assistant to help users throughout the booking process and address any questions they may have."
+    "Deporturnos": {
+      "name": "Deporturnos",
+      "description": "Platform for the comprehensive management of sports courts.",
+      "linkVisitSite": "Website",
+      "linkViewCode": "Backend Repository",
+      "linkViewCode2": "Frontend Repository",
+      "linkVisitDocs": "Documentation",
+      "about": "Deporturnos is a web application that simplifies court reservations in sports centers with an intuitive design.\nIts backend, developed from scratch, ensures secure and reliable performance.\nAdditionally, it provides a complete solution for reservation management, user administration, and more."
     },
-    "monedasAPI": {
-      "name": "BlinkLink",
-      "description": "Robust API for URL shortening, leveraging CRUD operations.",
-      "linkVisitDocs": "Visit documentation",
-      "linkViewCode": "View code",
-      "linkViewVideo": "View in Dockerhub",
-      "linkViewSite": "Visit site",
-      "about" : "With the goal of delving deeper into API development and database management, I developed BlinkLink, a public API that provides an advanced URL shortening service. \n\nBlinkLink is designed to provide efficient and scalable performance, integrating CRUD operations that enable complete and secure link management."
+    "ProductManager": {
+      "name": "Product Manager App",
+      "description": "RESTful API designed to handle full CRUD operations for products.",
+      "linkVisitSite": "Website",
+      "linkViewCode": "Repository",
+      "linkVisitDocs": "Documentation",
+      "about": "This application is a comprehensive tool for product management, designed to be scalable and easy to use. Includes JWT authentication, file uploads, Swagger documentation, automated tests, and EJS views."
     },
-    "TheDungeon": {
-      "name": "S.P.U",
-      "description": "AI-driven game where you judge souls and decide their fates.",
-      "linkItchIo": "View on itch.io",
-      "linkViewVideos": "View gameplay",
-      "about": "In this AI-powered simulation game, you step into the role of a cosmic judge tasked with deciding the fates of newly departed souls. \nUsing only your intuition and the stories shared by these AI-generated souls, you’ll uncover their regrets, desires, and deepest truths. \nEvery decision—whether to Save, Reincarnate, or Damn—will challenge your morality and shape their ultimate destiny. \nCan you navigate this moral maze and pass fair judgment in the Soul Processing Unit?"
+    "Poui": {
+      "name": "Poui",
+      "description": "Website designed for an entrepreneur dedicated to selling scented candles and diffusers.",
+      "linkVisitSite": "Website",
+      "linkViewCode": "Repository",
+      "about": "The site offers a warm and elegant experience that reflects the essence of the business, with a design focused on highlighting the quality and variety of products related to aromatherapy and well-being.\nIt includes an interactive catalog, contact form, and an 'About Us' section."
+    },
+    "TaskList": {
+      "name": "TaskList",
+      "description": "A simple task list that will help you a lot.",
+      "linkVisitSite": "Website",
+      "linkViewCode": "Repository",
+      "about": "This is a simple task list that uses React Router for navigation and stores data in localStorage."
     }
   },
   "AboutSection": {
@@ -74,7 +80,6 @@
   "SkillsSection": {
     "title": "Recently used technologies",
     "defaultDescription": "Hover over a skill to see more details!",
-
     "Python": "Flexible language for data analysis, automation, and building web services.",
     "Docker": "Packages apps in secure containers for easy, consistent deployment.",
     "Azure": "Microsoft’s cloud platform for apps, AI, and data solutions that scale.",
@@ -109,18 +114,6 @@
   "CopyEmailButton": {
     "copy": "Click to copy",
     "toast": "I'll be waiting for your message!"
-  },
-  "Initiatives": {
-    "title": "Other initiatives",
-    "subtitle": "Projects and contributions made to learn new technologies and refine my skills.",
-    "hcr" : "Recreation in Unity with improvements in physics, interface and sound for a more challenging and immersive experience. Inspired by my love for this childhood game.",
-    "arrayutils" : "Functions adapted from the C++ Standard Template Library (STL) for arrays in Unreal Engine Blueprints, with over 12k downloads.",
-    "tgcp" : "Fast, ONNX-Optimized Transformer for Real-Time Character-Level Text Generation.",
-    "pd" : "Driving simulator set in a gothic city with PlayStation 2-style graphics.",
-    "afx" : "Real-time foreign exchange rates API for the Argentinean market.",
-    "uepc" : "Command line script that optimizes the maintenance of Unreal Engine projects by deleting temporary folders effectively, securely and quickly.",
-    "roadmapsh" : "As a top contributor for the 6th most starred repository on GitHub, I have made significant contributions to the project, especially in the game developer and backend roadmaps.",
-    "mercadix": "Website that allows users to check product prices on MercadoLibre and visualize them in a histogram."
   },
   "Form": {
     "name": "John Doe",

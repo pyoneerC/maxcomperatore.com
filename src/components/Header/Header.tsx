@@ -1,5 +1,4 @@
 import NextLink from "next/link"
-import { APP_ROUTES } from "~/constants"
 import { HomeLogo } from "~/components/Svg/HomeLogo"
 import { LanguageSwitcher } from "~/components/LanguageSwitcher"
 import { Button } from "~/components/Ui/Button"
