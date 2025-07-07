@@ -64,19 +64,19 @@
 }
 
 .card:hover .image {
-	filter: brightness(1.25) contrast(1.15) saturate(1.2); /* Subtle brightness boost */
-	transform: scale(1.12) rotate(1deg); /* Smooth scale and slight rotation */
-	cursor: url('/assets/cursor/hand-pointer.png'), auto; /* Custom cursor */
+	filter: brightness(1) contrast(1.15) saturate(1); 
+	transform: scale(1.12);
+	cursor: url('/assets/cursor/hand-pointer.png'), auto; 
 	transition:
 			transform 0.6s cubic-bezier(0.19, 1, 0.22, 1),
 			filter 0.5s ease,
-			box-shadow 0.5s ease; /* Smooth transitions */
-	box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15), 0 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+			box-shadow 0.5s ease; 
+	box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15), 0 8px 15px rgba(0, 0, 0, 0.2); 
 	position: relative;
-	z-index: 2; /* Ensure it stays above */
+	z-index: 2; 
 }
 
-/* Glowing Border Effect */
+
 .card:hover .image::before {
 	content: "";
 	position: absolute;
@@ -85,10 +85,10 @@
 	width: 116%;
 	height: 116%;
 	border-radius: 12px;
-	background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%); /* Smooth glow fade */
-	box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.4); /* Subtle outer glow */
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%); 
+	box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.4); 
 	opacity: 0;
-	z-index: -1; /* Ensure it sits below the image */
+	z-index: -1; 
 	transition: opacity 0.5s ease, transform 0.7s ease;
 	transform: scale(1.1);
 }
