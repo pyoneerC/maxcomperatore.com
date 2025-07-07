@@ -2,137 +2,141 @@ import type { CoverProject } from "~/types"
 import { Tag } from "./tags"
 
 export const projectMetadata = {
-	mercadolibrepricechart: {
-		slug: "mercadolibrepricechart",
-		name: "Cinemax",
+	Deporturnos: {
+		slug: "deporturnos",
+		name: "Deporturnos",
 	},
-	BlinkLink: {
-		slug: "blinklink",
-		name: "BlinkLink",
+	ProductManager: {
+		slug: "product-manager",
+		name: "Product Manager",
 	},
-	TheDungeon: {
-		slug: "the-dungeon",
-		name: "S.P.U",
+	Poui: {
+		slug: "poui",
+		name: "Poui",
 	},
 }
 
 export const coverProjects: CoverProject[] = [
 	{
-		...projectMetadata.mercadolibrepricechart,
-		imageUrl: `/assets/images/projects/cinemax/cinemax.avif`,
-		i18nDescriptionKey: "mercadolibrepricechart.description",
+		...projectMetadata.Deporturnos,
+		imageUrl: `/assets/images/projects/deporturnos/home-depo.avif`,
+		i18nDescriptionKey: "deporturnos.description",
 	},
 	{
-		...projectMetadata.BlinkLink,
-		imageUrl: `/assets/images/projects/cover/blinklink.avif`,
-		i18nDescriptionKey: "monedasAPI.description",
+		...projectMetadata.ProductManager,
+		imageUrl: `/assets/images/projects/productmanager/home.avif`,
+		i18nDescriptionKey: "ProductManager.description",
 	},
 	{
-		...projectMetadata.TheDungeon,
-		imageUrl: `/assets/images/projects/cover/thedungeon.avif`,
-		i18nDescriptionKey: "TheDungeon.description",
+		...projectMetadata.Poui,
+		imageUrl: `/assets/images/projects/poui/home-poui.avif`,
+		i18nDescriptionKey: "Poui.description",
 	},
 ]
 
 export const projects = [
 	{
-		...projectMetadata.mercadolibrepricechart,
+		...projectMetadata.Deporturnos,
 		index: 0,
-		description: "mercadolibrepricechart.about",
+		description: "deporturnos.about",
 		mobileImages:
 			[
-				`/assets/images/projects/cinemax/phone.avif`,
+				`/assets/images/projects/deporturnos/deporturnos.gif`,
 			],
 		desktopImages:
 			[
-				`/assets/images/projects/cinemax/index.avif`,
-				`/assets/images/projects/cinemax/seats.avif`,
-				`/assets/images/projects/cinemax/pycharm.avif`,
-				`/assets/images/projects/cinemax/receipt.avif`,
+				`/assets/images/projects/deporturnos/login.avif`,
+				`/assets/images/projects/deporturnos/register.avif`,
+				`/assets/images/projects/deporturnos/homeclient.avif`,
 			],
 		links: [
 			{
-				label: "mercadolibrepricechart.linkVisitSite",
-				url: "https://cinemaximo.netlify.app/",
+				label: "deporturnos.linkVisitSite",
+				url: "",
 			},
 			{
-				label: "mercadolibrepricechart.linkViewVideo",
-				url: "https://youtu.be/0zoD_jpB_t4",
+				label: "deporturnos.linkViewCode",
+				url: "https://github.com/Pulpoide/deporturnos-back",
 			},
 			{
-				label: "mercadolibrepricechart.linkViewCode",
-				url: "https://github.com/pyoneerC/Cinemax-B",
+				label: "deporturnos.linkViewCode2",
+				url: "https://github.com/Pulpoide/deporturnos-front",
+			},
+			{
+				label: "deporturnos.linkVisitDocs",
+				url: "",
 			},
 		],
 		tags:
 			[
-			Tag.python,
-			Tag.fastAPI,
+			Tag.java,
+			Tag.springboot,
+			Tag.ejs,
 			Tag.postgreSQL,
 			Tag.docker,
 		],
 	},
 	{
-		...projectMetadata.BlinkLink,
+		...projectMetadata.ProductManager,
 		index: 1,
-		description: "monedasAPI.about",
+		description: "ProductManager.about",
 		mobileImages:
 			[
-				`/assets/images/projects/monedasapi/postman.gif`,
+				`/assets/images/projects/productmanager/productmanager.gif`,
 			],
 		desktopImages:
 			[
-				`/assets/images/projects/monedasapi/architecturediagram.avif`
+				`/assets/images/projects/productmanager/home.avif`
 			],
 		links: [
 			{
-				label: "monedasAPI.linkViewSite",
-				url: "https://shorturl-web.vercel.app/shorten/12dc9f",
+				label: "ProductManager.linkVisitSite",
+				url: "https://aoi2-w2.onrender.com/",
 			},
 			{
-				label: "monedasAPI.linkViewVideo",
-				url: "https://hub.docker.com/r/maxcomperatore/bliklink",
+				label: "ProductManager.linkViewCode",
+				url: "https://github.com/Pulpoide/aoi2_w2",
 			},
 			{
-				label: "monedasAPI.linkViewCode",
-				url: "https://github.com/pyoneerC/BlinkLink",
+				label: "ProductManager.linkVisitDocs",
+				url: "https://aoi2-w2.onrender.com/api-docs/",
 			},
 		],
 		tags:
 			[
-			Tag.python,
-			Tag.postgreSQL,
-			Tag.redis,
-			Tag.fastAPI,
-			Tag.docker,
+			Tag.javascript,
+			Tag.expressjs,
+			Tag.mongoDB,
 		],
 	},
 	{
-		...projectMetadata.TheDungeon,
+		...projectMetadata.Poui,
 		index: 2,
-		description: "TheDungeon.about",
+		description: "Poui.about",
 		mobileImages:
 			[
-				`/assets/images/projects/thedungeon/streamer.avif`,
+				`/assets/images/projects/poui/home.gif`,
 			],
 		desktopImages: [
-			`/assets/images/projects/thedungeon/library.avif`,
+			`/assets/images/projects/poui/catalogo.avif`,
+			`/assets/images/projects/poui/form.avif`,
+			`/assets/images/projects/poui/quienessomos.avif`,
 		],
 		links: [
 			{
-				label: "TheDungeon.linkItchIo",
-				url: "https://pyoneerc1.itch.io/spu",
+				label: "Poui.linkVisitSite",
+				url: "https://poui.netlify.app/",
 			},
 			{
-				label: "TheDungeon.linkViewVideos",
-				url: "https://www.youtube.com/watch?v=l8W4iZG-S3U&t=2s&ab_channel=pyoneerC",
+				label: "Poui.linkViewCode",
+				url: "https://github.com/Pulpoide/aoi1_w2",
 			},
 		],
 		tags:
 		[
-			Tag.python,
-			Tag.kivi,
-			Tag.llama31
+			Tag.javascript,
+			Tag.css,
+			Tag.html
 		],
 	},
 ]
