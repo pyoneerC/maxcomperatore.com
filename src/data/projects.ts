@@ -14,13 +14,17 @@ export const projectMetadata = {
 		slug: "poui",
 		name: "Poui",
 	},
+	TaskList: {
+		slug: "task-list",
+		name: "Task List",
+	}
 }
 
 export const coverProjects: CoverProject[] = [
 	{
 		...projectMetadata.Deporturnos,
 		imageUrl: `/assets/images/projects/deporturnos/home-depo.avif`,
-		i18nDescriptionKey: "deporturnos.description",
+		i18nDescriptionKey: "Deporturnos.description",
 	},
 	{
 		...projectMetadata.ProductManager,
@@ -32,13 +36,18 @@ export const coverProjects: CoverProject[] = [
 		imageUrl: `/assets/images/projects/poui/home-poui.avif`,
 		i18nDescriptionKey: "Poui.description",
 	},
+	{
+		...projectMetadata.TaskList,
+		imageUrl: `/assets/images/projects/tasklist/home-tasklist.avif`,
+		i18nDescriptionKey: "TaskList.description",
+	},
 ]
 
 export const projects = [
 	{
 		...projectMetadata.Deporturnos,
 		index: 0,
-		description: "deporturnos.about",
+		description: "Deporturnos.about",
 		mobileImages:
 			[
 				`/assets/images/projects/deporturnos/deporturnos.gif`,
@@ -51,30 +60,30 @@ export const projects = [
 			],
 		links: [
 			{
-				label: "deporturnos.linkVisitSite",
+				label: "Deporturnos.linkVisitSite",
 				url: "",
 			},
 			{
-				label: "deporturnos.linkViewCode",
+				label: "Deporturnos.linkViewCode",
 				url: "https://github.com/Pulpoide/deporturnos-back",
 			},
 			{
-				label: "deporturnos.linkViewCode2",
+				label: "Deporturnos.linkViewCode2",
 				url: "https://github.com/Pulpoide/deporturnos-front",
 			},
 			{
-				label: "deporturnos.linkVisitDocs",
+				label: "Deporturnos.linkVisitDocs",
 				url: "",
 			},
 		],
 		tags:
 			[
-			Tag.java,
-			Tag.springboot,
-			Tag.ejs,
-			Tag.postgreSQL,
-			Tag.docker,
-		],
+				Tag.java,
+				Tag.springboot,
+				Tag.ejs,
+				Tag.postgreSQL,
+				Tag.docker,
+			],
 	},
 	{
 		...projectMetadata.ProductManager,
@@ -104,10 +113,10 @@ export const projects = [
 		],
 		tags:
 			[
-			Tag.javascript,
-			Tag.expressjs,
-			Tag.mongoDB,
-		],
+				Tag.javascript,
+				Tag.expressjs,
+				Tag.mongoDB,
+			],
 	},
 	{
 		...projectMetadata.Poui,
@@ -133,10 +142,39 @@ export const projects = [
 			},
 		],
 		tags:
-		[
-			Tag.javascript,
-			Tag.css,
-			Tag.html
+			[
+				Tag.javascript,
+				Tag.css,
+				Tag.html
+			],
+	},
+	{
+		...projectMetadata.TaskList,
+		index: 3,
+		description: "TaskList.about",
+		links: [
+			{
+				label: "TaskList.linkVisitSite",
+				url: "https://listatareasjolivero.netlify.app/",
+			},
+			{
+				label: "TaskList.linkViewCode",
+				url: "https://github.com/Pulpoide/TaskList",
+			}
 		],
+		mobileImages:
+			[
+				`/assets/images/projects/tasklist/home-tasklist.avif`
+			],
+		desktopImages:
+			[
+				
+			],
+		tags:
+			[
+				Tag.javascript,
+				Tag.html,
+				Tag.css,
+			],
 	},
 ]
