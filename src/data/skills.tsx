@@ -1,47 +1,26 @@
-import { PythonLogo } from "~/components/Svg/PythonLogo"
-import { SupabaseLogo } from "~/components/Svg/SupabaseLogo"
-import { N8nLogo } from "~/components/Svg/n8nLogo"
+import { PostgresqlLogo } from "~/components/Svg/PostgresqlLogo"
+import { NextJsLogo } from "~/components/Svg/NextJsLogo"
 import { OpenAILogo } from "~/components/Svg/OpenAILogo"
-import { DotNetLogo } from "~/components/Svg/DotNetLogo"
 import { ReactLogo } from "~/components/Svg/ReactLogo"
-import { AzureLogo } from "~/components/Svg/AzureLogo"
 import { DockerLogo } from "~/components/Svg/DockerLogo"
+import { JavaLogo } from "~/components/Svg/JavaLogo"
+import { SpringBootLogo } from "~/components/Svg/SpringBootLogo"
+import { MongoDBLogo } from "~/components/Svg/MongoDBLogo"
 
 export const skills = [
 	{
-		name: "Python",
-		icon: <PythonLogo />,
-		brandColor: "#ecc238",
-		tooltip: "A versatile language for data analysis, automation, and web apps.",
-		colors: ["#eac347", "#FFE17D", "#caa30a", "#FFD700", "#FFDD44", "#F4C542", "#E6B800"]
+		name: "Java",
+		icon: <JavaLogo />,
+		brandColor: "#f89820",
+		tooltip: "Robust, object-oriented language used for cross-platform applications, backend services, and enterprise systems.",
+		colors: ["#f89820", "#5382a1"]
 	},
 	{
-		name: "n8n",
-		icon: <N8nLogo />,
-		brandColor: "#EA4B71",
-		tooltip: "AI-powered workflow automation with intelligent agents for technical teams.",
-		colors: ["#E63964", "#FF5A7B", "#C72D52"],
-	},
-	{
-		name: "OpenAI",
-		icon: <OpenAILogo />,
-		brandColor: "#10A37F",
-		tooltip: "I use the OpenAI API to build intelligent applications, automate tasks, and enhance user experiences.",
-		colors: ["#0E7C63", "#15B091", "#087F6D"],
-	},
-	{
-		name: "Azure",
-		icon: <AzureLogo />,
-		brandColor: "#12c0fd",
-		tooltip: "Microsoft’s cloud for scalable apps, AI, and data solutions.",
-		colors: ["#34BDEE", "#0078D4", "#00599C"],
-	},
-	{
-		name: "DotNet",
-		icon: <DotNetLogo />,
-		brandColor: "#6540e8",
-		tooltip: "Framework for building scalable, enterprise-grade applications.",
-		colors: ["#512BD4", "#683AB7", "#3C1E70"],
+		name: "SpringBoot",
+		icon: <SpringBootLogo />,
+		brandColor: "#8BC34A",
+		tooltip: "Framework built on Java for rapidly developing scalable, production-ready backend services and microservices.",
+		colors: ["#8BC34A", "#76A63F", "#9DDD54"],
 	},
 	{
 		name: "Docker",
@@ -51,6 +30,13 @@ export const skills = [
 		colors: ["#099CEC", "#00ADEF", "#0077B5"],
 	},
 	{
+		name: "PostgreSQL",
+		icon: <PostgresqlLogo />,
+		brandColor: "#008bb9",
+		tooltip: "Advanced open-source relational database known for reliability, SQL compliance, and extensibility.",
+		colors: ["#0064a5", "#336791", "#008bb9"],
+	},
+	{
 		name: "React",
 		icon: <ReactLogo />,
 		brandColor: "#11bfed",
@@ -58,10 +44,24 @@ export const skills = [
 		colors: ["#61DAFB", "#2196F3", "#0D47A1"],
 	},
 	{
-		name: "Supabase",
-		icon: <SupabaseLogo />,
-		brandColor: "#3ECF8E",
-		tooltip: "Open-source Firebase alternative for databases, auth, and storage.",
-		colors: ["#2F9E6C", "#3ECF8E", "#249D63"],
+		name: "NextJS",
+		icon: <NextJsLogo />,
+		brandColor: "#5e72e4",
+		tooltip: "React framework focused on server-side rendering and static generation.",
+		colors: ["#172b4d", "#f4f5f7", "#5e72e4"],
+	},
+	{
+		name: "OpenAI",
+		icon: <OpenAILogo />,
+		brandColor: "#10A37F",
+		tooltip: "I use the OpenAI API to build intelligent applications, automate tasks, and enhance user experiences.",
+		colors: ["#0E7C63", "#15B091", "#087F6D"],
+	},
+	{
+		name: "MongoDB",
+		icon: <MongoDBLogo />,
+		brandColor: "#4DB33D",
+		tooltip: "NoSQL database for flexible and scalable document storage.",
+		colors: ["#3FA037", "#E8E7D5", "#3F3E42", "#C1BEBC"],
 	},
 ];

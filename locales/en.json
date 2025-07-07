@@ -80,12 +80,12 @@
   "SkillsSection": {
     "title": "Recently used technologies",
     "defaultDescription": "Hover over a skill to see more details!",
-    "Python": "Flexible language for data analysis, automation, and building web services.",
+    "Java": "Robust, object-oriented language for building scalable backend systems and enterprise applications.",
     "Docker": "Packages apps in secure containers for easy, consistent deployment.",
-    "Azure": "Microsoft’s cloud platform for apps, AI, and data solutions that scale.",
-    "Supabase": "Open-source BaaS for databases, auth, and storage.",
-    "DotNet": "Framework for building business-grade apps and enterprise solutions.",
-    "n8n": "AI-powered automation with intelligent agents for next-level workflows.",
+    "SpringBoot": "Java-based framework for building production-ready, scalable backend applications with minimal setup.",
+    "PostgreSQL": "Open-source relational database with powerful SQL, ACID compliance, and extensibility.",
+    "MongoDB": "NoSQL document database designed for flexibility, scalability, and performance.",
+    "NextJS": "React framework for server-side rendering and static site generation.",
     "OpenAI": "AI models and APIs for automation, chatbots, and smart apps.",
     "React": "Tool for building fast, dynamic web apps (like this one!)."
   },

@@ -80,12 +80,12 @@
   "SkillsSection": {
     "title": "Tecnologías empleadas recientemente",
     "defaultDescription": "Pasa el cursor sobre una habilidad para ver más detalles.",
-    "Python": "Lenguaje versátil para análisis de datos, automatización y desarrollo web.",
+    "Java": "Lenguaje robusto y orientado a objetos para crear sistemas backend escalables y aplicaciones empresariales.",
     "Docker": "Plataforma que facilita el despliegue de aplicaciones en entornos portables.",
-    "Azure": "Nube de Microsoft con enfoque en IA avanzada, datos y escalabilidad.",
-    "Supabase": "BaaS de código abierto para bases de datos, autenticación y almacenamiento.",
-    "DotNet": "Framework para crear aplicaciones empresariales y soluciones de negocio.",
-    "n8n": "Automatización con IA y agentes inteligentes para flujos de trabajo modernos.",
+    "SpringBoot": "Framework basado en Java para crear aplicaciones backend escalables, listas para producción y con configuración mínima.",
+    "PostgreSQL": "Base de datos relacional de código abierto con SQL potente, cumplimiento ACID y gran extensibilidad.",
+    "MongoDB": "Base de datos NoSQL orientada a documentos, diseñada para flexibilidad, escalabilidad y alto rendimiento.",
+    "NextJS": "Framework de React para renderizado del lado servidor y generación de sitios estáticos.",
     "OpenAI": "Modelos y API de IA para automatización, chatbots y apps inteligentes.",
     "React": "Herramienta para apps web dinámicas y rápidas (¡como esta!)."
   },
