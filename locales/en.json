@@ -32,13 +32,13 @@
   },
   "ProjectsSection": {
     "title": "Featured Projects",
-    "seemore": "See more initiatives",
     "pc": "Hover over the cards to see them in color!",
     "mobile": "Hold in the pictures to see them in color!",
     "next": "Next",
     "previous": "Previous",
     "home": "← Back to home",
-    "deporturnos": {
+
+    "Deporturnos": {
       "name": "Deporturnos",
       "description": "Platform for the comprehensive management of sports courts.",
       "linkVisitSite": "Website",
@@ -61,6 +61,13 @@
       "linkVisitSite": "Website",
       "linkViewCode": "Repository",
       "about": "The site offers a warm and elegant experience that reflects the essence of the business, with a design focused on highlighting the quality and variety of products related to aromatherapy and well-being.\nIt includes an interactive catalog, contact form, and an 'About Us' section."
+    },
+    "TaskList": {
+      "name": "TaskList",
+      "description": "A simple task list that will help you a lot.",
+      "linkVisitSite": "Website",
+      "linkViewCode": "Repository",
+      "about": "This is a simple task list that uses React Router for navigation and stores data in localStorage."
     }
   },
   "AboutSection": {
