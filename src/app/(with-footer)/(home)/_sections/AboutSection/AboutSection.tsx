@@ -6,39 +6,30 @@ import { useTranslations } from "next-intl";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
-
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export const AboutSection = () => {
 	const t = useTranslations("AboutSection");
-
-	// GSAP Refs
 	const sectionRef = useRef<HTMLElement>(null);
 	const titleRef = useRef<HTMLHeadingElement>(null);
 	const photoWrapperRef = useRef<HTMLDivElement>(null);
 	const textWrapperRef = useRef<HTMLDivElement>(null);
 	const paragraphRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
-	// Function to add paragraph refs
 	const addToParagraphRefs = (el: HTMLParagraphElement | null) => {
 		if (el && !paragraphRefs.current.includes(el)) {
 			paragraphRefs.current.push(el);
 		}
-		// Ensure refs are cleaned up properly
 		paragraphRefs.current = paragraphRefs.current.filter(ref => ref && ref.isConnected);
 	};
 
-	// Cleanup GSAP animations
 	const cleanupGSAP = () => {
 		paragraphRefs.current = paragraphRefs.current.filter(ref => ref !== null);
 	};
 
-	// GSAP Animation Effect
 	useEffect(() => {
 		const ctx = gsap.context(() => {
 			if (!sectionRef.current || !titleRef.current || !photoWrapperRef.current || !textWrapperRef.current) {
-				console.warn("GSAP Aborted: One or more refs not available.");
 				return;
 			}
 
@@ -97,9 +88,12 @@ export const AboutSection = () => {
 			});
 
 			return () => {
-				if (titleSplit && titleSplit.elements && titleSplit.elements[0]?.isConnected) titleSplit.revert();
-				paragraphSplits.forEach(split => {
-					if(split.elements && split.elements[0]?.isConnected) {
+				if (titleSplit && titleRef.current && titleRef.current.isConnected) {
+					titleSplit.revert();
+				}
+				paragraphSplits.forEach((split, idx) => {
+					const paraRef = paragraphRefs.current[idx];
+					if (split && paraRef && paraRef.isConnected) {
 						split.revert();
 					}
 				});
@@ -113,7 +107,6 @@ export const AboutSection = () => {
 	return (
 		<section id="about" className={`section-wrapper ${styles.sectionWrapper}`} ref={sectionRef}>
 			<h2 className={styles.title} ref={titleRef}>{t("title")}</h2>
-
 			<div className={styles.aboutMeContainer}>
 				<div className={styles.photoWrapper} ref={photoWrapperRef}>
 					<img
