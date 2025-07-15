@@ -22,7 +22,7 @@
 
 .subtitle {
 	display: inline-block;
-	animation: fadeInOut 6s infinite;
+	animation: fadeInOut 7s infinite;
 	will-change: opacity, transform;
 }
 

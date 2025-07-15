@@ -1,31 +1,23 @@
-/* ./AboutSection.module.css */
-/* Use a distinct class name for the section wrapper if using modules,
-   or rely on the global .section-wrapper if defined elsewhere */
 .sectionWrapper {
-	padding: 40px 20px; /* Adjusted padding */
+	padding: 40px 20px;
 	max-width: 1200px;
-	margin: 4rem auto; /* Add some vertical margin */
-	opacity: 0; /* Start hidden for GSAP fade-in */
+	margin: 4rem auto;
+	opacity: 0;
 	caret-color: transparent;
-	overflow: hidden; /* Prevent content overflow during animations */
+	overflow: hidden;
 }
 
 .title {
-	font-size: clamp(1.8rem, 5vw, 2.5em); /* Responsive font size */
-	margin-bottom: 30px; /* Increased margin */
+	font-size: clamp(1.8rem, 5vw, 2.5em);
+	margin-bottom: 30px;
 	text-align: center;
-	letter-spacing: 1.5px; /* Slightly increased spacing */
+	letter-spacing: 1.5px;
 	color: var(--text-color);
 	caret-color: transparent;
-	/* Prepare for SplitText - ensure proper line breaking */
-	white-space: pre-wrap; /* Allow wrapping but preserve whitespace */
+	white-space: pre-wrap;
 	word-wrap: break-word;
-	/* Hide initial state if needed, though GSAP handles it */
-	/* opacity: 0; */
-	/* transform: translateY(20px); */
 }
 
-/* Ensure SplitText characters are display: inline-block for transforms */
 .title > div {
 	display: inline-block;
 }
@@ -34,44 +26,36 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 30px; /* Slightly increased gap */
+	gap: 30px;
 	caret-color: transparent;
-	margin-bottom: 3rem; /* Space before Experience */
+	margin-bottom: 3rem;
 }
 
-/* Removed .goFAQLink as it wasn't in the final component JSX */
-
 .textWrapper {
-	line-height: 1.7; /* Slightly increased line-height */
+	line-height: 1.7;
 	text-align: center;
 	color: var(--text-color);
 	caret-color: transparent;
-	max-width: 750px; /* Limit text width for readability */
+	max-width: 750px;
 	width: 100%;
-	opacity: 0; /* Start hidden */
+	opacity: 0;
 }
 
 .paragraph {
-	font-size: clamp(1rem, 2.5vw, 1.15em); /* Responsive font size */
+	font-size: clamp(1rem, 2.5vw, 1.15em);
 	color: var(--text-color);
-	margin-bottom: 20px; /* Consistent margin */
-	text-align: left; /* Keep left align for readability */
+	margin-bottom: 20px;
 	caret-color: transparent;
-	/* Prepare lines for SplitText */
-	/* opacity: 0; */ /* Let GSAP handle this */
-	/* transform: translateY(10px); */
 }
 
-/* Ensure SplitText lines are block-level for transforms */
 .paragraph > div {
-	display: block; /* Or inline-block if needed, but block is often better for lines */
-	overflow: hidden; /* Helps contain transforms if needed */
+	display: block;
+	overflow: hidden;
 }
-
 
 @media (max-width: 767px) {
 	.paragraph {
-		text-align: center; /* Center on mobile if preferred */
+		text-align: center;
 	}
 	.sectionWrapper {
 		padding: 30px 15px;
@@ -82,41 +66,37 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 25px; /* Use margin instead of padding-bottom */
+	margin-bottom: 25px;
 	caret-color: transparent;
-	opacity: 0; /* Start hidden */
+	opacity: 0;
 }
 
 .photo {
-	max-width: 280px; /* Slightly increased max-width */
-	width: 90%; /* Use percentage for better scaling */
+	max-width: 280px;
+	width: 90%;
 	height: auto;
-	aspect-ratio: 1 / 1; /* Ensure square aspect ratio */
+	aspect-ratio: 1 / 1;
 	border-radius: 90% 65% 79% 63% / 92% 86% 70% 71%;
-	padding: 10px; /* control the border gap */
+	padding: 10px;
 	mask:
-		/* Mask for the content area */
-			conic-gradient(#000 0 0) content-box,
-				/* Subtracting pattern for the border effect */
-			linear-gradient(calc(mod(var(--a, 0deg), 180deg) * var(--i, 0) + 45deg),
-			#0000 30%,#000 40% 60%,#0000 70%) subtract,
-				/* Mask for the padding area (border background) */
-			conic-gradient(#000 0 0) padding-box;
+		conic-gradient(#000 0 0) content-box,
+		linear-gradient(calc(mod(var(--a, 0deg), 180deg) * var(--i, 0) + 45deg),
+		#0000 30%,#000 40% 60%,#0000 70%) subtract,
+		conic-gradient(#000 0 0) padding-box;
 	transition:
-			--i 0.5s,             /* Transition for hover intensity */
-			--a 0s 0.5s,         /* Delay angle transition */
-			filter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), /* Smoother filter transition */
-			box-shadow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), /* Smoother shadow transition */
-			transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transform transition */
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Slightly softer shadow */
-	filter: grayscale(90%) brightness(80%); /* Slightly less harsh filter */
-	border: 4px solid #aaa; /* Slightly darker border */
+		--i 0.5s,
+		--a 0s 0.5s,
+		filter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+		box-shadow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+		transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+	filter: grayscale(90%) brightness(80%);
+	border: 4px solid #aaa;
 	caret-color: transparent;
 	user-select: none;
-	object-fit: cover; /* Ensure image covers the area */
-	transform-origin: center center; /* Set transform origin */
-
-	animation: ultraGooeyPortal 12s linear infinite alternate; /* Smoother, alternating animation */
+	object-fit: cover;
+	transform-origin: center center;
+	animation: ultraGooeyPortal 12s linear infinite alternate;
 }
 
 @keyframes ultraGooeyPortal {
@@ -148,23 +128,21 @@
 	}
 }
 
-
 .photo:hover {
-	--i: 1; /* Activate intensity variable */
-	--a: 15turn; /* Set target angle for rotation effect */
+	--i: 1;
+	--a: 15turn;
 	transition:
-			--i 0.1s, /* Faster activation */
-			--a 25s linear, /* Slower, smoother rotation */
-			filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), /* Ease out quad */
-			box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-			transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+		--i 0.1s,
+		--a 25s linear,
+		filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+		box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+		transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 	filter: grayscale(0%) brightness(100%);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Enhanced hover shadow */
-	transform: scale(1.03); /* Slight scale up on hover */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+	transform: scale(1.03);
 	-webkit-tap-highlight-color: transparent;
 }
 
-/* CSS Custom Properties for the mask effect */
 @property --a {
 	syntax: "<angle>";
 	inherits: false;
@@ -175,98 +153,84 @@
 	inherits: false;
 	initial-value: 0;
 }
-/* Removed .photo.alt as it wasn't used */
 
-/* --- Responsive Adjustments --- */
-
-@media (min-width: 768px) { /* Tablet and up */
+@media (min-width: 768px) {
 	.sectionWrapper {
 		padding: 60px 40px;
 	}
 	.aboutMeContainer {
 		flex-direction: row;
-		align-items: flex-start; /* Align items to the start */
+		align-items: flex-start;
 		gap: 50px;
 	}
-
 	.textWrapper {
-		text-align: left; /* Keep text left-aligned */
-		flex: 1; /* Allow text to take available space */
-		max-width: none; /* Remove max-width constraint from row layout */
+		text-align: left;
+		flex: 1;
+		max-width: none;
 	}
-
 	.photoWrapper {
-		flex: 0 0 300px; /* Fixed width for photo container */
-		justify-content: center; /* Center photo within its container */
-		margin-bottom: 0; /* Remove bottom margin in row layout */
+		flex: 0 0 300px;
+		justify-content: center;
+		margin-bottom: 0;
 	}
-
 	.photo {
-		max-width: 300px; /* Max size on larger screens */
+		max-width: 300px;
 		width: 100%;
 	}
 	.paragraph {
-		margin-bottom: 25px; /* Slightly more space between paragraphs */
+		margin-bottom: 25px;
 	}
 }
 
-@media (min-width: 1024px) { /* Desktop */
+@media (min-width: 1024px) {
 	.sectionWrapper {
-		padding: 80px 60px; /* More padding */
+		padding: 80px 60px;
 	}
 	.aboutMeContainer {
 		gap: 60px;
 	}
 	.textWrapper {
-		/* Maybe add a max-width back if needed on very wide screens */
 		max-width: 650px;
 	}
 	.photoWrapper {
-		flex: 0 0 350px; /* Slightly larger photo container */
+		flex: 0 0 350px;
 	}
 	.photo {
 		max-width: 350px;
 	}
 }
 
-
-/* --- Theme Adjustments --- */
 body.dark .title,
 body.dark .textWrapper,
 body.dark .paragraph {
-	color: #e0e0e0; /* Slightly off-white for dark mode */
+	color: #e0e0e0;
 }
 body.dark .photo {
-	border-color: #555; /* Darker border for dark mode */
+	border-color: #555;
 }
 
 body.light .title,
 body.light .textWrapper,
 body.light .paragraph {
-	color: #222; /* Slightly softer black for light mode */
+	color: #222;
 }
 body.light .photo {
-	border-color: #ccc; /* Lighter border for light mode */
+	border-color: #ccc;
 }
 
-
-/* --- Experience Wrapper --- */
 .experienceWrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 8vh; /* Use min-height */
+	min-height: 8vh;
 	margin-top: 4rem;
 	margin-bottom: 2rem;
-	opacity: 0; /* Start hidden */
-	/* transform: translateY(30px); */ /* GSAP handles this */
+	opacity: 0;
 }
 
-/* Mobile-specific styles for Experience Wrapper margins */
 @media (max-width: 767px) {
 	.experienceWrapper {
-		margin-top: 3rem; /* Adjusted margin */
-		margin-bottom: 4rem; /* Adjusted margin */
-		/* Consider scaling down the Experience component itself on mobile if needed */
+		margin-top: 3rem;
+		margin-bottom: 4rem;
 	}
 }
