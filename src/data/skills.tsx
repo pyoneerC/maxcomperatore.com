@@ -1,6 +1,6 @@
 import { PostgresqlLogo } from "~/components/Svg/PostgresqlLogo"
 import { NextJsLogo } from "~/components/Svg/NextJsLogo"
-import { OpenAILogo } from "~/components/Svg/OpenAILogo"
+import { TypeScriptLogo } from "~/components/Svg/TypeScriptLogo"
 import { ReactLogo } from "~/components/Svg/ReactLogo"
 import { DockerLogo } from "~/components/Svg/DockerLogo"
 import { JavaLogo } from "~/components/Svg/JavaLogo"
@@ -51,11 +51,11 @@ export const skills = [
 		colors: ["#172b4d", "#f4f5f7", "#5e72e4"],
 	},
 	{
-		name: "OpenAI",
-		icon: <OpenAILogo />,
-		brandColor: "#10A37F",
-		tooltip: "I use the OpenAI API to build intelligent applications, automate tasks, and enhance user experiences.",
-		colors: ["#0E7C63", "#15B091", "#087F6D"],
+		name: "TypeScript",
+		icon: <TypeScriptLogo />,
+		brandColor: "#358ef1",
+		tooltip: "Strongly typed language that builds on JavaScript for large-scale applications.",
+		colors: ["#3178c6", "#235a97", "#00273f"],
 	},
 	{
 		name: "MongoDB",
