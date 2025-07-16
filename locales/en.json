@@ -3,11 +3,6 @@
     "title": "Page not found",
     "home": "Back to home"
   },
-  "testim": {
-    "a": "He's very reliable, works fast, and delivers high-quality results. Definitely worth the price.",
-    "b": "We were stuck on a critical issue for weeks, and he solved it in a matter of hours. Super sharp and easy to work with.",
-    "c": "Working with him felt like having an extra team member who truly cared. Great communication, no fluff, and real results."
-  },
   "LanguageSwitcher": {
     "switchLanguage": "Switch to Spanish"
   },
@@ -25,8 +20,10 @@
     "download": "Resume",
     "position": "Software Developer",
     "position2": "Backend Specialist",
+    "position3": "AI Enthusiast",
+    "position4": "Exploring cloud technologies",
     "language": "(¡Clic en la bandera para español!)",
-    "location": "Based in Villa Carlos Paz, Córdoba",
+    "location": "Villa Carlos Paz, Córdoba, Argentina",
     "subtitle": "Dedicated to transforming <em>complex ideas</em> into <em>effective solutions</em>",
     "resumeUrl": "https://drive.google.com/file/d/1fevdA01nCS-LsR5CR2TaAEzGHW3O0WPO/view?usp=drive_link"
   },
@@ -37,7 +34,6 @@
     "next": "Next",
     "previous": "Previous",
     "home": "← Back to home",
-
     "Deporturnos": {
       "name": "Deporturnos",
       "description": "Platform for the comprehensive management of sports courts.",
@@ -71,10 +67,10 @@
     }
   },
   "AboutSection": {
-    "title": "About me",
-    "d0": "I'm <strong>Joaquín Dario Olivero</strong>, a Software Developer with a strong foundation in building robust applications, with a particular focus on scalable REST APIs.",
-    "d1": "My academic background, including a Technical Degree in Software Development from the Aeronautical University Institute  with an outstanding GPA and a perfect thesis grade for the DeporTurnos project, has equipped me with a deep understanding of software architecture, agile methodologies, and a solid analytical mindset.",
-    "d2": "While my passion and initial experience lie in backend development, I'm driven to adapt and contribute across various development areas, always committed to code optimization and proactive problem-solving, aiming to contribute to innovative projects in dynamic team environments.",
+    "title": "About Me",
+    "d0": "I'm <strong>Joaquín Darío Olivero</strong>, a software developer specialized in <strong>robust backend applications and scalable REST APIs</strong>.",
+    "d1": "Graduated from the Instituto Universitario Aeronáutico with a technical degree and a <strong>perfect score (10/10) on my DeporTurnos thesis</strong>, where I led design, development, and deployment. This project gave me a solid foundation in <strong>software architecture, agile methodologies</strong>, and analytical thinking.",
+    "d2": "While my main passion is backend development, I also enjoy collaborating across the stack. I excel at <strong>code optimization, proactive problem-solving</strong>, and contributing to teams building <strong>innovative, high‑quality projects</strong>.",
     "mab": "More about me"
   },
   "SkillsSection": {
@@ -86,11 +82,11 @@
     "PostgreSQL": "Open-source relational database with powerful SQL, ACID compliance, and extensibility.",
     "MongoDB": "NoSQL document database designed for flexibility, scalability, and performance.",
     "NextJS": "React framework for server-side rendering and static site generation.",
-    "OpenAI": "AI models and APIs for automation, chatbots, and smart apps.",
+    "TypeScript": "Typed superset of JavaScript that scales.",
     "React": "Tool for building fast, dynamic web apps (like this one!)."
   },
   "ContactSection": {
-    "question": "Need help with a project?",
+    "question": "Would you like to work with me?",
     "services": "Available services",
     "servicesDevelopment": "Programming",
     "gameDevelopment": "Video game development",

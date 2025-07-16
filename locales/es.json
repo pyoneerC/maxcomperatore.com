@@ -3,11 +3,6 @@
     "title": "Página no encontrada",
     "home": "Volver al inicio"
   },
-  "testim": {
-    "a": "Es muy confiable, trabaja rápido y entrega resultados de alta calidad. Definitivamente vale lo que cuesta.",
-    "b": "Estuvimos semanas trabados con un problema crítico, y lo resolvió en cuestión de horas. Muy inteligente y fácil de tratar.",
-    "c": "Trabajar con él fue como tener un miembro más del equipo que realmente se preocupa. Excelente comunicación, sin vueltas, y con resultados reales."
-  },
   "LanguageSwitcher": {
     "switchLanguage": "Cambiar a Inglés"
   },
@@ -25,8 +20,10 @@
     "download": "Currículum",
     "position": "Desarrollador de Software",
     "position2": "Especialista en Backend",
+    "position3": "Entusiasta de la IA",
+    "position4": "Explorando tecnologías en la nube",
     "language": "(Click the flag to switch to English!)",
-    "location": "Operando desde Villa Carlos Paz, Córdoba",
+    "location": "Villa Carlos Paz, Córdoba, Argentina",
     "subtitle": "Dedicado a transformar <em>ideas complejas</em> en <em>soluciones eficaces</em>",
     "resumeUrl": "https://drive.google.com/file/d/1fevdA01nCS-LsR5CR2TaAEzGHW3O0WPO/view?usp=drive_link"
   },
@@ -34,10 +31,9 @@
     "title": "Proyectos Destacados",
     "pc": "¡Pasa el ratón por encima de las imágenes para verlas en color!",
     "mobile": "¡Mantén presionadas las imágenes para verlas en color!",
-    "next" : "Siguiente",
-    "previous" : "Anterior",
-    "home" : "← Volver al inicio",
-
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "home": "← Volver al inicio",
     "Deporturnos": {
       "name": "Deporturnos",
       "description": "Plataforma para la gestión intergal de canchas deportivas.",
@@ -72,9 +68,9 @@
   },
   "AboutSection": {
     "title": "Sobre mí",
-    "d0": "Soy Joaquín Dario Olivero, un Desarrollador de Software con una sólida base en la construcción de aplicaciones robustas, con una particular inclinación hacia las REST APIs escalables.",
-    "d1": "Mi formación académica, que incluye un Título Técnico en Desarrollo de Software del Instituto Universitario Aeronáutico  con un GPA sobresaliente y una calificación de 10/10 en mi tesis por el proyecto DeporTurnos, me ha proporcionado un profundo conocimiento en arquitectura de software, metodologías ágiles y una sólida mentalidad analítica.",
-    "d2": "Aunque mi pasión y experiencia inicial residen en el desarrollo backend, estoy motivado a adaptarme y contribuir en diversas áreas del desarrollo, siempre comprometido con la optimización del código y la resolución proactiva de problemas, con el objetivo de contribuir en proyectos innovadores dentro de equipos dinámicos.",
+    "d0": "Soy <strong>Joaquín Darío Olivero</strong>, desarrollador de software especializado en <strong>aplicaciones backend robustas y REST APIs escalables</strong>.",
+    "d1": "Graduado del Instituto Universitario Aeronáutico con un título técnico y <strong>10/10 en mi tesis DeporTurnos</strong>, donde lideré diseño, desarrollo y despliegue. Esta experiencia me brindó una base sólida en <strong>arquitectura de software, metodologías ágiles</strong> y pensamiento analítico.",
+    "d2": "Mi pasión principal es el backend, aunque también disfruto colaborar en otras áreas del desarrollo. Me destaco por <strong>optimizar código, resolver problemas de forma proactiva</strong> y contribuir en equipos que crean <strong>proyectos innovadores y de alta calidad</strong>.",
     "mab": "Más sobre mí"
   },
   "SkillsSection": {
@@ -86,11 +82,11 @@
     "PostgreSQL": "Base de datos relacional de código abierto con SQL potente, cumplimiento ACID y gran extensibilidad.",
     "MongoDB": "Base de datos NoSQL orientada a documentos, diseñada para flexibilidad, escalabilidad y alto rendimiento.",
     "NextJS": "Framework de React para renderizado del lado servidor y generación de sitios estáticos.",
-    "OpenAI": "Modelos y API de IA para automatización, chatbots y apps inteligentes.",
+    "TypeScript": "Superset tipado de JavaScript que escala.",
     "React": "Herramienta para apps web dinámicas y rápidas (¡como esta!)."
   },
   "ContactSection": {
-    "question": "¿Necesitas ayuda con tu proyecto?",
+    "question": "¿Te gustaría trabajar conmigo?",
     "services": "Servicios disponibles",
     "servicesDevelopment": "Programación",
     "backendDevelopment": "Desarrollo Backend",

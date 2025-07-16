@@ -8,29 +8,28 @@ import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton"
 import ArgentinaFlag from "~/components/Svg/ArgentinaFlag"
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useRef, useState } from "react";
-import gsap from 'gsap'; // Import GSAP
+import gsap from 'gsap'; 
 
 export const HeroSection = () => {
 	const t = useTranslations("HeroSection");
 
-	// Positions array
 	const positions = [
 		t("position"),
 		t("position2"),
+		t("position3"),
+		t("position4"),
 	];
-
 
 	const [positionIndex, setPositionIndex] = useState(0);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setPositionIndex((prevIndex: number) => (prevIndex + 1) % positions.length);
-		}, 6000); // Change every second
+		}, 7000); 
 
-		return () => clearInterval(interval); // Cleanup on unmount
+		return () => clearInterval(interval); 
 	}, []);
 
-	// GSAP Refrences
 	const sectionRef = useRef<HTMLElement | null>(null);
 	const titleRef = useRef<HTMLHeadingElement | null>(null);
 	const subtitleRef = useRef<HTMLHeadingElement | null>(null);

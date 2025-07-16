@@ -20,61 +20,11 @@
 	caret-color: transparent;
 }
 
-.arrow1, .arrow2 {
-	display: none;
-	padding: 0;
-	position: absolute;
-	transform-origin: center;
-	caret-color: transparent;
-}
 
-.arrow1 {
-	justify-content: flex-start;
-	left: 785px;
-	margin-top: -4.5rem;
-	transform: scale(0.9);
-	caret-color: transparent;
-}
-
-.arrow2 {
-	justify-content: flex-end;
-	right: 785px;
-	margin-top: -5rem;
-	transform: scale(0.8);
-	caret-color: transparent;
-}
 
 .mobilearrow {
 	display: none;
 }
-
-.testimonials {
-	margin-bottom: 2rem;
-	padding: 1rem;
-	border-radius: 12px;
-	text-align: center;
-	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.testimonial {
-	margin: 1rem 0;
-	font-style: italic;
-	color: #666;
-	font-size: 0.95rem;
-	line-height: 1.4;
-}
-
-.testimonial p {
-	margin: 0;
-}
-
-/* Hide testimonials on mobile */
-@media (max-width: 768px) {
-	.testimonials {
-		display: none;
-	}
-}
-
 
 @media (max-width: 1024px) {
 	.arrow1 {
@@ -117,10 +67,9 @@
 	}
 }
 
-/* make the button more down in mobile */
 @media (max-width: 768px) {
 	.actionBtn {
-		margin-top: 5rem;
+		margin-top: 1rem;
 	}
 }
 
@@ -169,6 +118,7 @@
 	justify-content: center;
 	padding-bottom: 2.5rem;
 	padding-top: 2rem;
+	position: relative;
 }
 .subtitle svg {
 	display: flex;
