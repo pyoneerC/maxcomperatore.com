@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import styles from "./AboutSection.module.css";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 export const AboutSection = () => {
 	const t = useTranslations("AboutSection");
 	const sectionRef = useRef<HTMLElement>(null);
-	const titleRef = useRef<HTMLHeadingElement>(null);
+	const titleRef = useRef<HTMLHeadingElement | null>(null);
 	const photoWrapperRef = useRef<HTMLDivElement>(null);
 	const textWrapperRef = useRef<HTMLDivElement>(null);
 	const paragraphRefs = useRef<(HTMLParagraphElement | null)[]>([]);
@@ -23,19 +23,11 @@ export const AboutSection = () => {
 		paragraphRefs.current = paragraphRefs.current.filter(ref => ref && ref.isConnected);
 	};
 
-	const cleanupGSAP = () => {
-		paragraphRefs.current = paragraphRefs.current.filter(ref => ref !== null);
-	};
-
 	useEffect(() => {
 		const ctx = gsap.context(() => {
-			if (!sectionRef.current || !titleRef.current || !photoWrapperRef.current || !textWrapperRef.current) {
-				return;
-			}
+			if (!sectionRef.current || !titleRef.current || !photoWrapperRef.current || !textWrapperRef.current) return;
 
 			let titleSplit: SplitText | null = null;
-			const paragraphSplits: SplitText[] = [];
-
 			const tl = gsap.timeline({
 				scrollTrigger: {
 					trigger: sectionRef.current,
@@ -75,12 +67,9 @@ export const AboutSection = () => {
 
 			paragraphRefs.current.forEach((paragraph) => {
 				if (paragraph) {
-					const paraSplit = new SplitText(paragraph, { type: "lines" });
-					paragraphSplits.push(paraSplit);
-					tl.from(paraSplit.lines, {
+					tl.from(paragraph, {
 						opacity: 0,
-						yPercent: 50,
-						stagger: 0.1,
+						y: 30,
 						duration: 0.7,
 						ease: "power2.out",
 					}, "-=0.3");
@@ -91,16 +80,9 @@ export const AboutSection = () => {
 				if (titleSplit && titleRef.current && titleRef.current.isConnected) {
 					titleSplit.revert();
 				}
-				paragraphSplits.forEach((split, idx) => {
-					const paraRef = paragraphRefs.current[idx];
-					if (split && paraRef && paraRef.isConnected) {
-						split.revert();
-					}
-				});
 				tl.kill();
 			};
 		}, sectionRef);
-
 		return () => ctx.revert();
 	}, []);
 
