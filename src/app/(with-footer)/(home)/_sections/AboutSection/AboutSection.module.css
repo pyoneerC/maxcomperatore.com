@@ -33,7 +33,6 @@
 
 .textWrapper {
 	line-height: 1.7;
-	text-align: center;
 	color: var(--text-color);
 	caret-color: transparent;
 	max-width: 750px;
@@ -42,10 +41,11 @@
 }
 
 .paragraph {
-	font-size: clamp(1rem, 2.5vw, 1.15em);
-	color: var(--text-color);
-	margin-bottom: 20px;
-	caret-color: transparent;
+font-size: clamp(1rem, 2.5vw, 1.15em);
+color: var(--text-color);
+margin-bottom: 20px;
+caret-color: transparent;
+text-align: left;
 }
 
 .paragraph > div {
@@ -55,7 +55,7 @@
 
 @media (max-width: 767px) {
 	.paragraph {
-		text-align: center;
+		text-align: center !important;
 	}
 	.sectionWrapper {
 		padding: 30px 15px;
@@ -164,7 +164,6 @@
 		gap: 50px;
 	}
 	.textWrapper {
-		text-align: left;
 		flex: 1;
 		max-width: none;
 	}
@@ -179,6 +178,7 @@
 	}
 	.paragraph {
 		margin-bottom: 25px;
+		text-align: left;
 	}
 }
 
