@@ -3,7 +3,7 @@ export const socialMediaLinks = [
   { label: "GitHub",   url: "...", icon: "GithubIcon",   className: "github" },
 ] as const;
 
-export type IconKey = typeof socialMediaLinks[number]['icon'];
+export type IconKey = typeof socialMediaLinks[number]["icon"];
 export interface SocialMediaLink {
   label: string;
   url: string;
