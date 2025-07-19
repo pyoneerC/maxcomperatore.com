@@ -14,7 +14,6 @@ const iconComponents: any = {
 export const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
-	// @ts-ignore
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.wrapper}>

@@ -13,14 +13,14 @@ interface TextDecoratorProps {
 }
 
 const TextDecorator: React.FC<TextDecoratorProps> = ({
-																											 children,
-																											 color = "#000000",
-																											 isUnderlined = false,
-																											 isHighlighted = false,
-																											 isBold = false,
-																											 font = "Arial",
-																											 style = {},
-																										 }) => {
+	children,
+	color = "#000000",
+	isUnderlined = false,
+	isHighlighted = false,
+	isBold = false,
+	font = "Arial",
+	style = {},
+}) => {
 	const textStyle = {
 		color,
 		textDecoration: isUnderlined ? "underline" : "none",
@@ -32,8 +32,8 @@ const TextDecorator: React.FC<TextDecoratorProps> = ({
 
 	return (
 		<span style={textStyle}>
-      {children}
-    </span>
+			{children}
+		</span>
 	);
 };
 

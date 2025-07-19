@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import styles from "./AboutSection.module.css";
 gsap.registerPlugin(ScrollTrigger, SplitText);

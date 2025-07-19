@@ -14,7 +14,7 @@ export const ThemeSwitcher = () => {
 
 	useEffect(() => {
 		setMounted(true);
-	}, []);	
+	}, []);
 
 	useEffect(() => {
 		if (mounted) setIsLightMode(theme === "light");
@@ -24,7 +24,7 @@ export const ThemeSwitcher = () => {
 
 	const oppositeThemeName = isLightMode ? "oscuro" : "claro";
 	const handleOnClick = () => {
-		    setTheme(isLightMode ? "dark" : "light");
+		setTheme(isLightMode ? "dark" : "light");
 	};
 
 	return (

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { HOST_URL, APP_ROUTES } from "~/constants";
+import { HOST_URL } from "~/constants";
 import { projects } from "~/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
