@@ -12,7 +12,7 @@ interface SendEmailResponse {
 	error?: string
 	success?: boolean
 }
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const isFormDataValues = (obj: any): obj is FormDataValues => {
 	return (
 		typeof obj.name === "string" && typeof obj.email === "string" && typeof obj.message === "string"
