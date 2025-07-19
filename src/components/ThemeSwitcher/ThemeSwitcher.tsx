@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { useTheme } from "next-themes";
+
 import styles from "./ThemeSwitcher.module.css";
 
 export const ThemeSwitcher = () => {
@@ -22,7 +24,7 @@ export const ThemeSwitcher = () => {
 
 	const oppositeThemeName = isLightMode ? "oscuro" : "claro";
 	const handleOnClick = () => {
-		    setTheme(isLightMode ? 'dark' : 'light');
+		    setTheme(isLightMode ? "dark" : "light");
 	};
 
 	return (

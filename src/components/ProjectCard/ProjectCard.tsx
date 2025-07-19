@@ -1,9 +1,12 @@
-"use client"
+"use client";
 
-import React, { useRef, useEffect, useState } from 'react';
-import Link from 'next/link';
-import type { CoverProject } from '~/types';
-import styles from './ProjectCard.module.css';
+import React, { useRef, useEffect, useState } from "react";
+
+import Link from "next/link";
+
+import type { CoverProject } from "~/types";
+
+import styles from "./ProjectCard.module.css";
 
 interface Props extends CoverProject {}
 
@@ -53,4 +56,4 @@ export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description
 			</article>
 		</Link>
 	);
-}
+};

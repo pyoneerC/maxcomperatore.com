@@ -1,14 +1,19 @@
-"use client"
+"use client";
 
-import NextLink from "next/link";
-import { Button } from "~/components/Ui/Button";
-import { CopyEmailSmallButton } from "~/components/CopyEmailSmallButton";
-import styles from "./HeroSection.module.css";
-import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton";
-import ArgentinaFlag from "~/components/Svg/ArgentinaFlag"
-import { useTranslations } from 'next-intl';
 import React, { useEffect, useRef, useState } from "react";
-import gsap from 'gsap'; 
+
+import gsap from "gsap"; 
+import NextLink from "next/link";
+import { useTranslations } from "next-intl";
+
+import { CopyEmailSmallButton } from "~/components/CopyEmailSmallButton";
+import ScrollToTopButton from "~/components/ScrollToTopButton/ScrollToTopButton";
+import ArgentinaFlag from "~/components/Svg/ArgentinaFlag";
+import { Button } from "~/components/Ui/Button";
+
+import styles from "./HeroSection.module.css";
+
+
 
 export const HeroSection = () => {
 	const t = useTranslations("HeroSection");
@@ -66,7 +71,7 @@ export const HeroSection = () => {
 			.fromTo(introRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out", stagger: 0.2 }, "-=0.4") // Intro subtitles stagger fade in and slide up
 			.fromTo(buttonContainerRef.current, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.7)" }, "-=0.3") // Button container scale up and fade in
 			.fromTo(actionsRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.4") // Actions button slide up and fade in
-			.fromTo(arrowwaveRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.4") // Arrowwave slide up and fade in
+			.fromTo(arrowwaveRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, "-=0.4"); // Arrowwave slide up and fade in
 
 		return () => {
 			tl.kill();

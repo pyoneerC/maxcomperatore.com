@@ -1,13 +1,13 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 export const useTimeout = (callback: () => void, delay: number | null) => {
 	useEffect(() => {
-		if (!delay && delay !== 0) return
+		if (!delay && delay !== 0) return;
 
-		const id = setTimeout(callback, delay)
+		const id = setTimeout(callback, delay);
 
 		return () => {
-			clearTimeout(id)
-		}
-	}, [callback, delay])
-}
+			clearTimeout(id);
+		};
+	}, [callback, delay]);
+};

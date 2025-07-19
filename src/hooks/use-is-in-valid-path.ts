@@ -1,8 +1,9 @@
-import { usePathname } from "next/navigation"
-import { APP_ROUTES } from "~/constants"
+import { usePathname } from "next/navigation";
+
+import { APP_ROUTES } from "~/constants";
 
 export const useIsValidAppRoute = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
-  return APP_ROUTES.includes(pathname)
-}
+  return APP_ROUTES.includes(pathname);
+};

@@ -1,13 +1,17 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Button } from "~/components/Ui/Button";
-import { Label } from "~/components/Ui/Label";
-import { Input } from "~/components/Ui/Input";
-import { Textarea } from "~/components/Ui/TextArea";
-import { MessageCard } from "~/components/MessageCard";
-import styles from "./ContactForm.module.css";
+
 import { useTranslations } from "next-intl";
+
+import { MessageCard } from "~/components/MessageCard";
+import { Button } from "~/components/Ui/Button";
+import { Input } from "~/components/Ui/Input";
+import { Label } from "~/components/Ui/Label";
+import { Textarea } from "~/components/Ui/TextArea";
+
+import styles from "./ContactForm.module.css";
+
 
 const ContactForm = () => {
 	const formRef = useRef(null);

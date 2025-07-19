@@ -1,17 +1,20 @@
-"use client"
+"use client";
 
-import { useIsValidAppRoute } from "~/hooks/use-is-in-valid-path"
-import { HOME_NAV_LINKS } from "~/constants"
-import { Link } from "~/components/Ui/Link"
-import { useTranslations } from "next-intl"
-import styles from "./Navigation.module.css"
+import { useTranslations } from "next-intl";
+
+import { Link } from "~/components/Ui/Link";
+import { HOME_NAV_LINKS } from "~/constants";
+import { useIsValidAppRoute } from "~/hooks/use-is-in-valid-path";
+
+
+import styles from "./Navigation.module.css";
 
 export const Navigation = () => {
-  const isValidAppRoute = useIsValidAppRoute()
-  const t = useTranslations("Header")
+  const isValidAppRoute = useIsValidAppRoute();
+  const t = useTranslations("Header");
 
 
-  if (!isValidAppRoute) return
+  if (!isValidAppRoute) return;
 
   return (
     <nav className={styles.nav}>
@@ -25,5 +28,5 @@ export const Navigation = () => {
         ))}
       </ul>
     </nav>
-  )
-}
+  );
+};

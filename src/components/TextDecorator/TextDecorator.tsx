@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from "react";
 
 interface TextDecoratorProps {
 	children: React.ReactNode
@@ -14,27 +14,27 @@ interface TextDecoratorProps {
 
 const TextDecorator: React.FC<TextDecoratorProps> = ({
 																											 children,
-																											 color = '#000000',
+																											 color = "#000000",
 																											 isUnderlined = false,
 																											 isHighlighted = false,
 																											 isBold = false,
-																											 font = 'Arial',
+																											 font = "Arial",
 																											 style = {},
 																										 }) => {
 	const textStyle = {
 		color,
-		textDecoration: isUnderlined ? 'underline' : 'none',
-		fontWeight: isBold ? 'bold' : 'normal',
+		textDecoration: isUnderlined ? "underline" : "none",
+		fontWeight: isBold ? "bold" : "normal",
 		fontFamily: font,
-		backgroundColor: isHighlighted ? '#ffff00' : 'transparent',
+		backgroundColor: isHighlighted ? "#ffff00" : "transparent",
 		...style,
-	}
+	};
 
 	return (
 		<span style={textStyle}>
       {children}
     </span>
-	)
-}
+	);
+};
 
-export default TextDecorator
+export default TextDecorator;

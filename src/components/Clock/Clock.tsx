@@ -1,20 +1,21 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import styles from './Clock.module.css';
+import React, { useState, useEffect } from "react";
+
+import styles from "./Clock.module.css";
 
 // @ts-ignore
 const Clock = ({ className }) => {
- 	 const [timeString, setTimeString] = useState<string>('');
+ 	 const [timeString, setTimeString] = useState<string>("");
 
 	   useEffect(() => {
     const update = () => {
       const now = new Date();
       const local = new Date(
-        now.toLocaleString('en-US', { timeZone: 'America/Argentina/Cordoba' })
+        now.toLocaleString("en-US", { timeZone: "America/Argentina/Cordoba" })
       );
       const options: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit", hour12: false };
-      setTimeString(local.toLocaleTimeString('es-AR', options));
+      setTimeString(local.toLocaleTimeString("es-AR", options));
     };
 
     update();
@@ -32,7 +33,7 @@ const Clock = ({ className }) => {
 
 	return (
 		<span className={`${styles.clock} ${className}`}>
-			<svg style={{marginRight: '5px', fontSize: '15px'}} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+			<svg style={{marginRight: "5px", fontSize: "15px"}} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
 					 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
 					 className="icon icon-tabler icons-tabler-outline icon-tabler-clock"><path stroke="none" d="M0 0h24v24H0z"
 																																										 fill="none" /><path
@@ -42,4 +43,4 @@ const Clock = ({ className }) => {
 	);
 };
 
-export default Clock
+export default Clock;

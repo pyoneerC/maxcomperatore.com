@@ -1,11 +1,13 @@
-"use client"
+"use client";
 
 import React, { useEffect, useRef } from "react";
-import styles from "./AboutSection.module.css";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 import { useTranslations, useLocale } from "next-intl";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SplitText } from 'gsap/SplitText';
+
+import styles from "./AboutSection.module.css";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export const AboutSection = () => {

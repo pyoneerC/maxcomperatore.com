@@ -1,12 +1,14 @@
-import { socialMediaLinks } from "~/data/links"
-import { Link } from "~/components/Ui/Link"
-import styles from "./Footer404.module.css"
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import EmailIcon2 from "~/components/Svg/EmailIcon2"
-import ItchioIcon from "~/components/Svg/ItchioIcon"
-import YoutubeIcon from "~/components/Svg/YoutubeIcon"
-import GithubIcon from "~/components/Svg/GithubIcon"
-import LinkedInIcon from "~/components/Svg/LinkedInIcon"
+import { socialMediaLinks } from "~/data/links";
+import { Link } from "~/components/Ui/Link";
+
+import styles from "./Footer404.module.css";
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import EmailIcon2 from "~/components/Svg/EmailIcon2";
+import GithubIcon from "~/components/Svg/GithubIcon";
+import ItchioIcon from "~/components/Svg/ItchioIcon";
+import LinkedInIcon from "~/components/Svg/LinkedInIcon";
+import YoutubeIcon from "~/components/Svg/YoutubeIcon";
 
 const iconComponents: any = {
 	LinkedInIcon : < LinkedInIcon />,
@@ -14,7 +16,7 @@ const iconComponents: any = {
 	EmailIcon : < EmailIcon2 />,
 	YoutubeIcon : < YoutubeIcon />,
 	ItchioIcon : < ItchioIcon />,
-}
+};
 
 export const Footer404 = () => {
 
@@ -33,5 +35,5 @@ export const Footer404 = () => {
 				</div>
 			</div>
 		</footer>
-	)
-}
+	);
+};

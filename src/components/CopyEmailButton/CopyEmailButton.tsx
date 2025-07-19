@@ -1,27 +1,30 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import clsx from "clsx"
-import { JOACO_EMAIL } from "~/constants"
-import { copyToClipboard } from "~/utils"
-import { useTimeout } from "~/hooks/use-timeout"
-import styles from "./CopyEmailButton.module.css"
-import { useTranslations} from "next-intl"
+import { useState } from "react";
 
-const RESET_FEEDBACK_TIME = 5000
+import clsx from "clsx";
+import { useTranslations} from "next-intl";
+
+import { JOACO_EMAIL } from "~/constants";
+import { useTimeout } from "~/hooks/use-timeout";
+import { copyToClipboard } from "~/utils";
+
+import styles from "./CopyEmailButton.module.css";
+
+const RESET_FEEDBACK_TIME = 5000;
 
 export const CopyEmailButton = () => {
-	const [displayFeedback, setDisplayFeedback] = useState(false)
-	const t = useTranslations("CopyEmailButton")
+	const [displayFeedback, setDisplayFeedback] = useState(false);
+	const t = useTranslations("CopyEmailButton");
 
-	const hideFeedback = () => setDisplayFeedback(false)
+	const hideFeedback = () => setDisplayFeedback(false);
 
-	useTimeout(hideFeedback, RESET_FEEDBACK_TIME)
+	useTimeout(hideFeedback, RESET_FEEDBACK_TIME);
 
 	const handleOnClick = async () => {
-		const isCopied = await copyToClipboard(JOACO_EMAIL)
-		setDisplayFeedback(isCopied)
-	}
+		const isCopied = await copyToClipboard(JOACO_EMAIL);
+		setDisplayFeedback(isCopied);
+	};
 
 	return (
 		<div className={styles.wrapper}>
@@ -33,5 +36,5 @@ export const CopyEmailButton = () => {
 			</button>
 			<div className={styles.hintMessage}>{t("copy")}</div>
 		</div>
-	)
-}
+	);
+};

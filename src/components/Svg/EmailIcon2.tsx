@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 export const EmailIcon = (props: SVGProps<SVGSVGElement>) => (
 	<svg
@@ -28,6 +28,6 @@ export const EmailIcon = (props: SVGProps<SVGSVGElement>) => (
 		3.18428,0,0,1,2.34472,1.02051A.993.993,0,0,0,19.499,5.96a9.27073,9.27073,0,0,0,1.21192-.32226A6.68126,
 		6.68126,0,0,1,19.68457,7.16211Z"/>
 	</svg>
-)
+);
 
-export default EmailIcon
+export default EmailIcon;

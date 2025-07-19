@@ -1,32 +1,36 @@
-"use client"
+"use client";
 
-import { SetStateAction, useState, useRef, useEffect, FC } from "react"
-import { skills } from "~/data/skills"
-import { SkillCard } from "~/components/SkillCard"
-import styles from "./SkillsSection.module.css"
-import { useTranslations } from "next-intl"
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SetStateAction, useState, useRef, useEffect, FC } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
+
+import { SkillCard } from "~/components/SkillCard";
+import { skills } from "~/data/skills";
+
+import styles from "./SkillsSection.module.css";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const SkillsSection: FC = () => {
-	const t = useTranslations("SkillsSection")
-	const [currentTooltip, setCurrentTooltip] = useState<string>("")
+	const t = useTranslations("SkillsSection");
+	const [currentTooltip, setCurrentTooltip] = useState<string>("");
 
-	const sectionRef = useRef<HTMLElement>(null)
-	const titleRef = useRef<HTMLHeadingElement>(null)
-	const skillWrapperRef = useRef<HTMLDivElement>(null)
-	const arrowwaveRef = useRef<HTMLDivElement>(null)
-	const descriptionRef = useRef<HTMLParagraphElement>(null)
+	const sectionRef = useRef<HTMLElement>(null);
+	const titleRef = useRef<HTMLHeadingElement>(null);
+	const skillWrapperRef = useRef<HTMLDivElement>(null);
+	const arrowwaveRef = useRef<HTMLDivElement>(null);
+	const descriptionRef = useRef<HTMLParagraphElement>(null);
 
 	const handleMouseEnter = (tooltip: SetStateAction<string>) => {
-		setCurrentTooltip(tooltip)
-	}
+		setCurrentTooltip(tooltip);
+	};
 
 	const handleMouseLeave = () => {
-		setCurrentTooltip("")
-	}
+		setCurrentTooltip("");
+	};
 
 	useEffect(() => {
 		if (
@@ -87,7 +91,7 @@ export const SkillsSection: FC = () => {
 				{currentTooltip || t("defaultDescription")}
 			</p>
 		</section>
-	)
-}
+	);
+};
 
-export default SkillsSection
+export default SkillsSection;

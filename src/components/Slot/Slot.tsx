@@ -1,5 +1,6 @@
-import { Children, cloneElement, isValidElement } from "react"
-import clsx from "clsx"
+import { Children, cloneElement, isValidElement } from "react";
+
+import clsx from "clsx";
 
 export type AsChildProps<DefaultElementProps> =
 	| ({ asChild?: false } & DefaultElementProps)
@@ -19,12 +20,12 @@ export const Slot: React.FC<Props> = ({ children, ...props }) => {
 				...children.props.style,
 			},
 			className: clsx(props.className, children.props.className),
-		})
+		});
 	}
 
 	if (Children.count(children) > 1) {
-		Children.only(null)
+		Children.only(null);
 	}
 
-	return null
-}
+	return null;
+};

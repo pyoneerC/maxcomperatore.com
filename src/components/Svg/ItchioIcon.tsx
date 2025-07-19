@@ -7,6 +7,6 @@ export const ItchioIcon = () => (
 <path d="M10 16l2 -2l2 2" />
 <path d="M12 14v4" />
 	</svg>
-)
+);
 
-export default ItchioIcon
+export default ItchioIcon;

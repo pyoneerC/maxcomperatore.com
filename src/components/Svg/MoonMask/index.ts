@@ -1,1 +1,1 @@
-export * from "./MoonMask"
+export * from "./MoonMask";

@@ -1,18 +1,18 @@
 export const copyToClipboard = async (text: string) => {
 	if (!navigator?.clipboard) {
-		console.warn("Clipboard not supported")
-		return false
+		console.warn("Clipboard not supported");
+		return false;
 	}
 
 	try {
-		await navigator.clipboard.writeText(text)
-		return true
+		await navigator.clipboard.writeText(text);
+		return true;
 	} catch (error) {
-		console.warn("Copy failed", error)
-		return false
+		console.warn("Copy failed", error);
+		return false;
 	}
-}
+};
 
 export const toggleBodyOverflow = (force: boolean = false) => {
-	document.body.classList.toggle("hide-overflow", force)
-}
+	document.body.classList.toggle("hide-overflow", force);
+};

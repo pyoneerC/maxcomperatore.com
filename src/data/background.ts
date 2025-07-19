@@ -20,4 +20,4 @@ export const experience: BackgroundData[] = [
 		siteUrl: "https://intellicialis.com/",
 		inRemote: true
 	},
-]
+];

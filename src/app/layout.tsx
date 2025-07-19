@@ -1,7 +1,9 @@
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
-import { SvgMasks } from "~/components/Svg/SvgMasks";
+
 import { Header } from "~/components/Header";
+import { SvgMasks } from "~/components/Svg/SvgMasks";
+
 import "~/styles/reset.css";
 import "~/styles/globals.css";
 import "~/styles/utils.css";
