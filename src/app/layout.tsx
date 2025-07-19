@@ -111,7 +111,7 @@ export default async function RootLayout({
 	};
 
 	return (
-		<html lang="es" suppressHydrationWarning>
+		<html lang="es" className={`${GeistSans.className} ${GeistSans.variable}`} suppressHydrationWarning>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -186,7 +186,7 @@ export default async function RootLayout({
 					}}
 				/>
 			</head>
-			<body className={`${GeistSans.className} ${GeistSans.variable}`}>
+			<body >
 				<NextIntlClientProvider messages={messages}>
 					<ThemeProvider>
 						<SvgMasks />
