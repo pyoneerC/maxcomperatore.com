@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "npm run build && npm run export"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
@@ -37,6 +39,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.11.6",
     "@shikijs/rehype": "^1.10.3",
     "@types/mdx": "^2.0.13",
     "@types/node": "^20.14.11",
