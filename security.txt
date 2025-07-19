@@ -1,4 +1,4 @@
-Contact: mailto:me@maxcomperatore.com
+Contact: mailto:joacolivero.dev@gmail.com
 Expires: 2025-07-22T15:00:00.000Z
-Acknowledgments: https://github.com/pyoneerC/maxcomperatore.com/blob/main/README.md
+Acknowledgments: https://github.com/Pulpoide/joacolivero.com
 Preferred-Languages: en, es, pt
