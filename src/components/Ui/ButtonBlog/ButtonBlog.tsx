@@ -12,7 +12,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 	variant?: "primary" | "outlined"
 	rounded?: "default" | "full"
 }
-
+/* eslint-disable react/display-name */
 export const ButtonBlog = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 	const {
 		className,
