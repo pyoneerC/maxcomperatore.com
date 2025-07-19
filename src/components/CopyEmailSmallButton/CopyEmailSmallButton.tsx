@@ -1,32 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import clsx from "clsx"
-import { JOACO_EMAIL } from "~/constants"
-import { useTimeout } from "~/hooks/use-timeout"
-import { CheckIcon } from "~/components/Svg/CheckIcon"
-import { EmailIcon } from "~/components/Svg/EmailIcon"
-import styles from "./CopyEmailSmallButton.module.css"
-import { ArrowUpRight } from "~/components/Svg/ArrowUpRight"
+import { useState } from "react";
 
-const RESET_FEEDBACK_TIME = 2000
+import clsx from "clsx";
+
+import { ArrowUpRight } from "~/components/Svg/ArrowUpRight";
+import { CheckIcon } from "~/components/Svg/CheckIcon";
+import { EmailIcon } from "~/components/Svg/EmailIcon";
+import { JOACO_EMAIL } from "~/constants";
+import { useTimeout } from "~/hooks/use-timeout";
+
+import styles from "./CopyEmailSmallButton.module.css";
+
+
+const RESET_FEEDBACK_TIME = 2000;
 
 interface Props {
 	className?: string
 }
 
 export const CopyEmailSmallButton: React.FC<Props> = ({ className }) => {
-	const [displayFeedback, setDisplayFeedback] = useState(false)
+	const [displayFeedback, setDisplayFeedback] = useState(false);
 
-	const hideFeedback = () => setDisplayFeedback(false)
+	const hideFeedback = () => setDisplayFeedback(false);
 
-	useTimeout(hideFeedback, RESET_FEEDBACK_TIME)
+	useTimeout(hideFeedback, RESET_FEEDBACK_TIME);
 
 	const handleOnClick = async () => {
-		const isCopied = true
-		setDisplayFeedback(isCopied)
-		window.location.href = `mailto:${JOACO_EMAIL}`
-	}
+		const isCopied = true;
+		setDisplayFeedback(isCopied);
+		window.location.href = `mailto:${JOACO_EMAIL}`;
+	};
 
 	return (
 		<button className={clsx(styles.button, className)} onClick={handleOnClick}>
@@ -34,5 +38,5 @@ export const CopyEmailSmallButton: React.FC<Props> = ({ className }) => {
 			<ArrowUpRight className={clsx(styles.icon, { [styles.showIcon]: !displayFeedback })} />
 			<CheckIcon className={clsx(styles.icon, { [styles.showIcon]: displayFeedback })} />
 		</button>
-	)
-}
+	);
+};

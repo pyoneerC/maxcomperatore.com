@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from './TimeDifference.module.css';
+import React from "react";
+
+import styles from "./TimeDifference.module.css";
 
 const TimeDifference = () => {
 
@@ -9,7 +10,7 @@ const TimeDifference = () => {
 
 	let message;
 	if (timeDifference === 0) {
-		message = 'Estamos en el mismo huso horario.';
+		message = "Estamos en el mismo huso horario.";
 	} else if (timeDifference > 0) {
 		message = `${Math.abs(timeDifference)} horas detrás de ti.`;
 	} else {

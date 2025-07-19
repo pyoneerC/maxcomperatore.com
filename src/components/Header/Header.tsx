@@ -1,16 +1,18 @@
-import NextLink from "next/link"
-import { HomeLogo } from "~/components/Svg/HomeLogo"
-import { LanguageSwitcher } from "~/components/LanguageSwitcher"
-import { Button } from "~/components/Ui/Button"
-import { MenuMobile } from "~/components/MenuMobile"
-import { ContactDialog } from "~/components/ContactDialog"
-import { ThemeSwitcher } from "../ThemeSwitcher"
-import { useTranslations } from "next-intl"
-import { Navigation } from "./Navigation"
-import styles from "./Header.module.css"
+import NextLink from "next/link";
+import { useTranslations } from "next-intl";
+
+import { ContactDialog } from "~/components/ContactDialog";
+import { LanguageSwitcher } from "~/components/LanguageSwitcher";
+import { MenuMobile } from "~/components/MenuMobile";
+import { HomeLogo } from "~/components/Svg/HomeLogo";
+import { Button } from "~/components/Ui/Button";
+
+import { ThemeSwitcher } from "../ThemeSwitcher";
+import styles from "./Header.module.css";
+import { Navigation } from "./Navigation";
 
 export const Header = () => {
-	const t = useTranslations("Header")
+	const t = useTranslations("Header");
 	return (
 		<header className={styles.header}>
 			<div className={styles.contentWrapper}>
@@ -32,5 +34,5 @@ export const Header = () => {
 				<MenuMobile />
 			</div>
 		</header>
-	)
-}
+	);
+};

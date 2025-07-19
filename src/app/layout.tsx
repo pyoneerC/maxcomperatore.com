@@ -1,7 +1,9 @@
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
-import { SvgMasks } from "~/components/Svg/SvgMasks";
+
 import { Header } from "~/components/Header";
+import { SvgMasks } from "~/components/Svg/SvgMasks";
+
 import "~/styles/reset.css";
 import "~/styles/globals.css";
 import "~/styles/utils.css";
@@ -125,7 +127,6 @@ export default async function RootLayout({
 			<link rel="icon" href="/favicon.ico" />
 
 			<link rel="canonical" href="https://joacolivero.com" />
-			<meta name="robots" content="index, follow" />
 			<link rel="alternate" hrefLang="en" href="https://joacolivero.com/" />
 			<meta
 				name="keywords"

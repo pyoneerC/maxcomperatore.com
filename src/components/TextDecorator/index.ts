@@ -1,1 +1,1 @@
-export * from './TextDecorator'
+export * from "./TextDecorator";

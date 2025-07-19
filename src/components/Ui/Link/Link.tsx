@@ -1,7 +1,9 @@
-import NextLink from "next/link"
-import clsx from "clsx"
-import { ArrowUpRight } from "~/components/Svg/ArrowUpRight"
-import styles from "./Link.module.css"
+import clsx from "clsx";
+import NextLink from "next/link";
+
+import { ArrowUpRight } from "~/components/Svg/ArrowUpRight";
+
+import styles from "./Link.module.css";
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	children: React.ReactNode
@@ -9,9 +11,9 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 export const Link: React.FC<Props> = ({ href, children, target, className, ...delegated }) => {
-	const isTargetBlank = target === "_blank"
-	const rel = isTargetBlank ? "noopener" : undefined
-	const prefetch = isTargetBlank
+	const isTargetBlank = target === "_blank";
+	const rel = isTargetBlank ? "noopener" : undefined;
+	const prefetch = isTargetBlank;
 
 	return (
 		<NextLink
@@ -25,5 +27,5 @@ export const Link: React.FC<Props> = ({ href, children, target, className, ...de
 			{children}
 			{isTargetBlank && <ArrowUpRight className={styles.arrowIcon} />}
 		</NextLink>
-	)
-}
+	);
+};

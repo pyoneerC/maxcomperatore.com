@@ -1,12 +1,15 @@
-"use client"
+"use client";
 
-import { coverProjects } from "~/data/projects"
-import { ProjectCard } from "~/components/ProjectCard";
-import styles from "./ProjectsSection.module.css";
+import { useEffect, useState, useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
-import { useEffect, useState, useRef } from "react"
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import { ProjectCard } from "~/components/ProjectCard";
+import { coverProjects } from "~/data/projects";
+
+import styles from "./ProjectsSection.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,15 +27,15 @@ export const ProjectsSection = () => {
 
 	useEffect(() => {
 		const detectDevice = () => {
-			const isMobileDevice = 'ontouchstart' in window || window.innerWidth < 768;
+			const isMobileDevice = "ontouchstart" in window || window.innerWidth < 768;
 			setIsPC(!isMobileDevice);
 		};
 
 		detectDevice();
 
-		window.addEventListener('resize', detectDevice);
+		window.addEventListener("resize", detectDevice);
 
-		return () => window.removeEventListener('resize', detectDevice);
+		return () => window.removeEventListener("resize", detectDevice);
 	}, []);
 
 	useEffect(() => {
@@ -55,7 +58,7 @@ export const ProjectsSection = () => {
 		});
 
 		// @ts-ignore
-		let x = projectsWrapperRef.current.children;
+		const x = projectsWrapperRef.current.children;
 
 		// @ts-ignore
 		tl.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out" })

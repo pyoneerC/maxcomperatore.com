@@ -1,13 +1,17 @@
-import NextLink from "next/link"
-import { notFound } from "next/navigation"
-import { projects } from "~/data/projects"
-import { getPrevAndNextProjectSlug, getProjectBySlug } from "~/helpers/get-projects"
-import { Link } from "~/components/Ui/Link"
-import styles from "./page.module.css"
-import React from "react"
-import { getTranslations } from "next-intl/server"
+import React from "react";
 
-export const dynamic = 'force-dynamic'
+import NextLink from "next/link";
+import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+
+import { Link } from "~/components/Ui/Link";
+import { projects } from "~/data/projects";
+import { getPrevAndNextProjectSlug, getProjectBySlug } from "~/helpers/get-projects";
+
+import styles from "./page.module.css";
+
+
+export const dynamic = "force-dynamic";
 
 interface Props {
 	params: Promise<{ slug: string }>
@@ -18,19 +22,19 @@ export async function generateMetadata({ params }: Props) {
 	const project = getProjectBySlug(slug);
 	
 	if (!project) {
-		return notFound()
+		return notFound();
 	}
 
 	return {
 		title: `Joaquín Olivero - Proyecto | ${project.name}`,
 		description: project.description,
-	}
+	};
 }
 
 export function generateStaticParams() {
 	return projects.map(({ slug }) => ({
 		params: { slug },
-	}))
+	}));
 }
 
 export default async function Project({ params }: Props) {
@@ -43,12 +47,12 @@ export default async function Project({ params }: Props) {
 	const t = await getTranslations("ProjectsSection");
 
 	const renderDescription = (text: string) => {
-		return text.split('\n').map((item, key) => {
+		return text.split("\n").map((item, key) => {
 			return <React.Fragment key={key}>
-				<div style={{ marginBottom: '0.75rem' }}>{item}</div>
+				<div style={{ marginBottom: "0.75rem" }}>{item}</div>
 			</React.Fragment>;
 		});
-	}
+	};
 
 	return (
 		<>
@@ -133,5 +137,5 @@ export default async function Project({ params }: Props) {
 				</NextLink>
 			</nav>
 		</>
-	)
+	);
 }

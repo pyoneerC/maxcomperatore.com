@@ -1,7 +1,10 @@
-import { forwardRef } from "react"
-import { clsx } from "clsx"
-import { Slot } from "~/components/Slot"
-import styles from "./ButtonBlog.module.css"
+import { forwardRef } from "react";
+
+import { clsx } from "clsx";
+
+import { Slot } from "~/components/Slot";
+
+import styles from "./ButtonBlog.module.css";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	asChild?: boolean
@@ -18,8 +21,8 @@ export const ButtonBlog = forwardRef<HTMLButtonElement, ButtonProps>((props, ref
 		rounded = "default",
 		asChild,
 		...delegated
-	} = props
-	const Component = asChild ? Slot : "button"
+	} = props;
+	const Component = asChild ? Slot : "button";
 
 	return (
 		<Component
@@ -27,7 +30,7 @@ export const ButtonBlog = forwardRef<HTMLButtonElement, ButtonProps>((props, ref
 			className={clsx(styles.button, styles[variant], styles[size], styles[rounded], className)}
 			{...delegated}
 		/>
-	)
-})
+	);
+});
 
-export default ButtonBlog
+export default ButtonBlog;

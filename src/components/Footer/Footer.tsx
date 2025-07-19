@@ -1,13 +1,15 @@
-import { socialMediaLinks } from "~/data/links";
+import { GithubIcon } from "~/components/Svg/GithubIcon";
+import { LinkedInIcon } from "~/components/Svg/LinkedInIcon";
 import { Link } from "~/components/Ui/Link";
+import { socialMediaLinks } from "~/data/links";
+
 import styles from "./Footer.module.css";
-import { LinkedInIcon } from "~/components/Svg/LinkedInIcon"
-import { GithubIcon } from "~/components/Svg/GithubIcon"
+
 
 const iconComponents: any = {
 	LinkedInIcon : < LinkedInIcon />,
 	GithubIcon : < GithubIcon />,
-}
+};
 
 export const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -34,4 +36,4 @@ export const Footer = () => {
 			</div>
 		</footer>
 	);
-}
+};

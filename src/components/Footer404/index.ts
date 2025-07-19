@@ -1,1 +1,1 @@
-export * from "./Footer404"
+export * from "./Footer404";

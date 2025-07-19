@@ -1,4 +1,4 @@
-import type { SVGProps } from "react"
+import type { SVGProps } from "react";
 
 export const HomeLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -15,4 +15,4 @@ export const HomeLogo = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-)
+);

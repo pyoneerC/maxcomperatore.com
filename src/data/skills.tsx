@@ -1,11 +1,11 @@
-import { PostgresqlLogo } from "~/components/Svg/PostgresqlLogo"
-import { NextJsLogo } from "~/components/Svg/NextJsLogo"
-import { TypeScriptLogo } from "~/components/Svg/TypeScriptLogo"
-import { ReactLogo } from "~/components/Svg/ReactLogo"
-import { DockerLogo } from "~/components/Svg/DockerLogo"
-import { JavaLogo } from "~/components/Svg/JavaLogo"
-import { SpringBootLogo } from "~/components/Svg/SpringBootLogo"
-import { MongoDBLogo } from "~/components/Svg/MongoDBLogo"
+import { DockerLogo } from "~/components/Svg/DockerLogo";
+import { JavaLogo } from "~/components/Svg/JavaLogo";
+import { MongoDBLogo } from "~/components/Svg/MongoDBLogo";
+import { NextJsLogo } from "~/components/Svg/NextJsLogo";
+import { PostgresqlLogo } from "~/components/Svg/PostgresqlLogo";
+import { ReactLogo } from "~/components/Svg/ReactLogo";
+import { SpringBootLogo } from "~/components/Svg/SpringBootLogo";
+import { TypeScriptLogo } from "~/components/Svg/TypeScriptLogo";
 
 export const skills = [
 	{

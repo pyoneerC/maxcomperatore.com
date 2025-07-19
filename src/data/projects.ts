@@ -1,5 +1,6 @@
-import type { CoverProject } from "~/types"
-import { Tag } from "./tags"
+import type { CoverProject } from "~/types";
+
+import { Tag } from "./tags";
 
 export const projectMetadata = {
 	Deporturnos: {
@@ -18,30 +19,30 @@ export const projectMetadata = {
 		slug: "task-list",
 		name: "Task List",
 	}
-}
+};
 
 export const coverProjects: CoverProject[] = [
 	{
 		...projectMetadata.Deporturnos,
-		imageUrl: `/assets/images/projects/deporturnos/home-depo.avif`,
+		imageUrl: "/assets/images/projects/deporturnos/home-depo.avif",
 		i18nDescriptionKey: "Deporturnos.description",
 	},
 	{
 		...projectMetadata.ProductManager,
-		imageUrl: `/assets/images/projects/productmanager/home.avif`,
+		imageUrl: "/assets/images/projects/productmanager/home.avif",
 		i18nDescriptionKey: "ProductManager.description",
 	},
 	{
 		...projectMetadata.Poui,
-		imageUrl: `/assets/images/projects/poui/home-poui.avif`,
+		imageUrl: "/assets/images/projects/poui/home-poui.avif",
 		i18nDescriptionKey: "Poui.description",
 	},
 	{
 		...projectMetadata.TaskList,
-		imageUrl: `/assets/images/projects/tasklist/home-tasklist.avif`,
+		imageUrl: "/assets/images/projects/tasklist/home-tasklist.avif",
 		i18nDescriptionKey: "TaskList.description",
 	},
-]
+];
 
 export const projects = [
 	{
@@ -50,13 +51,13 @@ export const projects = [
 		description: "Deporturnos.about",
 		mobileImages:
 			[
-				`/assets/images/projects/deporturnos/deporturnos.gif`,
+				"/assets/images/projects/deporturnos/deporturnos.gif",
 			],
 		desktopImages:
 			[
-				`/assets/images/projects/deporturnos/login.avif`,
-				`/assets/images/projects/deporturnos/register.avif`,
-				`/assets/images/projects/deporturnos/homeclient.avif`,
+				"/assets/images/projects/deporturnos/login.avif",
+				"/assets/images/projects/deporturnos/register.avif",
+				"/assets/images/projects/deporturnos/homeclient.avif",
 			],
 		links: [
 			{
@@ -91,11 +92,11 @@ export const projects = [
 		description: "ProductManager.about",
 		mobileImages:
 			[
-				`/assets/images/projects/productmanager/productmanager.gif`,
+				"/assets/images/projects/productmanager/productmanager.gif",
 			],
 		desktopImages:
 			[
-				`/assets/images/projects/productmanager/home.avif`
+				"/assets/images/projects/productmanager/home.avif"
 			],
 		links: [
 			{
@@ -124,12 +125,12 @@ export const projects = [
 		description: "Poui.about",
 		mobileImages:
 			[
-				`/assets/images/projects/poui/home.gif`,
+				"/assets/images/projects/poui/home.gif",
 			],
 		desktopImages: [
-			`/assets/images/projects/poui/catalogo.avif`,
-			`/assets/images/projects/poui/form.avif`,
-			`/assets/images/projects/poui/quienessomos.avif`,
+			"/assets/images/projects/poui/catalogo.avif",
+			"/assets/images/projects/poui/form.avif",
+			"/assets/images/projects/poui/quienessomos.avif",
 		],
 		links: [
 			{
@@ -164,7 +165,7 @@ export const projects = [
 		],
 		mobileImages:
 			[
-				`/assets/images/projects/tasklist/home-tasklist.avif`
+				"/assets/images/projects/tasklist/home-tasklist.avif"
 			],
 		desktopImages:
 			[
@@ -177,4 +178,4 @@ export const projects = [
 				Tag.css,
 			],
 	},
-]
+];

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+
 import { HOST_URL, APP_ROUTES } from "~/constants";
 import { projects } from "~/data/projects";
 

@@ -1,7 +1,10 @@
-import type { BackgroundData } from "~/data/background"
-import { ArrowUpRight } from "~/components/Svg/ArrowUpRight"
-import styles from "./BackgroundCard.module.css"
-import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl";
+
+import { ArrowUpRight } from "~/components/Svg/ArrowUpRight";
+import type { BackgroundData } from "~/data/background";
+
+import styles from "./BackgroundCard.module.css";
+
 
 interface Props {
 	data: BackgroundData
@@ -9,11 +12,11 @@ interface Props {
 }
 
 export const BackgroundCard: React.FC<Props> = ({ data, isExperience = true }) => {
-	const t = useTranslations("Experience")
+	const t = useTranslations("Experience");
 
-	const { role, years, siteName, siteUrl, inRemote } = data
+	const { role, years, siteName, siteUrl, inRemote } = data;
 
-	const showBadge = isExperience ? (inRemote ? t("remote") : t("hybrid")) : null
+	const showBadge = isExperience ? (inRemote ? t("remote") : t("hybrid")) : null;
 
 	return (
 		<div className={styles.card}>
@@ -41,5 +44,5 @@ export const BackgroundCard: React.FC<Props> = ({ data, isExperience = true }) =
 				)}
 			</div>
 		</div>
-	)
-}
+	);
+};

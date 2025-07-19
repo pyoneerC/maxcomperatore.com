@@ -1,1 +1,1 @@
-export * from "./CenteredContent"
+export * from "./CenteredContent";

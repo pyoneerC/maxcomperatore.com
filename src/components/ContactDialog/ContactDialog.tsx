@@ -1,6 +1,8 @@
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "~/components/Ui/Dialog"
-import ContactForm from "../ContactForm/ContactForm"
-import {useTranslations} from "next-intl"
+import {useTranslations} from "next-intl";
+
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "~/components/Ui/Dialog";
+
+import ContactForm from "../ContactForm/ContactForm";
 
 
 interface Props {
@@ -8,7 +10,7 @@ interface Props {
 }
 
 export const ContactDialog: React.FC<Props> = ({ trigger }) => {
-	const t = useTranslations("ContactDialog")
+	const t = useTranslations("ContactDialog");
 
 	return (
 		<Dialog>
@@ -18,5 +20,5 @@ export const ContactDialog: React.FC<Props> = ({ trigger }) => {
 				<ContactForm />
 			</DialogContent>
 		</Dialog>
-	)
-}
+	);
+};

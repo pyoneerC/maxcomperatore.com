@@ -15,4 +15,4 @@ export const Tag = {
 	reactjs: "React.js",
 	expressjs: "Express.js",
 	ejs: "EJS",
-}
+};

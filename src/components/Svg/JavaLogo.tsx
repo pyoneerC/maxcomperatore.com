@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 export const JavaLogo = (props: SVGProps<SVGSVGElement>) => (
 	<svg
@@ -14,6 +14,6 @@ export const JavaLogo = (props: SVGProps<SVGSVGElement>) => (
 			fill="currentColor"
 		/>
 	</svg>
-)
+);
 
 

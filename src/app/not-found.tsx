@@ -1,15 +1,18 @@
-import Link from "next/link"
-import { Button } from "~/components/Ui/Button"
-import { Footer404 } from "~/components/Footer404"
-import styles from "./not-found.module.css"
-import { useTranslations } from "next-intl"
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+import { Footer404 } from "~/components/Footer404";
+import { Button } from "~/components/Ui/Button";
+
+import styles from "./not-found.module.css";
+
 
 export const metadata = {
 	title: "Maximo Comperatore - 404",
-}
+};
 
 export default function NotFound() {
-	const t = useTranslations("404")
+	const t = useTranslations("404");
 	return (
 		<>
 			<main className={styles.wrapper}>
@@ -22,5 +25,5 @@ export default function NotFound() {
 			</main>
 			<Footer404 />
 		</>
-	)
+	);
 }

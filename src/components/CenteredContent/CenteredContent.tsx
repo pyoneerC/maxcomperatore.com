@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 interface CenteredContentProps {
 	children: React.ReactNode
@@ -6,10 +6,10 @@ interface CenteredContentProps {
 
 const CenteredContent: React.FC<CenteredContentProps> = ({ children }) => {
 	return (
-		<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+		<div style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
 			{children}
 		</div>
-	)
-}
+	);
+};
 
-export default CenteredContent
+export default CenteredContent;

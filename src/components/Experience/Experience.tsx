@@ -1,9 +1,12 @@
-import { experience } from "~/data/background"
-import { BackgroundCard } from "~/components/BackgroundCard"
-import styles from "./Experience.module.css"
-import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl";
+
+import { BackgroundCard } from "~/components/BackgroundCard";
+import { experience } from "~/data/background";
+
+import styles from "./Experience.module.css";
+
 export const Experience = () => {
-	const t = useTranslations("Experience")
+	const t = useTranslations("Experience");
 	return (
 		<div data-name="experience" className={styles.experience}>
 			<h3>{t("experience")}</h3>
@@ -13,5 +16,5 @@ export const Experience = () => {
 				))}
 			</div>
 		</div>
-	)
-}
+	);
+};

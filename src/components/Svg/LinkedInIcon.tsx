@@ -7,6 +7,6 @@ export const LinkedInIcon = () => (
 	<path d="M12 16l0 -5" />
 	<path d="M16 16v-3a2 2 0 0 0 -4 0" />
 </svg>
-	)
+	);
 
-export default LinkedInIcon
+export default LinkedInIcon;

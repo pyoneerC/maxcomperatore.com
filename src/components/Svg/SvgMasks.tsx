@@ -1,4 +1,4 @@
-import { MoonMask } from "./MoonMask"
+import { MoonMask } from "./MoonMask";
 
 export const SvgMasks = () => {
 	return (
@@ -14,5 +14,5 @@ export const SvgMasks = () => {
 				<MoonMask />
 			</defs>
 		</svg>
-	)
-}
+	);
+};

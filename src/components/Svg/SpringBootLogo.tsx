@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
 export const SpringBootLogo = (props: SVGProps<SVGSVGElement>) => (
 	<svg
@@ -14,4 +14,4 @@ export const SpringBootLogo = (props: SVGProps<SVGSVGElement>) => (
 			fill="currentColor"
 		/>
 	</svg>
-)
+);
