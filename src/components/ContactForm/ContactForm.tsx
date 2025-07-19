@@ -32,7 +32,7 @@ const ContactForm = () => {
 		// Reset global response message
 		setResponseMessage("");
 
-		// @ts-ignore
+		// @ts-expect-error:
 		const formData = new FormData(formRef.current);
 
 		try {
@@ -55,8 +55,8 @@ const ContactForm = () => {
 				setNameError("");
 				setEmailError("");
 				setMessageError("");
-
-				// @ts-ignore
+				
+				// @ts-expect-error: formRef is a ref to the form element
 				formRef.current?.reset();
 			} else {
 				setResponseMessage(data.error || t("somethingWrong"));

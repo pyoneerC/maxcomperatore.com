@@ -11,17 +11,16 @@ interface Props {
 }
 
 export const SkillCard: React.FC<Props> = ({
-																						 icon,
-																						 brandColor,
-																						 name,
-																						 colors,
-																						 onMouseEnter,
-																						 onMouseLeave,
-																					 }) => {
+	icon,
+	brandColor,
+	name,
+	colors,
+	onMouseEnter,
+	onMouseLeave,
+}) => {
 	const customProperties = { "--color-brand": brandColor } as React.CSSProperties;
 	const colorString = colors.join(", "); // Convert array to comma-separated string
 
-	// @ts-ignore
 	return (
 		<span
 			className={styles.card}
@@ -29,12 +28,13 @@ export const SkillCard: React.FC<Props> = ({
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
 		>
-			<pixel-canvas data-gap="3" data-speed="20" data-colors={colorString}/>
+			{/* @ts-expect-error: pixelCanvas is a global function provided by the pixelcanvas library */}
+			<pixel-canvas data-gap="3" data-speed="20" data-colors={colorString} />
 
-      <div className={styles.wrapper}>
-        <div className={styles.iconWrapper}>{icon}</div>
-        <span className={styles.skillName}>{name}</span>
-      </div>
-    </span>
+			<div className={styles.wrapper}>
+				<div className={styles.iconWrapper}>{icon}</div>
+				<span className={styles.skillName}>{name}</span>
+			</div>
+		</span>
 	);
 };

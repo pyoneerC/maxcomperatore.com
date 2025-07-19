@@ -57,10 +57,8 @@ export const ProjectsSection = () => {
 			},
 		});
 
-		// @ts-ignore
 		const x = projectsWrapperRef.current.children;
 
-		// @ts-ignore
 		tl.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out" })
 			.fromTo(titleRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.6")
 			.fromTo(subtitleRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, "-=0.4")
@@ -74,7 +72,6 @@ export const ProjectsSection = () => {
 		};
 	}, [t]);
 
-	// @ts-ignore
 	return (
 		<section id="projects" className="section-wrapper" ref={sectionRef}>
 			<h2 className={styles.title} ref={titleRef}>
