@@ -7,7 +7,7 @@ import Link from "next/link";
 import type { CoverProject } from "~/types";
 
 import styles from "./ProjectCard.module.css";
-
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 interface Props extends CoverProject {}
 
 export const ProjectCard: React.FC<Props> = ({ slug, imageUrl, name, description }) => {
