@@ -10,7 +10,7 @@ import { getTranslations } from "next-intl/server"
 export const dynamic = 'force-dynamic'
 
 interface Props {
-	params: { slug: string }
+	params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
