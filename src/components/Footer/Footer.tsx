@@ -25,8 +25,8 @@ export const Footer = () => {
 					{currentYear} - Joaquín Olivero
 				</span>
 				<div className={styles.linksWrapper}>
-					{socialMediaLinks.map(({ url, label, icon, className }) => (
-						<Link key={url} className={`${styles.link} ${styles[className]}`} href={url} target="_blank">
+					{socialMediaLinks.map(({ id, url, label, icon, className }) => (
+						<Link key={id} className={`${styles.link} ${styles[className]}`} href={url} target="_blank">
 							<span className={styles.icon}>
 								{iconComponents[icon]}
 							</span>
