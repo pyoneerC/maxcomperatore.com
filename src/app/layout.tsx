@@ -1,5 +1,5 @@
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
+// import { GeistMono } from "geist/font/mono";
+// import { GeistSans } from "geist/font/sans";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
@@ -115,7 +115,7 @@ export default async function RootLayout({
 	};
 
 	return (
-		<html lang="es" className={`${GeistSans.className} ${GeistMono.className}`} suppressHydrationWarning>
+		<html lang="es" className="sans" suppressHydrationWarning>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
