@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 import styles from "./Clock.module.css";
 
-// @ts-expect-error:
+// @ts-expect-error: className is not used in the component, but it is passed as a prop
 const Clock = ({ className }) => {
  	 const [timeString, setTimeString] = useState<string>("");
 
