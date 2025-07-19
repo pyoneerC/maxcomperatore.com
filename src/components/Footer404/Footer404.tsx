@@ -22,8 +22,8 @@ export const Footer404 = () => {
 		<footer className={styles.footer}>
 			<div className={styles.wrapper}>
 				<div className={styles.linksWrapper}>
-					{socialMediaLinks.map(({ url, label, icon, className }) => (
-						<Link key={url} className={`${styles.link} ${styles[className]}`} href={url} target="_blank">
+					{socialMediaLinks.map(({ id, url, label, icon, className }) => (
+						<Link key={id} className={`${styles.link} ${styles[className]}`} href={url} target="_blank">
 							<span className={styles.icon}>
 							{iconComponents[icon]}
 							</span>
