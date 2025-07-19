@@ -1,19 +1,17 @@
-import { socialMediaLinks } from "~/data/links";
 
-import styles from "./Footer404.module.css";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import LinkedInIcon from "~/components/Svg/LinkedInIcon";
 import GithubIcon from "~/components/Svg/GithubIcon";
-import EmailIcon2 from "~/components/Svg/EmailIcon2";
 import { Link } from "~/components/Ui/Link";
+import { socialMediaLinks, IconKey } from "~/data/links";
+import { ReactElement } from "react";
+import styles from "./Footer404.module.css";
 
 
-
-const iconComponents: any = {
+const iconComponents: Record<IconKey, ReactElement> = {
 	LinkedInIcon : < LinkedInIcon />,
 	GithubIcon : < GithubIcon />,
-	EmailIcon : < EmailIcon2 />,
 };
 
 export const Footer404 = () => {
