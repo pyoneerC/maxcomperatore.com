@@ -1,9 +1,10 @@
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+
 import { Header } from "~/components/Header";
 import { SvgMasks } from "~/components/Svg/SvgMasks";
 
