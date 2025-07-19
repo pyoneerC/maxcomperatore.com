@@ -29,6 +29,7 @@ export const metadata = {
 			},
 		],
 	},
+	fonts: [GeistSans],
 };
 
 export default async function RootLayout({
