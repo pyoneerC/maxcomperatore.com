@@ -32,7 +32,7 @@ const ContactForm = () => {
 		const formData = new FormData(formRef.current);
 
 		try {
-			const response = await fetch("https://formspree.io/f/xzzpebvr", {
+			const response = await fetch("https://formspree.io/f/mdkdkvnd", {
 				method: "POST",
 				body: formData,
 				headers: {
