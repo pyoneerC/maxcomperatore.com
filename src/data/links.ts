@@ -1,15 +1,12 @@
-
 export const socialMediaLinks = [
-	{
-		label: "LinkedIn",
-		url: "https://www.linkedin.com/in/joaquinolivero/",
-		icon: "LinkedInIcon",
-		className: "linkedin",
-	},
-	{
-		label: "GitHub",
-		url: "https://github.com/Pulpoide",
-		icon: "GithubIcon",
-		className: "github",
-	},
-];
+  { label: "LinkedIn", url: "...", icon: "LinkedInIcon", className: "linkedin" },
+  { label: "GitHub",   url: "...", icon: "GithubIcon",   className: "github" },
+] as const;
+
+export type IconKey = typeof socialMediaLinks[number]['icon'];
+export interface SocialMediaLink {
+  label: string;
+  url: string;
+  icon: IconKey;
+  className: string;
+}

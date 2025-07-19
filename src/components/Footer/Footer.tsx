@@ -1,12 +1,13 @@
 import { GithubIcon } from "~/components/Svg/GithubIcon";
 import { LinkedInIcon } from "~/components/Svg/LinkedInIcon";
 import { Link } from "~/components/Ui/Link";
-import { socialMediaLinks } from "~/data/links";
+import { socialMediaLinks, IconKey } from "~/data/links";
 
 import styles from "./Footer.module.css";
+import { ReactElement } from "react";
 
 
-const iconComponents: any = {
+const iconComponents:  Record<IconKey, ReactElement> = {
 	LinkedInIcon : < LinkedInIcon />,
 	GithubIcon : < GithubIcon />,
 };
