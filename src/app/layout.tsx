@@ -127,7 +127,6 @@ export default async function RootLayout({
 			<link rel="icon" href="/favicon.ico" />
 
 			<link rel="canonical" href="https://joacolivero.com" />
-			<meta name="robots" content="index, follow" />
 			<link rel="alternate" hrefLang="en" href="https://joacolivero.com/" />
 			<meta
 				name="keywords"
