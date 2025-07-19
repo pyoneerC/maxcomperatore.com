@@ -1,11 +1,14 @@
 
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import LinkedInIcon from "~/components/Svg/LinkedInIcon";
+import { ReactElement } from "react";
+
 import GithubIcon from "~/components/Svg/GithubIcon";
+import LinkedInIcon from "~/components/Svg/LinkedInIcon";
 import { Link } from "~/components/Ui/Link";
 import { socialMediaLinks, IconKey } from "~/data/links";
-import { ReactElement } from "react";
+
+
 import styles from "./Footer404.module.css";
 
 

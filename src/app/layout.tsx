@@ -1,4 +1,8 @@
-import { GeistSans } from "geist/font/sans";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { ThemeProvider } from "next-themes";
+
+//import { GeistSans } from "geist/font/sans";
 
 import { Header } from "~/components/Header";
 import { SvgMasks } from "~/components/Svg/SvgMasks";
@@ -6,9 +10,7 @@ import { SvgMasks } from "~/components/Svg/SvgMasks";
 import "~/styles/reset.css";
 import "~/styles/globals.css";
 import "~/styles/utils.css";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { ThemeProvider } from "next-themes";
+
 
 
 export const metadata = {
@@ -30,7 +32,6 @@ export const metadata = {
 			},
 		],
 	},
-	fonts: [GeistSans],
 };
 
 export default async function RootLayout({
@@ -113,7 +114,7 @@ export default async function RootLayout({
 	};
 
 	return (
-		<html lang="es" className={`${GeistSans.className} ${GeistSans.variable}`} suppressHydrationWarning>
+		<html lang="es" className="font-sans" suppressHydrationWarning>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />

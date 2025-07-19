@@ -1,5 +1,5 @@
 declare namespace JSX {
 	interface IntrinsicElements {
-		"pixel-canvas": any;
+		"pixel-canvas": unknown;
 	}
 }
