@@ -1,5 +1,4 @@
 import { GeistSans } from "geist/font/sans";
-import { ThemeProvider } from "next-themes";
 
 import { Header } from "~/components/Header";
 import { SvgMasks } from "~/components/Svg/SvgMasks";
@@ -9,6 +8,8 @@ import "~/styles/globals.css";
 import "~/styles/utils.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { ThemeProvider } from "next-themes";
+
 
 export const metadata = {
 	metadataBase: new URL("https://joacolivero.com"),
