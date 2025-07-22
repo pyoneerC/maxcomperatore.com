@@ -1,5 +1,4 @@
- import { GeistMono } from "geist/font/mono";
- import { GeistSans } from "geist/font/sans";
+import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
@@ -7,6 +6,8 @@ import { ThemeProvider } from "next-themes";
 
 import { Header } from "~/components/Header";
 import { SvgMasks } from "~/components/Svg/SvgMasks";
+
+import { GeistSans } from "./font";
 
 import "~/styles/reset.css";
 import "~/styles/globals.css";
@@ -144,20 +145,25 @@ export default async function RootLayout({
 				/>
 
 				{/* Google Analytics */}
-				<script
+				<Script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=G-N5ZZD243ZP"
-				></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-N5ZZD243ZP');
-            `,
-					}}
-				/>
+					strategy="afterInteractive"
+				></Script>
+				<Script
+					id="ga-init"
+					strategy="afterInteractive"
+
+				>
+					{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-N5ZZD243ZP', {
+              page_path: window.location.pathname,
+            });
+          `}
+				</Script>
 
 				{/* Microsoft Clarity */}
 				<script
@@ -190,7 +196,7 @@ export default async function RootLayout({
 					}}
 				/>
 			</head>
-			<body className={`${GeistMono.className} ${GeistSans.variable}`}>
+			<body className={`${GeistSans.className} ${GeistSans.variable}`}>
 				<NextIntlClientProvider messages={messages}>
 					<ThemeProvider>
 						<SvgMasks />
