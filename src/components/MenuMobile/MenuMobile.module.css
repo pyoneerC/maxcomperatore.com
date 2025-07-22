@@ -132,6 +132,7 @@
 	padding-inline: 0;
 	-webkit-tap-highlight-color: transparent;
 	cursor: pointer;
+	color: inherit;
 }
 .buttonLine {
 	inline-size: 80%;
