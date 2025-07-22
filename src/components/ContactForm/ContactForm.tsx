@@ -1,129 +1,81 @@
 "use client";
 
 import { useRef, useState } from "react";
-
 import { useTranslations } from "next-intl";
-
 import { MessageCard } from "~/components/MessageCard";
 import { Button } from "~/components/Ui/Button";
 import { Input } from "~/components/Ui/Input";
 import { Label } from "~/components/Ui/Label";
 import { Textarea } from "~/components/Ui/TextArea";
-
+import { FORMSPREE_URL } from "~/constants";
 import styles from "./ContactForm.module.css";
 
+export const EMAIL_REGEX = /^(?=.{1,254}$)(?=.{1,64}@.{1,255}$)(?=[a-zA-Z0-9._%+-]{1,64}@)[a-zA-Z0-9][a-zA-Z0-9._%+-]{0,63}@[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]\.[a-zA-Z]{2,24}$/;
+export const FORMSPREE_ENDPOINT =
+	process.env.NEXT_PUBLIC_FORMSPREE_ID
+		? `${FORMSPREE_URL}/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
+		: (() => { throw new Error("Missing NEXT_PUBLIC_FORMSPREE_ID"); })();
 
 const ContactForm = () => {
-	const formRef = useRef(null);
+	const formRef = useRef<HTMLFormElement>(null);
 	const [responseMessage, setResponseMessage] = useState("");
 	const [nameError, setNameError] = useState("");
 	const [emailError, setEmailError] = useState("");
 	const [messageError, setMessageError] = useState("");
-	const [hasError, setHasError] = useState(false);
-	const [nameValid, setNameValid] = useState(false);
-	const [emailValid, setEmailValid] = useState(false);
-	const [messageValid, setMessageValid] = useState(false);
-
 	const t = useTranslations("Form");
+
+	const hasError = Boolean(nameError || emailError || messageError);
+
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-
-		// Reset global response message
 		setResponseMessage("");
 
-		// @ts-expect-error: formRef is a ref to the form element
-		const formData = new FormData(formRef.current);
+		const form = event.currentTarget;
 
+		const data = new FormData(form);
 		try {
-			const response = await fetch("https://formspree.io/f/mdkdkvnd", {
+			const res = await fetch(FORMSPREE_ENDPOINT, {
 				method: "POST",
-				body: formData,
+				body: data,
 				headers: {
 					Accept: "application/json",
 				},
 			});
 
-			const data = await response.json();
-			if (data.ok) {
-				setResponseMessage(t("success"));
-				setHasError(false);
-
-				setNameValid(false);
-				setEmailValid(false);
-				setMessageValid(false);
-				setNameError("");
-				setEmailError("");
-				setMessageError("");
-
-				// @ts-expect-error: formRef is a ref to the form element
-				formRef.current?.reset();
-			} else {
-				setResponseMessage(data.error || t("somethingWrong"));
-				setHasError(true);
+			if (!res.ok) {
+				setResponseMessage(t("somethingWrong"));
+				return;
 			}
-		} catch (error) {
+
+			const json = await res.json();
+			if (json.ok) {
+				setResponseMessage(t("success"));
+				form.reset();
+				setNameError(""); setEmailError(""); setMessageError("");
+			} else {
+				setResponseMessage(json.error || t("somethingWrong"));
+			}
+		} catch (err) {
+			console.error("Error en handleSubmit:", err);
+
 			setResponseMessage(t("networkError"));
-			setHasError(true);
 		}
 	};
 
-	const validateName = (name: string) => {
-		if (name.length < 5) {
-			setNameError(t("nameError"));
-			setNameValid(false);
-			setHasError(true);
-		} else {
-			setNameError("");
-			setNameValid(true);
-			setHasError(false);
-		}
+	const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const v = e.target.value;
+		setNameError(v.length < 4 ? t("nameError") : "");
 	};
 
-	const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setResponseMessage("");
-		const name = event.target.value;
-		validateName(name);
+	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const v = e.target.value;
+		setEmailError(!EMAIL_REGEX.test(v) ? t("emailError") : "");
 	};
 
-	const validateEmail = (email: string) => {
-		const emailRegex =
-			/^(?=.{1,254}$)(?=.{1,64}@.{1,255}$)(?=[a-zA-Z0-9._%+-]{1,64}@)[a-zA-Z0-9][a-zA-Z0-9._%+-]{0,63}@[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]\.[a-zA-Z]{2,24}$/;
-		if (!emailRegex.test(email)) {
-			setEmailError(t("emailError"));
-			setEmailValid(false);
-			setHasError(true);
-		} else {
-			setEmailError("");
-			setEmailValid(true);
-			setHasError(false);
-		}
-	};
-
-	const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setResponseMessage("");
-		const email = event.target.value;
-		validateEmail(email);
-	};
-
-	const validateMessage = (message: string) => {
-		if (message.length < 10) {
-			setMessageError(t("messageError"));
-			setMessageValid(false);
-			setHasError(true);
-		} else {
-			setMessageError("");
-			setMessageValid(true);
-			setHasError(false);
-		}
-	};
-
-	const handleMessageChange = (
-		event: React.ChangeEvent<HTMLTextAreaElement>
-	) => {
-		setResponseMessage("");
-		const message = event.target.value;
-		validateMessage(message);
+	const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+		const v = e.target.value;
+		setMessageError(v.length < 10 ? t("messageError") : "");
 	};
 
 	return (
@@ -131,7 +83,6 @@ const ContactForm = () => {
 			ref={formRef}
 			onSubmit={handleSubmit}
 			className={styles.form}
-			method="POST"
 		>
 			<Label>
 				<span className={styles.labelWrapper}>{t("nameLabel")}</span>
@@ -144,7 +95,7 @@ const ContactForm = () => {
 						required
 						onChange={handleNameChange}
 					/>
-					{nameValid && (
+					{!nameError && (
 						<svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
 							<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
 							<path d="M9 12l2 2l4 -4" />
@@ -180,8 +131,8 @@ const ContactForm = () => {
 						name="email"
 						autoComplete="email"
 						required
-						onInput={handleEmailChange} />
-					{emailValid && (
+						onChange={handleEmailChange} />
+					{!emailError && (
 						<svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
 							<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
 							<path d="M9 12l2 2l4 -4" />
@@ -206,9 +157,9 @@ const ContactForm = () => {
 						name="message"
 						required
 						onChange={handleMessageChange}
-						className={messageValid ? styles.valid : ""}
+						className={messageError ? styles.valid : ""}
 					/>
-					{messageValid && (
+					{!messageError && (
 						<svg
 							className={styles.checkIcon}
 							viewBox="0 0 24 24"
