@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getRequestConfig } from "next-intl/server";
 
 import { getUserLocale } from "./services/locale";
