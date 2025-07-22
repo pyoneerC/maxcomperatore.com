@@ -14,7 +14,6 @@ import { Button } from "~/components/Ui/Button";
 import styles from "./HeroSection.module.css";
 
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 export const HeroSection = () => {
 	const t = useTranslations("HeroSection");
 
@@ -33,7 +32,7 @@ export const HeroSection = () => {
 		}, 7000); 
 
 		return () => clearInterval(interval); 
-	}, []);
+	}, [positions.length]);
 
 	const sectionRef = useRef<HTMLElement | null>(null);
 	const titleRef = useRef<HTMLHeadingElement | null>(null);
