@@ -1,13 +1,16 @@
 "use client";
 
 import { useRef, useState } from "react";
+
 import { useTranslations } from "next-intl";
+
 import { MessageCard } from "~/components/MessageCard";
 import { Button } from "~/components/Ui/Button";
 import { Input } from "~/components/Ui/Input";
 import { Label } from "~/components/Ui/Label";
 import { Textarea } from "~/components/Ui/TextArea";
 import { FORMSPREE_URL } from "~/constants";
+
 import styles from "./ContactForm.module.css";
 
 export const EMAIL_REGEX = /^(?=.{1,254}$)(?=.{1,64}@.{1,255}$)(?=[a-zA-Z0-9._%+-]{1,64}@)[a-zA-Z0-9][a-zA-Z0-9._%+-]{0,63}@[a-zA-Z0-9][a-zA-Z0-9.-]{0,253}[a-zA-Z0-9]\.[a-zA-Z]{2,24}$/;
