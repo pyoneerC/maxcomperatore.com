@@ -62,7 +62,7 @@ export const projects = [
 		links: [
 			{
 				label: "Deporturnos.linkVisitSite",
-				url: "",
+				url: "https://deporturnos-front.vercel.app/",
 			},
 			{
 				label: "Deporturnos.linkViewCode",
@@ -74,7 +74,7 @@ export const projects = [
 			},
 			{
 				label: "Deporturnos.linkVisitDocs",
-				url: "",
+				url: "https://deporturnos-back-production.up.railway.app/doc/swagger-ui/index.html",
 			},
 		],
 		tags:
