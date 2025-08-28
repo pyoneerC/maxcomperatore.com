@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Comperatore | AI Engineer & Builder</title>
+    <style>
+        /* This now includes the Mono font for our surgical application */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap');
+
+        :root {
+            --text-color: #1a1a1a;
+            --background-color: #fdfdfd;
+            --link-color: #007bff;
+            --link-hover-color: #0056b3;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* CALIBRATION #2: Re-adding the subtle polish animation */
+        .container {
+            max-width: 680px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .container.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+        
+        /* CALIBRATION #1: This is the surgical monospace style for our "whisper" */
+        code {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .footer {
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Max Comperatore</h1>
+            <p class="subtitle">AI Engineer Building 1-Person Enterprises.</p>
+        </header>
+
+        <main>
+            <section id="philosophy">
+                <h2>Philosophy</h2>
+                <p>
+                    My work is centered on a single principle: <b>extreme leverage</b>. I believe most companies operate at less than 1% of their potential, constrained by manual processes and linear thinking. I architect systems that allow a single individual to achieve the output of an entire team.
+                </p>
+                <p>
+                    I don't just build software; I build autonomous engines. By fusing Language Models with robust backend infrastructure, I create systems that automate the impossible, unlock the value trapped in proprietary data, and create an unfair competitive advantage.
+                </p>
+            </section>
+
+            <!-- CALIBRATION #3: Reverting to the stronger, active heading -->
+            <section id="connect">
+                <h2>Connect & Build</h2>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/maxcomperatore" target="_blank">LinkedIn</a> &mdash; My professional trajectory and thoughts on the industry.</li>
+                    <li><a href="https://github.com/pyoneerC" target="_blank">GitHub</a> &mdash; The open-source code behind the systems I build.</li>
+                    <li><a href="mailto:me@maxcomperatore.com">Email</a> &mdash; For high-impact collaborations and ambitious projects.</li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>Based in Mendoza, Argentina. Building for the world.</p>
+        </footer>
+    </div>
+    
+    <!-- Script to trigger the animation -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('.container').classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>
