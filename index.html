@@ -31,18 +31,10 @@
             box-sizing: border-box;
         }
 
-        /* CALIBRATION #2: Re-adding the subtle polish animation */
         .container {
             max-width: 680px;
             width: 100%;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .container.loaded {
-            opacity: 1;
-            transform: translateY(0);
+            /* Animation removed: opacity, transform, transition */
         }
 
         h1 {
@@ -141,13 +133,6 @@
             <p>Based in Mendoza, Argentina. Building for the world.</p>
         </footer>
     </div>
-    
-    <!-- Script to trigger the animation -->
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelector('.container').classList.add('loaded');
-        });
-    </script>
 
 </body>
 </html>
