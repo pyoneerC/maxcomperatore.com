@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max Comperatore | AI Engineer & Builder</title>
     <style>
-        /* This now includes the Mono font for our surgical application */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap');
 
         :root {
@@ -24,7 +23,7 @@
             line-height: 1.7;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center; /* Vertically center the entire container */
             min-height: 100vh;
             margin: 0;
             padding: 40px 20px;
@@ -34,7 +33,7 @@
         .container {
             max-width: 680px;
             width: 100%;
-            /* Animation removed: opacity, transform, transition */
+            /* Startup animation removed: opacity, transform, transition */
         }
 
         h1 {
@@ -85,7 +84,6 @@
             text-decoration: underline;
         }
         
-        /* CALIBRATION #1: This is the surgical monospace style for our "whisper" */
         code {
             font-family: var(--font-mono);
             font-size: 0.95rem;
@@ -93,9 +91,98 @@
         }
 
         .footer {
-            margin-top: 4rem;
+            margin-top: 3rem;
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+        }
+        
+        .newsletter-cta {
+            color: #555;
+            font-size: 0.9rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .subscribe-form {
+            display: flex;
+            gap: 8px;
+            max-width: 400px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .subscribe-form input[type="email"] {
+            flex-grow: 1;
+            padding: 8px 12px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .subscribe-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--link-color);
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+        }
+
+        .subscribe-form button {
+            padding: 8px 16px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #fff;
+            background-color: var(--link-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .subscribe-form button:hover {
+            background-color: var(--link-hover-color);
+        }
+        
+        .location-text {
             font-size: 0.9rem;
             color: #888;
+            margin: 0;
+        }
+
+        .toast {
+            visibility: hidden;
+            min-width: 200px;
+            background: #fff;
+            color: var(--text-color);
+            text-align: left;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            position: fixed;
+            right: 2.2rem;
+            bottom: 2.2rem;
+            z-index: 2000;
+            font-size: 1rem;
+            opacity: 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            border: 1px solid #eee;
+            font-family: var(--font-sans);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            transform: translateY(20px);
+        }
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (max-width: 600px) {
+            .toast {
+                right: 1rem;
+                bottom: 1rem;
+                padding: 0.8rem 1rem;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
@@ -118,7 +205,6 @@
                 </p>
             </section>
 
-            <!-- CALIBRATION #3: Reverting to the stronger, active heading -->
             <section id="connect">
                 <h2>Connect & Build</h2>
                 <ul>
@@ -127,12 +213,31 @@
                     <li><a href="mailto:me@maxcomperatore.com">Email</a> &mdash; For high-impact collaborations and ambitious projects.</li>
                 </ul>
             </section>
-        </main>
+        </main>        
         
         <footer class="footer">
-            <p>Based in Mendoza, Argentina. Building for the world.</p>
+            <p class="newsletter-cta">Join the Friday Deep-Dive: my weekly, high-signal dispatch.</p>
+            <form class="subscribe-form" action="https://maxcomperatore.substack.com/api/v1/free?no_welcome_email=true" method="post" target="hidden-iframe" onsubmit="showToast(event)">
+                <input name="email" type="email" placeholder="Your email..." required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="location-text">Based in Mendoza, Argentina. Building for the world.</p>
         </footer>
     </div>
+    
+    <iframe name="hidden-iframe" style="display:none;"></iframe>
+    <div class="toast" id="toast">Thank you for subscribing!<br><span style="font-size:0.95em;color:#888;">Check your inbox to confirm.</span></div>
+    <script>
+        function showToast(e) {
+            e.preventDefault();
+            document.querySelector('.subscribe-form').submit();
+            var toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
 
 </body>
 </html>
