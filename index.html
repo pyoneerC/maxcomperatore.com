@@ -120,6 +120,7 @@
             border-radius: 5px;
             background-color: #fff;
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            user-select: text;
         }
 
         .subscribe-form input[type="email"]:focus {
@@ -183,6 +184,10 @@
                 padding: 0.8rem 1rem;
                 font-size: 0.95rem;
             }
+        }
+
+        body, .container, h1, h2, h3, h4, h5, h6, p, ul, li, a, .footer, .newsletter-cta, .location-text, .toast {
+            user-select: none;
         }
     </style>
 </head>
