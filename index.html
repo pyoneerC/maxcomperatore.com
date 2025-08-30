@@ -147,8 +147,8 @@
         }
         
         .location-text {
-            font-size: 0.9rem;
-            color: #888;
+            font-size: 0.8rem; /* Slightly smaller */
+            color: #aaa;      /* Slightly lighter/less contrast */
             margin: 0;
         }
 
@@ -183,6 +183,16 @@
                 bottom: 1rem;
                 padding: 0.8rem 1rem;
                 font-size: 0.95rem;
+            }
+            .subscribe-form {
+                flex-direction: column;
+                gap: 0.5rem;
+                max-width: 100%;
+            }
+            .subscribe-form input[type="email"],
+            .subscribe-form button {
+                width: 100%;
+                box-sizing: border-box;
             }
         }
 
@@ -221,7 +231,7 @@
         </main>        
         
         <footer class="footer">
-            <p class="newsletter-cta">Join the Friday Deep-Dive: my weekly, high-signal dispatch.</p>
+            <p class="newsletter-cta">Your Weekly Asymmetric Advantage.</p>
             <form class="subscribe-form" action="https://maxcomperatore.substack.com/api/v1/free?no_welcome_email=true" method="post" target="hidden-iframe" onsubmit="showToast(event)">
                 <input name="email" type="email" placeholder="Your email..." required>
                 <button type="submit">Subscribe</button>
