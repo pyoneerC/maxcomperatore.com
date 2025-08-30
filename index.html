@@ -229,10 +229,10 @@
             <section id="philosophy">
                 <h2>Philosophy</h2>
                 <p>
-                    My work is centered on a single principle: <b>extreme leverage</b>. I believe most companies operate at less than 1% of their potential, constrained by manual processes and linear thinking. I architect systems that allow a single individual to achieve the output of an entire team.
+                    My work is centered on a single principle: <span id="highlight-leverage"><b>extreme leverage</b></span>. I believe most companies operate at less than 1% of their potential, constrained by <span id="cross-manual">manual processes</span> and linear thinking. I architect systems that allow a single individual to achieve the output of an entire team.
                 </p>
                 <p>
-                    I don't just build software; I build autonomous engines. By fusing Language Models with robust backend infrastructure, I create systems that automate the impossible, unlock the value trapped in proprietary data, and create an unfair competitive advantage.
+                    I don't just build software; I build <span id="circle-autonomous">autonomous engines</span>. By fusing Language Models with robust backend infrastructure, I create systems that automate the impossible, unlock the value trapped in proprietary data, and create an <span id="highlight-advantage">unfair competitive advantage</span>.
                 </p>
             </section>
 
@@ -258,6 +258,7 @@
     
     <iframe name="hidden-iframe" style="display:none;"></iframe>
     <div class="toast" id="toast">Thank you for subscribing!<br><span style="font-size:0.95em;color:#888;">Check your inbox to confirm.</span></div>
+    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
     <script>
         function showToast(e, message, isError) {
             if (e) e.preventDefault();
@@ -307,6 +308,30 @@
             // Move focus to body to ensure no input is focused
             document.activeElement.blur();
             window.focus();
+        });
+        // Rough Notation annotations for specific phrases
+        window.addEventListener('DOMContentLoaded', function() {
+            if (window.RoughNotation) {
+                const leverage = document.getElementById('highlight-leverage');
+                const autonomous = document.getElementById('circle-autonomous');
+                const advantage = document.getElementById('highlight-advantage');
+                const manual = document.getElementById('cross-manual');
+                const a1 = RoughNotation.annotate(leverage, { type: 'highlight', color: '#ffe066', animationDuration: 900 });
+                const a2 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: 1200 });
+                const a3 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
+                const a4 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: 1300 });
+                // Animate each annotation with a brisker pause between (1.3s)
+                a1.show();
+                setTimeout(function() {
+                    a2.show();
+                    setTimeout(function() {
+                        a3.show();
+                        setTimeout(function() {
+                            a4.show();
+                        }, 1300);
+                    }, 1300);
+                }, 1300);
+            }
         });
     </script>
 
