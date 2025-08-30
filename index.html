@@ -146,6 +146,18 @@
             background-color: var(--link-hover-color);
         }
         
+        .subscribe-form.disabled {
+            pointer-events: none;
+            user-select: none;
+            opacity: 0.7;
+        }
+
+        .subscribe-form button:disabled {
+            background-color: #bfc5cc;
+            color: #fff;
+            cursor: not-allowed;
+        }
+        
         .location-text {
             font-size: 0.8rem; /* Slightly smaller */
             color: #aaa;      /* Slightly lighter/less contrast */
@@ -198,6 +210,10 @@
 
         body, .container, h1, h2, h3, h4, h5, h6, p, ul, li, a, .footer, .newsletter-cta, .location-text, .toast {
             user-select: none;
+        }
+        /* Hide caret for disabled input after subscribing */
+        .subscribe-form input.no-caret {
+            caret-color: transparent !important;
         }
     </style>
 </head>
@@ -268,6 +284,7 @@
 
         document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
             var emailInput = this.querySelector('input[name="email"]');
+            var button = this.querySelector('button[type="submit"]');
             var email = emailInput.value.trim();
             var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailRegex.test(email)) {
@@ -276,7 +293,20 @@
                 e.preventDefault();
                 return false;
             }
+            // On valid submit: clear input and disable form
             showToast(e);
+            emailInput.value = '';
+            emailInput.disabled = true;
+            button.disabled = true;
+            this.classList.add('disabled');
+            // Remove focus from input and button, and move focus elsewhere
+            emailInput.blur();
+            button.blur();
+            // Hide caret by applying CSS to input after disabling
+            emailInput.classList.add('no-caret');
+            // Move focus to body to ensure no input is focused
+            document.activeElement.blur();
+            window.focus();
         });
     </script>
 
