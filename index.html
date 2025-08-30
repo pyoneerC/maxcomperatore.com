@@ -315,32 +315,40 @@
         window.addEventListener('DOMContentLoaded', function() {
             if (window.RoughNotation) {
                 const leverage = document.getElementById('highlight-leverage');
+                const manual = document.getElementById('cross-manual');
                 const autonomous = document.getElementById('circle-autonomous');
                 const advantage = document.getElementById('highlight-advantage');
-                const manual = document.getElementById('cross-manual');
                 const isMobile = window.matchMedia('(max-width: 600px)').matches;
                 const a1 = RoughNotation.annotate(leverage, { type: 'highlight', color: '#ffe066', animationDuration: 900 });
-                const a3 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
-                let a2, a4;
+                let a2, a3, a4;
                 if (!isMobile) {
-                    a2 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: 1200 });
-                    a4 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: 1300 });
+                    a2 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: 1300 });
+                    a3 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: 1200 });
+                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
+                } else {
+                    a2 = null;
+                    a3 = null;
+                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
                 }
-                // Animate each annotation with a brisker pause between (1.3s)
+                // Animate each annotation in the new order: leverage, manual, autonomous, advantage
                 a1.show();
                 setTimeout(function() {
                     if (!isMobile && a2) {
                         a2.show();
                         setTimeout(function() {
-                            a3.show();
-                            setTimeout(function() {
-                                if (a4) a4.show();
-                            }, 1300);
-                        }, 1300);
-                    } else {
-                        a3.show();
+                            if (a3) {
+                                a3.show();
+                                setTimeout(function() {
+                                    if (a4) a4.show();
+                                }, 3200);
+                            } else if (a4) {
+                                a4.show();
+                            }
+                        }, 3200);
+                    } else if (a4) {
+                        a4.show();
                     }
-                }, 1300);
+                }, 3200);
             }
         });
     </script>
