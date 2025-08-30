@@ -243,15 +243,41 @@
     <iframe name="hidden-iframe" style="display:none;"></iframe>
     <div class="toast" id="toast">Thank you for subscribing!<br><span style="font-size:0.95em;color:#888;">Check your inbox to confirm.</span></div>
     <script>
-        function showToast(e) {
-            e.preventDefault();
-            document.querySelector('.subscribe-form').submit();
+        function showToast(e, message, isError) {
+            if (e) e.preventDefault();
             var toast = document.getElementById('toast');
+            if (message) {
+                toast.innerHTML = message;
+                if (isError) {
+                    toast.style.background = '#ffeaea';
+                    toast.style.color = '#b00020';
+                } else {
+                    toast.style.background = '#fff';
+                    toast.style.color = 'var(--text-color)';
+                }
+            } else {
+                toast.innerHTML = 'Thank you for subscribing!<br><span style="font-size:0.95em;color:#888;">Check your inbox to confirm.</span>';
+                toast.style.background = '#fff';
+                toast.style.color = 'var(--text-color)';
+            }
             toast.classList.add('show');
             setTimeout(function() {
                 toast.classList.remove('show');
             }, 3000);
         }
+
+        document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
+            var emailInput = this.querySelector('input[name="email"]');
+            var email = emailInput.value.trim();
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                showToast(null, 'Please enter a valid email address.', true);
+                emailInput.focus();
+                e.preventDefault();
+                return false;
+            }
+            showToast(e);
+        });
     </script>
 
 </body>
