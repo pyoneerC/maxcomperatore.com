@@ -321,10 +321,10 @@
                 const isMobile = window.matchMedia('(max-width: 600px)').matches;
                 const a1 = RoughNotation.annotate(leverage, { type: 'highlight', color: '#ffe066', animationDuration: 900 });
                 const a3 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
-                const a4 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: 1300 });
-                let a2;
+                let a2, a4;
                 if (!isMobile) {
                     a2 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: 1200 });
+                    a4 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: 1300 });
                 }
                 // Animate each annotation with a brisker pause between (1.3s)
                 a1.show();
@@ -334,14 +334,11 @@
                         setTimeout(function() {
                             a3.show();
                             setTimeout(function() {
-                                a4.show();
+                                if (a4) a4.show();
                             }, 1300);
                         }, 1300);
                     } else {
                         a3.show();
-                        setTimeout(function() {
-                            a4.show();
-                        }, 1300);
                     }
                 }, 1300);
             }
