@@ -25,7 +25,7 @@
             line-height: 1.7;
             display: flex;
             justify-content: center;
-            align-items: center; /* Vertically center the entire container */
+            align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 40px 20px;
@@ -35,7 +35,6 @@
         .container {
             max-width: 680px;
             width: 100%;
-            /* Startup animation removed: opacity, transform, transition */
         }
 
         h1 {
@@ -161,8 +160,8 @@
         }
         
         .location-text {
-            font-size: 0.8rem; /* Slightly smaller */
-            color: #aaa;      /* Slightly lighter/less contrast */
+            font-size: 0.8rem;
+            color: #aaa;
             margin: 0;
         }
 
@@ -213,7 +212,6 @@
         body, .container, h1, h2, h3, h4, h5, h6, p, ul, li, a, .footer, .newsletter-cta, .location-text, .toast {
             user-select: none;
         }
-        /* Hide caret for disabled input after subscribing */
         .subscribe-form input.no-caret {
             caret-color: transparent !important;
         }
@@ -296,22 +294,17 @@
                 e.preventDefault();
                 return false;
             }
-            // On valid submit: clear input and disable form
             showToast(e);
             emailInput.value = '';
             emailInput.disabled = true;
             button.disabled = true;
             this.classList.add('disabled');
-            // Remove focus from input and button, and move focus elsewhere
             emailInput.blur();
             button.blur();
-            // Hide caret by applying CSS to input after disabling
             emailInput.classList.add('no-caret');
-            // Move focus to body to ensure no input is focused
             document.activeElement.blur();
             window.focus();
         });
-        // Rough Notation annotations for specific phrases
         window.addEventListener('DOMContentLoaded', function() {
             if (window.RoughNotation) {
                 const leverage = document.getElementById('highlight-leverage');
@@ -330,7 +323,6 @@
                     a3 = null;
                     a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
                 }
-                // Animate each annotation in the new order: leverage, manual, autonomous, advantage
                 a1.show();
                 setTimeout(function() {
                     if (!isMobile && a2) {
