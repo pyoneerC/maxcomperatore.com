@@ -316,20 +316,31 @@
                 const autonomous = document.getElementById('circle-autonomous');
                 const advantage = document.getElementById('highlight-advantage');
                 const manual = document.getElementById('cross-manual');
+                const isMobile = window.matchMedia('(max-width: 600px)').matches;
                 const a1 = RoughNotation.annotate(leverage, { type: 'highlight', color: '#ffe066', animationDuration: 900 });
-                const a2 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: 1200 });
                 const a3 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
                 const a4 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: 1300 });
+                let a2;
+                if (!isMobile) {
+                    a2 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: 1200 });
+                }
                 // Animate each annotation with a brisker pause between (1.3s)
                 a1.show();
                 setTimeout(function() {
-                    a2.show();
-                    setTimeout(function() {
+                    if (!isMobile && a2) {
+                        a2.show();
+                        setTimeout(function() {
+                            a3.show();
+                            setTimeout(function() {
+                                a4.show();
+                            }, 1300);
+                        }, 1300);
+                    } else {
                         a3.show();
                         setTimeout(function() {
                             a4.show();
                         }, 1300);
-                    }, 1300);
+                    }
                 }, 1300);
             }
         });
